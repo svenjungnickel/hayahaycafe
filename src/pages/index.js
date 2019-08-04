@@ -12,20 +12,22 @@ export default ({ data }) => {
         <Layout currentPage="/">
             <SEO title={data.site.siteMetadata.title} keywords={[]} />
 
-            <section className={IndexStyles.indexSection} id="home">
+            <header className={IndexStyles.indexHeader} id="home">
                 <Img
                     fluid={data.header.childImageSharp.fluid}
-                    alt="Hayahay Cafe Welcome"
-                    className={IndexStyles.indexSection__image}
+                    alt="Hayahay Cafe"
+                    className={IndexStyles.indexHeader__image}
                 />
 
-                <div className={IndexStyles.indexSection__content}>
-                    <div className={IndexStyles.indexSection__contentInner}>
-                        <h1 className="display-1">{data.site.siteMetadata.title}</h1>
-                        <p className="lead">{data.site.siteMetadata.description}</p>
-                    </div>
+                <div className={IndexStyles.indexHeader__content}>
+                    <Container>
+                        <div className={IndexStyles.indexHeader__contentInner}>
+                            <h1 className="display-1">{data.site.siteMetadata.title}</h1>
+                            <p className="lead">{data.site.siteMetadata.description}</p>
+                        </div>
+                    </Container>
                 </div>
-            </section>
+            </header>
 
             <section className={SectionStyles.section} id="cafe">
                 <Container>
@@ -98,7 +100,7 @@ export const query = graphql`
                 description
             }
         }
-        header: file(relativePath: { eq: "header.jpg" }) {
+        header: file(relativePath: { eq: "header/index.jpg" }) {
             childImageSharp {
                 # Specify the image processing specifications right in the query.
                 fluid {
