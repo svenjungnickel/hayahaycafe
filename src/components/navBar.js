@@ -1,48 +1,80 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { StaticQuery, graphql, Link } from 'gatsby';
+import { Navbar, Nav } from 'react-bootstrap';
+import Styles from '../styles/components/navbar.module.scss';
 
-import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
+export default ({ currentPage }) => {
+    if (typeof window !== 'undefined') {
+        // eslint-disable-next-line global-require
+        require('smooth-scroll')('a[href*="#"]', {
+            speed: 800,
+            speedAsDuration: true,
+            easing: 'easeInOutCubic',
+            offset: 136,
+        });
+    }
 
-const CustomNavbar = ({ pageInfo }) => {
-    console.log(pageInfo);
+    const Logo = ({ logo, className }) => (
+        <div className={className}>
+            <Link to="/#home" className="link-no-style">
+                <img src={logo.src} alt="Logo" className={Styles.navBar__logo} />
+            </Link>
+        </div>
+    );
+
+    const NavItem = ({ link, name }) => (
+        <Nav.Item className={Styles.navBar__item}>
+            <Nav.Link href={link} className={Styles.navBar__link}>
+                {name}
+            </Nav.Link>
+        </Nav.Item>
+    );
+
     return (
-        <>
-            <Navbar variant="dark" expand="lg" id="site-navbar">
-                {/* <Container> */}
-                <Link to="/" className="link-no-style">
-                    <Navbar.Brand as="span">
-                        Gatsby React Bootstrap
-                    </Navbar.Brand>
-                </Link>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav
-                        className="mr-auto"
-                        activeKey={pageInfo && pageInfo.pageName}
-                    >
-                        <Link to="/page-2" className="link-no-style">
-                            <Nav.Link as="span" eventKey="page-2">
-                                Page 2
-                            </Nav.Link>
-                        </Link>
-                    </Nav>
-                    <Nav className="ml-auto">
-                        <Form inline onSubmit={e => e.preventDefault()}>
-                            <Form.Group>
-                                <FormControl
-                                    type="text"
-                                    placeholder="Fake Search"
-                                    className="mr-2"
-                                />
-                            </Form.Group>
-                            <Button>Fake Button</Button>
-                        </Form>
-                    </Nav>
-                </Navbar.Collapse>
-                {/* </Container> */}
-            </Navbar>
-        </>
+        <StaticQuery
+            query={graphql`
+                query {
+                    logoMobile: file(relativePath: { eq: "logo.png" }) {
+                        childImageSharp {
+                            # Specify the image processing specifications right in the query.
+                            fixed(height: 80) {
+                                ...GatsbyImageSharpFixed
+                            }
+                        }
+                    }
+                    logo: file(relativePath: { eq: "logo.png" }) {
+                        childImageSharp {
+                            # Specify the image processing specifications right in the query.
+                            fixed(height: 120) {
+                                ...GatsbyImageSharpFixed
+                            }
+                        }
+                    }
+                }
+            `}
+            render={data => (
+                <Navbar
+                    collapseOnSelect
+                    variant="light"
+                    expand="md"
+                    sticky="top"
+                    id="site-navbar"
+                    className={Styles.navBar}
+                >
+                    <Logo logo={data.logoMobile.childImageSharp.fixed} className="d-block d-sm-none" />
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" className="ml-auto" />
+                    <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">
+                        <Nav className={Styles.navBar__items} activeKey={currentPage}>
+                            <NavItem link="/#home" name="Home" />
+                            <NavItem link="/#cafe" name="Cafe" />
+                            <Logo logo={data.logo.childImageSharp.fixed} className="d-none d-sm-block" />
+                            <NavItem link="/#menu" name="Menu" />
+                            {/*<NavItem link="/shop" name="Shop" />*/}
+                            <NavItem link="/service" name="Service" />
+                        </Nav>
+                    </Navbar.Collapse>
+                </Navbar>
+            )}
+        />
     );
 };
-
-export default CustomNavbar;

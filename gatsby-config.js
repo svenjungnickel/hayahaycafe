@@ -1,22 +1,34 @@
 module.exports = {
     // pathPrefix: "/gatsby-react-bootstrap-starter",
     siteMetadata: {
-        title: `Hayahay Cafe`,
-        description: `Locally Sourced - Crafted With Love`,
-        author: `Sven Jungnickel <svenjungnickel@googlemail.com>`,
+        title: 'Hayahay Cafe',
+        description: 'Locally Sourced - Crafted With Love',
+        author: 'Sven Jungnickel <svenjungnickel@googlemail.com>',
+        address: 'Hayahay Cafe, Bug-ong, Mambajao, Camiguin 9100, Philippines',
+        email: 'hayahaycafe@gmail.com',
+        socialMedia: [
+            {
+                type: 'instagram',
+                link: 'https://www.instagram.com/hayahaycafe/',
+            },
+            {
+                type: 'facebook',
+                link: 'https://www.facebook.com/hayahaycafesacamiguin/',
+            },
+        ],
     },
     plugins: [
         `gatsby-plugin-react-helmet`,
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                name: `images`,
-                path: `${__dirname}/src/images`,
-            },
-        },
         `gatsby-plugin-sass`,
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `assets`,
+                path: `${__dirname}/assets/`,
+            },
+        },
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
@@ -26,7 +38,7 @@ module.exports = {
                 background_color: `#662721`,
                 theme_color: `#d2a795`,
                 display: `standalone`,
-                icon: `src/images/icon.png`, // This path is relative to the root of the site.
+                icon: `assets/icon.png`, // This path is relative to the root of the site.
             },
         },
         // This (optional) plugin enables Progressive Web App + Offline functionality.

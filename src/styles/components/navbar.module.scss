@@ -1,0 +1,28 @@
+.navBar {
+    background-color: rgba(255, 255, 255, .7);
+    text-transform: uppercase;
+    color: var(--color-primary);
+    letter-spacing: 2px;
+    font-weight: 700;
+
+    .navBar__items {
+        display: flex;
+        align-items: center;
+
+        .navBar__item {
+            .navBar__link {
+                color: var(--color-primary);
+
+                & > .active,
+                &:focus,
+                &:hover {
+                    color: var(--color-secondary);
+                }
+            }
+        }
+    }
+
+    .navBar__logo {
+        margin: 0 20px;
+    }
+}

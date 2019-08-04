@@ -1,0 +1,27 @@
+.footer {
+    color: white;
+
+    .footer__pre {
+        padding: 20px 0;
+        background-color: var(--color-secondary);
+    }
+
+    .footer__main {
+        padding: 40px 0;
+        background-color: var(--color-primary);
+
+        a {
+            color: white;
+
+            &.active,
+            &:focus,
+            &:hover {
+                color: var(--color-secondary);
+            }
+        }
+
+        .footer__address {
+            margin-top: 10px;
+        }
+    }
+}

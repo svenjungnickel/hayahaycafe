@@ -1,5 +1,17 @@
-@import "../../node_modules/bootstrap/scss/bootstrap.scss";
-@import "variables";
+body {
+    --color-primary: #662721;
+    --color-secondary: #d2a795;
 
-@import "layout";
-@import "navbar";
+    ul {
+        li {
+            list-style: none;
+        }
+    }
+}
+
+$theme-colors: (
+    "primary": #662721,
+    "secondary": #d2a795,
+    "navbar-light-color": #662721,
+);
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";

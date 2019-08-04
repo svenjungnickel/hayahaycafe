@@ -1,72 +1,110 @@
 import React from 'react';
-import { Row, Col, Container, ListGroup } from 'react-bootstrap';
-
-import Layout from '../components/layout';
+import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
+import { Container, Row, Col } from 'react-bootstrap';
 import SEO from '../components/seo';
+import Layout from '../components/layout';
+import IndexStyles from '../styles/pages/index.module.scss';
+import SectionStyles from '../styles/components/section.module.scss';
 
-const IndexPage = () => (
-    <Layout pageInfo={{ pageName: 'index' }}>
-        <SEO title="Home" keywords={[`gatsby`, `react`, `bootstrap`]} />
-        <Container className="text-center">
-            <Row>
-                <Col>
-                    <p>
-                        This is a Gatsby Starter that I frequently use to get
-                        jump started on quick website builds. It includes the
-                        following packages:
-                    </p>
-                </Col>
-            </Row>
-            <Row className="justify-content-center my-3">
-                <Col md="6">
-                    <ListGroup>
-                        <ListGroup.Item
-                            action
-                            href="https://getbootstrap.com"
-                            target="_blank"
-                        >
-                            Bootstrap
-                        </ListGroup.Item>
-                        <ListGroup.Item
-                            action
-                            href="https://react-bootstrap.github.io/"
-                            target="_blank"
-                        >
-                            react-bootstrap
-                        </ListGroup.Item>
-                        <ListGroup.Item
-                            action
-                            href="https://react-icons.netlify.com"
-                            target="_blank"
-                        >
-                            react-icons
-                        </ListGroup.Item>
-                        <ListGroup.Item
-                            action
-                            href="https://www.gatsbyjs.org/packages/gatsby-plugin-sass/"
-                            target="_blank"
-                        >
-                            gatsby-plugin-sass
-                        </ListGroup.Item>
-                    </ListGroup>
-                </Col>
-            </Row>
-            <Row>
-                <Col>
-                    <p>
-                        This starter also includes a navbar that sticks to the
-                        top of the screen when the user scrolls past it, and a
-                        footer that stays at the bottom of the screen.
-                    </p>
-                    <p>
-                        For more documentation on these packages and how they
-                        work, please refer to the pages linked in the list
-                        above.
-                    </p>
-                </Col>
-            </Row>
-        </Container>
-    </Layout>
-);
+export default ({ data }) => {
+    return (
+        <Layout currentPage="/">
+            <SEO title={data.site.siteMetadata.title} keywords={[]} />
 
-export default IndexPage;
+            <section className={IndexStyles.indexSection} id="home">
+                <Img
+                    fluid={data.header.childImageSharp.fluid}
+                    alt="Hayahay Cafe Welcome"
+                    className={IndexStyles.indexSection__image}
+                />
+
+                <div className={IndexStyles.indexSection__content}>
+                    <div className={IndexStyles.indexSection__contentInner}>
+                        <h1 className="display-1">{data.site.siteMetadata.title}</h1>
+                        <p className="lead">{data.site.siteMetadata.description}</p>
+                    </div>
+                </div>
+            </section>
+
+            <section className={SectionStyles.section} id="cafe">
+                <Container>
+                    <Row>
+                        <Col>
+                            <h2 className="display-5">1st Smoothie Bowls in Camiguin</h2>
+                            <p>&nbsp;</p>
+                            <p>
+                                A new and perfect chill out spot where you can easily get healthy food like smoothie
+                                bowls, fresh fruit shakes and more. We aim to serve only fresh, raw, organic and more
+                                especially no preservatives at all. Perfect for Vegans & Vegetarians.
+                            </p>
+                        </Col>
+                        <Col cs lg="1">
+                            &nbsp;
+                        </Col>
+                        <Col xs lg="2">
+                            <p>
+                                <strong>Location</strong>
+                            </p>
+                            <p>
+                                Bug-ong,
+                                <br />
+                                Mambajao
+                                <br />
+                                Camiguin Island
+                                <br />
+                                9100
+                                <br />
+                                Philippines
+                            </p>
+                            <p>&nbsp;</p>
+                            <p>
+                                <strong>Hours</strong>
+                            </p>
+                            <p>
+                                Mo closed
+                                <br />
+                                Th-Su 8:00–19:30
+                            </p>
+                        </Col>
+                    </Row>
+                </Container>
+            </section>
+
+            <section className={SectionStyles.section} id="menu">
+                <div className="container">
+                    <h2 className="display-5 text-center">Menu</h2>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                        and more recently with desktop publishing software like Aldus PageMaker including versions of
+                        Lorem Ipsum.
+                    </p>
+                    <img src="https://picsum.photos/200/300" alt="lorem ipsum" />
+                </div>
+            </section>
+        </Layout>
+    );
+};
+
+export const query = graphql`
+    query {
+        site {
+            siteMetadata {
+                title
+                description
+            }
+        }
+        header: file(relativePath: { eq: "header.jpg" }) {
+            childImageSharp {
+                # Specify the image processing specifications right in the query.
+                fluid {
+                    ...GatsbyImageSharpFluid
+                }
+            }
+        }
+    }
+`;
