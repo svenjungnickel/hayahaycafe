@@ -21,7 +21,7 @@ export default ({ items }) => {
     return (
         <div className={`container text-center ${Styles.socialMedia}`}>
             {items.map(item => (
-                <SocialMediaIcon item={item} />
+                <SocialMediaIcon item={item} key={item.type} />
             ))}
         </div>
     );
