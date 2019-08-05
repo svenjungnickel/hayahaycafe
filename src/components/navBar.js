@@ -10,7 +10,7 @@ export default ({ currentPage }) => {
             speed: 800,
             speedAsDuration: true,
             easing: 'easeInOutCubic',
-            offset: 136,
+            offset: 96, // 136 on desktop
         });
     }
 
@@ -24,9 +24,10 @@ export default ({ currentPage }) => {
 
     const NavItem = ({ link, name }) => (
         <Nav.Item className={Styles.navBar__item}>
-            <Nav.Link href={link} className={Styles.navBar__link}>
+            {/*<Nav.Link href={link} className={Styles.navBar__link}>*/}
+            <Link to={link} className={`nav-link ${Styles.navBar__link}`}>
                 {name}
-            </Nav.Link>
+            </Link>
         </Nav.Item>
     );
 
@@ -70,7 +71,8 @@ export default ({ currentPage }) => {
                             <Logo logo={data.logo.childImageSharp.fixed} className="d-none d-sm-block" />
                             <NavItem link="/#menu" name="Menu" />
                             {/*<NavItem link="/shop" name="Shop" />*/}
-                            <NavItem link="/service" name="Service" />
+                            {/*<NavItem link="/service" name="Service" />*/}
+                            <NavItem link="/contact" name="Contact" />
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
