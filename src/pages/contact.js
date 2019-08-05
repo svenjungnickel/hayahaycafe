@@ -49,6 +49,8 @@ export default ({ data }) => {
                                 validated={validated}
                                 onSubmit={handleSubmit}
                                 name="contact"
+                                method="POST"
+                                data-netlify-recaptcha="true"
                                 data-netlify="true"
                             >
                                 <Form.Label>Name *</Form.Label>
@@ -97,6 +99,7 @@ export default ({ data }) => {
                                     </Form.Control.Feedback>
                                 </Form.Group>
 
+                                <div data-netlify-recaptcha="true" />
                                 <Button variant="primary" type="submit" className={ContactStyles.contactSubmitButton}>
                                     Submit
                                 </Button>
