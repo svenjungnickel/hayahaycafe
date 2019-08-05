@@ -53,6 +53,8 @@ export default ({ data }) => {
                                 data-netlify-recaptcha="true"
                                 data-netlify="true"
                             >
+                                <input type="hidden" name="form-name" value="contact" />
+
                                 <Form.Label>Name *</Form.Label>
                                 <Form.Row>
                                     <Col xs={12} lg={6}>
