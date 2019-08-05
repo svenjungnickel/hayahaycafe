@@ -41,7 +41,7 @@ export default ({ data }) => {
                                 especially no preservatives at all. Perfect for Vegans & Vegetarians.
                             </p>
                         </Col>
-                        <Col cs lg="1">
+                        <Col xs lg="1">
                             &nbsp;
                         </Col>
                         <Col xs lg="2">
@@ -49,9 +49,7 @@ export default ({ data }) => {
                                 <strong>Location</strong>
                             </p>
                             <p>
-                                Bug-ong,
-                                <br />
-                                Mambajao
+                                Bug-ong, Mambajao
                                 <br />
                                 Camiguin Island
                                 <br />
