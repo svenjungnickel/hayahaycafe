@@ -60,7 +60,7 @@ export default ({ data }) => {
                                 <Form.Row>
                                     <Col xs={12} lg={6}>
                                         <Form.Group controlId="contactFirstName">
-                                            <Form.Control type="text" required />
+                                            <Form.Control name="firstName" type="text" required />
                                             <Form.Text className="text-muted">First name</Form.Text>
                                             <Form.Control.Feedback type="invalid">
                                                 Please enter your first name.
@@ -69,7 +69,7 @@ export default ({ data }) => {
                                     </Col>
                                     <Col xs={12} lg={6}>
                                         <Form.Group controlId="contactLastName">
-                                            <Form.Control type="text" required />
+                                            <Form.Control name="lastName" type="text" required />
                                             <Form.Text className="text-muted">Last name</Form.Text>
                                             <Form.Control.Feedback type="invalid">
                                                 Please enter your last name.
@@ -80,7 +80,7 @@ export default ({ data }) => {
 
                                 <Form.Group controlId="contactEmail">
                                     <Form.Label>Email *</Form.Label>
-                                    <Form.Control type="email" required />
+                                    <Form.Control name="email" type="email" required />
                                     <Form.Control.Feedback type="invalid">
                                         Please enter a valid email address.
                                     </Form.Control.Feedback>
@@ -88,7 +88,7 @@ export default ({ data }) => {
 
                                 <Form.Group controlId="contactSubject">
                                     <Form.Label>Subject *</Form.Label>
-                                    <Form.Control type="text" required />
+                                    <Form.Control name="subject" type="text" required />
                                     <Form.Control.Feedback type="invalid">
                                         Please enter a subject.
                                     </Form.Control.Feedback>
@@ -96,7 +96,13 @@ export default ({ data }) => {
 
                                 <Form.Group controlId="contactMessage">
                                     <Form.Label>Message *</Form.Label>
-                                    <textarea className="form-control" id="contactMessage" rows="5" required />
+                                    <textarea
+                                        name="message"
+                                        className="form-control"
+                                        id="contactMessage"
+                                        rows="5"
+                                        required
+                                    />
                                     <Form.Control.Feedback type="invalid">
                                         Please enter your message.
                                     </Form.Control.Feedback>
