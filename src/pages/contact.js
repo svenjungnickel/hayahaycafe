@@ -50,7 +50,8 @@ export default ({ data }) => {
                                 onSubmit={handleSubmit}
                                 name="contact"
                                 method="POST"
-                                data-netlify-recaptcha="true"
+                                action="/thanks?no-cache=1"
+                                // data-netlify-recaptcha="true"
                                 data-netlify="true"
                             >
                                 <input type="hidden" name="form-name" value="contact" />
@@ -101,7 +102,7 @@ export default ({ data }) => {
                                     </Form.Control.Feedback>
                                 </Form.Group>
 
-                                <div data-netlify-recaptcha="true" />
+                                {/*<div data-netlify-recaptcha="true" />*/}
                                 <Button variant="primary" type="submit" className={ContactStyles.contactSubmitButton}>
                                     Submit
                                 </Button>
