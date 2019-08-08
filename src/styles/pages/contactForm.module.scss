@@ -1,0 +1,37 @@
+.contact-form {
+    transition: height 500ms 500ms, opacity 500ms 0ms;
+    opacity: 1;
+    visibility: visible;
+
+    &.contact-form--hide {
+        transition: height 500ms 0ms, opacity 500ms 500ms;
+        opacity: 0;
+        visibility: hidden;
+        height: 0;
+    }
+
+    .contact-form-submit-button {
+        border-radius: 300px;
+        padding: 6px 40px;
+
+        @media (max-width: 576px) {
+            display: block;
+            width: 100%;
+            padding: 10px
+        }
+    }
+}
+
+.contact-form-success {
+    opacity: 0;
+    visibility: hidden;
+
+    p {
+        padding-bottom: 0;
+    }
+
+    &.contact-form-success--show {
+        opacity: 1;
+        visibility: visible;
+    }
+}
