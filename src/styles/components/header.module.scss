@@ -1,5 +1,9 @@
 .header {
-    height: calc(500px - 136px);
+    height: calc(500px - 96px);
+
+    @media (min-width: 576px) {
+        height: calc(500px - 136px);
+    }
 
     .header__image {
         background-color: rgba(0, 0, 0, .2);
