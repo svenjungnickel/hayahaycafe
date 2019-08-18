@@ -1,5 +1,9 @@
 .index-header {
-    height: calc(100vh - 136px); // viewport height minus nav bar height
+    height: calc(100vh - 96px); // viewport height minus nav bar height
+
+    @media (min-width: 768px) {
+        height: calc(100vh - 136px);
+    }
 
     .index-header__image {
         background-color: rgba(0, 0, 0, .2);

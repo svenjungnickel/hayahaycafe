@@ -1,7 +1,7 @@
 .header {
     height: calc(500px - 96px);
 
-    @media (min-width: 576px) {
+    @media (min-width: 768px) {
         height: calc(500px - 136px);
     }
 
