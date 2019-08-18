@@ -1,0 +1,32 @@
+.contact {
+    p {
+        margin-bottom: 0;
+    }
+
+    .separator {
+        padding: 16px 0;
+    }
+
+    .what3words {
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            text-decoration: none;
+            color: var(--color-secondary);
+        }
+
+        .what3words__address {
+            padding-left: 16px;
+        }
+
+        @media (min-width: 576px) and (max-width: 991px) {
+            flex-direction: column;
+
+            .what3words__address {
+                padding-top: 16px;
+                padding-left: 0;
+            }
+        }
+    }
+}
