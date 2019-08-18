@@ -100,7 +100,6 @@ export const query = graphql`
         }
         header: file(relativePath: { eq: "header/index.jpg" }) {
             childImageSharp {
-                # Specify the image processing specifications right in the query.
                 fluid {
                     ...GatsbyImageSharpFluid
                 }

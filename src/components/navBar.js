@@ -37,7 +37,6 @@ export default ({ currentPage }) => {
                 query {
                     logoMobile: file(relativePath: { eq: "logo.png" }) {
                         childImageSharp {
-                            # Specify the image processing specifications right in the query.
                             fixed(height: 80) {
                                 ...GatsbyImageSharpFixed
                             }
@@ -45,7 +44,6 @@ export default ({ currentPage }) => {
                     }
                     logo: file(relativePath: { eq: "logo.png" }) {
                         childImageSharp {
-                            # Specify the image processing specifications right in the query.
                             fixed(height: 120) {
                                 ...GatsbyImageSharpFixed
                             }
