@@ -5,6 +5,8 @@ backend:
 media_folder: static/images
 public_folder: /images
 
+publish_mode: editorial_workflow
+
 collections: # A list of collections the CMS should be able to edit
   - name: 'pages'
     label: 'Page'
@@ -13,8 +15,8 @@ collections: # A list of collections the CMS should be able to edit
       preview: true
     files:
       - file: 'content/pages/home.md'
-        label: 'Home Page'
-        name: 'home-page'
+        label: 'Start Page'
+        name: 'start-page'
         fields:
           - {
             label: Template,
