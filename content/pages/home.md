@@ -2,8 +2,8 @@
 template: HomePage
 slug: ''
 title: Hayahay Cafe
-featuredImage: 'https://ucarecdn.com/159203d3-881d-4218-baa1-ca4427b48d0d/'
-subtitle: 'Locally Sourced - Crafted With Love'
+featuredImage: /images/index.jpg
+subtitle: Locally Sourced - Crafted With Love
 meta:
   description: Locally Sourced - Crafted With Love
   title: Hayahay Cafe
