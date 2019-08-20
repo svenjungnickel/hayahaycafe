@@ -45,5 +45,17 @@ module.exports = {
         // The offline plugin should be listed after the manifest plugin so that the offline plugin can cache the
         // created manifest.webmanifest
         `gatsby-plugin-offline`,
+        {
+            resolve: `gatsby-plugin-netlify-cms`,
+            options: {
+                /**
+                 * One convention is to place your Netlify CMS customization code in a
+                 * `src/cms` directory.
+                 */
+                modulePath: `${__dirname}/src/cms/cms.js`,
+                enableIdentityWidget: true,
+                htmlTitle: `Hayahay Cafe - Admin`,
+            },
+        },
     ],
 };
