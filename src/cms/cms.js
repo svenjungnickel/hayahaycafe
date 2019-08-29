@@ -3,27 +3,14 @@
  * extension registration methods, such as `registerWidget` and
  * `registerPreviewTemplate`.
  */
+import React from 'react';
 import CMS from 'netlify-cms-app';
 
-/**
- * Any imported styles will automatically be applied to the editor preview
- * pane, there is no need to use `registerPreviewStyle` for imported styles.
- * All of the example imports below would result in styles being applied to the
- * preview pane.
- */
-// import 'module-that-imports-styles.js';
-// import 'styles.scss';
-// import '../other-styles.css';
-import '../styles/style.scss';
+import { StartPageTemplate } from '../../src/templates/StartPage';
+import { ContactPageTemplate } from '../../src/templates/ContactPage';
 
 /**
- * Let's say you've created widget and preview components for a custom image
- * gallery widget in separate files:
+ * Register preview templates
  */
-// import ImageGalleryWidget from './image-gallery-widget.js';
-// import ImageGalleryPreview from './image-gallery-preview.js';
-
-/**
- * Register the imported widget:
- */
-// CMS.registerWidget(`image-gallery`, ImageGalleryWidget, ImageGalleryPreview);
+CMS.registerPreviewTemplate('start-page', ({ entry }) => <StartPageTemplate {...entry.toJS().data} />);
+CMS.registerPreviewTemplate('contact-page', ({ entry }) => <ContactPageTemplate {...entry.toJS().data} />);

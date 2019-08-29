@@ -20,8 +20,8 @@ module.exports = {
     plugins: [
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-sass`,
-        `gatsby-transformer-sharp`,
-        `gatsby-plugin-sharp`,
+
+        // Add static assets before markdown files
         {
             resolve: `gatsby-source-filesystem`,
             options: {
@@ -30,6 +30,43 @@ module.exports = {
             },
         },
         {
+            resolve: 'gatsby-source-filesystem',
+            options: {
+                name: 'images',
+                path: `${__dirname}/static/images`,
+            },
+        },
+        {
+            resolve: 'gatsby-source-filesystem',
+            options: {
+                name: 'content',
+                path: `${__dirname}/content`,
+            },
+        },
+
+        // images
+        `gatsby-plugin-sharp`,
+        `gatsby-transformer-sharp`,
+        {
+            resolve: 'gatsby-transformer-remark',
+            options: {
+                plugins: [
+                    // gatsby-remark-relative-images must
+                    // go before gatsby-remark-images
+                    'gatsby-remark-relative-images',
+                    {
+                        resolve: 'gatsby-remark-images',
+                        options: {
+                            maxWidth: 1400,
+                            linkImagesToOriginal: false,
+                        },
+                    },
+                    // `gatsby-remark-responsive-iframe`,
+                ],
+            },
+        },
+
+        {
             resolve: `gatsby-plugin-manifest`,
             options: {
                 name: `Hayahay Cafe`,
@@ -37,6 +74,8 @@ module.exports = {
                 start_url: `/`,
                 background_color: `#662721`,
                 theme_color: `#d2a795`,
+                // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
+                // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
                 display: `standalone`,
                 icon: `assets/icon.png`, // This path is relative to the root of the site.
             },
@@ -45,6 +84,7 @@ module.exports = {
         // The offline plugin should be listed after the manifest plugin so that the offline plugin can cache the
         // created manifest.webmanifest
         `gatsby-plugin-offline`,
+
         {
             resolve: `gatsby-plugin-netlify-cms`,
             options: {
