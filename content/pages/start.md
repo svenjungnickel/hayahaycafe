@@ -3,7 +3,7 @@ template: StartPage
 slug: ''
 title: Hayahay Cafe
 subtitle: Locally Sourced - Crafted With Love
-featuredImage: /images/index.jpg
+headerImage: /images/index.jpg
 location: |-
   Bug-ong, Mambajao<br />
   Camiguin Island<br />
@@ -13,9 +13,9 @@ openingHours: |-
   Mo closed<br />
   Th-Su 8:00–19:30
 meta:
-  title: Hayahay Cafe
   description: Locally Sourced - Crafted With Love
   keywords: ''
+  title: Hayahay Cafe
 ---
 ## 1st Smoothie Bowls in Camiguin
 
