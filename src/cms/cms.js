@@ -19,4 +19,5 @@ if (window.location.hostname === 'localhost' && window.localStorage.getItem('net
  */
 CMS.registerPreviewTemplate('start-page', ({ entry }) => <StartPageTemplate {...entry.toJS().data} />);
 CMS.registerPreviewTemplate('contact-page', ({ entry }) => <ContactPageTemplate {...entry.toJS().data} />);
-CMS.registerPreviewTemplate('page', ({ entry }) => <DefaultPageTemplate {...entry.toJS().data} />);
+CMS.registerPreviewTemplate('legal-page', ({ entry }) => <DefaultPageTemplate {...entry.toJS().data} />);
+CMS.registerPreviewTemplate('data-privacy-page', ({ entry }) => <DefaultPageTemplate {...entry.toJS().data} />);
