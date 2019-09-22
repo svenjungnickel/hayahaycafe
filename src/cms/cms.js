@@ -8,6 +8,7 @@ import CMS from 'netlify-cms-app';
 
 import { StartPageTemplate } from '../../src/templates/StartPage';
 import { ContactPageTemplate } from '../../src/templates/ContactPage';
+import { DefaultPageTemplate } from '../../src/templates/DefaultPage';
 
 if (window.location.hostname === 'localhost' && window.localStorage.getItem('netlifySiteURL')) {
     CMS.registerPreviewStyle(window.localStorage.getItem('netlifySiteURL') + '/admin/cms.css');
@@ -18,3 +19,4 @@ if (window.location.hostname === 'localhost' && window.localStorage.getItem('net
  */
 CMS.registerPreviewTemplate('start-page', ({ entry }) => <StartPageTemplate {...entry.toJS().data} />);
 CMS.registerPreviewTemplate('contact-page', ({ entry }) => <ContactPageTemplate {...entry.toJS().data} />);
+CMS.registerPreviewTemplate('page', ({ entry }) => <DefaultPageTemplate {...entry.toJS().data} />);
