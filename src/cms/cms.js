@@ -9,6 +9,10 @@ import CMS from 'netlify-cms-app';
 import { StartPageTemplate } from '../../src/templates/StartPage';
 import { ContactPageTemplate } from '../../src/templates/ContactPage';
 
+if (window.location.hostname === 'localhost' && window.localStorage.getItem('netlifySiteURL')) {
+    CMS.registerPreviewStyle(window.localStorage.getItem('netlifySiteURL') + '/admin/cms.css');
+}
+
 /**
  * Register preview templates
  */
