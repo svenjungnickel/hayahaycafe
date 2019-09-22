@@ -18,8 +18,6 @@ module.exports = {
         ],
     },
     plugins: [
-        `gatsby-plugin-sharp`,
-        `gatsby-transformer-sharp`,
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-sass`,
 
@@ -50,6 +48,8 @@ module.exports = {
         // `gatsby-plugin-netlify-cms-paths`,
 
         // images
+        `gatsby-plugin-sharp`,
+        `gatsby-transformer-sharp`,
         {
             resolve: 'gatsby-transformer-remark',
             options: {
@@ -113,7 +113,7 @@ module.exports = {
                 modulePath: `${__dirname}/src/cms/cms.js`,
                 enableIdentityWidget: true,
                 htmlTitle: `Hayahay Cafe - Admin`,
-                logo: './assets/logo.png',
+                logo: 'assets/logo.png',
             },
         },
         'gatsby-plugin-netlify', // make sure to keep it last in the array
