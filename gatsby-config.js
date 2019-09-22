@@ -18,6 +18,8 @@ module.exports = {
         ],
     },
     plugins: [
+        `gatsby-plugin-sharp`,
+        `gatsby-transformer-sharp`,
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-sass`,
 
@@ -44,28 +46,44 @@ module.exports = {
             },
         },
 
+        // Including in your Gatsby plugins will transform any paths in your frontmatter
+        // `gatsby-plugin-netlify-cms-paths`,
+
         // images
-        `gatsby-plugin-sharp`,
-        `gatsby-transformer-sharp`,
         {
             resolve: 'gatsby-transformer-remark',
             options: {
                 plugins: [
+                    // `gatsby-plugin-netlify-cms-paths`,
                     // gatsby-remark-relative-images must
                     // go before gatsby-remark-images
-                    'gatsby-remark-relative-images',
+                    {
+                        resolve: `gatsby-remark-relative-images`,
+                        options: {
+                            name: 'images', // Must match the source name
+                        },
+                    },
                     {
                         resolve: 'gatsby-remark-images',
                         options: {
+                            // It's important to specify the maxWidth (in pixels) of
+                            // the content container as this plugin uses this as the
+                            // base for generating different widths of each image.
                             maxWidth: 1400,
-                            linkImagesToOriginal: false,
+                            // linkImagesToOriginal: false,
+                            // backgroundColor: 'transparent', // required to display blurred image first
+                        },
+                    },
+                    {
+                        resolve: 'gatsby-remark-copy-linked-files',
+                        options: {
+                            destinationDir: 'static',
                         },
                     },
                     // `gatsby-remark-responsive-iframe`,
                 ],
             },
         },
-
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
@@ -95,7 +113,9 @@ module.exports = {
                 modulePath: `${__dirname}/src/cms/cms.js`,
                 enableIdentityWidget: true,
                 htmlTitle: `Hayahay Cafe - Admin`,
+                logo: './assets/logo.png',
             },
         },
+        'gatsby-plugin-netlify', // make sure to keep it last in the array
     ],
 };

@@ -62,7 +62,7 @@ exports.createPages = ({ actions, graphql }) => {
 exports.onCreateNode = ({ node, actions, getNode }) => {
     const { createNodeField } = actions;
 
-    // convert frontmatter images
+    // convert image paths for gatsby images
     fmImagesToRelative(node);
 
     // Create smart slugs

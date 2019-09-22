@@ -11,7 +11,15 @@ import SectionStyles from '../styles/components/section.module.scss';
 export const StartPageTemplate = ({ title, subtitle, featuredImage, body, location, openingHours }) => (
     <>
         <header className={IndexStyles.indexHeader} id="home">
-            <Img fluid={featuredImage.childImageSharp.fluid} alt={title} className={IndexStyles.indexHeader__image} />
+            {!!featuredImage && !!featuredImage.childImageSharp ? (
+                <Img
+                    fluid={featuredImage.childImageSharp.fluid}
+                    alt={title}
+                    className={IndexStyles.indexHeader__image}
+                />
+            ) : (
+                <img src={featuredImage} alt={title} className={IndexStyles.indexHeader__image} />
+            )}
 
             <div className={IndexStyles.indexHeader__content}>
                 <Container>
@@ -92,6 +100,7 @@ export const pageQuery = graphql`
                             ...GatsbyImageSharpFluid
                         }
                     }
+                    publicURL
                 }
             }
         }

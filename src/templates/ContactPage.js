@@ -12,7 +12,7 @@ import ContactStyles from '../styles/pages/contact.module.scss';
 // Export Template for use in CMS preview
 export const ContactPageTemplate = ({ title, subtitle, featuredImage, body, what3WordsAddress, what3wordsIcon }) => (
     <>
-        <Header title={title} subtitle={subtitle} header={featuredImage.childImageSharp.fluid} />
+        <Header title={title} subtitle={subtitle} header={featuredImage} />
 
         <section className={SectionStyles.section}>
             <Container>
@@ -28,7 +28,11 @@ export const ContactPageTemplate = ({ title, subtitle, featuredImage, body, what
                             rel="noreferrer"
                             className={ContactStyles.what3words}
                         >
-                            <Img fixed={what3wordsIcon.childImageSharp.fixed} alt="What3words address" />
+                            {!!what3wordsIcon && !!what3wordsIcon.childImageSharp ? (
+                                <Img fluid={what3wordsIcon.childImageSharp.fixed} alt="What3words address" />
+                            ) : (
+                                <img src={what3wordsIcon} alt="What3words address" />
+                            )}
                             <p className={ContactStyles.what3words__address}>///{what3WordsAddress}</p>
                         </a>
                         <p>&nbsp;</p>
@@ -72,6 +76,7 @@ export const pageQuery = graphql`
                             ...GatsbyImageSharpFluid
                         }
                     }
+                    publicURL
                 }
             }
         }

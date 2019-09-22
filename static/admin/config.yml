@@ -1,18 +1,18 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: master # Branch to update (optional; defaults to master)
 
-#media_folder: static/images
-#public_folder: /images
-media_library:
-  name: cloudinary
-  use_transformations: false
-  use_secure_url: true
-  config:
-    cloud_name: hayahaycafe
-    api_key: 422136513935459
-    use_transformations: false
-    use_secure_url: true
+media_folder: static/images
+public_folder: /images
+#media_library:
+#  name: cloudinary
+#  use_transformations: false
+#  use_secure_url: true
+#  config:
+#    cloud_name: hayahaycafe
+#    api_key: 422136513935459
+#    use_transformations: false
+#    use_secure_url: true
 
 publish_mode: editorial_workflow
 
