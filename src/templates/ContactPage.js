@@ -86,6 +86,7 @@ export const pageQuery = graphql`
                     ...GatsbyImageSharpFixed
                 }
             }
+            publicURL
         }
     }
 `;
