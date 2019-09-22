@@ -18,7 +18,7 @@ export const ContactPageTemplate = ({ title, subtitle, headerImage, body, what3W
             <Container>
                 <Row>
                     <Col xs={12} sm={4} className={ContactStyles.contact}>
-                        <p dangerouslySetInnerHTML={{ __html: body }} />
+                        <div dangerouslySetInnerHTML={{ __html: body }} />
                         <div className={ContactStyles.separator}>
                             <hr />
                         </div>

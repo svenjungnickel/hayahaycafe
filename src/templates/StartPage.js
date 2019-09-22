@@ -30,16 +30,18 @@ export const StartPageTemplate = ({ title, subtitle, headerImage, body, location
         <section className={SectionStyles.section} id="cafe">
             <Container>
                 <Row>
-                    <Col xs={12} sm={9} lg={8} dangerouslySetInnerHTML={{ __html: body }} />
+                    <Col xs={12} sm={9} lg={8}>
+                        <div dangerouslySetInnerHTML={{ __html: body }} />
+                    </Col>
                     <Col xs={12} sm={1} lg={1}>
                         &nbsp;
                     </Col>
                     <Col xs={12} sm={2} lg={3}>
                         <h4>Location</h4>
-                        <p dangerouslySetInnerHTML={{ __html: location }} />
+                        <div dangerouslySetInnerHTML={{ __html: location }} />
                         <p>&nbsp;</p>
                         <h4>Hours</h4>
-                        <p dangerouslySetInnerHTML={{ __html: openingHours }} />
+                        <div dangerouslySetInnerHTML={{ __html: openingHours }} />
                     </Col>
                 </Row>
             </Container>
