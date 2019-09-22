@@ -9,7 +9,7 @@ import SectionStyles from '../styles/components/section.module.scss';
 export default ({ data }) => (
     <Layout currentPage="404">
         <SEO title="404: Not found" />
-        <Header title="404" description="Not found" header={data.header.childImageSharp.fluid} />
+        <Header title="404" subtitle="Not found" header={data.header.childImageSharp.fluid} />
 
         <section className={SectionStyles.section}>
             <Container>
@@ -26,7 +26,7 @@ export default ({ data }) => (
 
 export const query = graphql`
     query {
-        header: file(relativePath: { eq: "header/default.jpg" }) {
+        header: file(relativePath: { eq: "default.jpg" }) {
             childImageSharp {
                 fluid(maxHeight: 500) {
                     ...GatsbyImageSharpFluid
