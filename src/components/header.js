@@ -24,7 +24,7 @@ const Header = ({ header, title, subtitle }) => (
 );
 
 Header.propTypes = {
-    header: PropTypes.object.isRequired,
+    header: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
     title: PropTypes.string.isRequired,
     subtitle: PropTypes.string.isRequired,
 };
