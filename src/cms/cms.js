@@ -5,6 +5,7 @@
  */
 import React from 'react';
 import CMS from 'netlify-cms-app';
+// import cloudinary from 'netlify-cms-media-library-cloudinary';
 
 import { StartPageTemplate } from '../../src/templates/StartPage';
 import { ContactPageTemplate } from '../../src/templates/ContactPage';
@@ -13,6 +14,8 @@ import { DefaultPageTemplate } from '../../src/templates/DefaultPage';
 if (window.location.hostname === 'localhost' && window.localStorage.getItem('netlifySiteURL')) {
     CMS.registerPreviewStyle(window.localStorage.getItem('netlifySiteURL') + '/admin/cms.css');
 }
+
+// CMS.registerMediaLibrary(cloudinary);
 
 /**
  * Register preview templates
