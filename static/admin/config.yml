@@ -71,7 +71,7 @@ collections: # A list of collections the CMS should be able to edit
           - { label: Template, name: template, widget: hidden, default: DefaultPage }
           - { label: Slug, name: slug, widget: hidden, default: 'legal' }
           - { label: Title, name: title, widget: string }
-          - { label: Subtitle, name: subtitle, widget: markdown }
+          - { label: Subtitle, name: subtitle, widget: string }
           - { label: Header Images, name: headerImage, widget: image }
           - { label: Body, name: body, widget: markdown }
           - label: 'Meta'
@@ -90,7 +90,7 @@ collections: # A list of collections the CMS should be able to edit
           - { label: Template, name: template, widget: hidden, default: DefaultPage }
           - { label: Slug, name: slug, widget: hidden, default: 'data-privacy' }
           - { label: Title, name: title, widget: string }
-          - { label: Subtitle, name: subtitle, widget: markdown }
+          - { label: Subtitle, name: subtitle, widget: string }
           - { label: Header Images, name: headerImage, widget: image }
           - { label: Body, name: body, widget: markdown }
           - label: 'Meta'
