@@ -36,7 +36,7 @@ collections: # A list of collections the CMS should be able to edit
           - { label: Slug, name: slug, widget: hidden, default: '' }
           - { label: Title, name: title, widget: string }
           - { label: Subtitle, name: subtitle, widget: string }
-          - { label: Featured Image, name: featuredImage, widget: image }
+          - { label: Header Image, name: headerImage, widget: image }
           - { label: Body, name: body, widget: markdown }
           - { label: Location, name: location, widget: markdown }
           - { label: Opening Hours, name: openingHours, widget: markdown }
@@ -67,13 +67,7 @@ collections: # A list of collections the CMS should be able to edit
           - { label: Slug, name: slug, widget: hidden, default: 'contact' }
           - { label: Title, name: title, widget: string }
           - { label: Subtitle, name: subtitle, widget: string }
-          - {
-            label: Featured Image,
-            name: featuredImage,
-            widget: image,
-#            options:
-#              { media_library: { config: { imageShrink: 1400x500 } } },
-          }
+          - { label: Header Image, name: headerImage, widget: image }
           - { label: Body, name: body, widget: markdown }
           - { label: What3words Address, name: what3WordsAddress, widget: string }
           - label: 'Meta'

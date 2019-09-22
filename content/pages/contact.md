@@ -3,7 +3,7 @@ template: ContactPage
 slug: contact
 title: Contact
 subtitle: Feel free to contact us
-featuredImage: /images/default.jpg
+headerImage: /images/default.jpg
 what3WordsAddress: doings.beeping.motel
 meta:
   description: This is a meta description.

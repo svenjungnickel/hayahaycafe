@@ -4,12 +4,12 @@ import PropTypes from 'prop-types';
 import { Container } from 'react-bootstrap';
 import IndexStyles from '../styles/components/header.module.scss';
 
-const Header = ({ header, title, subtitle }) => (
+const Header = ({ title, subtitle, headerImage }) => (
     <header className={IndexStyles.header}>
-        {!!header && !!header.childImageSharp ? (
-            <Img fluid={header.childImageSharp.fluid} alt="header" className={IndexStyles.header__image} />
+        {!!headerImage && !!headerImage.childImageSharp ? (
+            <Img fluid={headerImage.childImageSharp.fluid} alt="header" className={IndexStyles.header__image} />
         ) : (
-            <img src={header} alt="header" className={IndexStyles.header__image} />
+            <img src={headerImage} alt="header" className={IndexStyles.header__image} />
         )}
 
         <div className={IndexStyles.header__content}>

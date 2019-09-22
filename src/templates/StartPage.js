@@ -8,17 +8,13 @@ import IndexStyles from '../styles/pages/index.module.scss';
 import SectionStyles from '../styles/components/section.module.scss';
 
 // Export Template for use in CMS preview
-export const StartPageTemplate = ({ title, subtitle, featuredImage, body, location, openingHours }) => (
+export const StartPageTemplate = ({ title, subtitle, headerImage, body, location, openingHours }) => (
     <>
         <header className={IndexStyles.indexHeader} id="home">
-            {!!featuredImage && !!featuredImage.childImageSharp ? (
-                <Img
-                    fluid={featuredImage.childImageSharp.fluid}
-                    alt={title}
-                    className={IndexStyles.indexHeader__image}
-                />
+            {!!headerImage && !!headerImage.childImageSharp ? (
+                <Img fluid={headerImage.childImageSharp.fluid} alt={title} className={IndexStyles.indexHeader__image} />
             ) : (
-                <img src={featuredImage} alt={title} className={IndexStyles.indexHeader__image} />
+                <img src={headerImage} alt={title} className={IndexStyles.indexHeader__image} />
             )}
 
             <div className={IndexStyles.indexHeader__content}>
@@ -94,7 +90,7 @@ export const pageQuery = graphql`
                 subtitle
                 location
                 openingHours
-                featuredImage {
+                headerImage {
                     childImageSharp {
                         fluid {
                             ...GatsbyImageSharpFluid

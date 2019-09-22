@@ -10,9 +10,9 @@ import SectionStyles from '../styles/components/section.module.scss';
 import ContactStyles from '../styles/pages/contact.module.scss';
 
 // Export Template for use in CMS preview
-export const ContactPageTemplate = ({ title, subtitle, featuredImage, body, what3WordsAddress, what3wordsIcon }) => (
+export const ContactPageTemplate = ({ title, subtitle, headerImage, body, what3WordsAddress, what3wordsIcon }) => (
     <>
-        <Header title={title} subtitle={subtitle} header={featuredImage} />
+        <Header title={title} subtitle={subtitle} headerImage={headerImage} />
 
         <section className={SectionStyles.section}>
             <Container>
@@ -70,7 +70,7 @@ export const pageQuery = graphql`
                 title
                 subtitle
                 what3WordsAddress
-                featuredImage {
+                headerImage {
                     childImageSharp {
                         fluid(maxHeight: 500) {
                             ...GatsbyImageSharpFluid
