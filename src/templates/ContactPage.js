@@ -29,7 +29,7 @@ export const ContactPageTemplate = ({ title, subtitle, featuredImage, body, what
                             className={ContactStyles.what3words}
                         >
                             {!!what3wordsIcon && !!what3wordsIcon.childImageSharp ? (
-                                <Img fluid={what3wordsIcon.childImageSharp.fixed} alt="What3words address" />
+                                <Img fixed={what3wordsIcon.childImageSharp.fixed} alt="What3words address" />
                             ) : (
                                 <img src={what3wordsIcon} alt="What3words address" />
                             )}
