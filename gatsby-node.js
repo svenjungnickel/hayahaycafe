@@ -48,7 +48,7 @@ exports.createPages = ({ actions, graphql }) => {
                 createPage({
                     // page slug set in md frontmatter
                     path: page.node.fields.slug,
-                    component: path.resolve(`src/pages/${String(page.node.frontmatter.template)}.js`),
+                    component: path.resolve(`src/templates/${String(page.node.frontmatter.template)}.js`),
                     // additional data can be passed via context
                     context: {
                         id,

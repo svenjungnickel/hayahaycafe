@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import DefaultPageTemplate from '../../templates/DefaultPageTemplate';
+import { DefaultPageTemplate } from '../../templates/DefaultPage';
 
 const DefaultPagePreview = ({ entry, widgetFor }) => (
     <DefaultPageTemplate
