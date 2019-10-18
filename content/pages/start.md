@@ -3,7 +3,8 @@ template: StartPage
 slug: ''
 title: Hayahay Cafe
 subtitle: Locally Sourced - Crafted With Love
-headerImage: /images/index.jpg
+headerImage: >-
+  https://res.cloudinary.com/hayahaycafe/image/upload/v1569187337/Hayahay%20Cafe/index_f6gjxl.jpg
 location: |-
   Bug-ong, Mambajao<br />
   Camiguin Island<br />
