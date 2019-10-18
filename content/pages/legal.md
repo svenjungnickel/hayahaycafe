@@ -2,12 +2,13 @@
 template: DefaultPage
 slug: legal
 title: Legal
-subtitle: ''
-headerImage: /images/default.jpg
+subtitle: ' '
+headerImage: >-
+  https://res.cloudinary.com/hayahaycafe/image/upload/v1569187336/Hayahay%20Cafe/default_qqvv4j.jpg
 meta:
   description: This is a meta description.
-  title: Legal DefaultPage
   keywords: ''
+  title: Legal DefaultPage
 ---
 ## Legal
 
