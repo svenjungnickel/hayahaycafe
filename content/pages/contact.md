@@ -3,12 +3,13 @@ template: ContactPage
 slug: contact
 title: Contact
 subtitle: Feel free to contact us
-headerImage: /images/default.jpg
+headerImage: >-
+  https://res.cloudinary.com/hayahaycafe/image/upload/v1569187336/Hayahay%20Cafe/default_qqvv4j.jpg
 what3WordsAddress: doings.beeping.motel
 meta:
   description: This is a meta description.
-  title: Contact Page
   keywords: ''
+  title: Contact Page
 ---
 ## Hayahay Cafe
 
