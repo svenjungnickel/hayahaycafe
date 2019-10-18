@@ -85,7 +85,7 @@ export const StartPageTemplate = ({
 StartPageTemplate.propTypes = {
     title: PropTypes.string.isRequired,
     subtitle: PropTypes.string.isRequired,
-    headerImage: PropTypes.string.isRequired,
+    headerImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
     content: PropTypes.node.isRequired,
     contentComponent: PropTypes.func,
     location: PropTypes.node.isRequired,

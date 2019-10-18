@@ -63,11 +63,11 @@ export const ContactPageTemplate = ({
 ContactPageTemplate.propTypes = {
     title: PropTypes.string.isRequired,
     subtitle: PropTypes.string.isRequired,
-    headerImage: PropTypes.string.isRequired,
+    headerImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
     content: PropTypes.node.isRequired,
     contentComponent: PropTypes.func,
     what3WordsAddress: PropTypes.string.isRequired,
-    what3wordsIcon: PropTypes.string.isRequired,
+    what3wordsIcon: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
 };
 
 const ContactPage = ({ data: { page, what3wordsIcon } }) => (
@@ -90,7 +90,7 @@ const ContactPage = ({ data: { page, what3wordsIcon } }) => (
 ContactPage.propTypes = {
     data: PropTypes.shape({
         markdownRemark: PropTypes.object,
-        what3wordsIcon: PropTypes.string,
+        what3wordsIcon: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     }),
 };
 

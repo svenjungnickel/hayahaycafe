@@ -31,7 +31,7 @@ export const DefaultPageTemplate = ({ title, subtitle, headerImage, content, con
 DefaultPageTemplate.propTypes = {
     title: PropTypes.string.isRequired,
     subtitle: PropTypes.string.isRequired,
-    headerImage: PropTypes.string.isRequired,
+    headerImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
     content: PropTypes.node.isRequired,
     contentComponent: PropTypes.func,
 };

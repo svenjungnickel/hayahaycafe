@@ -24,9 +24,9 @@ const Header = ({ title, subtitle, headerImage }) => (
 );
 
 Header.propTypes = {
-    header: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
     title: PropTypes.string.isRequired,
     subtitle: PropTypes.string.isRequired,
+    headerImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
 };
 
 export default Header;
