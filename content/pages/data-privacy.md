@@ -2,12 +2,13 @@
 template: DefaultPage
 slug: data-privacy
 title: Data Privacy
-subtitle: ''
-headerImage: /images/default.jpg
+subtitle: ' '
+headerImage: >-
+  https://res.cloudinary.com/hayahaycafe/image/upload/v1569187336/Hayahay%20Cafe/default_qqvv4j.jpg
 meta:
   description: This is a meta description.
-  title: Data Privacy DefaultPage
   keywords: ''
+  title: Data Privacy DefaultPage
 ---
 ## Data Privacy
 
