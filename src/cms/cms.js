@@ -7,9 +7,9 @@ import React from 'react';
 import CMS from 'netlify-cms-app';
 // import cloudinary from 'netlify-cms-media-library-cloudinary';
 
-import { StartPageTemplate } from '../../src/templates/StartPage';
-import { ContactPageTemplate } from '../../src/templates/ContactPage';
-import { DefaultPageTemplate } from '../../src/templates/DefaultPage';
+import StartPagePreview from './previews/StartPagePreview';
+import ContactPagePreview from './previews/ContactPagePreview';
+import DefaultPagePreview from './previews/DefaultPagePreview';
 
 if (window.location.hostname === 'localhost' && window.localStorage.getItem('netlifySiteURL')) {
     CMS.registerPreviewStyle(window.localStorage.getItem('netlifySiteURL') + '/admin/cms.css');
@@ -20,7 +20,7 @@ if (window.location.hostname === 'localhost' && window.localStorage.getItem('net
 /**
  * Register preview templates
  */
-CMS.registerPreviewTemplate('start-page', ({ entry }) => <StartPageTemplate {...entry.toJS().data} />);
-CMS.registerPreviewTemplate('contact-page', ({ entry }) => <ContactPageTemplate {...entry.toJS().data} />);
-CMS.registerPreviewTemplate('legal-page', ({ entry }) => <DefaultPageTemplate {...entry.toJS().data} />);
-CMS.registerPreviewTemplate('data-privacy-page', ({ entry }) => <DefaultPageTemplate {...entry.toJS().data} />);
+CMS.registerPreviewTemplate('start-page', StartPagePreview);
+CMS.registerPreviewTemplate('contact-page', ContactPagePreview);
+CMS.registerPreviewTemplate('legal-page', DefaultPagePreview);
+CMS.registerPreviewTemplate('data-privacy-page', DefaultPagePreview);

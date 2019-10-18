@@ -1,29 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import { Container, Row, Col } from 'react-bootstrap';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import Header from '../components/header';
-import SectionStyles from '../styles/components/section.module.scss';
+import { HTMLContent } from '../components/content';
+import DefaultPageTemplate from '../templates/DefaultPageTemplate';
 
-// Export Template for use in CMS preview
-export const DefaultPageTemplate = ({ title, subtitle, headerImage, body }) => (
-    <>
-        <Header title={title} subtitle={subtitle} headerImage={headerImage} />
-
-        <section className={SectionStyles.section}>
-            <Container>
-                <Row>
-                    <Col xs={12}>
-                        <div dangerouslySetInnerHTML={{ __html: body }} />
-                    </Col>
-                </Row>
-            </Container>
-        </section>
-    </>
-);
-
-// Export Default ContactPage for front-end
 const DefaultPage = ({ data: { page } }) => (
     <Layout currentPage="/contact">
         <SEO
@@ -32,14 +14,20 @@ const DefaultPage = ({ data: { page } }) => (
         />
         {/*<SEO meta={page.frontmatter.meta || false} title={page.frontmatter.title || false} />*/}
 
-        <DefaultPageTemplate {...page.frontmatter} body={page.html} />
+        <DefaultPageTemplate {...page.frontmatter} content={page.html} contentComponent={HTMLContent} />
     </Layout>
 );
+
+DefaultPage.propTypes = {
+    data: PropTypes.shape({
+        markdownRemark: PropTypes.object,
+    }),
+};
 
 export default DefaultPage;
 
 export const pageQuery = graphql`
-    query Page($id: String!) {
+    query DefaultPage($id: String!) {
         page: markdownRemark(id: { eq: $id }) {
             html
             frontmatter {
