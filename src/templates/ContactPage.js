@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
 import { Col, Container, Row } from 'react-bootstrap';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Header from '../components/header';
 import ContactForm from '../components/contactForm';
+import Image from '../components/image';
 import Content, { HTMLContent } from '../components/content';
 import SectionStyles from '../styles/components/section.module.scss';
 import ContactStyles from '../styles/pages/contact.module.scss';
@@ -40,11 +40,8 @@ export const ContactPageTemplate = ({
                                 rel="noreferrer"
                                 className={ContactStyles.what3words}
                             >
-                                {!!what3wordsIcon && !!what3wordsIcon.childImageSharp ? (
-                                    <Img fixed={what3wordsIcon.childImageSharp.fixed} alt="What3words address" />
-                                ) : (
-                                    <img src={what3wordsIcon} alt="What3words address" />
-                                )}
+                                <Image src={what3wordsIcon} alt="What3words address" />
+
                                 <p className={ContactStyles.what3words__address}>///{what3WordsAddress}</p>
                             </a>
                             <p>&nbsp;</p>

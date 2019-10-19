@@ -1,16 +1,12 @@
 import React from 'react';
-import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 import { Container } from 'react-bootstrap';
+import Image from './image';
 import IndexStyles from '../styles/components/header.module.scss';
 
 const Header = ({ title, subtitle, headerImage }) => (
     <header className={IndexStyles.header}>
-        {!!headerImage && !!headerImage.childImageSharp ? (
-            <Img fluid={headerImage.childImageSharp.fluid} alt="header" className={IndexStyles.header__image} />
-        ) : (
-            <img src={headerImage} alt="header" className={IndexStyles.header__image} />
-        )}
+        <Image src={headerImage} alt="header" className={IndexStyles.header__image} />
 
         <div className={IndexStyles.header__content}>
             <Container>

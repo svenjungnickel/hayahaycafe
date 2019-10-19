@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
 import { Col, Container, Row } from 'react-bootstrap';
 import SEO from '../components/seo';
 import Layout from '../components/layout';
+import Image from '../components/image';
 import Content, { HTMLContent } from '../components/content';
 import IndexStyles from '../styles/pages/index.module.scss';
 import SectionStyles from '../styles/components/section.module.scss';
@@ -23,15 +23,7 @@ export const StartPageTemplate = ({
     return (
         <>
             <header className={IndexStyles.indexHeader} id="home">
-                {!!headerImage && !!headerImage.childImageSharp ? (
-                    <Img
-                        fluid={headerImage.childImageSharp.fluid}
-                        alt={title}
-                        className={IndexStyles.indexHeader__image}
-                    />
-                ) : (
-                    <img src={headerImage} alt={title} className={IndexStyles.indexHeader__image} />
-                )}
+                <Image src={headerImage} alt={title} className={IndexStyles.indexHeader__image} />
 
                 <div className={IndexStyles.indexHeader__content}>
                     <Container>
