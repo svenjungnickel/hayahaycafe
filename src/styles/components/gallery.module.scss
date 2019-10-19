@@ -1,0 +1,33 @@
+.navigation-button-left {
+    font-size: 48px;
+    color: white;
+    appearance: none;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+
+    &:hover {
+        color: var(--primary-color);
+    }
+
+    @media (min-width: 992px) {
+        font-size: 60px;
+    }
+}
+
+.navigation-button-right {
+    font-size: 48px;
+    color: white;
+    appearance: none;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+
+    &:hover {
+        color: var(--primary-color);
+    }
+
+    @media (min-width: 992px) {
+        font-size: 60px;
+    }
+}

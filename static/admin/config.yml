@@ -35,6 +35,13 @@ collections: # A list of collections the CMS should be able to edit
           - { label: Body, name: body, widget: markdown }
           - { label: Location, name: location, widget: markdown }
           - { label: Opening Hours, name: openingHours, widget: markdown }
+          - label: 'Gallery'
+            name: 'gallery'
+            widget: 'list'
+            fields:
+              - { name: src, label: Image, widget: image }
+              - { name: alt, label: Alt, widget: string }
+              - { name: title, label: Title, widget: string, required: false }
           - label: 'Meta'
             required: false
             name: 'meta'

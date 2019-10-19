@@ -67,7 +67,7 @@ export default ({ currentPage }) => {
                             <NavItem link="/#home" name="Home" />
                             <NavItem link="/#cafe" name="Cafe" />
                             <Logo logo={data.logo.childImageSharp.fixed} className="d-none d-sm-block" />
-                            <NavItem link="/#menu" name="Menu" />
+                            <NavItem link="/#gallery" name="Gallery" />
                             {/*<NavItem link="/shop" name="Shop" />*/}
                             {/*<NavItem link="/service" name="Service" />*/}
                             <NavItem link="/contact" name="Contact" />

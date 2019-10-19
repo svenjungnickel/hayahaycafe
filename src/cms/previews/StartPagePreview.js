@@ -10,6 +10,7 @@ const StartPagePreview = ({ entry, widgetFor }) => (
         content={widgetFor('body')}
         location={widgetFor('location')}
         openingHours={widgetFor('openingHours')}
+        gallery={entry.toJS().data.gallery}
     />
 );
 

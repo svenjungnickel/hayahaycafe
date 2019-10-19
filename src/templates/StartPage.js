@@ -5,6 +5,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import SEO from '../components/seo';
 import Layout from '../components/layout';
 import Image from '../components/image';
+import Gallery from '../components/gallery';
 import Content, { HTMLContent } from '../components/content';
 import IndexStyles from '../styles/pages/index.module.scss';
 import SectionStyles from '../styles/components/section.module.scss';
@@ -17,6 +18,7 @@ export const StartPageTemplate = ({
     contentComponent,
     location,
     openingHours,
+    gallery,
 }) => {
     const PostContent = contentComponent || Content;
 
@@ -55,21 +57,7 @@ export const StartPageTemplate = ({
                 </Container>
             </section>
 
-            <section className={SectionStyles.section} id="menu">
-                <div className="container">
-                    <h2 className="display-5 text-center">Menu</h2>
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
-                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                        and more recently with desktop publishing software like Aldus PageMaker including versions of
-                        Lorem Ipsum.
-                    </p>
-                    <img src="https://picsum.photos/200/300" alt="lorem ipsum" />
-                </div>
-            </section>
+            <Gallery images={gallery} />
         </>
     );
 };
@@ -82,6 +70,7 @@ StartPageTemplate.propTypes = {
     contentComponent: PropTypes.func,
     location: PropTypes.node.isRequired,
     openingHours: PropTypes.node.isRequired,
+    gallery: PropTypes.array,
 };
 
 const StartPage = ({ data: { page } }) => (
@@ -124,6 +113,18 @@ export const pageQuery = graphql`
                         }
                     }
                     publicURL
+                }
+                gallery {
+                    src {
+                        childImageSharp {
+                            fluid(maxHeight: 600) {
+                                ...GatsbyImageSharpFluid
+                            }
+                        }
+                        publicURL
+                    }
+                    alt
+                    title
                 }
             }
         }
