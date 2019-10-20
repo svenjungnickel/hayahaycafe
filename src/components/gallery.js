@@ -7,6 +7,59 @@ import GalleryStyle from '../styles/components/gallery.module.scss';
 import SectionStyles from '../styles/components/section.module.scss';
 import '../styles/libs/fslightbox-react.css';
 
+const PreviousButton = ({ previousSlide }) => (
+    <button className={GalleryStyle.previousButton} aria-label="previous" onClick={previousSlide}>
+        &lsaquo;
+    </button>
+);
+
+PreviousButton.prototype = {
+    previousSlide: PropTypes.func,
+};
+
+const NextButton = ({ nextSlide }) => (
+    <button className={GalleryStyle.nextButton} aria-label="next" onClick={nextSlide}>
+        &rsaquo;
+    </button>
+);
+
+NextButton.prototype = {
+    previousSlide: PropTypes.func,
+};
+
+const PagingDots = ({ slideCount, slidesToScroll, goToSlide, currentSlide }) => (
+    <ul className={GalleryStyle.pagingDots__list}>
+        {PagingDots.getIndexes(slideCount, slidesToScroll).map(index => {
+            return (
+                <li className={GalleryStyle.pagingDots__listItem} key={index}>
+                    <button
+                        className={GalleryStyle.pagingDots__button}
+                        style={{ opacity: currentSlide === index ? 1 : 0.5 }}
+                        onClick={goToSlide.bind(null, index)}
+                    >
+                        &bull;
+                    </button>
+                </li>
+            );
+        })}
+    </ul>
+);
+
+PagingDots.getIndexes = (count, inc) => {
+    const arr = [];
+    for (let i = 0; i < count; i += inc) {
+        arr.push(i);
+    }
+    return arr;
+};
+
+PagingDots.propTypes = {
+    slideCount: PropTypes.number,
+    slidesToScroll: PropTypes.number,
+    goToSlide: PropTypes.func,
+    currentSlide: PropTypes.number,
+};
+
 const Gallery = ({ images }) => {
     if (!images || 0 === images.length) {
         return;
@@ -26,18 +79,6 @@ const Gallery = ({ images }) => {
         return image.src;
     });
 
-    const navigationButtonLeft = ({ previousSlide }) => (
-        <button className={GalleryStyle.navigationButtonLeft} aria-label="previous slide" onClick={previousSlide}>
-            &lsaquo;
-        </button>
-    );
-
-    const navigationButtonRight = ({ nextSlide }) => (
-        <button className={GalleryStyle.navigationButtonRight} aria-label="next slide" onClick={nextSlide}>
-            &rsaquo;
-        </button>
-    );
-
     return (
         <section className={SectionStyles.section} id="gallery">
             <div className="container">
@@ -46,8 +87,9 @@ const Gallery = ({ images }) => {
                     dragging={true}
                     swiping={true}
                     heightMode="first"
-                    renderCenterLeftControls={navigationButtonLeft}
-                    renderCenterRightControls={navigationButtonRight}
+                    renderCenterLeftControls={props => <PreviousButton {...props} />}
+                    renderCenterRightControls={props => <NextButton {...props} />}
+                    renderBottomCenterControls={props => <PagingDots {...props} />}
                 >
                     {images.map((image, index) => (
                         <Image
