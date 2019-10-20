@@ -5,6 +5,7 @@ import FsLightbox from 'fslightbox-react';
 import Image from './image';
 import GalleryStyle from '../styles/components/gallery.module.scss';
 import SectionStyles from '../styles/components/section.module.scss';
+import '../styles/libs/fslightbox-react.css';
 
 const Gallery = ({ images }) => {
     if (!images || 0 === images.length) {
