@@ -86,6 +86,7 @@ const Gallery = ({ images }) => {
                 <Carousel
                     dragging={true}
                     swiping={true}
+                    wrapAround={true}
                     heightMode="first"
                     renderCenterLeftControls={props => <PreviousButton {...props} />}
                     renderCenterRightControls={props => <NextButton {...props} />}
