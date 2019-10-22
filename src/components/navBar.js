@@ -60,7 +60,7 @@ export default ({ currentPage }) => {
                     id="site-navbar"
                     className={Styles.navBar}
                 >
-                    <Logo logo={data.logoMobile.childImageSharp.fixed} className="d-block d-sm-none" />
+                    <Logo logo={data.logoMobile.childImageSharp.fixed} className="d-block d-md-none" />
                     <Navbar.Toggle aria-controls="basic-navbar-nav" className="ml-auto" />
                     <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">
                         <Nav className={Styles.navBar__items} activeKey={currentPage}>
