@@ -1,7 +1,9 @@
+@import "../mixins/media-queries";
+
 .start-header {
     height: calc(100vh - 96px); // viewport height minus nav bar height
 
-    @media (min-width: 768px) {
+    @include respond-above(md) {
         height: calc(100vh - 136px);
     }
 

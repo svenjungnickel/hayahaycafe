@@ -1,9 +1,11 @@
+@import "../mixins/media-queries";
+
 /* hide FsLightbox fullscreen button at low resolution */
 .fslightbox-toolbar-button:nth-child(1) {
     display: none;
 }
 
-@media (min-width: 576px) {
+@include respond-above(sm) {
     .fslightbox-toolbar-button:nth-child(1) {
         display: flex;
     }

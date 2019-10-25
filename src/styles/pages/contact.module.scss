@@ -1,3 +1,5 @@
+@import "../mixins/media-queries";
+
 .contact {
     p {
         margin-bottom: 0;
@@ -20,7 +22,7 @@
             padding-left: 16px;
         }
 
-        @media (min-width: 576px) and (max-width: 991px) {
+        @include respond-between(sm,lg) {
             flex-direction: column;
 
             .what3words__address {

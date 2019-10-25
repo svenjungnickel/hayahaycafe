@@ -1,7 +1,9 @@
+@import "../mixins/media-queries";
+
 .header {
     height: calc(500px - 96px);
 
-    @media (min-width: 768px) {
+    @include respond-above(md) {
         height: calc(500px - 136px);
     }
 

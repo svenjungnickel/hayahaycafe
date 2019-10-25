@@ -5,7 +5,7 @@ import FsLightbox from 'fslightbox-react';
 import Image from './image';
 import GalleryStyle from '../styles/components/gallery.module.scss';
 import SectionStyles from '../styles/components/section.module.scss';
-import '../styles/libs/fslightbox-react.css';
+import '../styles/libs/fslightbox-react.scss';
 
 const PreviousButton = ({ previousSlide }) => (
     <button className={GalleryStyle.previousButton} aria-label="previous" onClick={previousSlide}>
