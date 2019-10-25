@@ -12,10 +12,11 @@
     .what3words {
         display: flex;
         align-items: center;
+        color: var(--textLink);
 
         &:hover {
             text-decoration: none;
-            color: var(--color-secondary);
+            color: var(--textLink__hover);
         }
 
         .what3words__address {

@@ -20,6 +20,7 @@ module.exports = {
     plugins: [
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-sass`,
+        `gatsby-plugin-use-dark-mode`,
 
         // Add static assets before markdown files
         {

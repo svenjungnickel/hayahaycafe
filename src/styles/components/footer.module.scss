@@ -4,12 +4,12 @@
 
     .footer__pre {
         padding: 20px 0;
-        background-color: var(--color-secondary);
+        background-color: var(--footerPre-bg);
     }
 
     .footer__main {
         padding: 40px 0;
-        background-color: var(--color-primary);
+        background-color: var(--footerMain-bg);
 
         a {
             color: white;

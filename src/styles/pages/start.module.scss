@@ -8,7 +8,7 @@
     }
 
     .start-header__image {
-        background-color: rgba(0, 0, 0, .2);
+        background-color: var(--header-bg);
         position: absolute !important;
         top: 0;
         right: 0;
