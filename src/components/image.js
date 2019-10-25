@@ -13,7 +13,7 @@ const Image = props => {
         return <Img fixed={src.childImageSharp.fixed} {...props} />;
     }
 
-    return <img src={src} {...props} />;
+    return <img src={src} loading="lazy" {...props} />;
 };
 
 Image.propTypes = {
