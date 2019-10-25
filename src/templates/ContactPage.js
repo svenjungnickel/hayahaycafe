@@ -9,7 +9,7 @@ import ContactForm from '../components/contactForm';
 import Image from '../components/image';
 import Content, { HTMLContent } from '../components/content';
 import SectionStyles from '../styles/components/section.module.scss';
-import ContactStyles from '../styles/pages/contact.module.scss';
+import ContactPageStyles from '../styles/pages/contact.module.scss';
 
 export const ContactPageTemplate = ({
     title,
@@ -29,20 +29,20 @@ export const ContactPageTemplate = ({
             <section className={SectionStyles.section}>
                 <Container>
                     <Row>
-                        <Col xs={12} sm={4} className={ContactStyles.contact}>
+                        <Col xs={12} sm={4} className={ContactPageStyles.contact}>
                             <PostContent content={content} />
-                            <div className={ContactStyles.separator}>
+                            <div className={ContactPageStyles.separator}>
                                 <hr />
                             </div>
                             <a
                                 href={`https://what3words.com/${what3WordsAddress}`}
                                 target="_blank"
                                 rel="noreferrer"
-                                className={ContactStyles.what3words}
+                                className={ContactPageStyles.what3words}
                             >
                                 <Image src={what3wordsIcon} alt="What3words address" />
 
-                                <p className={ContactStyles.what3words__address}>///{what3WordsAddress}</p>
+                                <p className={ContactPageStyles.what3words__address}>///{what3WordsAddress}</p>
                             </a>
                             <p>&nbsp;</p>
                         </Col>

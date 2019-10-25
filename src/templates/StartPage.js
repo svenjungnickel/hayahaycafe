@@ -7,7 +7,7 @@ import Layout from '../components/layout';
 import Image from '../components/image';
 import Gallery from '../components/gallery';
 import Content, { HTMLContent } from '../components/content';
-import IndexStyles from '../styles/pages/index.module.scss';
+import StartPageStyles from '../styles/pages/start.module.scss';
 import SectionStyles from '../styles/components/section.module.scss';
 
 export const StartPageTemplate = ({
@@ -24,12 +24,12 @@ export const StartPageTemplate = ({
 
     return (
         <>
-            <header className={IndexStyles.indexHeader} id="home">
-                <Image src={headerImage} alt={title} className={IndexStyles.indexHeader__image} />
+            <header className={StartPageStyles.startHeader} id="home">
+                <Image src={headerImage} alt={title} className={StartPageStyles.startHeader__image} />
 
-                <div className={IndexStyles.indexHeader__content}>
+                <div className={StartPageStyles.startHeader__content}>
                     <Container>
-                        <div className={IndexStyles.indexHeader__contentInner}>
+                        <div className={StartPageStyles.startHeader__contentInner}>
                             <h1 className="display-1">{title}</h1>
                             <p className="lead">{subtitle}</p>
                         </div>
