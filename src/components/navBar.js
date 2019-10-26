@@ -66,7 +66,8 @@ export default ({ currentPage }) => {
                     className={Styles.navBar}
                 >
                     <Logo logo={data.logoMobile.childImageSharp.fixed} className="d-block d-md-none" />
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" className="ml-auto" />
+                    <DarkModeToggle className="d-block d-md-none" />
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" className="ml-right" />
                     <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">
                         <Nav className={Styles.navBar__items} activeKey={currentPage}>
                             <NavItem link="/#home" name="Home" />
@@ -76,7 +77,6 @@ export default ({ currentPage }) => {
                             {/*<NavItem link="/shop" name="Shop" />*/}
                             {/*<NavItem link="/service" name="Service" />*/}
                             <NavItem link="/contact" name="Contact" />
-                            <DarkModeToggle className="d-block d-md-none" />
                         </Nav>
                     </Navbar.Collapse>
                     <div className={DarkModeToggleStyle.darkModeToggle}>
