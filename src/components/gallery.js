@@ -13,8 +13,8 @@ const PreviousButton = ({ previousSlide }) => (
     </button>
 );
 
-PreviousButton.prototype = {
-    previousSlide: PropTypes.func,
+PreviousButton.propTypes = {
+    previousSlide: PropTypes.func.isRequired,
 };
 
 const NextButton = ({ nextSlide }) => (
@@ -23,8 +23,8 @@ const NextButton = ({ nextSlide }) => (
     </button>
 );
 
-NextButton.prototype = {
-    previousSlide: PropTypes.func,
+NextButton.propTypes = {
+    previousSlide: PropTypes.func.isRequired,
 };
 
 const PagingDots = ({ slideCount, slidesToScroll, goToSlide, currentSlide }) => (
@@ -54,10 +54,10 @@ PagingDots.getIndexes = (count, inc) => {
 };
 
 PagingDots.propTypes = {
-    slideCount: PropTypes.number,
-    slidesToScroll: PropTypes.number,
-    goToSlide: PropTypes.func,
-    currentSlide: PropTypes.number,
+    slideCount: PropTypes.number.isRequired,
+    slidesToScroll: PropTypes.number.isRequired,
+    goToSlide: PropTypes.func.isRequired,
+    currentSlide: PropTypes.number.isRequired,
 };
 
 const Gallery = ({ images }) => {
@@ -109,7 +109,7 @@ const Gallery = ({ images }) => {
 };
 
 Gallery.propTypes = {
-    images: PropTypes.array,
+    images: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default Gallery;

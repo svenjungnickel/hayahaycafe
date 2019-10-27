@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import { Container, Nav } from 'react-bootstrap';
 import SocialMediaIcons from './socialMediaIcons';
 import FooterStyles from '../styles/components/footer.module.scss';
 
-export default ({ siteMetadata }) => {
+const Footer = ({ siteMetadata }) => {
     const NavItem = ({ link, name }) => (
         <Nav.Item>
             <Link to={link} className="nav-link">
@@ -34,3 +35,12 @@ export default ({ siteMetadata }) => {
         </footer>
     );
 };
+
+Footer.propTypes = {
+    siteMetadata: PropTypes.shape({
+        socialMedia: PropTypes.arrayOf(PropTypes.object).isRequired,
+        address: PropTypes.string.isRequired,
+    }).isRequired,
+};
+
+export default Footer;

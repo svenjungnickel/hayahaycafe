@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { StaticQuery, graphql, Link } from 'gatsby';
 import { Navbar, Nav } from 'react-bootstrap';
 import useDarkMode from 'use-dark-mode';
@@ -14,6 +15,13 @@ const Logo = ({ logo, className }) => (
     </div>
 );
 
+Logo.propTypes = {
+    logo: PropTypes.shape({
+        src: PropTypes.string.isRequired,
+    }).isRequired,
+    className: PropTypes.string.isRequired,
+};
+
 const NavItem = ({ link, name }) => (
     <Nav.Item className={Styles.navBar__item}>
         {/*<Nav.Link href={link} className={Styles.navBar__link}>*/}
@@ -23,7 +31,12 @@ const NavItem = ({ link, name }) => (
     </Nav.Item>
 );
 
-export default ({ currentPage }) => {
+NavItem.propTypes = {
+    link: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+};
+
+const NavBar = ({ currentPage }) => {
     const darkMode = useDarkMode(false);
 
     if (typeof window !== 'undefined') {
@@ -87,3 +100,9 @@ export default ({ currentPage }) => {
         />
     );
 };
+
+NavBar.propTypes = {
+    currentPage: PropTypes.string,
+};
+
+export default NavBar;

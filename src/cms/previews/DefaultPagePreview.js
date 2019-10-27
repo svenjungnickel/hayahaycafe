@@ -14,8 +14,8 @@ const DefaultPagePreview = ({ entry, widgetFor }) => (
 DefaultPagePreview.propTypes = {
     entry: PropTypes.shape({
         getIn: PropTypes.func,
-    }),
-    widgetFor: PropTypes.func,
+    }).isRequired,
+    widgetFor: PropTypes.func.isRequired,
 };
 
 export default DefaultPagePreview;

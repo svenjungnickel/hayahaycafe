@@ -18,10 +18,6 @@ const Image = props => {
 
 Image.propTypes = {
     src: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
-    className: PropTypes.string,
-    alt: PropTypes.string,
-    title: PropTypes.string,
-    onClick: PropTypes.func,
 };
 
 export default Image;

@@ -87,8 +87,8 @@ const ContactPage = ({ data: { page, what3wordsIcon } }) => (
 ContactPage.propTypes = {
     data: PropTypes.shape({
         markdownRemark: PropTypes.object,
-        what3wordsIcon: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-    }),
+        what3wordsIcon: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
+    }).isRequired,
 };
 
 export default ContactPage;

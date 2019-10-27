@@ -51,7 +51,7 @@ const DefaultPage = ({ data: { page } }) => (
 DefaultPage.propTypes = {
     data: PropTypes.shape({
         markdownRemark: PropTypes.object,
-    }),
+    }).isRequired,
 };
 
 export default DefaultPage;

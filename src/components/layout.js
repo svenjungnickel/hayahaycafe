@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { graphql, StaticQuery } from 'gatsby';
 import NavBar from './navBar';
 import Footer from './footer';
@@ -27,5 +28,10 @@ const Layout = ({ children, currentPage }) => (
         )}
     />
 );
+
+Layout.propTypes = {
+    children: PropTypes.node.isRequired,
+    currentPage: PropTypes.string.isRequired,
+};
 
 export default Layout;

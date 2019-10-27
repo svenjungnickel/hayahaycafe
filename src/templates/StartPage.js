@@ -70,7 +70,7 @@ StartPageTemplate.propTypes = {
     contentComponent: PropTypes.func,
     location: PropTypes.node.isRequired,
     openingHours: PropTypes.node.isRequired,
-    gallery: PropTypes.array,
+    gallery: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 const StartPage = ({ data: { page } }) => (
@@ -88,7 +88,7 @@ const StartPage = ({ data: { page } }) => (
 StartPage.propTypes = {
     data: PropTypes.shape({
         markdownRemark: PropTypes.object,
-    }),
+    }).isRequired,
 };
 
 export default StartPage;
