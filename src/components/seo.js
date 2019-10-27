@@ -10,30 +10,36 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
-function SEO({ description, lang, meta, keywords, title }) {
-    const { site } = useStaticQuery(
+function SEO({ title, description, keywords }) {
+    const { globalSettings } = useStaticQuery(
         graphql`
-            query {
-                site {
-                    siteMetadata {
+            query GlobalSettings {
+                globalSettings: settingsYaml {
+                    meta {
                         title
                         description
-                        author
+                        keywords
+                        language
                     }
                 }
             }
         `
     );
 
-    const metaDescription = description || site.siteMetadata.description;
+    const lang = globalSettings.meta.language || 'en';
+    const metaTitle = title || globalSettings.meta.title;
+    const metaDescription = description || globalSettings.meta.description;
+    const metaKeywords = keywords || globalSettings.meta.keywords;
+    const titleTemplate =
+        title === '' || title === globalSettings.meta.title
+            ? globalSettings.meta.title
+            : `%s | ${globalSettings.meta.title}`;
 
     return (
         <Helmet
-            htmlAttributes={{
-                lang,
-            }}
+            htmlAttributes={{ lang }}
             title={title}
-            titleTemplate={`%s | ${site.siteMetadata.title}`}
+            titleTemplate={titleTemplate}
             meta={[
                 {
                     name: `description`,
@@ -41,7 +47,7 @@ function SEO({ description, lang, meta, keywords, title }) {
                 },
                 {
                     property: `og:title`,
-                    content: title,
+                    content: metaTitle,
                 },
                 {
                     property: `og:description`,
@@ -52,48 +58,18 @@ function SEO({ description, lang, meta, keywords, title }) {
                     content: `website`,
                 },
                 {
-                    name: `twitter:card`,
-                    content: `summary`,
+                    name: `keywords`,
+                    content: metaKeywords,
                 },
-                {
-                    name: `twitter:creator`,
-                    content: site.siteMetadata.author,
-                },
-                {
-                    name: `twitter:title`,
-                    content: title,
-                },
-                {
-                    name: `twitter:description`,
-                    content: metaDescription,
-                },
-            ]
-                .concat(
-                    keywords.length > 0
-                        ? {
-                              name: `keywords`,
-                              content: keywords.join(`, `),
-                          }
-                        : []
-                )
-                .concat(meta)}
+            ]}
         />
     );
 }
 
-SEO.defaultProps = {
-    lang: `en`,
-    meta: [],
-    keywords: [],
-    description: ``,
-};
-
 SEO.propTypes = {
-    description: PropTypes.string,
-    lang: PropTypes.string,
-    meta: PropTypes.arrayOf(PropTypes.object),
-    keywords: PropTypes.arrayOf(PropTypes.string),
     title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    keywords: PropTypes.string,
 };
 
 export default SEO;

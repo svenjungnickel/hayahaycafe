@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import { Col, Container, Row } from 'react-bootstrap';
 import Layout from '../components/layout';
-import SEO from '../components/seo';
 import Header from '../components/header';
 import ContactForm from '../components/contactForm';
 import Image from '../components/image';
@@ -68,13 +67,7 @@ ContactPageTemplate.propTypes = {
 };
 
 const ContactPage = ({ data: { page, what3wordsIcon } }) => (
-    <Layout currentPage="/contact">
-        <SEO
-            title={page.frontmatter.title}
-            keywords={(page.frontmatter.meta && page.frontmatter.meta.keywords) || []}
-        />
-        {/*<SEO meta={page.frontmatter.meta || false} title={page.frontmatter.title || false} />*/}
-
+    <Layout meta={page.frontmatter.meta} currentPage="/contact">
         <ContactPageTemplate
             what3wordsIcon={what3wordsIcon}
             {...page.frontmatter}
@@ -108,6 +101,11 @@ export const pageQuery = graphql`
                         }
                     }
                     publicURL
+                }
+                meta {
+                    title
+                    description
+                    keywords
                 }
             }
         }

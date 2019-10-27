@@ -5,8 +5,8 @@ title: Legal
 subtitle: ''
 headerImage: /images/default.jpg
 meta:
+  title: Legal
   description: This is a meta description.
-  title: Legal DefaultPage
   keywords: ''
 ---
 ## Legal

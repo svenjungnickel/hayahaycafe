@@ -1,7 +1,8 @@
-siteTitle: Hayahay Cafe
-siteUrl: 'https://hayahaycafe.netlify.com'
-siteDescription: >-
-  Locally Sourced - Crafted With Love
-socialMediaCard:
-  image: 'https://ucarecdn.com/fcc8d148-a9a8-42ee-a793-0f12b1437f61/'
+meta:
+  title: Hayahay Cafe
+  description: >-
+    Locally Sourced - Crafted With Love
+  keywords: ''
+  language: 'en'
+address: 'Hayahay Cafe, Bug-ong, Mambajao, Camiguin 9100, Philippines'
 googleTrackingId: 'UA-xxxxxxxxx-x'

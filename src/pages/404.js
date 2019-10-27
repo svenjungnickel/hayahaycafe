@@ -1,16 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
 import { Container, Row, Col } from 'react-bootstrap';
 import Layout from '../components/layout';
-import SEO from '../components/seo';
 import Header from '../components/header';
-import { graphql } from 'gatsby';
 import SectionStyles from '../styles/components/section.module.scss';
 
+const meta = {
+    title: '404: Not found',
+    description: "You just hit a route that doesn't exist.",
+};
+
 const NotFoundPage = ({ data: { headerImage } }) => (
-    <Layout currentPage="404">
-        <SEO title="404: Not found" />
-        <Header title="404" subtitle="Not found" headerImage={headerImage} />
+    <Layout meta={meta}>
+        <Header headerImage={headerImage} title="404" />
 
         <section className={SectionStyles.section}>
             <Container>

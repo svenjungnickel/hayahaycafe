@@ -5,8 +5,8 @@ title: Data Privacy
 subtitle: ''
 headerImage: /images/default.jpg
 meta:
+  title: Data Privacy
   description: This is a meta description.
-  title: Data Privacy DefaultPage
   keywords: ''
 ---
 ## Data Privacy

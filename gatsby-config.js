@@ -1,11 +1,5 @@
 module.exports = {
-    // pathPrefix: "/gatsby-react-bootstrap-starter",
     siteMetadata: {
-        title: 'Hayahay Cafe',
-        description: 'Locally Sourced - Crafted With Love',
-        author: 'Sven Jungnickel <svenjungnickel@googlemail.com>',
-        address: 'Hayahay Cafe, Bug-ong, Mambajao, Camiguin 9100, Philippines',
-        email: 'hayahaycafe@gmail.com',
         socialMedia: [
             {
                 type: 'instagram',
@@ -21,6 +15,7 @@ module.exports = {
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-sass`,
         `gatsby-plugin-use-dark-mode`,
+        'gatsby-transformer-yaml',
 
         // Add static assets before markdown files
         {
@@ -45,9 +40,6 @@ module.exports = {
             },
         },
 
-        // Including in your Gatsby plugins will transform any paths in your frontmatter
-        // `gatsby-plugin-netlify-cms-paths`,
-
         // images
         `gatsby-plugin-sharp`,
         `gatsby-transformer-sharp`,
@@ -55,7 +47,6 @@ module.exports = {
             resolve: 'gatsby-transformer-remark',
             options: {
                 plugins: [
-                    // `gatsby-plugin-netlify-cms-paths`,
                     // gatsby-remark-relative-images must
                     // go before gatsby-remark-images
                     {
@@ -71,8 +62,7 @@ module.exports = {
                             // the content container as this plugin uses this as the
                             // base for generating different widths of each image.
                             maxWidth: 1400,
-                            // linkImagesToOriginal: false,
-                            // backgroundColor: 'transparent', // required to display blurred image first
+                            backgroundColor: 'transparent', // required to display blurred image first
                         },
                     },
                     {
@@ -81,7 +71,6 @@ module.exports = {
                             destinationDir: 'static',
                         },
                     },
-                    // `gatsby-remark-responsive-iframe`,
                 ],
             },
         },

@@ -29,9 +29,9 @@ gallery:
     alt: gallery image 05
     title: Gallery Image 05
 meta:
-  description: Locally Sourced - Crafted With Love
-  keywords: ''
   title: Hayahay Cafe
+  description: Locally Sourced - Crafted With Love
+  keywords: 'Cafe, Super Food, Camiguin, Philippines'
 ---
 ## 1st Smoothie Bowls in Camiguin
 

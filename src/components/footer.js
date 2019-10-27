@@ -5,7 +5,7 @@ import { Container, Nav } from 'react-bootstrap';
 import SocialMediaIcons from './socialMediaIcons';
 import FooterStyles from '../styles/components/footer.module.scss';
 
-const Footer = ({ siteMetadata }) => {
+const Footer = ({ socialMedia, address }) => {
     const NavItem = ({ link, name }) => (
         <Nav.Item>
             <Link to={link} className="nav-link">
@@ -17,7 +17,7 @@ const Footer = ({ siteMetadata }) => {
     return (
         <footer className={FooterStyles.footer}>
             <div className={FooterStyles.footer__pre}>
-                <SocialMediaIcons items={siteMetadata.socialMedia} />
+                <SocialMediaIcons items={socialMedia} />
             </div>
             <div className={FooterStyles.footer__main}>
                 <Container className="text-center">
@@ -27,9 +27,11 @@ const Footer = ({ siteMetadata }) => {
                         <NavItem link="/data-privacy" name="Data Privacy" />
                     </Nav>
 
-                    <div className={FooterStyles.footer__address}>
-                        <p>{siteMetadata.address}</p>
-                    </div>
+                    {address && (
+                        <div className={FooterStyles.footer__address}>
+                            <p>{address}</p>
+                        </div>
+                    )}
                 </Container>
             </div>
         </footer>
@@ -37,10 +39,8 @@ const Footer = ({ siteMetadata }) => {
 };
 
 Footer.propTypes = {
-    siteMetadata: PropTypes.shape({
-        socialMedia: PropTypes.arrayOf(PropTypes.object).isRequired,
-        address: PropTypes.string.isRequired,
-    }).isRequired,
+    socialMedia: PropTypes.arrayOf(PropTypes.object).isRequired,
+    address: PropTypes.string,
 };
 
 export default Footer;

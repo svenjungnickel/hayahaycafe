@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import { Col, Container, Row } from 'react-bootstrap';
 import Layout from '../components/layout';
-import SEO from '../components/seo';
 import Header from '../components/header';
 import Content, { HTMLContent } from '../components/content';
 import SectionStyles from '../styles/components/section.module.scss';
@@ -13,7 +12,7 @@ export const DefaultPageTemplate = ({ title, subtitle, headerImage, content, con
 
     return (
         <>
-            <Header title={title} subtitle={subtitle} headerImage={headerImage} />
+            <Header headerImage={headerImage} title={title} subtitle={subtitle} />
 
             <section className={SectionStyles.section}>
                 <Container>
@@ -30,20 +29,14 @@ export const DefaultPageTemplate = ({ title, subtitle, headerImage, content, con
 
 DefaultPageTemplate.propTypes = {
     title: PropTypes.string.isRequired,
-    subtitle: PropTypes.string.isRequired,
+    subtitle: PropTypes.string,
     headerImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
     content: PropTypes.node.isRequired,
     contentComponent: PropTypes.func,
 };
 
 const DefaultPage = ({ data: { page } }) => (
-    <Layout currentPage="/contact">
-        <SEO
-            title={page.frontmatter.title}
-            keywords={(page.frontmatter.meta && page.frontmatter.meta.keywords) || []}
-        />
-        {/*<SEO meta={page.frontmatter.meta || false} title={page.frontmatter.title || false} />*/}
-
+    <Layout meta={page.frontmatter.meta}>
         <DefaultPageTemplate {...page.frontmatter} content={page.html} contentComponent={HTMLContent} />
     </Layout>
 );
@@ -70,6 +63,11 @@ export const pageQuery = graphql`
                         }
                     }
                     publicURL
+                }
+                meta {
+                    title
+                    description
+                    keywords
                 }
             }
         }

@@ -4,7 +4,7 @@ import { Container } from 'react-bootstrap';
 import Image from './image';
 import IndexStyles from '../styles/components/header.module.scss';
 
-const Header = ({ title, subtitle, headerImage }) => (
+const Header = ({ headerImage, title, subtitle }) => (
     <header className={IndexStyles.header}>
         <Image src={headerImage} alt="header" className={IndexStyles.header__image} />
 
@@ -12,7 +12,7 @@ const Header = ({ title, subtitle, headerImage }) => (
             <Container>
                 <div className={IndexStyles.header__contentInner}>
                     <h1 className="display-1">{title}</h1>
-                    <p className="lead">{subtitle}</p>
+                    {subtitle && <p className="lead">{subtitle}</p>}
                 </div>
             </Container>
         </div>
@@ -20,9 +20,9 @@ const Header = ({ title, subtitle, headerImage }) => (
 );
 
 Header.propTypes = {
-    title: PropTypes.string.isRequired,
-    subtitle: PropTypes.string.isRequired,
     headerImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
+    title: PropTypes.string.isRequired,
+    subtitle: PropTypes.string,
 };
 
 export default Header;

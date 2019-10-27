@@ -78,7 +78,7 @@ collections: # A list of collections the CMS should be able to edit
           - { label: Template, name: template, widget: hidden, default: DefaultPage }
           - { label: Slug, name: slug, widget: hidden, default: 'legal' }
           - { label: Title, name: title, widget: string }
-          - { label: Subtitle, name: subtitle, widget: string }
+          - { label: Subtitle, name: subtitle, widget: string, required: false }
           - { label: Header Images, name: headerImage, widget: image }
           - { label: Body, name: body, widget: markdown }
           - label: 'Meta'
@@ -97,7 +97,7 @@ collections: # A list of collections the CMS should be able to edit
           - { label: Template, name: template, widget: hidden, default: DefaultPage }
           - { label: Slug, name: slug, widget: hidden, default: 'data-privacy' }
           - { label: Title, name: title, widget: string }
-          - { label: Subtitle, name: subtitle, widget: string }
+          - { label: Subtitle, name: subtitle, widget: string, required: false }
           - { label: Header Images, name: headerImage, widget: image }
           - { label: Body, name: body, widget: markdown }
           - label: 'Meta'
@@ -119,22 +119,13 @@ collections: # A list of collections the CMS should be able to edit
         label: 'Global Settings'
         name: 'global-settings'
         fields:
-          - { label: Site Title, name: siteTitle, widget: string }
-          - { label: Site Url, name: siteUrl, widget: string, required: false }
-          - {
-            label: Site Description,
-            name: siteDescription,
-            widget: text,
-            required: false,
-          }
-          - label: Social Media Card
-            name: socialMediaCard
-            widget: object
+          - label: 'Meta'
+            name: 'meta'
+            widget: 'object'
             fields:
-              - { label: Image, name: image, widget: image, required: false }
-          - {
-            label: Google Analytics Tracking Id,
-            name: googleTrackingId,
-            widget: string,
-            required: false,
-          }
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+              - { label: Keywords, name: keywords, widget: string, required: false }
+              - { label: Language, name: language, widget: string, required: false }
+          - { label: Address, name: address, widget: string, required: false }
+          - { label: Google Analytics Tracking Id, name: googleTrackingId, widget: string, required: false }

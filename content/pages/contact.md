@@ -6,9 +6,9 @@ subtitle: Feel free to contact us
 headerImage: /images/default.jpg
 what3WordsAddress: doings.beeping.motel
 meta:
-  description: This is a meta description.
   title: Contact Page
-  keywords: ''
+  description: Feel free to contact us
+  keywords: 'contact, contact form, contact us'
 ---
 ## Hayahay Cafe
 

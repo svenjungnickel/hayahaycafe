@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import { Col, Container, Row } from 'react-bootstrap';
-import SEO from '../components/seo';
 import Layout from '../components/layout';
 import Image from '../components/image';
 import Gallery from '../components/gallery';
@@ -74,13 +73,7 @@ StartPageTemplate.propTypes = {
 };
 
 const StartPage = ({ data: { page } }) => (
-    <Layout currentPage="/">
-        <SEO
-            title={page.frontmatter.title}
-            keywords={(page.frontmatter.meta && page.frontmatter.meta.keywords) || []}
-        />
-        {/*<SEO meta={page.frontmatter.meta || false} />*/}
-
+    <Layout meta={page.frontmatter.meta} currentPage="/">
         <StartPageTemplate {...page.frontmatter} content={page.html} contentComponent={HTMLContent} />
     </Layout>
 );
@@ -98,7 +91,7 @@ export const pageQuery = graphql`
     ## Use GraphiQL interface (http://localhost:8000/___graphql)
     ## $id is processed via gatsby-node.js
     ## query name must be unique to this file
-    query IndexPage($id: String!) {
+    query StartPage($id: String!) {
         page: markdownRemark(id: { eq: $id }) {
             html
             frontmatter {
@@ -125,6 +118,11 @@ export const pageQuery = graphql`
                     }
                     alt
                     title
+                }
+                meta {
+                    title
+                    description
+                    keywords
                 }
             }
         }
