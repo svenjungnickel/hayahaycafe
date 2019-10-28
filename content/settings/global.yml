@@ -5,4 +5,11 @@ meta:
   keywords: ''
   language: 'en'
 address: 'Hayahay Cafe, Bug-ong, Mambajao, Camiguin 9100, Philippines'
+socialMedia:
+  - url: 'https://www.instagram.com/hayahaycafe/'
+    type: 'instagram'
+  - url: 'https://www.facebook.com/hayahaycafesacamiguin/'
+    type: 'facebook'
+  - url: 'https://www.tripadvisor.de/Restaurant_Review-g811339-d12653875-Reviews-Hayahay_Cafe-Mambajao_Camiguin_Mindanao.html'
+    type: 'tripadvisor'
 googleTrackingId: 'UA-xxxxxxxxx-x'

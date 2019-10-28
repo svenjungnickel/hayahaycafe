@@ -1,16 +1,4 @@
 module.exports = {
-    siteMetadata: {
-        socialMedia: [
-            {
-                type: 'instagram',
-                link: 'https://www.instagram.com/hayahaycafe/',
-            },
-            {
-                type: 'facebook',
-                link: 'https://www.facebook.com/hayahaycafesacamiguin/',
-            },
-        ],
-    },
     plugins: [
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-sass`,

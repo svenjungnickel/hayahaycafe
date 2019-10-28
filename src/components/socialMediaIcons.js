@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/Button';
-import { FaFacebookF, FaInstagram } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaTripadvisor } from 'react-icons/fa';
 import Styles from '../styles/components/socialMediaIcons.module.scss';
 
 const SocialMediaIcon = ({ item }) => (
     <Button
-        href={item.link}
+        href={item.url}
         size="lg"
         target="_blank"
         type="button"
@@ -15,12 +15,13 @@ const SocialMediaIcon = ({ item }) => (
     >
         {'facebook' === item.type && <FaFacebookF />}
         {'instagram' === item.type && <FaInstagram />}
+        {'tripadvisor' === item.type && <FaTripadvisor />}
     </Button>
 );
 
 SocialMediaIcon.propTypes = {
     item: PropTypes.shape({
-        link: PropTypes.string.isRequired,
+        url: PropTypes.string.isRequired,
         type: PropTypes.string.isRequired,
     }),
 };
@@ -36,7 +37,7 @@ const SocialMediaIcons = ({ items }) => (
 SocialMediaIcons.propTypes = {
     items: PropTypes.arrayOf(
         PropTypes.shape({
-            link: PropTypes.string.isRequired,
+            url: PropTypes.string.isRequired,
             type: PropTypes.string.isRequired,
         })
     ).isRequired,

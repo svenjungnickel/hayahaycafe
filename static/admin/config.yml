@@ -128,4 +128,17 @@ collections: # A list of collections the CMS should be able to edit
               - { label: Keywords, name: keywords, widget: string, required: false }
               - { label: Language, name: language, widget: string, required: false }
           - { label: Address, name: address, widget: string, required: false }
+          - label: 'Social Media'
+            name: 'socialMedia'
+            required: false
+            widget: 'list'
+            fields:
+              - { label: Url, name: url, widget: string }
+              - name: 'type'
+                label: 'Typ'
+                widget: 'select'
+                options:
+                  - { label: 'Facebook', value: 'facebook' }
+                  - { label: 'Instagram', value: 'instagram' }
+                  - { label: 'Trip Advisor', value: 'tripadvisor' }
           - { label: Google Analytics Tracking Id, name: googleTrackingId, widget: string, required: false }
