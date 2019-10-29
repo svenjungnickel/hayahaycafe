@@ -6,19 +6,14 @@ import Layout from '../components/layout';
 import Image from '../components/image';
 import Gallery from '../components/gallery';
 import Content, { HTMLContent } from '../components/content';
+import Address from '../components/Location';
+import Separator from '../components/Separator';
+import OpeningHours from '../components/OpeningHours';
+import What3WordsAddress from '../components/What3WordsAddress';
 import StartPageStyles from '../styles/pages/start.module.scss';
 import SectionStyles from '../styles/components/section.module.scss';
 
-export const StartPageTemplate = ({
-    title,
-    subtitle,
-    headerImage,
-    content,
-    contentComponent,
-    location,
-    openingHours,
-    gallery,
-}) => {
+export const StartPageTemplate = ({ title, subtitle, headerImage, content, contentComponent, gallery }) => {
     const PostContent = contentComponent || Content;
 
     return (
@@ -39,24 +34,35 @@ export const StartPageTemplate = ({
             <section className={SectionStyles.section} id="cafe">
                 <Container>
                     <Row>
-                        <Col xs={12} sm={9} lg={8}>
+                        <Col xs={12}>
                             <PostContent content={content} />
+                            <Separator />
                         </Col>
-                        <Col xs={12} sm={1} lg={1}>
-                            &nbsp;
+                        <Col xs={12} sm={4}>
+                            <Address />
                         </Col>
-                        <Col xs={12} sm={2} lg={3}>
-                            <h4>Location</h4>
-                            <PostContent content={location} />
-                            <p>&nbsp;</p>
-                            <h4>Hours</h4>
-                            <PostContent content={openingHours} />
+                        <Col xs={12} sm={4}>
+                            <Separator className="d-block d-sm-none" />
+                            <What3WordsAddress />
                         </Col>
+                        <Col xs={12} sm={4}>
+                            <Separator className="d-block d-sm-none" />
+                            <OpeningHours />
+                        </Col>
+                        {gallery && gallery.length > 0 && (
+                            <>
+                                <Col xs={12}>
+                                    <Separator />
+                                </Col>
+                                <div className="container">
+                                    <h2 className="display-5 text-center">Gallery</h2>
+                                    <Gallery images={gallery} />
+                                </div>
+                            </>
+                        )}
                     </Row>
                 </Container>
             </section>
-
-            <Gallery images={gallery} />
         </>
     );
 };
@@ -67,8 +73,6 @@ StartPageTemplate.propTypes = {
     headerImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
     content: PropTypes.node.isRequired,
     contentComponent: PropTypes.func,
-    location: PropTypes.node.isRequired,
-    openingHours: PropTypes.node.isRequired,
     gallery: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
@@ -97,8 +101,6 @@ export const pageQuery = graphql`
             frontmatter {
                 title
                 subtitle
-                location
-                openingHours
                 headerImage {
                     childImageSharp {
                         fluid {

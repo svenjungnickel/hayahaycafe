@@ -1,7 +1,7 @@
 body {
     --color-primary: #662721;
     --color-secondary: #d2a795;
-    --bg: white;
+    --bg: #fff;
     --header-bg: rgba(0, 0, 0, .2);
     --navBar-bg: rgba(255, 255, 255, .7);
     --footerPre-bg: var(--color-secondary);
@@ -9,6 +9,7 @@ body {
     --textTitle: var(--color-primary);
     --textLink: var(--color-primary);
     --textLink__hover: var(--color-secondary);
+    --separator-border: rgba(0, 0, 0, 0.1);
 
     background-color: var(--bg);
     color: var(--color-primary);
@@ -36,6 +37,7 @@ body.dark-mode {
     --textTitle: #fff;
     --textLink: var(--color-primary);
     --textLink__hover: var(--color-secondary);
+    --separator-border: #fff;
 
     background-color: var(--bg);
     color: var(--color-primary);

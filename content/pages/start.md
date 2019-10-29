@@ -4,14 +4,6 @@ slug: ''
 title: Hayahay Cafe
 subtitle: Locally Sourced - Crafted With Love
 headerImage: /images/index.jpg
-location: |-
-  Bug-ong, Mambajao<br />
-  Camiguin Island<br />
-  9100<br />
-  Philippines
-openingHours: |-
-  Mo closed<br />
-  Tu-Su 8:00–19:30
 gallery:
   - src: /images/gallery01.jpg
     alt: gallery image 01

@@ -8,8 +8,6 @@ const ContactPagePreview = ({ entry, widgetFor }) => (
         subtitle={entry.toJS().data.subtitle}
         headerImage={entry.toJS().data.headerImage}
         content={widgetFor('body')}
-        what3WordsAddress={entry.toJS().data.what3WordsAddress}
-        what3wordsIcon={entry.toJS().data.what3wordsIcon}
     />
 );
 

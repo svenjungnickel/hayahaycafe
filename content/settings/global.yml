@@ -4,7 +4,18 @@ meta:
     Locally Sourced - Crafted With Love
   keywords: ''
   language: 'en'
-address: 'Hayahay Cafe, Bug-ong, Mambajao, Camiguin 9100, Philippines'
+location:
+  address:
+    company: 'Hayahay Cafe'
+    addressLine1: 'Bug-ong, Mambajao'
+    addressLine2: ''
+    province: 'Camiguin'
+    postalCode: '9100'
+    country: 'Philippines'
+  what3WordsAddress: 'doings.beeping.motel'
+openingHours: |-
+  Mo closed<br />
+  Tu-Su 8:00–19:30
 socialMedia:
   - url: 'https://www.instagram.com/hayahaycafe/'
     type: 'instagram'

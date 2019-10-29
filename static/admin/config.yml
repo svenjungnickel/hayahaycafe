@@ -33,8 +33,6 @@ collections: # A list of collections the CMS should be able to edit
           - { label: Subtitle, name: subtitle, widget: string }
           - { label: Header Image, name: headerImage, widget: image }
           - { label: Body, name: body, widget: markdown }
-          - { label: Location, name: location, widget: markdown }
-          - { label: Opening Hours, name: openingHours, widget: markdown }
           - label: 'Gallery'
             name: 'gallery'
             widget: 'list'
@@ -60,12 +58,11 @@ collections: # A list of collections the CMS should be able to edit
           - { label: Title, name: title, widget: string }
           - { label: Subtitle, name: subtitle, widget: string }
           - { label: Header Image, name: headerImage, widget: image }
-          - { label: Body, name: body, widget: markdown }
-          - { label: What3words Address, name: what3WordsAddress, widget: string }
+          - { label: Body, name: body, widget: markdown, required: false }
           - label: 'Meta'
-            required: false
             name: 'meta'
             widget: 'object'
+            required: false
             fields:
               - { label: Title, name: title, widget: string, required: false }
               - { label: Description, name: description, widget: text, required: false }
@@ -82,9 +79,9 @@ collections: # A list of collections the CMS should be able to edit
           - { label: Header Images, name: headerImage, widget: image }
           - { label: Body, name: body, widget: markdown }
           - label: 'Meta'
-            required: false
             name: 'meta'
             widget: 'object'
+            required: false
             fields:
               - { label: Title, name: title, widget: string, required: false }
               - { label: Description, name: description, widget: text, required: false }
@@ -127,7 +124,24 @@ collections: # A list of collections the CMS should be able to edit
               - { label: Description, name: description, widget: text }
               - { label: Keywords, name: keywords, widget: string, required: false }
               - { label: Language, name: language, widget: string, required: false }
-          - { label: Address, name: address, widget: string, required: false }
+          - label: 'Location'
+            name: 'location'
+            widget: 'object'
+            required: false
+            fields:
+              - label: 'Address'
+                name: 'address'
+                widget: 'object'
+                required: false
+                fields:
+                  - { label: 'Company', name: company, widget: string, required: false }
+                  - { label: 'Address Line 1', name: addressLine1, widget: string, required: false }
+                  - { label: 'Address Line 2', name: addressLine2, widget: string, required: false }
+                  - { label: 'Province', name: province, widget: string, required: false }
+                  - { label: 'Postal Code', name: postalCode, widget: string, required: false }
+                  - { label: 'Country', name: country, widget: string, required: false }
+              - { label: 'What3words Address', name: what3WordsAddress, widget: string, required: false }
+          - { label: 'Opening Hours', name: openingHours, widget: markdown, required: false }
           - label: 'Social Media'
             name: 'socialMedia'
             required: false

@@ -4,7 +4,6 @@ import Carousel from 'nuka-carousel';
 import FsLightbox from 'fslightbox-react';
 import Image from './image';
 import GalleryStyle from '../styles/components/gallery.module.scss';
-import SectionStyles from '../styles/components/section.module.scss';
 import '../styles/libs/fslightbox-react.scss';
 
 const PreviousButton = ({ previousSlide }) => (
@@ -61,12 +60,7 @@ PagingDots.propTypes = {
 };
 
 const Gallery = ({ images }) => {
-    if (!images || 0 === images.length) {
-        return;
-    }
-
     const [toggler, setToggler] = useState(false);
-
     const imageSources = images.map(image => {
         if (!!image.src && !!image.src.childImageSharp) {
             if (!!image.src.childImageSharp.fluid) {
@@ -80,31 +74,28 @@ const Gallery = ({ images }) => {
     });
 
     return (
-        <section className={SectionStyles.section} id="gallery">
-            <div className="container">
-                <h2 className="display-5 text-center">Gallery</h2>
-                <Carousel
-                    dragging={true}
-                    swiping={true}
-                    wrapAround={true}
-                    heightMode="first"
-                    renderCenterLeftControls={props => <PreviousButton {...props} />}
-                    renderCenterRightControls={props => <NextButton {...props} />}
-                    renderBottomCenterControls={props => <PagingDots {...props} />}
-                >
-                    {images.map((image, index) => (
-                        <Image
-                            key={index}
-                            src={image.src}
-                            alt={image.alt}
-                            title={image.title}
-                            onClick={() => setToggler(!toggler)}
-                        />
-                    ))}
-                </Carousel>
-                <FsLightbox toggler={toggler} sources={imageSources} />
-            </div>
-        </section>
+        <>
+            <Carousel
+                dragging={true}
+                swiping={true}
+                wrapAround={true}
+                heightMode="first"
+                renderCenterLeftControls={props => <PreviousButton {...props} />}
+                renderCenterRightControls={props => <NextButton {...props} />}
+                renderBottomCenterControls={props => <PagingDots {...props} />}
+            >
+                {images.map((image, index) => (
+                    <Image
+                        key={index}
+                        src={image.src}
+                        alt={image.alt}
+                        title={image.title}
+                        onClick={() => setToggler(!toggler)}
+                    />
+                ))}
+            </Carousel>
+            <FsLightbox toggler={toggler} sources={imageSources} />
+        </>
     );
 };
 

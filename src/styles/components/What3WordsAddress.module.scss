@@ -1,0 +1,25 @@
+@import "../mixins/media-queries";
+
+.what3words {
+    display: flex;
+    align-items: center;
+    color: var(--textLink);
+
+    &:hover {
+        text-decoration: none;
+        color: var(--textLink__hover);
+    }
+
+    .what3words__address {
+        padding-left: 16px;
+    }
+
+    @include respond-between(sm, lg) {
+        flex-direction: column;
+
+        .what3words__address {
+            padding-top: 16px;
+            padding-left: 0;
+        }
+    }
+}

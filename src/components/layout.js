@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import SEO from './seo';
 import NavBar from './navBar';
-import Footer from './footer';
+import Footer from './Footer';
 
 const Layout = ({ children, meta, currentPage }) => (
     <main>
