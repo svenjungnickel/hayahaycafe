@@ -9,7 +9,7 @@ import DarkModeToggleStyle from '../styles/components/darkModeToggle.module.scss
 
 const Logo = ({ logo, className }) => (
     <div className={className}>
-        <Link to="/#home" className="link-no-style">
+        <Link to="/" className="link-no-style">
             <img src={logo.src} alt="Logo" className={Styles.navBar__logo} />
         </Link>
     </div>
@@ -38,16 +38,6 @@ NavItem.propTypes = {
 
 const NavBar = ({ currentPage }) => {
     const darkMode = useDarkMode(false);
-
-    if (typeof window !== 'undefined') {
-        // eslint-disable-next-line global-require
-        require('smooth-scroll')('a[href*="#"]', {
-            speed: 800,
-            speedAsDuration: true,
-            easing: 'easeInOutCubic',
-            offset: 96, // 136 on desktop
-        });
-    }
 
     return (
         <StaticQuery
@@ -83,12 +73,8 @@ const NavBar = ({ currentPage }) => {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" className="ml-right" />
                     <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">
                         <Nav className={Styles.navBar__items} activeKey={currentPage}>
-                            <NavItem link="/#home" name="Home" />
-                            <NavItem link="/#cafe" name="Cafe" />
+                            <NavItem link="/" name="Home" />
                             <Logo logo={data.logo.childImageSharp.fixed} className="d-none d-md-block" />
-                            <NavItem link="/#gallery" name="Gallery" />
-                            {/*<NavItem link="/shop" name="Shop" />*/}
-                            {/*<NavItem link="/service" name="Service" />*/}
                             <NavItem link="/contact" name="Contact" />
                         </Nav>
                     </Navbar.Collapse>
