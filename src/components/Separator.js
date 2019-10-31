@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import SeparatorStyles from '../styles/components/Separator.module.scss';
 
 const Separator = ({ className }) => (
-    <div className={`${className} ${SeparatorStyles.separator}`}>
+    <div className={'' !== className ? `${SeparatorStyles.separator} ${className}` : `${SeparatorStyles.separator}`}>
         <hr />
     </div>
 );
