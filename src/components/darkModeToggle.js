@@ -48,14 +48,15 @@ const checkedIcon = (
 );
 
 const DarkModeToggle = props => {
-    const darkMode = useDarkMode(false);
+    const darkMode = useDarkMode(false),
+        darkModeValue = null !== darkMode.value ? darkMode.value : false;
 
     return (
         <Switch
             {...props}
             title="dark mode switch"
-            aria-checked={darkMode.value}
-            checked={darkMode.value}
+            aria-checked={darkModeValue}
+            checked={darkModeValue}
             onChange={darkMode.toggle}
             uncheckedIcon={uncheckedIcon}
             checkedIcon={checkedIcon}
