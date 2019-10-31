@@ -69,7 +69,7 @@ const NavBar = ({ currentPage }) => {
                     className={Styles.navBar}
                 >
                     <Logo logo={data.logoMobile.childImageSharp.fixed} className="d-block d-md-none" />
-                    <DarkModeToggle className="d-block d-md-none" />
+                    <DarkModeToggle darkMode={darkMode} className="d-block d-md-none" />
                     <Navbar.Toggle aria-controls="basic-navbar-nav" className="ml-right" />
                     <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">
                         <Nav className={Styles.navBar__items} activeKey={currentPage}>
@@ -79,7 +79,7 @@ const NavBar = ({ currentPage }) => {
                         </Nav>
                     </Navbar.Collapse>
                     <div className={DarkModeToggleStyle.darkModeToggle}>
-                        <DarkModeToggle className="d-none d-md-block" />
+                        <DarkModeToggle darkMode={darkMode} className="d-none d-md-block" />
                     </div>
                 </Navbar>
             )}

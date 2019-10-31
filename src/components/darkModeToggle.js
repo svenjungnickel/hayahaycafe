@@ -1,5 +1,5 @@
 import React from 'react';
-import useDarkMode from 'use-dark-mode';
+import PropTypes from 'prop-types';
 import ReactSwitch from 'react-switch';
 
 const Switch = props => <ReactSwitch {...props} />;
@@ -47,13 +47,12 @@ const checkedIcon = (
     </div>
 );
 
-const DarkModeToggle = props => {
-    const darkMode = useDarkMode(false),
-        darkModeValue = null !== darkMode.value ? darkMode.value : false;
+const DarkModeToggle = ({ darkMode, className }) => {
+    const darkModeValue = null !== darkMode.value ? darkMode.value : false;
 
     return (
         <Switch
-            {...props}
+            className={className}
             title="dark mode switch"
             aria-checked={darkModeValue}
             checked={darkModeValue}
@@ -62,6 +61,11 @@ const DarkModeToggle = props => {
             checkedIcon={checkedIcon}
         />
     );
+};
+
+DarkModeToggle.propTypes = {
+    darkMode: PropTypes.object.isRequired,
+    className: PropTypes.string,
 };
 
 export default DarkModeToggle;
