@@ -18,7 +18,7 @@ const What3Words = ({ what3WordsAddress, what3WordsIcon }) => (
 
 What3Words.propTypes = {
     what3WordsAddress: PropTypes.string.isRequired,
-    what3wordsIcon: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
+    what3WordsIcon: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
 };
 
 const What3WordsAddress = () => (
