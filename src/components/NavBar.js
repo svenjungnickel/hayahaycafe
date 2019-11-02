@@ -24,10 +24,9 @@ Logo.propTypes = {
 
 const NavItem = ({ link, name }) => (
     <Nav.Item className={NavBarStyles.navBar__item}>
-        {/*<Nav.Link href={link} className={Styles.navBar__link}>*/}
-        <Link to={link} className={`nav-link ${NavBarStyles.navBar__link}`}>
+        <Nav.Link href={link} className={NavBarStyles.navBar__link}>
             {name}
-        </Link>
+        </Nav.Link>
     </Nav.Item>
 );
 

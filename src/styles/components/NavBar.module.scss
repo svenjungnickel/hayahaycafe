@@ -16,7 +16,6 @@
             .navBar__link {
                 color: var(--color-primary);
 
-                & > .active,
                 &:focus,
                 &:hover {
                     color: var(--color-secondary);

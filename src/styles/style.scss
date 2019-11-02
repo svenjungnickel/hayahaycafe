@@ -23,6 +23,16 @@ body {
     h1, h2, h3, h4, h5 {
         margin-bottom: 30px;
     }
+
+    // workaround to get active links in nav bar working
+    .navbar-light,
+    .navbar-dark {
+        .navbar-nav {
+            .nav-link.active {
+                color: var(--color-secondary);
+            }
+        }
+    }
 }
 
 body.dark-mode {
@@ -48,8 +58,8 @@ body.dark-mode {
 }
 
 $theme-colors: (
-    "primary": #662721,
-    "secondary": #d2a795,
-    "navbar-light-color": #662721,
+        "primary": #662721,
+        "secondary": #d2a795,
+        "navbar-light-color": #662721,
 );
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
