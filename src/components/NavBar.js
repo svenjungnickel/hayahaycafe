@@ -74,7 +74,7 @@ const NavBar = ({ currentPage }) => {
                     expand="md"
                     fixed="top"
                     id="site-navbar"
-                    className={true === smallNavBar ? NavBarStyles.navBar__small : NavBarStyles.navBar}
+                    className={true === smallNavBar ? NavBarStyles.navBarSmall : NavBarStyles.navBar}
                 >
                     <Logo logo={data.logoMobile.childImageSharp.fixed} className="d-block d-md-none" />
                     <DarkModeToggle darkMode={darkMode} className="d-block d-md-none" />
