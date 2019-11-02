@@ -1,4 +1,4 @@
-module.exports = {
+const config = {
     plugins: [
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-sass`,
@@ -97,3 +97,16 @@ module.exports = {
         'gatsby-plugin-netlify', // make sure to keep it last in the array
     ],
 };
+
+if ('production' === process.env.CONTEXT) {
+    const googleAnalyticsConfig = {
+        resolve: `gatsby-plugin-gtag`,
+        options: {
+            trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID || 'none',
+            anonymize: true,
+        },
+    };
+    config.plugins.push(googleAnalyticsConfig);
+}
+
+module.exports = config;

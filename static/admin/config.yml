@@ -155,4 +155,3 @@ collections: # A list of collections the CMS should be able to edit
                   - { label: 'Facebook', value: 'facebook' }
                   - { label: 'Instagram', value: 'instagram' }
                   - { label: 'Trip Advisor', value: 'tripadvisor' }
-          - { label: Google Analytics Tracking Id, name: googleTrackingId, widget: string, required: false }
