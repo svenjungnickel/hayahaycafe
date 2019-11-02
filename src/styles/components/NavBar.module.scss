@@ -13,7 +13,7 @@
         align-items: center;
 
         .navBar__item {
-            .navBar__link {
+            a {
                 color: var(--color-primary);
 
                 &:focus,
