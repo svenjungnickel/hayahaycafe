@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
-import { HTMLContent } from './content';
+import { HTMLContent } from './Content';
 
 const OpeningHours = () => (
     <StaticQuery

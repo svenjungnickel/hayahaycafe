@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import { Container, Row, Col } from 'react-bootstrap';
-import Layout from '../components/layout';
-import Header from '../components/header';
-import SectionStyles from '../styles/components/section.module.scss';
+import Layout from '../components/Layout';
+import Header from '../components/Header';
+import SectionStyles from '../styles/components/Section.module.scss';
 
 const meta = {
     title: '404: Not found',

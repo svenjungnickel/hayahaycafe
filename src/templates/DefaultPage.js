@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import { Col, Container, Row } from 'react-bootstrap';
-import Layout from '../components/layout';
-import Header from '../components/header';
-import Content, { HTMLContent } from '../components/content';
-import SectionStyles from '../styles/components/section.module.scss';
+import Layout from '../components/Layout';
+import Header from '../components/Header';
+import Content, { HTMLContent } from '../components/Content';
+import SectionStyles from '../styles/components/Section.module.scss';
 
 export const DefaultPageTemplate = ({ title, subtitle, headerImage, content, contentComponent }) => {
     const PostContent = contentComponent || Content;

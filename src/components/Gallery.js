@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Carousel from 'nuka-carousel';
 import FsLightbox from 'fslightbox-react';
-import Image from './image';
-import GalleryStyle from '../styles/components/gallery.module.scss';
+import Image from './Image';
+import GalleryStyle from '../styles/components/Gallery.module.scss';
 import '../styles/libs/fslightbox-react.scss';
 
 const PreviousButton = ({ previousSlide }) => (

@@ -2,7 +2,7 @@ import React, { useState, createRef } from 'react';
 import { Alert, Button, Col, Form } from 'react-bootstrap';
 import Recaptcha from 'react-google-recaptcha';
 import Fade from 'react-reveal/Fade';
-import Styles from '../styles/components/contactForm.module.scss';
+import ContactFormStyles from '../styles/components/ContactForm.module.scss';
 
 const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY;
 const CONTACT_FORM_FADE_UP_DURATION = 400;
@@ -61,7 +61,7 @@ export default () => {
     };
 
     return (
-        <div className={Styles.contactForm}>
+        <div className={ContactFormStyles.contactForm}>
             <Fade top collapse when={false === success} duration={CONTACT_FORM_FADE_UP_DURATION} unmountOnExit={true}>
                 <Form
                     noValidate
@@ -128,7 +128,7 @@ export default () => {
                             ref={recaptchaRef}
                             sitekey={RECAPTCHA_KEY}
                             onChange={handleRecaptcha}
-                            className={Styles.contactFormReCaptcha}
+                            className={ContactFormStyles.contactFormReCaptcha}
                         />
                         {true === recaptchaError && (
                             <div className="invalid-feedback" style={{ display: 'block' }}>
@@ -137,7 +137,7 @@ export default () => {
                         )}
                     </Form.Group>
 
-                    <Button variant="primary" type="submit" className={Styles.contactFormSubmitButton}>
+                    <Button variant="primary" type="submit" className={ContactFormStyles.contactFormSubmitButton}>
                         Submit
                     </Button>
                 </Form>
@@ -148,7 +148,7 @@ export default () => {
                 duration={SUCCESS_MESSAGE_FADE_IN_DURATION}
                 delay={CONTACT_FORM_FADE_UP_DURATION}
             >
-                <Alert variant="success" className={Styles.contactFormSuccess}>
+                <Alert variant="success" className={ContactFormStyles.contactFormSuccess}>
                     <p>{`Thank you for your message. We're getting in touch with you soon.`}</p>
                 </Alert>
             </Fade>

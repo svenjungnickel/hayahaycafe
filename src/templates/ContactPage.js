@@ -2,15 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import { Col, Container, Row } from 'react-bootstrap';
-import Layout from '../components/layout';
-import Header from '../components/header';
-import ContactForm from '../components/contactForm';
-import Content, { HTMLContent } from '../components/content';
+import Layout from '../components/Layout';
+import Header from '../components/Header';
+import ContactForm from '../components/ContactForm';
+import Content, { HTMLContent } from '../components/Content';
 import Address from '../components/Location';
 import Separator from '../components/Separator';
 import What3WordsAddress from '../components/What3WordsAddress';
 import OpeningHours from '../components/OpeningHours';
-import SectionStyles from '../styles/components/section.module.scss';
+import SectionStyles from '../styles/components/Section.module.scss';
 
 export const ContactPageTemplate = ({ title, subtitle, headerImage, content, contentComponent }) => {
     const PostContent = contentComponent || Content;

@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import { StaticQuery, graphql, Link } from 'gatsby';
 import { Navbar, Nav } from 'react-bootstrap';
 import useDarkMode from 'use-dark-mode';
-import DarkModeToggle from './darkModeToggle';
-import Styles from '../styles/components/navbar.module.scss';
-import DarkModeToggleStyle from '../styles/components/darkModeToggle.module.scss';
+import DarkModeToggle from './DarkModeToggle';
+import NavBarStyles from '../styles/components/NavBar.module.scss';
+import DarkModeToggleStyle from '../styles/components/DarkModeToggle.module.scss';
 
 const Logo = ({ logo, className }) => (
     <div className={className}>
         <Link to="/" className="link-no-style">
-            <img src={logo.src} alt="Logo" className={Styles.navBar__logo} />
+            <img src={logo.src} alt="Logo" className={NavBarStyles.navBar__logo} />
         </Link>
     </div>
 );
@@ -23,9 +23,9 @@ Logo.propTypes = {
 };
 
 const NavItem = ({ link, name }) => (
-    <Nav.Item className={Styles.navBar__item}>
+    <Nav.Item className={NavBarStyles.navBar__item}>
         {/*<Nav.Link href={link} className={Styles.navBar__link}>*/}
-        <Link to={link} className={`nav-link ${Styles.navBar__link}`}>
+        <Link to={link} className={`nav-link ${NavBarStyles.navBar__link}`}>
             {name}
         </Link>
     </Nav.Item>
@@ -66,13 +66,13 @@ const NavBar = ({ currentPage }) => {
                     expand="md"
                     sticky="top"
                     id="site-navbar"
-                    className={Styles.navBar}
+                    className={NavBarStyles.navBar}
                 >
                     <Logo logo={data.logoMobile.childImageSharp.fixed} className="d-block d-md-none" />
                     <DarkModeToggle darkMode={darkMode} className="d-block d-md-none" />
                     <Navbar.Toggle aria-controls="basic-navbar-nav" className="ml-right" />
                     <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">
-                        <Nav className={Styles.navBar__items} activeKey={currentPage}>
+                        <Nav className={NavBarStyles.navBar__items} activeKey={currentPage}>
                             <NavItem link="/" name="Home" />
                             <Logo logo={data.logo.childImageSharp.fixed} className="d-none d-md-block" />
                             <NavItem link="/contact" name="Contact" />

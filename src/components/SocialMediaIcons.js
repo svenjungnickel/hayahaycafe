@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { graphql, StaticQuery } from 'gatsby';
 import Button from 'react-bootstrap/Button';
 import { FaFacebookF, FaInstagram, FaTripadvisor } from 'react-icons/fa';
-import Styles from '../styles/components/SocialMediaIcons.module.scss';
+import SocialMediaIconsStyles from '../styles/components/SocialMediaIcons.module.scss';
 
 const SocialMediaIcon = ({ item }) => (
     <Button
@@ -42,7 +42,7 @@ const SocialMediaIcons = () => (
         render={({ globalSettings }) => (
             <>
                 {globalSettings && globalSettings.socialMedia && (
-                    <div className={`container text-center ${Styles.socialMedia}`}>
+                    <div className={`container text-center ${SocialMediaIconsStyles.socialMediaIcon}`}>
                         {globalSettings.socialMedia.map(item => (
                             <SocialMediaIcon item={item} key={item.type} />
                         ))}

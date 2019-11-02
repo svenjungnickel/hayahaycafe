@@ -2,16 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import { Col, Container, Row } from 'react-bootstrap';
-import Layout from '../components/layout';
-import Image from '../components/image';
-import Gallery from '../components/gallery';
-import Content, { HTMLContent } from '../components/content';
+import Layout from '../components/Layout';
+import Image from '../components/Image';
+import Gallery from '../components/Gallery';
+import Content, { HTMLContent } from '../components/Content';
 import Address from '../components/Location';
 import Separator from '../components/Separator';
 import OpeningHours from '../components/OpeningHours';
 import What3WordsAddress from '../components/What3WordsAddress';
-import StartPageStyles from '../styles/pages/start.module.scss';
-import SectionStyles from '../styles/components/section.module.scss';
+import StartPageStyles from '../styles/pages/Start.module.scss';
+import SectionStyles from '../styles/components/Section.module.scss';
 
 export const StartPageTemplate = ({ title, subtitle, headerImage, content, contentComponent, gallery }) => {
     const PostContent = contentComponent || Content;
