@@ -55,7 +55,6 @@ export default () => {
             }),
         })
             .then(() => {
-                console.log('success');
                 setSuccess(true);
             })
             .catch(error => alert(error));
