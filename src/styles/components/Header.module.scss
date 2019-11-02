@@ -1,10 +1,10 @@
 @import "../mixins/media-queries";
 
 .header {
-    height: calc(500px - 96px);
+    height: calc(500px);
 
     @include respond-above(md) {
-        height: calc(500px - 136px);
+        height: calc(500px);
     }
 
     .header__image {

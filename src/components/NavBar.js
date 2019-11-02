@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql, Link } from 'gatsby';
 import { Navbar, Nav } from 'react-bootstrap';
@@ -38,6 +38,14 @@ NavItem.propTypes = {
 
 const NavBar = ({ currentPage }) => {
     const darkMode = useDarkMode(false);
+    const [smallNavBar, setSmallNavBar] = useState(false);
+
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            // minimize nav bar only when scrolled past the nav bar height to avoid annoying flickering
+            setSmallNavBar(window.pageYOffset > 135);
+        });
+    });
 
     return (
         <StaticQuery
@@ -64,9 +72,9 @@ const NavBar = ({ currentPage }) => {
                     collapseOnSelect
                     variant={true === darkMode.value ? 'dark' : 'light'}
                     expand="md"
-                    sticky="top"
+                    fixed="top"
                     id="site-navbar"
-                    className={NavBarStyles.navBar}
+                    className={true === smallNavBar ? NavBarStyles.navBar__small : NavBarStyles.navBar}
                 >
                     <Logo logo={data.logoMobile.childImageSharp.fixed} className="d-block d-md-none" />
                     <DarkModeToggle darkMode={darkMode} className="d-block d-md-none" />
