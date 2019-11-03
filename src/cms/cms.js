@@ -11,8 +11,17 @@ import StartPagePreview from './previews/StartPagePreview';
 import ContactPagePreview from './previews/ContactPagePreview';
 import DefaultPagePreview from './previews/DefaultPagePreview';
 
-if (window.location.hostname === 'localhost' && window.localStorage.getItem('netlifySiteURL')) {
-    CMS.registerPreviewStyle(window.localStorage.getItem('netlifySiteURL') + '/admin/cms.css');
+if (window.location.hostname === 'localhost') {
+    const netlifySiteURL = window.localStorage.getItem('netlifySiteURL');
+
+    if (!netlifySiteURL && process.env.NETLIFY_SITE_URL) {
+        window.localStorage.setItem('netlifySiteURL', process.env.NETLIFY_SITE_URL);
+        window.location.reload();
+    }
+
+    if (netlifySiteURL) {
+        CMS.registerPreviewStyle(`${netlifySiteURL}/admin/cms.css`);
+    }
 }
 
 // CMS.registerMediaLibrary(cloudinary);
