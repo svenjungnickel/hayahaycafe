@@ -16,7 +16,7 @@ const Layout = ({ children, meta, currentPage }) => (
 Layout.propTypes = {
     children: PropTypes.node.isRequired,
     meta: PropTypes.object.isRequired,
-    currentPage: PropTypes.string,
+    currentPage: PropTypes.string.isRequired,
 };
 
 export default Layout;

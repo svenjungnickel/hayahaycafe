@@ -56,7 +56,7 @@ ContactPageTemplate.propTypes = {
 };
 
 const ContactPage = ({ data: { page } }) => (
-    <Layout meta={page.frontmatter.meta} currentPage="/contact">
+    <Layout meta={page.frontmatter.meta} currentPage={page.frontmatter.slug}>
         <ContactPageTemplate {...page.frontmatter} content={page.html} contentComponent={HTMLContent} />
     </Layout>
 );
@@ -74,6 +74,7 @@ export const pageQuery = graphql`
         page: markdownRemark(id: { eq: $id }) {
             html
             frontmatter {
+                slug
                 title
                 subtitle
                 headerImage {

@@ -18,7 +18,7 @@ export const StartPageTemplate = ({ title, subtitle, headerImage, content, conte
 
     return (
         <>
-            <header className={StartPageStyles.startHeader} id="home">
+            <header className={StartPageStyles.startHeader}>
                 <Image src={headerImage} alt={title} className={StartPageStyles.startHeader__image} />
 
                 <div className={StartPageStyles.startHeader__content}>
@@ -31,7 +31,7 @@ export const StartPageTemplate = ({ title, subtitle, headerImage, content, conte
                 </div>
             </header>
 
-            <section className={SectionStyles.section} id="cafe">
+            <section className={SectionStyles.section}>
                 <Container>
                     <Row>
                         <Col xs={12}>
@@ -77,7 +77,7 @@ StartPageTemplate.propTypes = {
 };
 
 const StartPage = ({ data: { page } }) => (
-    <Layout meta={page.frontmatter.meta} currentPage="/">
+    <Layout meta={page.frontmatter.meta} currentPage={page.frontmatter.slug}>
         <StartPageTemplate {...page.frontmatter} content={page.html} contentComponent={HTMLContent} />
     </Layout>
 );
@@ -99,6 +99,7 @@ export const pageQuery = graphql`
         page: markdownRemark(id: { eq: $id }) {
             html
             frontmatter {
+                slug
                 title
                 subtitle
                 headerImage {

@@ -41,6 +41,7 @@ NavItem.propTypes = {
 };
 
 const NavBar = ({ currentPage }) => {
+    currentPage = `/${currentPage}`;
     const darkMode = useDarkMode(false);
     const [smallNavBar, setSmallNavBar] = useState(false);
 
@@ -87,7 +88,7 @@ const NavBar = ({ currentPage }) => {
                         <Nav className={NavBarStyles.navBar__items}>
                             <NavItem link="/" name="Home" active={currentPage === '/'} />
                             <Logo logo={data.logo.childImageSharp.fixed} className="d-none d-md-block" />
-                            <NavItem link="/contact" name="Contact" active={currentPage === '/contact'} />
+                            <NavItem link="/story" name="Story" active={currentPage === '/story'} />
                         </Nav>
                     </Navbar.Collapse>
                     <div className={DarkModeToggleStyle.darkModeToggle}>
@@ -100,7 +101,7 @@ const NavBar = ({ currentPage }) => {
 };
 
 NavBar.propTypes = {
-    currentPage: PropTypes.string,
+    currentPage: PropTypes.string.isRequired,
 };
 
 export default NavBar;

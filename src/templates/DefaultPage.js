@@ -36,7 +36,7 @@ DefaultPageTemplate.propTypes = {
 };
 
 const DefaultPage = ({ data: { page } }) => (
-    <Layout meta={page.frontmatter.meta}>
+    <Layout meta={page.frontmatter.meta} currentPage={page.frontmatter.slug}>
         <DefaultPageTemplate {...page.frontmatter} content={page.html} contentComponent={HTMLContent} />
     </Layout>
 );
@@ -54,6 +54,7 @@ export const pageQuery = graphql`
         page: markdownRemark(id: { eq: $id }) {
             html
             frontmatter {
+                slug
                 title
                 subtitle
                 headerImage {
