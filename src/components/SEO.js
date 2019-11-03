@@ -62,7 +62,12 @@ function SEO({ title, description, keywords }) {
                     content: metaKeywords,
                 },
             ]}
-        />
+        >
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://www.google-analytics.com" />
+            <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        </Helmet>
     );
 }
 
