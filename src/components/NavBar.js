@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { StaticQuery, graphql, Link } from 'gatsby';
 import { Navbar, Nav } from 'react-bootstrap';
 import useDarkMode from 'use-dark-mode';
+import Image from './Image';
 import DarkModeToggle from './DarkModeToggle';
 import NavBarStyles from '../styles/components/NavBar.module.scss';
 import DarkModeToggleStyle from '../styles/components/DarkModeToggle.module.scss';
@@ -10,7 +11,7 @@ import DarkModeToggleStyle from '../styles/components/DarkModeToggle.module.scss
 const Logo = ({ logo, className }) => (
     <div className={className}>
         <Link to="/">
-            <img src={logo.src} alt="Logo" className={NavBarStyles.navBar__logo} />
+            <Image src={logo.src} alt="Logo" className={NavBarStyles.navBar__logo} />
         </Link>
     </div>
 );
