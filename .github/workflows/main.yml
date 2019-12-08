@@ -9,9 +9,12 @@ jobs:
         uses: treosh/lighthouse-ci-action@v2
         with:
           urls: |
-            https://hayahaycafe.netlify.com/
-            https://hayahaycafe.netlify.com/contact
-            https://hayahaycafe.netlify.com/story
+            https://$URL/
+            https://$URL/contact
+            https://$URL/story
+          temporaryPublicStorage: true
+          env:
+            URL: hayahaycafe.netlify.com
       - name: Save results
         uses: actions/upload-artifact@v1
         with:
