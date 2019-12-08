@@ -9,9 +9,9 @@ jobs:
         uses: treosh/lighthouse-ci-action@v2
         with:
           urls: |
-            http://hayahaycafe.netlify.com/
-            http://hayahaycafe.netlify.com/contact
-            http://hayahaycafe.netlify.com/story
+            https://hayahaycafe.netlify.com/
+            https://hayahaycafe.netlify.com/contact
+            https://hayahaycafe.netlify.com/story
       - name: Save results
         uses: actions/upload-artifact@v1
         with:
