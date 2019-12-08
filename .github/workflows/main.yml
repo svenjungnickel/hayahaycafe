@@ -1,5 +1,5 @@
 name: Lighthouse
-on: [push, pull-request]
+on: push
 jobs:
   static-dist-dir:
     runs-on: ubuntu-latest
