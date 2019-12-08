@@ -7,6 +7,6 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: run Lighthouse CI
-        uses: treosh/lighthouse-ci-action@v2
-        with:
-          configPath: ./lighthouserc.json
+        run: |
+          npm install -g @lhci/cli@0.3.x
+          lhci autorun
