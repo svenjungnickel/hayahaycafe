@@ -18,3 +18,13 @@ jobs:
         with:
           name: lighthouse-results
           path: '.lighthouseci' # This will save the Lighthouse results as .json files
+      - name: Run Lighthouse for preview
+        uses: treosh/lighthouse-ci-action@v2
+        with:
+          urls: |
+            https://$PR_NUMBER--hayahaycafe.netlify.com/
+            https://$PR_NUMBER--hayahaycafe.netlify.com/contact
+            https://$PR_NUMBER--hayahaycafe.netlify.com/story
+          temporaryPublicStorage: true
+          env:
+            PR_NUMBER: ${{ github.event.pull_request.number }}
