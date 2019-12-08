@@ -1,14 +1,15 @@
 {
   "ci": {
     "collect": {
-      "numberOfRuns": 1,
-      "staticDistDir": "./public"
+      "numberOfRuns": 3,
+      "url": [
+        "https://hayahaycafe.netlify.com/",
+        "https://hayahaycafe.netlify.com/story",
+        "https://hayahaycafe.netlify.com/contct"
+      ]
     },
     "assert": {
-      "preset": "lighthouse:recommended",
-      "assertions": {
-        "uses-http2": "off"
-      }
+      "preset": "lighthouse:recommended"
     },
     "upload": {
       "target": "temporary-public-storage"
