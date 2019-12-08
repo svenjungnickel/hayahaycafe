@@ -15,8 +15,8 @@ jobs:
           npm install
           npm run build
       - name: run Lighthouse CI
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
         run: |
           npm install -g @lhci/cli@0.3.x
           lhci autorun
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
