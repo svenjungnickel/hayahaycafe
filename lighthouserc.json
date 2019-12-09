@@ -3,13 +3,27 @@
     "collect": {
       "numberOfRuns": 3,
       "url": [
-        "https://hayahaycafe.netlify.com/",
-        "https://hayahaycafe.netlify.com/story",
-        "https://hayahaycafe.netlify.com/contact"
+        "https://hayahaycafe.netlify.com/"
       ]
     },
     "assert": {
-      "preset": "lighthouse:recommended"
+      "preset": "lighthouse:recommended",
+      "assertions": {
+        "offscreen-images": [
+          "warn",
+          {
+            "maxNumericValue": 1,
+            "aggregationMethod": "optimistic"
+          }
+        ],
+        "unused-css-rules": [
+          "warn",
+          {
+            "maxNumericValue": 1,
+            "aggregationMethod": "optimistic"
+          }
+        ]
+      }
     },
     "upload": {
       "target": "temporary-public-storage"

@@ -76,3 +76,4 @@ tutorial.md
 package-lock.json
 
 .netlify
+.lighthouseci
