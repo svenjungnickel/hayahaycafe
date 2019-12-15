@@ -23,4 +23,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 10.x
-      - uses: hallee/eslint-action@1.0.1
+      - name: run ESLint
+          run: |
+            npx eslint ./src/
