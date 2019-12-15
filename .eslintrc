@@ -7,13 +7,19 @@
     "node": true
   },
   "plugins": [
-    "react"
+    "react",
+    "react-hooks"
   ],
   "extends": [
     "plugin:prettier/recommended",
     "plugin:react/recommended",
     "eslint:recommended"
   ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
   "rules": {
     "quotes": [1, "single", "avoid-escape"],
     "react/prop-types": 0,

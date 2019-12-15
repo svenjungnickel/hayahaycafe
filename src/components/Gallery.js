@@ -63,7 +63,7 @@ const Gallery = ({ images }) => {
     const [toggler, setToggler] = useState(false);
     const imageSources = images.map(image => {
         if (!!image.src && !!image.src.childImageSharp) {
-            if (!!image.src.childImageSharp.fluid) {
+            if (image.src.childImageSharp.fluid) {
                 return image.src.childImageSharp.fluid.src;
             }
 

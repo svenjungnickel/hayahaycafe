@@ -3,7 +3,6 @@
  * extension registration methods, such as `registerWidget` and
  * `registerPreviewTemplate`.
  */
-import React from 'react';
 import CMS from 'netlify-cms-app';
 // import cloudinary from 'netlify-cms-media-library-cloudinary';
 

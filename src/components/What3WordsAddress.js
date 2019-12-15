@@ -8,11 +8,11 @@ const What3Words = ({ what3WordsAddress, what3WordsIcon }) => (
     <a
         href={`https://what3words.com/${what3WordsAddress}`}
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
         className={What3WordsAddressStyles.what3words}
     >
         <Image src={what3WordsIcon} alt="What3words address" />
-        <p className={What3WordsAddressStyles.what3words__address}>///{what3WordsAddress}</p>
+        <p className={What3WordsAddressStyles.what3words__address}>{`///${what3WordsAddress}`}</p>
     </a>
 );
 

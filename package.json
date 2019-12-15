@@ -44,13 +44,14 @@
   "devDependencies": {
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
-    "eslint": "^6.6.0",
-    "eslint-config-prettier": "^6.5.0",
+    "eslint": "^6.7.2",
+    "eslint-config-prettier": "^6.7.0",
     "eslint-loader": "^3.0.2",
-    "eslint-plugin-prettier": "^3.1.1",
-    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
     "gh-pages": "^2.1.1",
-    "prettier": "^1.17.0"
+    "prettier": "^1.19.1"
   },
   "keywords": [
     "gatsby"
@@ -63,6 +64,7 @@
     "start": "npm run develop",
     "serve": "gatsby clean && gatsby build && gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "lint": "eslint --fix ./src/ && echo 'Lint complete.'",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "homepage": "https://www.hayahaycafe.com"

@@ -149,7 +149,7 @@ export default () => {
                 delay={CONTACT_FORM_FADE_UP_DURATION}
             >
                 <Alert variant="success" className={ContactFormStyles.contactFormSuccess}>
-                    <p>{`Thank you for your message. We're getting in touch with you soon.`}</p>
+                    <p>{"Thank you for your message. We're getting in touch with you soon."}</p>
                 </Alert>
             </Fade>
         </div>

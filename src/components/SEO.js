@@ -42,23 +42,23 @@ function SEO({ title, description, keywords }) {
             titleTemplate={titleTemplate}
             meta={[
                 {
-                    name: `description`,
+                    name: 'description',
                     content: metaDescription,
                 },
                 {
-                    property: `og:title`,
+                    property: 'og:title',
                     content: metaTitle,
                 },
                 {
-                    property: `og:description`,
+                    property: 'og:description',
                     content: metaDescription,
                 },
                 {
-                    property: `og:type`,
-                    content: `website`,
+                    property: 'og:type',
+                    content: 'website',
                 },
                 {
-                    name: `keywords`,
+                    name: 'keywords',
                     content: metaKeywords,
                 },
             ]}

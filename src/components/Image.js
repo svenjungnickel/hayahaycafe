@@ -6,7 +6,7 @@ const Image = props => {
     const { src } = props;
 
     if (!!src && !!src.childImageSharp) {
-        if (!!src.childImageSharp.fluid) {
+        if (src.childImageSharp.fluid) {
             return <Img fluid={src.childImageSharp.fluid} {...props} />;
         }
 
