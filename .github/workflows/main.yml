@@ -25,4 +25,5 @@ jobs:
           node-version: 10.x
       - name: run ESLint
         run: |
+            npm install
             npx eslint ./src/
