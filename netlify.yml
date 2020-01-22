@@ -1,6 +1,7 @@
 build:
   publish: public/
   lifecycle:
-    onPreBuild: echo SITE_RECAPTCHA_KEY=$SITE_RECAPTCHA_KEY >> .env.production
+    onPreBuild:
+      - rm .env.production
+      - echo SITE_RECAPTCHA_KEY=$SITE_RECAPTCHA_KEY >> .env.production
     onBuild: gatsby build
-    onSuccess: npx lhci autorun
