@@ -1,11 +1,11 @@
 module.exports = {
     plugins: [
-        `gatsby-plugin-react-helmet`,
-        `gatsby-plugin-sass`,
-        `gatsby-plugin-use-dark-mode`,
+        'gatsby-plugin-react-helmet',
+        'gatsby-plugin-sass',
+        'gatsby-plugin-use-dark-mode',
         'gatsby-transformer-yaml',
         {
-            resolve: `gatsby-plugin-google-analytics`,
+            resolve: 'gatsby-plugin-google-analytics',
             options: {
                 trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID || 'none',
                 anonymize: true,
@@ -15,9 +15,9 @@ module.exports = {
 
         // Add static assets before markdown files
         {
-            resolve: `gatsby-source-filesystem`,
+            resolve: 'gatsby-source-filesystem',
             options: {
-                name: `assets`,
+                name: 'assets',
                 path: `${__dirname}/assets/`,
             },
         },
@@ -37,8 +37,8 @@ module.exports = {
         },
 
         // images
-        `gatsby-plugin-sharp`,
-        `gatsby-transformer-sharp`,
+        'gatsby-plugin-sharp',
+        'gatsby-transformer-sharp',
         {
             resolve: 'gatsby-transformer-remark',
             options: {
@@ -46,7 +46,7 @@ module.exports = {
                     // gatsby-remark-relative-images must
                     // go before gatsby-remark-images
                     {
-                        resolve: `gatsby-remark-relative-images`,
+                        resolve: 'gatsby-remark-relative-images',
                         options: {
                             name: 'images', // Must match the source name
                         },
@@ -71,26 +71,26 @@ module.exports = {
             },
         },
         {
-            resolve: `gatsby-plugin-manifest`,
+            resolve: 'gatsby-plugin-manifest',
             options: {
-                name: `Hayahay Cafe`,
-                short_name: `hayahay-cafe`,
-                start_url: `/`,
-                background_color: `#662721`,
-                theme_color: `#d2a795`,
+                name: 'Hayahay Cafe',
+                short_name: 'hayahay-cafe',
+                start_url: '/',
+                background_color: '#662721',
+                theme_color: '#d2a795',
                 // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
                 // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
-                display: `standalone`,
-                icon: `assets/icon.png`, // This path is relative to the root of the site.
+                display: 'standalone',
+                icon: 'assets/icon.png', // This path is relative to the root of the site.
             },
         },
         // This (optional) plugin enables Progressive Web App + Offline functionality.
         // The offline plugin should be listed after the manifest plugin so that the offline plugin can cache the
         // created manifest.webmanifest
-        `gatsby-plugin-offline`,
+        'gatsby-plugin-offline',
 
         {
-            resolve: `gatsby-plugin-netlify-cms`,
+            resolve: 'gatsby-plugin-netlify-cms',
             options: {
                 /**
                  * One convention is to place your Netlify CMS customization code in a
@@ -98,7 +98,7 @@ module.exports = {
                  */
                 modulePath: `${__dirname}/src/cms/cms.js`,
                 enableIdentityWidget: true,
-                htmlTitle: `Hayahay Cafe - Admin`,
+                htmlTitle: 'Hayahay Cafe - Admin',
                 logo: 'assets/logo.png',
             },
         },
