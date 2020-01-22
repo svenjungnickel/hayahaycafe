@@ -1,0 +1,8 @@
+plugins:
+  - type: netlify-plugin-lighthouse
+    config:
+      url: "https://hayahaycafe.netlify.com"
+build:
+  publish: public/
+  lifecycle:
+    onInit: "echo SITE_RECAPTCHA_KEY=$SITE_RECAPTCHA_KEY >> .env.production && gatsby build"
