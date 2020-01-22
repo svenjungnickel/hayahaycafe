@@ -4,15 +4,18 @@
     "browser": true,
     "commonjs": true,
     "es6": true,
-    "node": true
+    "node": true,
+    "jest/globals": true
   },
   "plugins": [
+    "jest",
     "react",
     "react-hooks"
   ],
   "extends": [
     "plugin:prettier/recommended",
     "plugin:react/recommended",
+    "plugin:jest/recommended",
     "eslint:recommended"
   ],
   "settings": {
@@ -30,6 +33,11 @@
     "no-var": 2,
     "react/react-in-jsx-scope": 0,
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn"
+    "react-hooks/exhaustive-deps": "warn",
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error"
   }
 }
