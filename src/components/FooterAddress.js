@@ -2,10 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql, StaticQuery } from 'gatsby';
 
-const AddressItem = ({ item }) => <>{item && <>{item}, </>}</>;
+const ListFooterAddress = ({ address }) => {
+    const filteredAddressItems = Object.values(address).filter(item => '' !== item);
 
-AddressItem.propTypes = {
-    item: PropTypes.string.isRequired,
+    return <p>{0 < filteredAddressItems.length && <>{filteredAddressItems.join(', ')}</>}</p>;
+};
+
+ListFooterAddress.propTypes = {
+    address: PropTypes.shape({
+        company: PropTypes.string,
+        addressLine1: PropTypes.string,
+        addressLine2: PropTypes.string,
+        province: PropTypes.string,
+        postalCode: PropTypes.string,
+        country: PropTypes.string,
+    }).isRequired,
 };
 
 const FooterAddress = () => (
@@ -29,14 +40,7 @@ const FooterAddress = () => (
         render={({ globalSettings }) => (
             <>
                 {!!globalSettings && !!globalSettings.location && !!globalSettings.location.address && (
-                    <p>
-                        <AddressItem item={globalSettings.location.address.company} />
-                        <AddressItem item={globalSettings.location.address.addressLine1} />
-                        <AddressItem item={globalSettings.location.address.addressLine2} />
-                        <AddressItem item={globalSettings.location.address.province} />
-                        <AddressItem item={globalSettings.location.address.postalCode} />
-                        {globalSettings.location.address.country && <>{globalSettings.location.address.country}</>}
-                    </p>
+                    <ListFooterAddress address={globalSettings.location.address} />
                 )}
             </>
         )}
