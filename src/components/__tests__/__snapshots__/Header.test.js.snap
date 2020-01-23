@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Header renders correctly 1`] = `
+exports[`Header renders with subtitle 1`] = `
 <header
   className="header"
 >
@@ -27,6 +27,34 @@ exports[`Header renders correctly 1`] = `
         >
           subtitle
         </p>
+      </div>
+    </div>
+  </div>
+</header>
+`;
+
+exports[`Header renders without subtitle 1`] = `
+<header
+  className="header"
+>
+  <img
+    alt="alt"
+    src="src"
+  />
+  <div
+    className="header__content"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="header__contentInner"
+      >
+        <h1
+          className="display-1"
+        >
+          title
+        </h1>
       </div>
     </div>
   </div>
