@@ -59,7 +59,10 @@ describe('Location', () => {
                     address: {
                         company: 'company',
                         addressLine1: 'addressLine1',
+                        addressLine2: '',
+                        province: '',
                         postalCode: 'postalCode',
+                        country: '',
                     },
                 },
             },

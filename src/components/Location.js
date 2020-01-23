@@ -2,34 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql, StaticQuery } from 'gatsby';
 
-const AddressItem = ({ item }) => (
-    <>
-        {item && (
-            <>
-                {item}
-                <br />
-            </>
-        )}
-    </>
-);
+const ListAddress = ({ address }) => {
+    const filteredAddressItems = Object.values(address).filter(item => '' !== item);
 
-AddressItem.propTypes = {
-    item: PropTypes.string,
+    return (
+        <>
+            <h2>Location</h2>
+            {0 < filteredAddressItems.length && <>{filteredAddressItems.join('<br />')}</>}
+        </>
+    );
 };
 
-const Address = ({ address }) => (
-    <>
-        <h2>Location</h2>
-        <AddressItem item={address.company} />
-        <AddressItem item={address.addressLine1} />
-        <AddressItem item={address.addressLine2} />
-        <AddressItem item={address.province} />
-        <AddressItem item={address.postalCode} />
-        <AddressItem item={address.country} />
-    </>
-);
-
-Address.propTypes = {
+ListAddress.propTypes = {
     address: PropTypes.shape({
         company: PropTypes.string,
         addressLine1: PropTypes.string,
@@ -61,7 +45,7 @@ const Location = () => (
         render={({ globalSettings }) => (
             <>
                 {!!globalSettings && !!globalSettings.location && !!globalSettings.location.address && (
-                    <Address address={globalSettings.location.address} />
+                    <ListAddress address={globalSettings.location.address} />
                 )}
             </>
         )}

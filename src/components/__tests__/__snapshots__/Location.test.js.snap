@@ -5,12 +5,7 @@ Array [
   <h2>
     Location
   </h2>,
-  "company",
-  <br />,
-  "addressLine1",
-  <br />,
-  "postalCode",
-  <br />,
+  "company<br />addressLine1<br />postalCode",
 ]
 `;
 
@@ -19,18 +14,7 @@ Array [
   <h2>
     Location
   </h2>,
-  "company",
-  <br />,
-  "addressLine1",
-  <br />,
-  "addressLine2",
-  <br />,
-  "province",
-  <br />,
-  "postalCode",
-  <br />,
-  "country",
-  <br />,
+  "company<br />addressLine1<br />addressLine2<br />province<br />postalCode<br />country",
 ]
 `;
 
