@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Location renders address data with company, first address line and postal code 1`] = `
+Array [
+  <h2>
+    Location
+  </h2>,
+  "company",
+  <br />,
+  "addressLine1",
+  <br />,
+  "postalCode",
+  <br />,
+]
+`;
+
+exports[`Location renders complete address data (company, first and second address line, province, postal code and country 1`] = `
+Array [
+  <h2>
+    Location
+  </h2>,
+  "company",
+  <br />,
+  "addressLine1",
+  <br />,
+  "addressLine2",
+  <br />,
+  "province",
+  <br />,
+  "postalCode",
+  <br />,
+  "country",
+  <br />,
+]
+`;
+
+exports[`Location renders empty address data 1`] = `
+<h2>
+  Location
+</h2>
+`;
+
+exports[`Location renders empty data 1`] = `null`;
+
+exports[`Location renders empty globalSettings data 1`] = `null`;
+
+exports[`Location renders empty location data 1`] = `null`;

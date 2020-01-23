@@ -14,7 +14,7 @@ const AddressItem = ({ item }) => (
 );
 
 AddressItem.propTypes = {
-    item: PropTypes.string.isRequired,
+    item: PropTypes.string,
 };
 
 const Address = ({ address }) => (
@@ -25,7 +25,7 @@ const Address = ({ address }) => (
         <AddressItem item={address.addressLine2} />
         <AddressItem item={address.province} />
         <AddressItem item={address.postalCode} />
-        {address.country && <>{address.country}</>}
+        <AddressItem item={address.country} />
     </>
 );
 
