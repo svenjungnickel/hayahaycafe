@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Content renders classname 1`] = `
+<div
+  className="className"
+/>
+`;
+
+exports[`Content renders content 1`] = `
+<div>
+  Content
+</div>
+`;
+
+exports[`Content renders content and classname 1`] = `
+<div
+  className="className"
+>
+  Content
+</div>
+`;
+
+exports[`HTMLContent renders classname 1`] = `
+<div
+  className="className"
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": undefined,
+    }
+  }
+/>
+`;
+
+exports[`HTMLContent renders content 1`] = `
+<div
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "<p>HTMLContent</p>",
+    }
+  }
+/>
+`;
+
+exports[`HTMLContent renders content and classname 1`] = `
+<div
+  className="className"
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "<p>HTMLContent</p>",
+    }
+  }
+/>
+`;
