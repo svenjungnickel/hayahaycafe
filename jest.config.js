@@ -13,6 +13,7 @@ module.exports = {
         __PATH_PREFIX__: '',
     },
     setupFiles: ['<rootDir>/loadershim.js', 'jest-prop-type-error'],
+    setupFilesAfterEnv: ['<rootDir>/setupEnzyme.js'],
     collectCoverage: true,
     collectCoverageFrom: ['<rootDir>/src/**/*.{js,jsx}', '!**/node_modules/**', '!**/vendor/**'],
     coverageReporters: ['html', 'text-summary'],
