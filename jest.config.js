@@ -12,7 +12,7 @@ module.exports = {
     globals: {
         __PATH_PREFIX__: '',
     },
-    setupFiles: ['<rootDir>/loadershim.js'],
+    setupFiles: ['<rootDir>/loadershim.js', 'jest-prop-type-error'],
     collectCoverage: true,
     collectCoverageFrom: ['<rootDir>/src/**/*.{js,jsx}', '!**/node_modules/**', '!**/vendor/**'],
     coverageReporters: ['html', 'text-summary'],
