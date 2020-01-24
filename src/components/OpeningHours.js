@@ -11,12 +11,12 @@ const OpeningHours = () => (
                 }
             }
         `}
-        render={({ globalSettings: { openingHours } }) => (
+        render={({ globalSettings }) => (
             <>
-                {!!openingHours && (
+                {!!globalSettings && !!globalSettings.openingHours && (
                     <>
                         <h2>Opening Hours</h2>
-                        <HTMLContent content={openingHours} />
+                        <HTMLContent content={globalSettings.openingHours} />
                     </>
                 )}
             </>

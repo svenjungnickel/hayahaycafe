@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OpeningHours renders correctly 1`] = `
+Array [
+  <h2>
+    Opening Hours
+  </h2>,
+  <div
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<p>openingHours</p>",
+      }
+    }
+  />,
+]
+`;
+
+exports[`OpeningHours renders empty data 1`] = `null`;
+
+exports[`OpeningHours renders empty globalSettings data 1`] = `null`;
