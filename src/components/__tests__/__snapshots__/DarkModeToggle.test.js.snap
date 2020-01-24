@@ -1,0 +1,321 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DarkModeToggle renders darkMode value null (default) 1`] = `
+<div
+  className="className"
+  style={
+    Object {
+      "MozTransition": "opacity 0.25s",
+      "MozUserSelect": "none",
+      "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
+      "WebkitTransition": "opacity 0.25s",
+      "WebkitUserSelect": "none",
+      "borderRadius": 12,
+      "direction": "ltr",
+      "display": "inline-block",
+      "msUserSelect": "none",
+      "opacity": 1,
+      "position": "relative",
+      "textAlign": "left",
+      "touchAction": "none",
+      "transition": "opacity 0.25s",
+      "userSelect": "none",
+    }
+  }
+>
+  <div
+    className="react-switch-bg"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+    style={
+      Object {
+        "MozTransition": "background 0.25s",
+        "WebkitTransition": "background 0.25s",
+        "background": "#000000",
+        "borderRadius": 12,
+        "cursor": "pointer",
+        "height": 24,
+        "margin": 0,
+        "position": "relative",
+        "transition": "background 0.25s",
+        "width": 48,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "MozTransition": "opacity 0.25s",
+          "WebkitTransition": "opacity 0.25s",
+          "height": 24,
+          "opacity": 0,
+          "pointerEvents": "none",
+          "position": "relative",
+          "transition": "opacity 0.25s",
+          "width": 25,
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "alignItems": "center",
+            "color": "yellow",
+            "display": "flex",
+            "fontSize": 15,
+            "height": "100%",
+            "justifyContent": "center",
+            "paddingRight": 2,
+          }
+        }
+      >
+        ☾
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "MozTransition": "opacity 0.25s",
+          "WebkitTransition": "opacity 0.25s",
+          "height": 24,
+          "opacity": 1,
+          "pointerEvents": "none",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "transition": "opacity 0.25s",
+          "width": 25,
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "alignItems": "center",
+            "color": "yellow",
+            "display": "flex",
+            "fontSize": 15,
+            "height": "100%",
+            "justifyContent": "center",
+            "paddingLeft": 2,
+          }
+        }
+      >
+        ☀
+      </div>
+    </div>
+  </div>
+  <div
+    className="react-switch-handle"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+    onTouchCancel={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "MozTransition": "background-color 0.25s, transform 0.25s, box-shadow 0.15s",
+        "WebkitTransition": "background-color 0.25s, transform 0.25s, box-shadow 0.15s",
+        "background": "#ffffff",
+        "border": 0,
+        "borderRadius": "50%",
+        "boxShadow": "inset 0 0 0 1px #000",
+        "cursor": "pointer",
+        "display": "inline-block",
+        "height": 24,
+        "outline": 0,
+        "position": "absolute",
+        "top": 0,
+        "transform": "translateX(0px)",
+        "transition": "background-color 0.25s, transform 0.25s, box-shadow 0.15s",
+        "width": 24,
+      }
+    }
+  />
+  <input
+    aria-checked={false}
+    checked={false}
+    disabled={false}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyUp={[Function]}
+    role="switch"
+    style={
+      Object {
+        "border": 0,
+        "clip": "rect(0 0 0 0)",
+        "height": 1,
+        "margin": -1,
+        "overflow": "hidden",
+        "padding": 0,
+        "position": "absolute",
+        "width": 1,
+      }
+    }
+    title="dark mode switch"
+    type="checkbox"
+  />
+</div>
+`;
+
+exports[`DarkModeToggle renders darkMode value true 1`] = `
+<div
+  className="className"
+  style={
+    Object {
+      "MozTransition": "opacity 0.25s",
+      "MozUserSelect": "none",
+      "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
+      "WebkitTransition": "opacity 0.25s",
+      "WebkitUserSelect": "none",
+      "borderRadius": 12,
+      "direction": "ltr",
+      "display": "inline-block",
+      "msUserSelect": "none",
+      "opacity": 1,
+      "position": "relative",
+      "textAlign": "left",
+      "touchAction": "none",
+      "transition": "opacity 0.25s",
+      "userSelect": "none",
+    }
+  }
+>
+  <div
+    className="react-switch-bg"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+    style={
+      Object {
+        "MozTransition": "background 0.25s",
+        "WebkitTransition": "background 0.25s",
+        "background": "#000000",
+        "borderRadius": 12,
+        "cursor": "pointer",
+        "height": 24,
+        "margin": 0,
+        "position": "relative",
+        "transition": "background 0.25s",
+        "width": 48,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "MozTransition": "opacity 0.25s",
+          "WebkitTransition": "opacity 0.25s",
+          "height": 24,
+          "opacity": 1,
+          "pointerEvents": "none",
+          "position": "relative",
+          "transition": "opacity 0.25s",
+          "width": 25,
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "alignItems": "center",
+            "color": "yellow",
+            "display": "flex",
+            "fontSize": 15,
+            "height": "100%",
+            "justifyContent": "center",
+            "paddingRight": 2,
+          }
+        }
+      >
+        ☾
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "MozTransition": "opacity 0.25s",
+          "WebkitTransition": "opacity 0.25s",
+          "height": 24,
+          "opacity": 0,
+          "pointerEvents": "none",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "transition": "opacity 0.25s",
+          "width": 25,
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "alignItems": "center",
+            "color": "yellow",
+            "display": "flex",
+            "fontSize": 15,
+            "height": "100%",
+            "justifyContent": "center",
+            "paddingLeft": 2,
+          }
+        }
+      >
+        ☀
+      </div>
+    </div>
+  </div>
+  <div
+    className="react-switch-handle"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+    onTouchCancel={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    style={
+      Object {
+        "MozTransition": "background-color 0.25s, transform 0.25s, box-shadow 0.15s",
+        "WebkitTransition": "background-color 0.25s, transform 0.25s, box-shadow 0.15s",
+        "background": "#ffffff",
+        "border": 0,
+        "borderRadius": "50%",
+        "boxShadow": "inset 0 0 0 1px #000",
+        "cursor": "pointer",
+        "display": "inline-block",
+        "height": 24,
+        "outline": 0,
+        "position": "absolute",
+        "top": 0,
+        "transform": "translateX(24px)",
+        "transition": "background-color 0.25s, transform 0.25s, box-shadow 0.15s",
+        "width": 24,
+      }
+    }
+  />
+  <input
+    aria-checked={true}
+    checked={true}
+    disabled={false}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyUp={[Function]}
+    role="switch"
+    style={
+      Object {
+        "border": 0,
+        "clip": "rect(0 0 0 0)",
+        "height": 1,
+        "margin": -1,
+        "overflow": "hidden",
+        "padding": 0,
+        "position": "absolute",
+        "width": 1,
+      }
+    }
+    title="dark mode switch"
+    type="checkbox"
+  />
+</div>
+`;
