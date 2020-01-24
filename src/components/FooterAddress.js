@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql, StaticQuery } from 'gatsby';
 
-const ListFooterAddress = ({ address }) => {
+export const ListFooterAddress = ({ address }) => {
     const filteredAddressItems = Object.values(address).filter(item => '' !== item);
 
     return <p>{0 < filteredAddressItems.length && <>{filteredAddressItems.join(', ')}</>}</p>;

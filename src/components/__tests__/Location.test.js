@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { StaticQuery } from 'gatsby';
-import Location from '../Location';
+import Location, { ListAddress } from '../Location';
 
 describe('Location', () => {
     it('renders empty data', () => {
@@ -10,6 +10,7 @@ describe('Location', () => {
 
         const component = <Location />;
         const tree = renderer.create(component).toJSON();
+
         expect(tree).toMatchSnapshot();
     });
 
@@ -21,6 +22,7 @@ describe('Location', () => {
 
         const component = <Location />;
         const tree = renderer.create(component).toJSON();
+
         expect(tree).toMatchSnapshot();
     });
 
@@ -34,6 +36,7 @@ describe('Location', () => {
 
         const component = <Location />;
         const tree = renderer.create(component).toJSON();
+
         expect(tree).toMatchSnapshot();
     });
 
@@ -49,6 +52,7 @@ describe('Location', () => {
 
         const component = <Location />;
         const tree = renderer.create(component).toJSON();
+
         expect(tree).toMatchSnapshot();
     });
 
@@ -71,6 +75,7 @@ describe('Location', () => {
 
         const component = <Location />;
         const tree = renderer.create(component).toJSON();
+
         expect(tree).toMatchSnapshot();
     });
 
@@ -93,6 +98,25 @@ describe('Location', () => {
 
         const component = <Location />;
         const tree = renderer.create(component).toJSON();
+
         expect(tree).toMatchSnapshot();
+    });
+
+    it('renders with invalid address data throws prop type error', () => {
+        const renderListAddress = () => {
+            const address = {
+                company: '',
+                addressLine1: 'addressLine1',
+                addressLine2: '',
+                province: 'province',
+                postalCode: 12345,
+                country: '',
+            };
+
+            const component = <ListAddress address={address} />;
+            renderer.create(component);
+        };
+
+        expect(renderListAddress).toThrowError('Warning: Failed prop type');
     });
 });

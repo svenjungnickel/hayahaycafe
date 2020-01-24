@@ -10,6 +10,7 @@ describe('OpeningHours', () => {
 
         const component = <OpeningHours />;
         const tree = renderer.create(component).toJSON();
+
         expect(tree).toMatchSnapshot();
     });
 
@@ -21,6 +22,7 @@ describe('OpeningHours', () => {
 
         const component = <OpeningHours />;
         const tree = renderer.create(component).toJSON();
+
         expect(tree).toMatchSnapshot();
     });
 
@@ -34,6 +36,7 @@ describe('OpeningHours', () => {
 
         const component = <OpeningHours />;
         const tree = renderer.create(component).toJSON();
+
         expect(tree).toMatchSnapshot();
     });
 });
