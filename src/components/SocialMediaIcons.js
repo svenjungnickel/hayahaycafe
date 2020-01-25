@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 import { FaFacebookF, FaInstagram, FaTripadvisor } from 'react-icons/fa';
 import SocialMediaIconsStyles from '../styles/components/SocialMediaIcons.module.scss';
 
-const SocialMediaIcon = ({ item }) => (
+export const SocialMediaIcon = ({ item }) => (
     <Button
         href={item.url}
         size="lg"
@@ -23,7 +23,7 @@ const SocialMediaIcon = ({ item }) => (
 SocialMediaIcon.propTypes = {
     item: PropTypes.shape({
         url: PropTypes.string.isRequired,
-        type: PropTypes.string.isRequired,
+        type: PropTypes.oneOf(['facebook', 'instagram', 'tripadvisor']).isRequired,
     }).isRequired,
 };
 
@@ -41,7 +41,7 @@ const SocialMediaIcons = () => (
         `}
         render={({ globalSettings }) => (
             <>
-                {globalSettings && globalSettings.socialMedia && (
+                {globalSettings && globalSettings.socialMedia && 0 < globalSettings.socialMedia.length && (
                     <div className={`container text-center ${SocialMediaIconsStyles.socialMediaIcon}`}>
                         {globalSettings.socialMedia.map(item => (
                             <SocialMediaIcon item={item} key={item.type} />
