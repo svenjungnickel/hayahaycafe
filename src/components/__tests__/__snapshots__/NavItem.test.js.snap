@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavItem renders active 1`] = `
+<div
+  className="navBar__item nav-item"
+>
+  <a
+    className="nav-link active"
+    href="name"
+  >
+    link
+  </a>
+</div>
+`;
+
+exports[`NavItem renders default (inactive) 1`] = `
+<div
+  className="navBar__item nav-item"
+>
+  <a
+    className="nav-link"
+    href="name"
+  >
+    link
+  </a>
+</div>
+`;

@@ -1,45 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { StaticQuery, graphql, Link } from 'gatsby';
+import { StaticQuery, graphql } from 'gatsby';
 import { Navbar, Nav } from 'react-bootstrap';
 import useDarkMode from 'use-dark-mode';
-import Image from './Image';
+import Logo from './Logo';
+import NavItem from './NavItem';
 import DarkModeToggle from './DarkModeToggle';
 import NavBarStyles from '../styles/components/NavBar.module.scss';
 import DarkModeToggleStyle from '../styles/components/DarkModeToggle.module.scss';
-
-const Logo = ({ logo, className }) => (
-    <div className={className}>
-        <Link to="/">
-            <Image src={logo.src} alt="Logo" className={NavBarStyles.navBar__logo} />
-        </Link>
-    </div>
-);
-
-Logo.propTypes = {
-    logo: PropTypes.shape({
-        src: PropTypes.string.isRequired,
-    }).isRequired,
-    className: PropTypes.string.isRequired,
-};
-
-const NavItem = ({ link, name, active }) => (
-    <Nav.Item className={NavBarStyles.navBar__item}>
-        <Link to={link} className={true === active ? 'nav-link active' : 'nav-link'}>
-            {name}
-        </Link>
-    </Nav.Item>
-);
-
-NavItem.defaultProps = {
-    active: false,
-};
-
-NavItem.propTypes = {
-    link: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    active: PropTypes.bool,
-};
 
 const NavBar = ({ currentPage }) => {
     currentPage = `/${currentPage}`;
