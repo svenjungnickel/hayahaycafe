@@ -4,7 +4,7 @@ import { graphql, StaticQuery } from 'gatsby';
 import Image from './Image';
 import What3WordsAddressStyles from '../styles/components/What3WordsAddress.module.scss';
 
-const What3Words = ({ what3WordsAddress, what3WordsIcon }) => (
+export const What3Words = ({ what3WordsAddress, what3WordsIcon }) => (
     <a
         href={`https://what3words.com/${what3WordsAddress}`}
         target="_blank"

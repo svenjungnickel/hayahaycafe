@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`What3WordsAddress does not render empty data 1`] = `null`;
+
+exports[`What3WordsAddress does not render empty globalSettings data 1`] = `null`;
+
+exports[`What3WordsAddress does not render empty location data 1`] = `null`;
+
+exports[`What3WordsAddress renders correctly 1`] = `
+Array [
+  <h2>
+    Map
+  </h2>,
+  <a
+    className="what3words"
+    href="https://what3words.com/what3WordsAddress"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    <img
+      alt="alt"
+      src="src"
+    />
+    <p
+      className="what3words__address"
+    >
+      ///what3WordsAddress
+    </p>
+  </a>,
+]
+`;
