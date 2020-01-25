@@ -1,5 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`FooterAddress does not render empty data 1`] = `null`;
+
+exports[`FooterAddress does not render empty globalSettings data 1`] = `null`;
+
+exports[`FooterAddress does not render empty location data 1`] = `null`;
+
 exports[`FooterAddress renders address data with company, first address line and postal code 1`] = `
 <p>
   company, addressLine1, postalCode
@@ -13,9 +19,3 @@ exports[`FooterAddress renders complete address data (company, first and second 
 `;
 
 exports[`FooterAddress renders empty address data 1`] = `<p />`;
-
-exports[`FooterAddress renders empty data 1`] = `null`;
-
-exports[`FooterAddress renders empty globalSettings data 1`] = `null`;
-
-exports[`FooterAddress renders empty location data 1`] = `null`;

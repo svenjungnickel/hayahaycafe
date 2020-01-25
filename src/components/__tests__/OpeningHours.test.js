@@ -4,7 +4,7 @@ import { StaticQuery } from 'gatsby';
 import OpeningHours from '../OpeningHours';
 
 describe('OpeningHours', () => {
-    it('renders empty data', () => {
+    it('does not render empty data', () => {
         const data = {};
         StaticQuery.mockImplementationOnce(({ render }) => render(data));
 
@@ -14,7 +14,7 @@ describe('OpeningHours', () => {
         expect(tree).toMatchSnapshot();
     });
 
-    it('renders empty globalSettings data', () => {
+    it('does not render empty globalSettings data', () => {
         const data = {
             globalSettings: {},
         };

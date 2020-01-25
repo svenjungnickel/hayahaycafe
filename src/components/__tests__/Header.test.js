@@ -5,27 +5,6 @@ import Header from '../Header';
 jest.mock('../Image');
 
 describe('Header', () => {
-    it('renders without subtitle', () => {
-        const headerImage = 'headerImage';
-        const title = 'title';
-
-        const component = <Header headerImage={headerImage} title={title} />;
-        const tree = renderer.create(component).toJSON();
-
-        expect(tree).toMatchSnapshot();
-    });
-
-    it('renders with subtitle', () => {
-        const headerImage = 'headerImage';
-        const title = 'title';
-        const subtitle = 'subtitle';
-
-        const component = <Header headerImage={headerImage} title={title} subtitle={subtitle} />;
-        const tree = renderer.create(component).toJSON();
-
-        expect(tree).toMatchSnapshot();
-    });
-
     it('renders without any required fields throws prop type error', () => {
         const renderHeader = () => {
             const component = <Header />;
@@ -70,5 +49,26 @@ describe('Header', () => {
         };
 
         expect(renderHeader).toThrowError('Warning: Failed prop type');
+    });
+
+    it('renders without subtitle', () => {
+        const headerImage = 'headerImage';
+        const title = 'title';
+
+        const component = <Header headerImage={headerImage} title={title} />;
+        const tree = renderer.create(component).toJSON();
+
+        expect(tree).toMatchSnapshot();
+    });
+
+    it('renders with subtitle', () => {
+        const headerImage = 'headerImage';
+        const title = 'title';
+        const subtitle = 'subtitle';
+
+        const component = <Header headerImage={headerImage} title={title} subtitle={subtitle} />;
+        const tree = renderer.create(component).toJSON();
+
+        expect(tree).toMatchSnapshot();
     });
 });

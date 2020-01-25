@@ -1,5 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`OpeningHours does not render empty data 1`] = `null`;
+
+exports[`OpeningHours does not render empty globalSettings data 1`] = `null`;
+
 exports[`OpeningHours renders correctly 1`] = `
 Array [
   <h2>
@@ -14,7 +18,3 @@ Array [
   />,
 ]
 `;
-
-exports[`OpeningHours renders empty data 1`] = `null`;
-
-exports[`OpeningHours renders empty globalSettings data 1`] = `null`;

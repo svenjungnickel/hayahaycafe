@@ -1,5 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Location does not render empty data 1`] = `null`;
+
+exports[`Location does not render empty globalSettings data 1`] = `null`;
+
+exports[`Location does not render empty location data 1`] = `null`;
+
 exports[`Location renders address data with company, first address line and postal code 1`] = `
 Array [
   <h2>
@@ -23,9 +29,3 @@ exports[`Location renders empty address data 1`] = `
   Location
 </h2>
 `;
-
-exports[`Location renders empty data 1`] = `null`;
-
-exports[`Location renders empty globalSettings data 1`] = `null`;
-
-exports[`Location renders empty location data 1`] = `null`;
