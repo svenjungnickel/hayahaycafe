@@ -6,7 +6,7 @@ import SocialMediaIcons from './SocialMediaIcons';
 import FooterAddress from './FooterAddress';
 import FooterStyles from '../styles/components/Footer.module.scss';
 
-const NavItem = ({ link, name }) => (
+export const NavItem = ({ link, name }) => (
     <Nav.Item>
         <Link to={link} className="nav-link">
             {name}

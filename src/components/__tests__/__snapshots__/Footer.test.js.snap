@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer renders correctly 1`] = `
+<footer
+  className="footer"
+>
+  <div
+    className="footer__pre"
+  >
+    <ul>
+      <li>
+        facebook
+      </li>
+      <li>
+        instagram
+      </li>
+      <li>
+        tripadvisor
+      </li>
+    </ul>
+  </div>
+  <div
+    className="footer__main"
+  >
+    <div
+      className="text-center container"
+    >
+      <div
+        className="justify-content-center nav"
+        onKeyDown={[Function]}
+      >
+        <div
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="/contact"
+          >
+            Contact
+          </a>
+        </div>
+        <div
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="/legal"
+          >
+            Legal
+          </a>
+        </div>
+        <div
+          className="nav-item"
+        >
+          <a
+            className="nav-link"
+            href="/data-privacy"
+          >
+            Data Privacy
+          </a>
+        </div>
+      </div>
+      <div
+        className="footer__address"
+      >
+        <p>
+          FooterAddress
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+`;
