@@ -29,7 +29,7 @@ describe('OpeningHours', () => {
     it('renders correctly', () => {
         const data = {
             globalSettings: {
-                openingHours: '<p>openingHours</p>',
+                openingHours: <p>openingHours</p>,
             },
         };
         StaticQuery.mockImplementationOnce(({ render }) => render(data));

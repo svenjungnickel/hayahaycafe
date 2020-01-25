@@ -35,7 +35,9 @@ exports[`HTMLContent renders content 1`] = `
 <div
   dangerouslySetInnerHTML={
     Object {
-      "__html": "<p>HTMLContent</p>",
+      "__html": <div>
+        HTMLContent
+      </div>,
     }
   }
 />
@@ -46,7 +48,9 @@ exports[`HTMLContent renders content and classname 1`] = `
   className="className"
   dangerouslySetInnerHTML={
     Object {
-      "__html": "<p>HTMLContent</p>",
+      "__html": <div>
+        HTMLContent
+      </div>,
     }
   }
 />

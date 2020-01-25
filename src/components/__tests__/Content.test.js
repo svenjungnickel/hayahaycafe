@@ -69,7 +69,7 @@ describe('HTMLContent', () => {
 
     it('renders with invalid className throws prop type error', () => {
         const renderHTMLContent = () => {
-            const content = '<p>HTMLContent</p>';
+            const content = <div>HTMLContent</div>;
             const className = 123;
 
             const component = <HTMLContent content={content} className={className} />;
@@ -80,7 +80,7 @@ describe('HTMLContent', () => {
     });
 
     it('renders content', () => {
-        const content = '<p>HTMLContent</p>';
+        const content = <div>HTMLContent</div>;
 
         const component = <HTMLContent content={content} />;
         const tree = renderer.create(component).toJSON();
@@ -98,7 +98,7 @@ describe('HTMLContent', () => {
     });
 
     it('renders content and classname', () => {
-        const content = '<p>HTMLContent</p>';
+        const content = <div>HTMLContent</div>;
         const className = 'className';
 
         const component = <HTMLContent content={content} className={className} />;

@@ -12,7 +12,9 @@ Array [
   <div
     dangerouslySetInnerHTML={
       Object {
-        "__html": "<p>openingHours</p>",
+        "__html": <p>
+          openingHours
+        </p>,
       }
     }
   />,
