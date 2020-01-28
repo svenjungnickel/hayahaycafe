@@ -1,45 +1,20 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import { useStaticQuery, graphql } from 'gatsby';
+import { graphql, StaticQuery } from 'gatsby';
 
-function SEO({ title, description, keywords }) {
-    const { globalSettings } = useStaticQuery(
-        graphql`
-            query GlobalSettings {
-                globalSettings: settingsYaml {
-                    meta {
-                        title
-                        description
-                        keywords
-                        language
-                    }
-                }
-            }
-        `
-    );
-
-    const lang = globalSettings.meta.language || 'en';
-    const metaTitle = title || globalSettings.meta.title;
-    const metaDescription = description || globalSettings.meta.description;
-    const metaKeywords = keywords || globalSettings.meta.keywords;
-    const titleTemplate =
-        title === '' || title === globalSettings.meta.title
-            ? globalSettings.meta.title
-            : `%s | ${globalSettings.meta.title}`;
+export const HTMLHead = ({ globalMeta, title, description, keywords }) => {
+    const lang = globalMeta.language || 'en';
+    const newTitle = title || globalMeta.title;
+    const metaTitle =
+        newTitle === '' || newTitle === globalMeta.title ? globalMeta.title : `${newTitle} | ${globalMeta.title}`;
+    const metaDescription = description || globalMeta.description;
+    const metaKeywords = keywords || globalMeta.keywords;
 
     return (
         <Helmet
             htmlAttributes={{ lang }}
-            title={title}
-            titleTemplate={titleTemplate}
+            title={metaTitle}
             meta={[
                 {
                     name: 'description',
@@ -69,12 +44,33 @@ function SEO({ title, description, keywords }) {
             <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         </Helmet>
     );
-}
+};
 
-SEO.propTypes = {
+HTMLHead.propTypes = {
+    globalMeta: PropTypes.object.isRequired,
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     keywords: PropTypes.string,
 };
+
+const SEO = props => (
+    <StaticQuery
+        query={graphql`
+            query {
+                globalSettings: settingsYaml {
+                    meta {
+                        title
+                        description
+                        keywords
+                        language
+                    }
+                }
+            }
+        `}
+        render={({ globalSettings }) => (
+            <>{!!globalSettings && !!globalSettings.meta && <HTMLHead globalMeta={globalSettings.meta} {...props} />}</>
+        )}
+    />
+);
 
 export default SEO;
