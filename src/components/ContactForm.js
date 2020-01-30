@@ -2,19 +2,20 @@ import React, { useState, createRef } from 'react';
 import { Alert, Button, Col, Form } from 'react-bootstrap';
 import Recaptcha from 'react-google-recaptcha';
 import Fade from 'react-reveal/Fade';
+import InputField from './InputFIeld';
 import ContactFormStyles from '../styles/components/ContactForm.module.scss';
 
 const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY;
 const CONTACT_FORM_FADE_UP_DURATION = 400;
 const SUCCESS_MESSAGE_FADE_IN_DURATION = 200;
 
-function encode(data) {
+const encode = data => {
     return Object.keys(data)
         .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
         .join('&');
-}
+};
 
-export default () => {
+const ContactForm = () => {
     const [validated, setValidated] = useState(false);
     const [state, setState] = useState({});
     const [recaptchaError, setRecaptchaError] = useState(false);
@@ -76,38 +77,38 @@ export default () => {
                     <Form.Label>Name *</Form.Label>
                     <Form.Row>
                         <Col xs={12} lg={6}>
-                            <Form.Group controlId="contactFirstName">
-                                <Form.Control name="firstName" type="text" required onChange={handleChange} />
-                                <Form.Text className="text-muted">First name</Form.Text>
-                                <Form.Control.Feedback type="invalid">
-                                    Please enter your first name.
-                                </Form.Control.Feedback>
-                            </Form.Group>
+                            <InputField
+                                controlId="contactFirstName"
+                                name="firstName"
+                                errorDescription="Please enter your first name."
+                                onChange={handleChange}
+                            />
                         </Col>
                         <Col xs={12} lg={6}>
-                            <Form.Group controlId="contactLastName">
-                                <Form.Control name="lastName" type="text" required onChange={handleChange} />
-                                <Form.Text className="text-muted">Last name</Form.Text>
-                                <Form.Control.Feedback type="invalid">
-                                    Please enter your last name.
-                                </Form.Control.Feedback>
-                            </Form.Group>
+                            <InputField
+                                controlId="contactLastName"
+                                name="lastName"
+                                errorDescription="Please enter your last name."
+                                onChange={handleChange}
+                            />
                         </Col>
                     </Form.Row>
 
-                    <Form.Group controlId="contactEmail">
-                        <Form.Label>Email *</Form.Label>
-                        <Form.Control name="email" type="email" required onChange={handleChange} />
-                        <Form.Control.Feedback type="invalid">
-                            Please enter a valid email address.
-                        </Form.Control.Feedback>
-                    </Form.Group>
+                    <Form.Label>Email *</Form.Label>
+                    <InputField
+                        controlId="contactEmail"
+                        name="email"
+                        errorDescription="Please enter a valid email address."
+                        onChange={handleChange}
+                    />
 
-                    <Form.Group controlId="contactSubject">
-                        <Form.Label>Subject *</Form.Label>
-                        <Form.Control name="subject" type="text" required onChange={handleChange} />
-                        <Form.Control.Feedback type="invalid">Please enter a subject.</Form.Control.Feedback>
-                    </Form.Group>
+                    <Form.Label>Subject *</Form.Label>
+                    <InputField
+                        controlId="contactSubject"
+                        name="subject"
+                        errorDescription="Please enter a subject."
+                        onChange={handleChange}
+                    />
 
                     <Form.Group controlId="contactMessage">
                         <Form.Label>Message *</Form.Label>
@@ -155,3 +156,5 @@ export default () => {
         </div>
     );
 };
+
+export default ContactForm;

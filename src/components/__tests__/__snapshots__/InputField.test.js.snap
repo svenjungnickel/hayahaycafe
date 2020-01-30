@@ -1,0 +1,26 @@
+ // Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputField renders correctly 1`] = `
+<div
+  className="form-group"
+>
+  <input
+    className="form-control"
+    id="controlId"
+    name="name"
+    onChange={[Function]}
+    required={true}
+    type="text"
+  />
+  <small
+    className="text-muted form-text"
+  >
+    First name
+  </small>
+  <div
+    className="invalid-feedback"
+  >
+    errorDescription
+  </div>
+</div>
+`;
