@@ -56,6 +56,22 @@ describe('DefaultPageTemplate', () => {
         expect(renderDefaultPageTemplate).toThrowError('Warning: Failed prop type');
     });
 
+    it('renders with invalid subtitle throws prop type error', () => {
+        const renderDefaultPageTemplate = () => {
+            const title = 'title';
+            const subtitle = 123;
+            const headerImage = 'headerImage';
+            const content = 'content';
+
+            const component = (
+                <DefaultPageTemplate title={title} subtitle={subtitle} headerImage={headerImage} content={content} />
+            );
+            renderer.create(component);
+        };
+
+        expect(renderDefaultPageTemplate).toThrowError('Warning: Failed prop type');
+    });
+
     it('renders with invalid headerImage throws prop type error', () => {
         const renderDefaultPageTemplate = () => {
             const title = 'title';
@@ -76,6 +92,27 @@ describe('DefaultPageTemplate', () => {
             const content = {};
 
             const component = <DefaultPageTemplate title={title} headerImage={headerImage} content={content} />;
+            renderer.create(component);
+        };
+
+        expect(renderDefaultPageTemplate).toThrowError('Warning: Failed prop type');
+    });
+
+    it('renders with invalid contentComponent throws prop type error', () => {
+        const renderDefaultPageTemplate = () => {
+            const title = 'title';
+            const headerImage = 'headerImage';
+            const content = {};
+            const contentComponent = false;
+
+            const component = (
+                <DefaultPageTemplate
+                    title={title}
+                    headerImage={headerImage}
+                    content={content}
+                    contentComponent={contentComponent}
+                />
+            );
             renderer.create(component);
         };
 
