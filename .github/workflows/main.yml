@@ -1,5 +1,11 @@
 name: Build project and Run CI
-on: push
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
 jobs:
   lhci:
     name: Lighthouse CI
@@ -27,3 +33,16 @@ jobs:
         run: |
             npm install
             npx eslint ./src/
+  jest:
+    name: Jest
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js 10.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 10.x
+      - name: run Jest
+        run: |
+            npm install
+            npx jest
