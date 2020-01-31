@@ -43,7 +43,7 @@ const DefaultPage = ({ data: { page } }) => (
 
 DefaultPage.propTypes = {
     data: PropTypes.shape({
-        markdownRemark: PropTypes.object,
+        page: PropTypes.object.isRequired,
     }).isRequired,
 };
 

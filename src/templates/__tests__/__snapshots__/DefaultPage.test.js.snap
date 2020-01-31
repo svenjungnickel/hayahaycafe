@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DefaultPage renders correctly 1`] = `
+<main>
+  <header />
+  <section
+    className="section"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col-12"
+        >
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": <p>
+                  HTML
+                </p>,
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+`;
+
+exports[`DefaultPageTemplate renders content correctly 1`] = `
+Array [
+  <header />,
+  <section
+    className="section"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col-12"
+        >
+          <div>
+            content
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>,
+]
+`;
+
+exports[`DefaultPageTemplate renders html content correctly 1`] = `
+Array [
+  <header />,
+  <section
+    className="section"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col-12"
+        >
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": <p>
+                  Html content
+                </p>,
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+  </section>,
+]
+`;
