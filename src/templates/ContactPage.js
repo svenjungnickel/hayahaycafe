@@ -6,7 +6,7 @@ import Layout from '../components/Layout';
 import Header from '../components/Header';
 import ContactForm from '../components/ContactForm';
 import Content, { HTMLContent } from '../components/Content';
-import Address from '../components/Location';
+import Location from '../components/Location';
 import Separator from '../components/Separator';
 import What3WordsAddress from '../components/What3WordsAddress';
 import OpeningHours from '../components/OpeningHours';
@@ -29,7 +29,7 @@ export const ContactPageTemplate = ({ title, subtitle, headerImage, content, con
                             </Col>
                         )}
                         <Col xs={12} sm={4}>
-                            <Address />
+                            <Location />
                             <Separator />
                             <What3WordsAddress />
                             <Separator />

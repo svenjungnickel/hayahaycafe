@@ -6,7 +6,7 @@ import Layout from '../components/Layout';
 import Image from '../components/Image';
 import Gallery from '../components/Gallery';
 import Content, { HTMLContent } from '../components/Content';
-import Address from '../components/Location';
+import Location from '../components/Location';
 import Separator from '../components/Separator';
 import OpeningHours from '../components/OpeningHours';
 import What3WordsAddress from '../components/What3WordsAddress';
@@ -39,7 +39,7 @@ export const StartPageTemplate = ({ title, subtitle, headerImage, content, conte
                             <Separator />
                         </Col>
                         <Col xs={12} sm={4}>
-                            <Address />
+                            <Location />
                         </Col>
                         <Col xs={12} sm={4}>
                             <Separator className="d-block d-sm-none" />
