@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 import Layout from '../Layout';
 
 jest.mock('../SEO');
-jest.mock('../NavBar');
+jest.mock('../NavBar/NavBar');
 jest.mock('../Footer/Footer');
 
 describe('Layout', () => {

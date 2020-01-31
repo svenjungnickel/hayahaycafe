@@ -6,8 +6,8 @@ import useDarkMode from 'use-dark-mode';
 import Logo from './Logo';
 import NavItem from './NavItem';
 import DarkModeToggle from './DarkModeToggle';
-import NavBarStyles from '../styles/components/NavBar.module.scss';
-import DarkModeToggleStyle from '../styles/components/DarkModeToggle.module.scss';
+import NavBarStyles from '../../styles/components/NavBar.module.scss';
+import DarkModeToggleStyle from '../../styles/components/DarkModeToggle.module.scss';
 
 const NavBar = ({ currentPage }) => {
     currentPage = `/${currentPage}`;

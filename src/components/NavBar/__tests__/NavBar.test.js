@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { StaticQuery } from 'gatsby';
 import NavBar from '../NavBar';
-import LogoQueryData from '../__fixtures__/LogoQueryData';
+import LogoQueryData from '../../__fixtures__/LogoQueryData';
 
 jest.mock('../Logo');
 jest.mock('../NavItem');
