@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`404 renders correctly 1`] = `
+<main>
+  <header />
+  <section
+    className="section"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col"
+        >
+          <h1>
+            404: not found
+          </h1>
+          <p>
+            You just hit a route that doesn't exist.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+`;
