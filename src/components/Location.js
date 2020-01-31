@@ -1,28 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { graphql, StaticQuery } from 'gatsby';
-
-export const ListAddress = ({ address }) => {
-    const filteredAddressItems = Object.values(address).filter(item => '' !== item);
-
-    return (
-        <>
-            <h2>Location</h2>
-            {0 < filteredAddressItems.length && <>{filteredAddressItems.join('<br />')}</>}
-        </>
-    );
-};
-
-ListAddress.propTypes = {
-    address: PropTypes.shape({
-        company: PropTypes.string,
-        addressLine1: PropTypes.string,
-        addressLine2: PropTypes.string,
-        province: PropTypes.string,
-        postalCode: PropTypes.string,
-        country: PropTypes.string,
-    }).isRequired,
-};
+import ListAddress from './ListAddress';
 
 const Location = () => (
     <StaticQuery

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Listaddress renders correctly  1`] = `
+Array [
+  <h2>
+    Location
+  </h2>,
+  "addressLine1",
+  <br />,
+  "province",
+  <br />,
+  "12345",
+  <br />,
+]
+`;
