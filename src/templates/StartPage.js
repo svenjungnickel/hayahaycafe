@@ -84,7 +84,7 @@ const StartPage = ({ data: { page } }) => (
 
 StartPage.propTypes = {
     data: PropTypes.shape({
-        markdownRemark: PropTypes.object,
+        page: PropTypes.object.isRequired,
     }).isRequired,
 };
 
