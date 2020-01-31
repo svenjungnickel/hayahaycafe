@@ -2,7 +2,7 @@ import React, { useState, createRef } from 'react';
 import { Alert, Button, Col, Form } from 'react-bootstrap';
 import Recaptcha from 'react-google-recaptcha';
 import Fade from 'react-reveal/Fade';
-import InputField from './InputFIeld';
+import InputField from './InputField';
 import ContactFormStyles from '../../styles/components/ContactForm.module.scss';
 
 const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY;
