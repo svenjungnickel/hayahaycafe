@@ -1,0 +1,219 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContactPage renders correctly 1`] = `
+<main>
+  <header />
+  <section
+    className="section"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col-sm-4 col-12"
+        >
+          <p>
+            Location
+          </p>
+          <hr />
+          <a
+            href="what3WordsAddress"
+          >
+            <img
+              alt="what3WordsIcon"
+              src="src"
+            />
+          </a>
+          <hr />
+          <p>
+            Opening Hours
+          </p>
+          <hr />
+        </div>
+        <div
+          className="col-sm-8 col-12"
+        >
+          <h2
+            className="d-block d-sm-none"
+          >
+            Contact us
+          </h2>
+          <form />
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+`;
+
+exports[`ContactPageTemplate renders with content 1`] = `
+Array [
+  <header />,
+  <section
+    className="section"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col-12"
+        >
+          <div>
+            content
+          </div>
+          <hr />
+        </div>
+        <div
+          className="col-sm-4 col-12"
+        >
+          <p>
+            Location
+          </p>
+          <hr />
+          <a
+            href="what3WordsAddress"
+          >
+            <img
+              alt="what3WordsIcon"
+              src="src"
+            />
+          </a>
+          <hr />
+          <p>
+            Opening Hours
+          </p>
+          <hr />
+        </div>
+        <div
+          className="col-sm-8 col-12"
+        >
+          <h2
+            className="d-block d-sm-none"
+          >
+            Contact us
+          </h2>
+          <form />
+        </div>
+      </div>
+    </div>
+  </section>,
+]
+`;
+
+exports[`ContactPageTemplate renders with html content 1`] = `
+Array [
+  <header />,
+  <section
+    className="section"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col-12"
+        >
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": <p>
+                  HTML content
+                </p>,
+              }
+            }
+          />
+          <hr />
+        </div>
+        <div
+          className="col-sm-4 col-12"
+        >
+          <p>
+            Location
+          </p>
+          <hr />
+          <a
+            href="what3WordsAddress"
+          >
+            <img
+              alt="what3WordsIcon"
+              src="src"
+            />
+          </a>
+          <hr />
+          <p>
+            Opening Hours
+          </p>
+          <hr />
+        </div>
+        <div
+          className="col-sm-8 col-12"
+        >
+          <h2
+            className="d-block d-sm-none"
+          >
+            Contact us
+          </h2>
+          <form />
+        </div>
+      </div>
+    </div>
+  </section>,
+]
+`;
+
+exports[`ContactPageTemplate renders without content 1`] = `
+Array [
+  <header />,
+  <section
+    className="section"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col-sm-4 col-12"
+        >
+          <p>
+            Location
+          </p>
+          <hr />
+          <a
+            href="what3WordsAddress"
+          >
+            <img
+              alt="what3WordsIcon"
+              src="src"
+            />
+          </a>
+          <hr />
+          <p>
+            Opening Hours
+          </p>
+          <hr />
+        </div>
+        <div
+          className="col-sm-8 col-12"
+        >
+          <h2
+            className="d-block d-sm-none"
+          >
+            Contact us
+          </h2>
+          <form />
+        </div>
+      </div>
+    </div>
+  </section>,
+]
+`;
