@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { graphql, StaticQuery } from 'gatsby';
 import Button from 'react-bootstrap/Button';
 import { FaFacebookF, FaInstagram, FaTripadvisor } from 'react-icons/fa';
-import SocialMediaIconsStyles from '../styles/components/SocialMediaIcons.module.scss';
+import SocialMediaIconsStyles from '../../styles/components/SocialMediaIcons.module.scss';
 
 export const SocialMediaIcon = ({ item }) => (
     <Button

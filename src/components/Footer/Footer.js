@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import { Container, Nav } from 'react-bootstrap';
 import SocialMediaIcons from './SocialMediaIcons';
 import FooterAddress from './FooterAddress';
-import FooterStyles from '../styles/components/Footer.module.scss';
+import FooterStyles from '../../styles/components/Footer.module.scss';
 
 export const NavItem = ({ link, name }) => (
     <Nav.Item>

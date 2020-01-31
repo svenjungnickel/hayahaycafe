@@ -4,7 +4,7 @@ import Layout from '../Layout';
 
 jest.mock('../SEO');
 jest.mock('../NavBar');
-jest.mock('../Footer');
+jest.mock('../Footer/Footer');
 
 describe('Layout', () => {
     it('renders without required children throws prop type error', () => {
