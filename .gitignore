@@ -75,3 +75,9 @@ yarn-error.log
 
 # Lighthouse CI
 .lighthouseci
+
+# Cypress
+cypress/fixtures/
+cypress/integration/
+cypress/screenshots/
+cypress/videos/
