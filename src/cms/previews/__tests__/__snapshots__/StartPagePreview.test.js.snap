@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StartPagePreview renders correctly 1`] = `
+Array [
+  <header
+    className="startHeader"
+  >
+    <img
+      alt="alt"
+      src="src"
+    />
+    <div
+      className="startHeader__content"
+    >
+      <div
+        className="container"
+      >
+        <div
+          className="startHeader__contentInner"
+        >
+          <h1
+            className="display-1"
+          >
+            title
+          </h1>
+          <p
+            className="lead"
+          >
+            subtitle
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>,
+  <section
+    className="section"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col-12"
+        >
+          <div>
+            content
+          </div>
+          <hr />
+        </div>
+        <div
+          className="col-sm-4 col-12"
+        >
+          <p>
+            Location
+          </p>
+        </div>
+        <div
+          className="col-sm-4 col-12"
+        >
+          <hr />
+          <a
+            href="what3WordsAddress"
+          >
+            <img
+              alt="what3WordsIcon"
+              src="src"
+            />
+          </a>
+        </div>
+        <div
+          className="col-sm-4 col-12"
+        >
+          <hr />
+          <p>
+            Opening Hours
+          </p>
+        </div>
+        <div
+          className="col-12"
+        >
+          <hr />
+        </div>
+        <div
+          className="container"
+        >
+          <h2
+            className="display-5 text-center"
+          >
+            Gallery
+          </h2>
+          <p>
+            Gallery
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>,
+]
+`;

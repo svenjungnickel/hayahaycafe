@@ -14,7 +14,7 @@ const StartPagePreview = ({ entry, widgetFor }) => (
 
 StartPagePreview.propTypes = {
     entry: PropTypes.shape({
-        getIn: PropTypes.func,
+        toJS: PropTypes.func,
     }).isRequired,
     widgetFor: PropTypes.func.isRequired,
 };
