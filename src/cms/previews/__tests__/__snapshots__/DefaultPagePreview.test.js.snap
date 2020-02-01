@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DefaultPagePreview renders correctly 1`] = `
+Array [
+  <header />,
+  <section
+    className="section"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col-12"
+        >
+          <div>
+            content
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>,
+]
+`;

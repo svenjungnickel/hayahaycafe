@@ -13,7 +13,7 @@ const DefaultPagePreview = ({ entry, widgetFor }) => (
 
 DefaultPagePreview.propTypes = {
     entry: PropTypes.shape({
-        getIn: PropTypes.func,
+        toJS: PropTypes.func.isRequired,
     }).isRequired,
     widgetFor: PropTypes.func.isRequired,
 };
