@@ -13,7 +13,7 @@ const ContactPagePreview = ({ entry, widgetFor }) => (
 
 ContactPagePreview.propTypes = {
     entry: PropTypes.shape({
-        getIn: PropTypes.func,
+        toJS: PropTypes.func,
     }).isRequired,
     widgetFor: PropTypes.func.isRequired,
 };

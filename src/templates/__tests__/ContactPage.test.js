@@ -2,6 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import ContactPage, { ContactPageTemplate } from '../ContactPage';
 import { HTMLContent } from '../../components/Content';
+import ContactPageData from '../../__fixtures__/ContactPageData';
 
 jest.mock('../../components/Layout');
 jest.mock('../../components/Header');
@@ -195,19 +196,7 @@ describe('ContactPage', () => {
         const data = {
             page: {
                 html: '',
-                frontmatter: {
-                    slug: 'slug',
-                    title: 'title',
-                    subtitle: 'subtitle',
-                    headerImage: {
-                        publicURL: 'publicURL',
-                    },
-                    meta: {
-                        title: 'meta title',
-                        description: 'meta description.',
-                        keywords: 'meta keywords',
-                    },
-                },
+                frontmatter: ContactPageData,
             },
         };
 
