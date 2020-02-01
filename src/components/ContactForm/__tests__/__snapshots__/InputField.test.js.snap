@@ -20,7 +20,7 @@ exports[`InputField renders with description 1`] = `
     type="text"
   />
   <small
-    className="text-muted form-text"
+    className="text-muted contactFormTextMuted form-text"
   >
     description
   </small>

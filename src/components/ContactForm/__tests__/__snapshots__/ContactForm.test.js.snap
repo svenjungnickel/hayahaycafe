@@ -55,7 +55,7 @@ exports[`ContactForm snapshot renders correctly 1`] = `
                 type="text"
               />
               <small
-                className="text-muted form-text"
+                className="text-muted contactFormTextMuted form-text"
               >
                 First name
               </small>
@@ -82,7 +82,7 @@ exports[`ContactForm snapshot renders correctly 1`] = `
                 type="text"
               />
               <small
-                className="text-muted form-text"
+                className="text-muted contactFormTextMuted form-text"
               >
                 Last name
               </small>

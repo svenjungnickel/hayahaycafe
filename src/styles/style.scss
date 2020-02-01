@@ -10,6 +10,7 @@ body {
     --textLink: var(--color-primary);
     --textLink__hover: var(--color-secondary);
     --separator-border: rgba(0, 0, 0, 0.1);
+    --text-muted: #6c757d;
 
     background-color: var(--bg);
     color: var(--color-primary);
@@ -53,6 +54,7 @@ body.dark-mode {
     --textLink: var(--color-primary);
     --textLink__hover: var(--color-secondary);
     --separator-border: #fff;
+    --text-muted: var(--color-secondary);
 
     background-color: var(--bg);
     color: var(--color-primary);

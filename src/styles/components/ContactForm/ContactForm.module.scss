@@ -3,6 +3,10 @@
 .contact-form {
     min-height: 74px;
 
+    .contact-form-text-muted {
+        color: var(--text-muted) !important;
+    }
+
     .contactFormReCaptcha {
         min-height: 78px;
     }
