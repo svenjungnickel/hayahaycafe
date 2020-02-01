@@ -54,6 +54,7 @@ const DarkModeToggle = ({ darkMode, className }) => {
         <Switch
             className={className}
             title="dark mode switch"
+            aria-label="dark mode switch"
             aria-checked={darkModeValue}
             checked={darkModeValue}
             onChange={darkMode.toggle}

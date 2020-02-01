@@ -135,6 +135,7 @@ exports[`DarkModeToggle renders darkMode value null (default) 1`] = `
   />
   <input
     aria-checked={false}
+    aria-label="dark mode switch"
     checked={false}
     disabled={false}
     onBlur={[Function]}
@@ -295,6 +296,7 @@ exports[`DarkModeToggle renders darkMode value true 1`] = `
   />
   <input
     aria-checked={true}
+    aria-label="dark mode switch"
     checked={true}
     disabled={false}
     onBlur={[Function]}
