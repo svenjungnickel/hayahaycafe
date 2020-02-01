@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import StartPagePreview from '../StartPagePreview';
+import StartPageData from '../../../__fixtures__/StartPageData';
 
 jest.mock('../../../components/Image');
 jest.mock('../../../components/Gallery');
@@ -67,29 +68,7 @@ describe('StartPagePreview', () => {
         const entry = {
             toJS: () => {
                 return {
-                    data: {
-                        title: 'title',
-                        subtitle: 'subtitle',
-                        headerImage: {
-                            publicURL: 'publicURL',
-                        },
-                        gallery: [
-                            {
-                                src: {
-                                    publicURL: 'publicURL',
-                                },
-                                alt: 'gallery image 01',
-                                title: 'Gallery Image 01',
-                            },
-                            {
-                                src: {
-                                    publicURL: 'publicURL',
-                                },
-                                alt: 'gallery image 02',
-                                title: 'Gallery Image 02',
-                            },
-                        ],
-                    },
+                    data: StartPageData,
                 };
             },
         };

@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import DefaultPagePreview from '../DefaultPagePreview';
+import DefaultPageData from '../../../__fixtures__/DefaultPageData';
 
 jest.mock('../../../components/Header');
 
@@ -61,13 +62,7 @@ describe('DefaultPagePreview', () => {
         const entry = {
             toJS: () => {
                 return {
-                    data: {
-                        title: 'title',
-                        subtitle: 'subtitle',
-                        headerImage: {
-                            src: 'src',
-                        },
-                    },
+                    data: DefaultPageData,
                 };
             },
         };

@@ -2,6 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import DefaultPage, { DefaultPageTemplate } from '../DefaultPage';
 import { HTMLContent } from '../../components/Content';
+import DefaultPageData from '../../__fixtures__/DefaultPageData';
 
 jest.mock('../../components/Layout');
 jest.mock('../../components/Header');
@@ -174,19 +175,7 @@ describe('DefaultPage', () => {
         const data = {
             page: {
                 html: <p>HTML</p>,
-                frontmatter: {
-                    slug: 'slug',
-                    title: 'title',
-                    subtitle: 'subtitle',
-                    headerImage: {
-                        publicURL: 'publicURL',
-                    },
-                    meta: {
-                        title: 'meta title',
-                        description: 'meta description.',
-                        keywords: 'meta keywords',
-                    },
-                },
+                frontmatter: DefaultPageData,
             },
         };
 

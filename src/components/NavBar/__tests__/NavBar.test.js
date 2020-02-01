@@ -2,7 +2,6 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { StaticQuery } from 'gatsby';
 import NavBar from '../NavBar';
-import LogoQueryData from '../../__fixtures__/LogoQueryData';
 
 jest.mock('../Logo');
 jest.mock('../NavItem');
@@ -31,7 +30,23 @@ describe('NavBar', () => {
 
     it('renders with disabled dark mode (default)', () => {
         const currentPage = '/';
-        StaticQuery.mockImplementationOnce(({ render }) => render(LogoQueryData));
+        const data = {
+            logoMobile: {
+                childImageSharp: {
+                    fixed: {
+                        src: 'src',
+                    },
+                },
+            },
+            logo: {
+                childImageSharp: {
+                    fixed: {
+                        src: 'src',
+                    },
+                },
+            },
+        };
+        StaticQuery.mockImplementationOnce(({ render }) => render(data));
 
         const component = <NavBar currentPage={currentPage} />;
         const tree = renderer.create(component).toJSON();

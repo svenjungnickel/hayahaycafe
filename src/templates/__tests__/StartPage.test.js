@@ -2,6 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import StartPage, { StartPageTemplate } from '../StartPage';
 import { HTMLContent } from '../../components/Content';
+import StartPageData from '../../__fixtures__/StartPageData';
 
 jest.mock('../../components/Layout');
 jest.mock('../../components/Image');
@@ -302,35 +303,7 @@ describe('StartPage', () => {
         const data = {
             page: {
                 html: <p>HTML</p>,
-                frontmatter: {
-                    slug: 'slug',
-                    title: 'title',
-                    subtitle: 'subtitle',
-                    headerImage: {
-                        publicURL: 'publicURL',
-                    },
-                    gallery: [
-                        {
-                            src: {
-                                publicURL: 'publicURL',
-                            },
-                            alt: 'gallery image 01',
-                            title: 'Gallery Image 01',
-                        },
-                        {
-                            src: {
-                                publicURL: 'publicURL',
-                            },
-                            alt: 'gallery image 02',
-                            title: 'Gallery Image 02',
-                        },
-                    ],
-                    meta: {
-                        title: 'meta title',
-                        description: 'meta description.',
-                        keywords: 'meta keywords',
-                    },
-                },
+                frontmatter: StartPageData,
             },
         };
 
