@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import Image from '../Image';
-import NavBarStyles from '../../styles/components/NavBar.module.scss';
+import NavBarStyles from '../../styles/components/NavBar/NavBar.module.scss';
 
 const Logo = ({ logo, className }) => (
     <div className={className}>

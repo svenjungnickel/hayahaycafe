@@ -3,7 +3,7 @@ import { Alert, Button, Col, Form } from 'react-bootstrap';
 import Recaptcha from 'react-google-recaptcha';
 import Fade from 'react-reveal/Fade';
 import InputField from './InputField';
-import ContactFormStyles from '../../styles/components/ContactForm.module.scss';
+import ContactFormStyles from '../../styles/components/ContactForm/ContactForm.module.scss';
 
 const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY;
 const CONTACT_FORM_FADE_UP_DURATION = 400;

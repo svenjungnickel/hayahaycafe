@@ -1,5 +1,5 @@
-@import "../mixins/media-queries";
-@import "../mixins/transition";
+@import "../../mixins/media-queries";
+@import "../../mixins/transition";
 
 .navBar {
     background-color: var(--navBar-bg);
