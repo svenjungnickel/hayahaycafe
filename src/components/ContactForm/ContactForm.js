@@ -74,39 +74,45 @@ const ContactForm = () => {
                     data-netlify="true"
                     data-netlify-recaptcha="true"
                 >
-                    <Form.Label>Name *</Form.Label>
+                    <Form.Label htmlFor="contactFirstName">Name *</Form.Label>
                     <Form.Row>
                         <Col xs={12} lg={6}>
                             <InputField
                                 controlId="contactFirstName"
                                 name="firstName"
-                                errorDescription="Please enter your first name."
+                                label=""
+                                errorMessage="Please enter your first name."
                                 onChange={handleChange}
+                                description="First name"
+                                ariaLabel="First name"
                             />
                         </Col>
                         <Col xs={12} lg={6}>
                             <InputField
                                 controlId="contactLastName"
                                 name="lastName"
-                                errorDescription="Please enter your last name."
+                                label=""
+                                errorMessage="Please enter your last name."
                                 onChange={handleChange}
+                                description="Last name"
+                                ariaLabel="Last name"
                             />
                         </Col>
                     </Form.Row>
 
-                    <Form.Label>Email *</Form.Label>
                     <InputField
                         controlId="contactEmail"
                         name="email"
-                        errorDescription="Please enter a valid email address."
+                        label="Email"
+                        errorMessage="Please enter a valid email address."
                         onChange={handleChange}
                     />
 
-                    <Form.Label>Subject *</Form.Label>
                     <InputField
                         controlId="contactSubject"
                         name="subject"
-                        errorDescription="Please enter a subject."
+                        label="Subject"
+                        errorMessage="Please enter a subject."
                         onChange={handleChange}
                     />
 

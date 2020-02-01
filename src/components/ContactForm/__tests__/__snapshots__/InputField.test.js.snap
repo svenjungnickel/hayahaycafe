@@ -1,9 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`InputField renders correctly 1`] = `
+exports[`InputField renders with description 1`] = `
 <div
   className="form-group"
 >
+  <label
+    className="form-label"
+    htmlFor="controlId"
+  >
+    label
+     *
+  </label>
   <input
     className="form-control"
     id="controlId"
@@ -15,12 +22,60 @@ exports[`InputField renders correctly 1`] = `
   <small
     className="text-muted form-text"
   >
-    First name
+    description
   </small>
   <div
     className="invalid-feedback"
   >
-    errorDescription
+    errorMessage
+  </div>
+</div>
+`;
+
+exports[`InputField renders with empty label and filled ariaLabel 1`] = `
+<div
+  className="form-group"
+>
+  <input
+    aria-label="ariaLabel"
+    className="form-control"
+    id="controlId"
+    name="name"
+    onChange={[Function]}
+    required={true}
+    type="text"
+  />
+  <div
+    className="invalid-feedback"
+  >
+    errorMessage
+  </div>
+</div>
+`;
+
+exports[`InputField renders with required parameters 1`] = `
+<div
+  className="form-group"
+>
+  <label
+    className="form-label"
+    htmlFor="controlId"
+  >
+    label
+     *
+  </label>
+  <input
+    className="form-control"
+    id="controlId"
+    name="name"
+    onChange={[Function]}
+    required={true}
+    type="text"
+  />
+  <div
+    className="invalid-feedback"
+  >
+    errorMessage
   </div>
 </div>
 `;

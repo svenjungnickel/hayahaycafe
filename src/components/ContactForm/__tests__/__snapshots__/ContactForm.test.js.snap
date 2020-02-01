@@ -32,6 +32,7 @@ exports[`ContactForm snapshot renders correctly 1`] = `
       >
         <label
           className="form-label"
+          htmlFor="contactFirstName"
         >
           Name *
         </label>
@@ -45,6 +46,7 @@ exports[`ContactForm snapshot renders correctly 1`] = `
               className="form-group"
             >
               <input
+                aria-label="First name"
                 className="form-control"
                 id="contactFirstName"
                 name="firstName"
@@ -71,6 +73,7 @@ exports[`ContactForm snapshot renders correctly 1`] = `
               className="form-group"
             >
               <input
+                aria-label="Last name"
                 className="form-control"
                 id="contactLastName"
                 name="lastName"
@@ -81,7 +84,7 @@ exports[`ContactForm snapshot renders correctly 1`] = `
               <small
                 className="text-muted form-text"
               >
-                First name
+                Last name
               </small>
               <div
                 className="invalid-feedback"
@@ -91,14 +94,16 @@ exports[`ContactForm snapshot renders correctly 1`] = `
             </div>
           </div>
         </div>
-        <label
-          className="form-label"
-        >
-          Email *
-        </label>
         <div
           className="form-group"
         >
+          <label
+            className="form-label"
+            htmlFor="contactEmail"
+          >
+            Email
+             *
+          </label>
           <input
             className="form-control"
             id="contactEmail"
@@ -107,25 +112,22 @@ exports[`ContactForm snapshot renders correctly 1`] = `
             required={true}
             type="text"
           />
-          <small
-            className="text-muted form-text"
-          >
-            First name
-          </small>
           <div
             className="invalid-feedback"
           >
             Please enter a valid email address.
           </div>
         </div>
-        <label
-          className="form-label"
-        >
-          Subject *
-        </label>
         <div
           className="form-group"
         >
+          <label
+            className="form-label"
+            htmlFor="contactSubject"
+          >
+            Subject
+             *
+          </label>
           <input
             className="form-control"
             id="contactSubject"
@@ -134,11 +136,6 @@ exports[`ContactForm snapshot renders correctly 1`] = `
             required={true}
             type="text"
           />
-          <small
-            className="text-muted form-text"
-          >
-            First name
-          </small>
           <div
             className="invalid-feedback"
           >
