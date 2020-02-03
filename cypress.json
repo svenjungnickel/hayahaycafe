@@ -1,4 +1,6 @@
 {
   "baseUrl": "http://localhost:8000/",
-  "integrationFolder": "cypress/e2e"
+  "integrationFolder": "cypress/e2e",
+  "videoUploadOnPasses": false,
+  "projectId": "imkh2i"
 }
