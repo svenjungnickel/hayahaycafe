@@ -3,17 +3,12 @@ import { Alert, Button, Col, Form } from 'react-bootstrap';
 import Recaptcha from 'react-google-recaptcha';
 import Fade from 'react-reveal/Fade';
 import InputField from './InputField';
+import Encode from './Encode';
 import ContactFormStyles from '../../styles/components/ContactForm/ContactForm.module.scss';
 
 const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY;
 const CONTACT_FORM_FADE_UP_DURATION = 400;
 const SUCCESS_MESSAGE_FADE_IN_DURATION = 200;
-
-const encode = data => {
-    return Object.keys(data)
-        .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-        .join('&');
-};
 
 const ContactForm = () => {
     const [validated, setValidated] = useState(false);
@@ -49,7 +44,7 @@ const ContactForm = () => {
         fetch('/', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: encode({
+            body: Encode({
                 'form-name': form.getAttribute('name'),
                 'g-recaptcha-response': recaptchaValue,
                 ...state,
