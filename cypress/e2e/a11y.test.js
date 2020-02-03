@@ -1,95 +1,136 @@
-describe('Accessibility checks in "light mode"', () => {
-    beforeEach(() => {
-        window.localStorage.setItem('darkMode', 'false');
+const checkA11yForPage = page => {
+    cy.visit(page);
+    cy.injectAxe();
+    cy.get('main');
+    cy.checkA11y();
+};
+
+describe('Accessibility checks', () => {
+    describe('Light mode', () => {
+        describe('Desktop', () => {
+            beforeEach(() => {
+                cy.setDarkMode(false);
+                cy.useDesktop();
+            });
+
+            it('Has no detectable a11y violations on start page', () => {
+                checkA11yForPage('/');
+            });
+
+            it('Navigates to story page and checks for accessibility violations', () => {
+                checkA11yForPage('/story');
+            });
+
+            it('Navigates to contact page and checks for accessibility violations', () => {
+                checkA11yForPage('/contact');
+            });
+
+            it('Navigates to legal page and checks for accessibility violations', () => {
+                checkA11yForPage('/legal');
+            });
+
+            it('Navigates to data privacy page and checks for accessibility violations', () => {
+                checkA11yForPage('/data-privacy');
+            });
+
+            it('Navigates to 404 page and checks for accessibility violations', () => {
+                checkA11yForPage('/404');
+            });
+        });
+
+        describe('Mobile', () => {
+            beforeEach(() => {
+                cy.setDarkMode(false);
+                cy.useMobile();
+            });
+
+            it('Has no detectable a11y violations on start page', () => {
+                checkA11yForPage('/');
+            });
+
+            it('Navigates to story page and checks for accessibility violations', () => {
+                checkA11yForPage('/story');
+            });
+
+            it('Navigates to contact page and checks for accessibility violations', () => {
+                checkA11yForPage('/contact');
+            });
+
+            it('Navigates to legal page and checks for accessibility violations', () => {
+                checkA11yForPage('/legal');
+            });
+
+            it('Navigates to data privacy page and checks for accessibility violations', () => {
+                checkA11yForPage('/data-privacy');
+            });
+
+            it('Navigates to 404 page and checks for accessibility violations', () => {
+                checkA11yForPage('/404');
+            });
+        });
     });
 
-    it('Has no detectable a11y violations on start page', () => {
-        cy.visit('/');
-        cy.injectAxe();
-        cy.get('main');
-        cy.checkA11y();
-    });
+    describe('Dark mode', () => {
+        describe('Desktop', () => {
+            beforeEach(() => {
+                cy.setDarkMode(true);
+                cy.useDesktop();
+            });
 
-    it('Navigates to story page and checks for accessibility violations', () => {
-        cy.visit('/story');
-        cy.injectAxe();
-        cy.get('main');
-        cy.checkA11y();
-    });
+            it('Has no detectable a11y violations on start page', () => {
+                checkA11yForPage('/');
+            });
 
-    it('Navigates to contact page and checks for accessibility violations', () => {
-        cy.visit('/contact');
-        cy.injectAxe();
-        cy.get('main');
-        cy.checkA11y();
-    });
+            it('Navigates to story page and checks for accessibility violations', () => {
+                checkA11yForPage('/story');
+            });
 
-    it('Navigates to legal page and checks for accessibility violations', () => {
-        cy.visit('/legal');
-        cy.injectAxe();
-        cy.get('main');
-        cy.checkA11y();
-    });
+            it('Navigates to contact page and checks for accessibility violations', () => {
+                checkA11yForPage('/contact');
+            });
 
-    it('Navigates to data privacy page and checks for accessibility violations', () => {
-        cy.visit('/data-privacy');
-        cy.injectAxe();
-        cy.get('main');
-        cy.checkA11y();
-    });
+            it('Navigates to legal page and checks for accessibility violations', () => {
+                checkA11yForPage('/legal');
+            });
 
-    it('Navigates to 404 page and checks for accessibility violations', () => {
-        cy.visit('/404');
-        cy.injectAxe();
-        cy.get('main');
-        cy.checkA11y();
-    });
-});
+            it('Navigates to data privacy page and checks for accessibility violations', () => {
+                checkA11yForPage('/data-privacy');
+            });
 
-describe('Accessibility checks in dark mode', () => {
-    beforeEach(() => {
-        window.localStorage.setItem('darkMode', 'true');
-    });
+            it('Navigates to 404 page and checks for accessibility violations', () => {
+                checkA11yForPage('/404');
+            });
+        });
 
-    it('Has no detectable a11y violations on start page', () => {
-        cy.visit('/');
-        cy.injectAxe();
-        cy.get('main');
-        cy.checkA11y();
-    });
+        describe('Mobile', () => {
+            beforeEach(() => {
+                cy.setDarkMode(true);
+                cy.useDesktop();
+            });
 
-    it('Navigates to story page and checks for accessibility violations', () => {
-        cy.visit('/story');
-        cy.injectAxe();
-        cy.get('main');
-        cy.checkA11y();
-    });
+            it('Has no detectable a11y violations on start page', () => {
+                checkA11yForPage('/');
+            });
 
-    it('Navigates to contact page and checks for accessibility violations', () => {
-        cy.visit('/contact');
-        cy.injectAxe();
-        cy.get('main');
-        cy.checkA11y();
-    });
+            it('Navigates to story page and checks for accessibility violations', () => {
+                checkA11yForPage('/story');
+            });
 
-    it('Navigates to legal page and checks for accessibility violations', () => {
-        cy.visit('/legal');
-        cy.injectAxe();
-        cy.get('main');
-        cy.checkA11y();
-    });
+            it('Navigates to contact page and checks for accessibility violations', () => {
+                checkA11yForPage('/contact');
+            });
 
-    it('Navigates to data privacy page and checks for accessibility violations', () => {
-        cy.visit('/data-privacy');
-        cy.injectAxe();
-        cy.get('main');
-        cy.checkA11y();
-    });
+            it('Navigates to legal page and checks for accessibility violations', () => {
+                checkA11yForPage('/legal');
+            });
 
-    it('Navigates to 404 page and checks for accessibility violations', () => {
-        cy.visit('/404');
-        cy.injectAxe();
-        cy.get('main');
-        cy.checkA11y();
+            it('Navigates to data privacy page and checks for accessibility violations', () => {
+                checkA11yForPage('/data-privacy');
+            });
+
+            it('Navigates to 404 page and checks for accessibility violations', () => {
+                checkA11yForPage('/404');
+            });
+        });
     });
 });

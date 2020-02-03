@@ -27,3 +27,11 @@
 Cypress.Commands.add('setDarkMode', mode => {
     window.localStorage.setItem('darkMode', mode.toString());
 });
+
+Cypress.Commands.add('useDesktop', () => {
+    cy.viewport(1024, 768);
+});
+
+Cypress.Commands.add('useMobile', () => {
+    cy.viewport(320, 480);
+});
