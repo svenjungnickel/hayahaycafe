@@ -1,7 +1,7 @@
 const checkA11yForPage = page => {
     cy.visit(page);
     cy.injectAxe();
-    cy.get('main');
+    cy.get('header');
     cy.checkA11y();
 };
 
@@ -13,27 +13,27 @@ describe('Accessibility checks', () => {
                 cy.useDesktop();
             });
 
-            it('Has no detectable a11y violations on start page', () => {
+            it('Has no detectable accessibility violations on start page', () => {
                 checkA11yForPage('/');
             });
 
-            it('Navigates to story page and checks for accessibility violations', () => {
+            it('Has no detectable accessibility violations on story page ', () => {
                 checkA11yForPage('/story');
             });
 
-            it('Navigates to contact page and checks for accessibility violations', () => {
+            it('Has no detectable accessibility violations on contact page', () => {
                 checkA11yForPage('/contact');
             });
 
-            it('Navigates to legal page and checks for accessibility violations', () => {
+            it('Has no detectable accessibility violations on legal page', () => {
                 checkA11yForPage('/legal');
             });
 
-            it('Navigates to data privacy page and checks for accessibility violations', () => {
+            it('Has no detectable accessibility violations on data privacy page', () => {
                 checkA11yForPage('/data-privacy');
             });
 
-            it('Navigates to 404 page and checks for accessibility violations', () => {
+            it('Has no detectable accessibility violations on 404 page', () => {
                 checkA11yForPage('/404');
             });
         });
@@ -44,27 +44,27 @@ describe('Accessibility checks', () => {
                 cy.useMobile();
             });
 
-            it('Has no detectable a11y violations on start page', () => {
+            it('Has no detectable accessibility violations on start page', () => {
                 checkA11yForPage('/');
             });
 
-            it('Navigates to story page and checks for accessibility violations', () => {
+            it('Has no detectable accessibility violations on story page ', () => {
                 checkA11yForPage('/story');
             });
 
-            it('Navigates to contact page and checks for accessibility violations', () => {
+            it('Has no detectable accessibility violations on contact page', () => {
                 checkA11yForPage('/contact');
             });
 
-            it('Navigates to legal page and checks for accessibility violations', () => {
+            it('Has no detectable accessibility violations on legal page', () => {
                 checkA11yForPage('/legal');
             });
 
-            it('Navigates to data privacy page and checks for accessibility violations', () => {
+            it('Has no detectable accessibility violations on data privacy page', () => {
                 checkA11yForPage('/data-privacy');
             });
 
-            it('Navigates to 404 page and checks for accessibility violations', () => {
+            it('Has no detectable accessibility violations on 404 page', () => {
                 checkA11yForPage('/404');
             });
         });
@@ -77,27 +77,27 @@ describe('Accessibility checks', () => {
                 cy.useDesktop();
             });
 
-            it('Has no detectable a11y violations on start page', () => {
+            it('Has no detectable accessibility violations on start page', () => {
                 checkA11yForPage('/');
             });
 
-            it('Navigates to story page and checks for accessibility violations', () => {
+            it('Has no detectable accessibility violations on story page ', () => {
                 checkA11yForPage('/story');
             });
 
-            it('Navigates to contact page and checks for accessibility violations', () => {
+            it('Has no detectable accessibility violations on contact page', () => {
                 checkA11yForPage('/contact');
             });
 
-            it('Navigates to legal page and checks for accessibility violations', () => {
+            it('Has no detectable accessibility violations on legal page', () => {
                 checkA11yForPage('/legal');
             });
 
-            it('Navigates to data privacy page and checks for accessibility violations', () => {
+            it('Has no detectable accessibility violations on data privacy page', () => {
                 checkA11yForPage('/data-privacy');
             });
 
-            it('Navigates to 404 page and checks for accessibility violations', () => {
+            it('Has no detectable accessibility violations on 404 page', () => {
                 checkA11yForPage('/404');
             });
         });
@@ -108,27 +108,27 @@ describe('Accessibility checks', () => {
                 cy.useDesktop();
             });
 
-            it('Has no detectable a11y violations on start page', () => {
+            it('Has no detectable accessibility violations on start page', () => {
                 checkA11yForPage('/');
             });
 
-            it('Navigates to story page and checks for accessibility violations', () => {
+            it('Has no detectable accessibility violations on story page ', () => {
                 checkA11yForPage('/story');
             });
 
-            it('Navigates to contact page and checks for accessibility violations', () => {
+            it('Has no detectable accessibility violations on contact page', () => {
                 checkA11yForPage('/contact');
             });
 
-            it('Navigates to legal page and checks for accessibility violations', () => {
+            it('Has no detectable accessibility violations on legal page', () => {
                 checkA11yForPage('/legal');
             });
 
-            it('Navigates to data privacy page and checks for accessibility violations', () => {
+            it('Has no detectable accessibility violations on data privacy page', () => {
                 checkA11yForPage('/data-privacy');
             });
 
-            it('Navigates to 404 page and checks for accessibility violations', () => {
+            it('Has no detectable accessibility violations on 404 page', () => {
                 checkA11yForPage('/404');
             });
         });
