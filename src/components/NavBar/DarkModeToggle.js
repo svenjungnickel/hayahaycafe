@@ -51,16 +51,18 @@ const DarkModeToggle = ({ darkMode, className }) => {
     const darkModeValue = null !== darkMode.value ? darkMode.value : false;
 
     return (
-        <Switch
-            className={className}
-            title="dark mode switch"
-            aria-label="dark mode switch"
-            aria-checked={darkModeValue}
-            checked={darkModeValue}
-            onChange={darkMode.toggle}
-            uncheckedIcon={uncheckedIcon}
-            checkedIcon={checkedIcon}
-        />
+        <div data-cy="darkModeToggle">
+            <Switch
+                className={className}
+                title="dark mode switch"
+                aria-label="dark mode switch"
+                aria-checked={darkModeValue}
+                checked={darkModeValue}
+                onChange={darkMode.toggle}
+                uncheckedIcon={uncheckedIcon}
+                checkedIcon={checkedIcon}
+            />
+        </div>
     );
 };
 
