@@ -51,6 +51,7 @@ Array [
         </div>
         <div
           className="col-sm-4 col-12"
+          data-cy="startPageLocation"
         >
           <p>
             Location
@@ -58,6 +59,7 @@ Array [
         </div>
         <div
           className="col-sm-4 col-12"
+          data-cy="startPageWhat3Words"
         >
           <hr />
           <a
@@ -71,6 +73,7 @@ Array [
         </div>
         <div
           className="col-sm-4 col-12"
+          data-cy="startPageOpeningHours"
         >
           <hr />
           <p>

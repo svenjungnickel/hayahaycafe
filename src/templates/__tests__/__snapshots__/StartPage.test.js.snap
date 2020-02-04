@@ -57,6 +57,7 @@ exports[`StartPage renders correctly 1`] = `
         </div>
         <div
           className="col-sm-4 col-12"
+          data-cy="startPageLocation"
         >
           <p>
             Location
@@ -64,6 +65,7 @@ exports[`StartPage renders correctly 1`] = `
         </div>
         <div
           className="col-sm-4 col-12"
+          data-cy="startPageWhat3Words"
         >
           <hr />
           <a
@@ -77,6 +79,7 @@ exports[`StartPage renders correctly 1`] = `
         </div>
         <div
           className="col-sm-4 col-12"
+          data-cy="startPageOpeningHours"
         >
           <hr />
           <p>
@@ -157,6 +160,7 @@ Array [
         </div>
         <div
           className="col-sm-4 col-12"
+          data-cy="startPageLocation"
         >
           <p>
             Location
@@ -164,6 +168,7 @@ Array [
         </div>
         <div
           className="col-sm-4 col-12"
+          data-cy="startPageWhat3Words"
         >
           <hr />
           <a
@@ -177,6 +182,7 @@ Array [
         </div>
         <div
           className="col-sm-4 col-12"
+          data-cy="startPageOpeningHours"
         >
           <hr />
           <p>
@@ -263,6 +269,7 @@ Array [
         </div>
         <div
           className="col-sm-4 col-12"
+          data-cy="startPageLocation"
         >
           <p>
             Location
@@ -270,6 +277,7 @@ Array [
         </div>
         <div
           className="col-sm-4 col-12"
+          data-cy="startPageWhat3Words"
         >
           <hr />
           <a
@@ -283,6 +291,7 @@ Array [
         </div>
         <div
           className="col-sm-4 col-12"
+          data-cy="startPageOpeningHours"
         >
           <hr />
           <p>

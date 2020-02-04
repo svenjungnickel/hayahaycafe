@@ -38,14 +38,14 @@ export const StartPageTemplate = ({ title, subtitle, headerImage, content, conte
                             <PostContent content={content} />
                             <Separator />
                         </Col>
-                        <Col xs={12} sm={4}>
+                        <Col xs={12} sm={4} data-cy="startPageLocation">
                             <Location />
                         </Col>
-                        <Col xs={12} sm={4}>
+                        <Col xs={12} sm={4} data-cy="startPageWhat3Words">
                             <Separator className="d-block d-sm-none" />
                             <What3WordsAddress />
                         </Col>
-                        <Col xs={12} sm={4}>
+                        <Col xs={12} sm={4} data-cy="startPageOpeningHours">
                             <Separator className="d-block d-sm-none" />
                             <OpeningHours />
                         </Col>
