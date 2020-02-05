@@ -43,7 +43,7 @@ jobs:
         with:
           node-version: 10.x
         env:
-          super_secret: ${{ secrets.CYPRESS_RECORD_KEY }}
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
       - name: Run Cypress
         run: |
           npm install
