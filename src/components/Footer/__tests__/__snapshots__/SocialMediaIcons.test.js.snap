@@ -9,6 +9,7 @@ exports[`SocialMediaIcons does not render empty socialMedia data array 1`] = `nu
 exports[`SocialMediaIcons renders all icons correctly 1`] = `
 <div
   className="container text-center socialMediaIcon"
+  data-cy="footerSocialMediaIcons"
 >
   <a
     aria-label="Visit Hayahay Cafe at instagram"

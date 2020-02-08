@@ -34,6 +34,7 @@ exports[`Footer renders correctly 1`] = `
         >
           <a
             className="nav-link"
+            data-cy="footerLinkContact"
             href="/contact"
           >
             Contact
@@ -44,6 +45,7 @@ exports[`Footer renders correctly 1`] = `
         >
           <a
             className="nav-link"
+            data-cy="footerLinkLegal"
             href="/legal"
           >
             Legal
@@ -54,6 +56,7 @@ exports[`Footer renders correctly 1`] = `
         >
           <a
             className="nav-link"
+            data-cy="footerLinkDataPrivacy"
             href="/data-privacy"
           >
             Data Privacy
@@ -62,6 +65,7 @@ exports[`Footer renders correctly 1`] = `
       </div>
       <div
         className="footer__address"
+        data-cy="footerAddress"
       >
         <p>
           FooterAddress

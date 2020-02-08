@@ -8,7 +8,7 @@ import FooterStyles from '../../styles/components/Footer/Footer.module.scss';
 
 export const NavItem = ({ link, name }) => (
     <Nav.Item>
-        <Link to={link} className="nav-link">
+        <Link to={link} className="nav-link" data-cy={`footerLink${name.replace(' ', '')}`}>
             {name}
         </Link>
     </Nav.Item>
@@ -31,7 +31,7 @@ const Footer = () => (
                     <NavItem link="/legal" name="Legal" />
                     <NavItem link="/data-privacy" name="Data Privacy" />
                 </Nav>
-                <div className={FooterStyles.footer__address}>
+                <div className={FooterStyles.footer__address} data-cy="footerAddress">
                     <FooterAddress />
                 </div>
             </Container>

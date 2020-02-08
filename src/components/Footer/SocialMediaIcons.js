@@ -42,7 +42,10 @@ const SocialMediaIcons = () => (
         render={({ globalSettings }) => (
             <>
                 {globalSettings && globalSettings.socialMedia && 0 < globalSettings.socialMedia.length && (
-                    <div className={`container text-center ${SocialMediaIconsStyles.socialMediaIcon}`}>
+                    <div
+                        className={`container text-center ${SocialMediaIconsStyles.socialMediaIcon}`}
+                        data-cy="footerSocialMediaIcons"
+                    >
                         {globalSettings.socialMedia.map(item => (
                             <SocialMediaIcon item={item} key={item.type} />
                         ))}
