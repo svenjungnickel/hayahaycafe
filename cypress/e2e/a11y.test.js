@@ -2,6 +2,15 @@ const checkA11yForPage = page => {
     cy.visit(page);
     cy.injectAxe();
     cy.get('header');
+
+    // To turn off uncaught exception handling
+    // https://docs.cypress.io/api/events/catalog-of-events.html#Examples
+    cy.on('uncaught:exception', (err, runnable) => {
+        console.error(err.message);
+
+        return false;
+    });
+
     cy.checkA11y();
 };
 
