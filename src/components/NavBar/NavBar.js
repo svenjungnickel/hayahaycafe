@@ -49,10 +49,11 @@ const NavBar = ({ currentPage }) => {
                     fixed="top"
                     id="site-navbar"
                     className={true === smallNavBar ? NavBarStyles.navBarSmall : NavBarStyles.navBar}
+                    data-cy="navBar"
                 >
                     <Logo logo={data.logoMobile.childImageSharp.fixed} className="d-block d-md-none" />
                     <DarkModeToggle darkMode={darkMode} className="d-block d-md-none" />
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" className="ml-right" />
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" className="ml-right" data-cy="navBarToggle" />
                     <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">
                         <Nav className={NavBarStyles.navBar__items}>
                             <NavItem link="/" name="Home" active={currentPage === '/'} />

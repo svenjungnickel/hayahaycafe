@@ -6,6 +6,7 @@ exports[`NavItem renders active 1`] = `
 >
   <a
     className="nav-link active"
+    data-cy="navBarLinklink"
     href="name"
   >
     link
@@ -19,6 +20,7 @@ exports[`NavItem renders default (inactive) 1`] = `
 >
   <a
     className="nav-link"
+    data-cy="navBarLinklink"
     href="name"
   >
     link

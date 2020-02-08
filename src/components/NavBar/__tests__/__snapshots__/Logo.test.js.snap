@@ -5,6 +5,7 @@ exports[`Logo renders correctly 1`] = `
   className="className"
 >
   <a
+    data-cy="navBarLinkLogo"
     href="/"
   >
     <img

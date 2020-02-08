@@ -6,7 +6,7 @@ import NavBarStyles from '../../styles/components/NavBar/NavBar.module.scss';
 
 const Logo = ({ logo, className }) => (
     <div className={className}>
-        <Link to="/">
+        <Link to="/" data-cy="navBarLinkLogo">
             <Image src={logo.src} alt="Logo" className={NavBarStyles.navBar__logo} />
         </Link>
     </div>

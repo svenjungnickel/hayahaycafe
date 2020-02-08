@@ -53,11 +53,4 @@ describe('NavBar', () => {
 
         expect(tree).toMatchSnapshot();
     });
-
-    // @TODO finish skipped tests
-    it.skip('renders with active dark mode', () => {});
-
-    it.skip('renders with small nav bar', () => {});
-
-    it.skip('simulate scroll event', () => {});
 });

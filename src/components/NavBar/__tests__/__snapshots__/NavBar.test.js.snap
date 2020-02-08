@@ -3,6 +3,7 @@
 exports[`NavBar renders with disabled dark mode (default) 1`] = `
 <nav
   className="navBar navbar navbar-expand-md navbar-light fixed-top"
+  data-cy="navBar"
   id="site-navbar"
 >
   <img
@@ -17,6 +18,7 @@ exports[`NavBar renders with disabled dark mode (default) 1`] = `
     aria-controls="basic-navbar-nav"
     aria-label="Toggle navigation"
     className="ml-right navbar-toggler collapsed"
+    data-cy="navBarToggle"
     onClick={[Function]}
     type="button"
   >
