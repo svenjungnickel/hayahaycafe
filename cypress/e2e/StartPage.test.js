@@ -32,10 +32,13 @@ const openingHours = () => {
 };
 
 describe('Start page', () => {
+    beforeEach(() => {
+        cy.visit('/');
+    });
+
     describe('Desktop', () => {
         beforeEach(() => {
             cy.useDesktop();
-            cy.visit('/');
         });
 
         it('Story button', () => {
@@ -58,7 +61,6 @@ describe('Start page', () => {
     describe('Mobile', () => {
         beforeEach(() => {
             cy.useMobile();
-            cy.visit('/');
         });
 
         it('Story button', () => {

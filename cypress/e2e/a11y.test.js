@@ -16,9 +16,12 @@ const checkA11yForPage = page => {
 
 describe('Accessibility checks', () => {
     describe('Light mode', () => {
+        beforeEach(() => {
+            cy.setDarkMode(false);
+        });
+
         describe('Desktop', () => {
             beforeEach(() => {
-                cy.setDarkMode(false);
                 cy.useDesktop();
             });
 
@@ -49,7 +52,6 @@ describe('Accessibility checks', () => {
 
         describe('Mobile', () => {
             beforeEach(() => {
-                cy.setDarkMode(false);
                 cy.useMobile();
             });
 
@@ -80,9 +82,12 @@ describe('Accessibility checks', () => {
     });
 
     describe('Dark mode', () => {
+        beforeEach(() => {
+            cy.setDarkMode(true);
+        });
+
         describe('Desktop', () => {
             beforeEach(() => {
-                cy.setDarkMode(true);
                 cy.useDesktop();
             });
 
@@ -113,8 +118,7 @@ describe('Accessibility checks', () => {
 
         describe('Mobile', () => {
             beforeEach(() => {
-                cy.setDarkMode(true);
-                cy.useDesktop();
+                cy.useMobile();
             });
 
             it('Has no detectable accessibility violations on start page', () => {

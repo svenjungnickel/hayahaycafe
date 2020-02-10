@@ -44,10 +44,13 @@ const address = () => {
 };
 
 describe('Footer', () => {
+    beforeEach(() => {
+        cy.visit('/');
+    });
+
     describe('Desktop', () => {
         beforeEach(() => {
             cy.useDesktop();
-            cy.visit('/');
         });
 
         it('Social icons', () => {
@@ -74,7 +77,6 @@ describe('Footer', () => {
     describe('Mobile', () => {
         beforeEach(() => {
             cy.useMobile();
-            cy.visit('/');
         });
 
         it('Social icons', () => {

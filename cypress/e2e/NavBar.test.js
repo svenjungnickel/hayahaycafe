@@ -1,4 +1,6 @@
 const minimizeNavBar = () => {
+    cy.visit('/');
+
     cy.get('[data-cy=navBar]')
         .should('have.attr', 'class')
         .and('match', /navBar/);
@@ -53,6 +55,8 @@ const logoLink = (mobile = false) => {
 };
 
 const storyLink = (mobile = false) => {
+    cy.visit('/');
+
     cy.get('[data-cy=navBarLinkStory]')
         .should('have.attr', 'href')
         .and('include', 'story');
@@ -71,7 +75,6 @@ describe('Navigation bar', () => {
     describe('Desktop', () => {
         beforeEach(() => {
             cy.useDesktop();
-            cy.visit('/');
         });
 
         it('Scroll down minimizes the navigation bar', () => {
@@ -98,7 +101,6 @@ describe('Navigation bar', () => {
     describe('Mobile', () => {
         beforeEach(() => {
             cy.useMobile();
-            cy.visit('/');
         });
 
         it('Scroll down minimizes the navigation bar', () => {
