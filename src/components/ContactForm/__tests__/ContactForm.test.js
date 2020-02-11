@@ -67,18 +67,6 @@ describe('ContactForm events', () => {
         expect(setSuccessMock).toHaveBeenCalledTimes(0);
     });
 
-    // @TODO finish skipped tests
-    it.skip('simulate change unsolved recaptcha', () => {
-        const Recaptcha = ContactFormComponent.find('#contactRecaptcha').first();
-        Recaptcha.simulate('click');
-
-        expect(setValidatedMock).toHaveBeenCalledTimes(0);
-        expect(setStateMock).toHaveBeenCalledTimes(0);
-        expect(setRecaptchaErrorMock).toHaveBeenCalledTimes(1);
-        expect(setRecaptchaErrorMock).toHaveBeenCalledWith(false);
-        expect(setSuccessMock).toHaveBeenCalledTimes(0);
-    });
-
     it('simulate unsuccessful form submit', () => {
         const SubmitButton = ContactFormComponent.find('button[type="submit"]');
         SubmitButton.simulate('submit');
@@ -88,22 +76,5 @@ describe('ContactForm events', () => {
         expect(setStateMock).toHaveBeenCalledTimes(0);
         expect(setRecaptchaErrorMock).toHaveBeenCalledTimes(1);
         expect(setSuccessMock).toHaveBeenCalledTimes(0);
-    });
-
-    it.skip('simulate successful form submit', () => {
-        useStateMock
-            .mockImplementationOnce(init => [init, setValidatedMock])
-            .mockImplementationOnce(init => [init, setStateMock])
-            .mockImplementationOnce(init => [init, setRecaptchaErrorMock])
-            .mockImplementationOnce(init => [init, setSuccessMock])
-            .mockReturnValue(true);
-        // mock setRecaptchaErrorMock return to false
-        //...
-        ContactFormComponent = mount(<ContactForm />);
-
-        const SubmitButton = ContactFormComponent.find('button[type="submit"]');
-        SubmitButton.simulate('submit');
-        // validate state mock calls and params
-        //...
     });
 });

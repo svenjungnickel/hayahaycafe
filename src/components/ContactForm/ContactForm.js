@@ -68,6 +68,7 @@ const ContactForm = () => {
                     action="/thanks"
                     data-netlify="true"
                     data-netlify-recaptcha="true"
+                    data-cy="contactForm"
                 >
                     <Form.Label htmlFor="contactFirstName">Name *</Form.Label>
                     <Form.Row>
@@ -111,7 +112,7 @@ const ContactForm = () => {
                         onChange={handleChange}
                     />
 
-                    <Form.Group controlId="contactMessage">
+                    <Form.Group controlId="contactMessage" data-cy="contactMessage">
                         <Form.Label>Message *</Form.Label>
                         <textarea
                             name="message"
@@ -124,7 +125,7 @@ const ContactForm = () => {
                         <Form.Control.Feedback type="invalid">Please enter your message.</Form.Control.Feedback>
                     </Form.Group>
 
-                    <Form.Group controlId="contactRecaptcha">
+                    <Form.Group controlId="contactRecaptcha" data-cy="contactRecaptcha">
                         <Recaptcha
                             id="contactRecaptcha"
                             ref={recaptchaRef}
@@ -150,7 +151,7 @@ const ContactForm = () => {
                 duration={SUCCESS_MESSAGE_FADE_IN_DURATION}
                 delay={CONTACT_FORM_FADE_UP_DURATION}
             >
-                <Alert variant="success" className={ContactFormStyles.contactFormSuccess}>
+                <Alert variant="success" className={ContactFormStyles.contactFormSuccess} data-cy="contactFormSuccess">
                     <p>{"Thank you for your message. We're getting in touch with you soon."}</p>
                 </Alert>
             </Fade>

@@ -4,7 +4,7 @@ import { Form } from 'react-bootstrap';
 import ContactFormStyles from '../../styles/components/ContactForm/ContactForm.module.scss';
 
 const InputField = ({ controlId, name, label, errorMessage, onChange, description, ariaLabel }) => (
-    <Form.Group controlId={controlId}>
+    <Form.Group controlId={controlId} data-cy={controlId}>
         {'' !== label && <Form.Label>{label} *</Form.Label>}
         <Form.Control name={name} type="text" required onChange={onChange} aria-label={ariaLabel} />
         {description && (

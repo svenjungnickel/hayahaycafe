@@ -23,6 +23,7 @@ exports[`ContactForm snapshot renders correctly 1`] = `
       <form
         action="/thanks"
         className=""
+        data-cy="contactForm"
         data-netlify="true"
         data-netlify-recaptcha="true"
         method="POST"
@@ -44,6 +45,7 @@ exports[`ContactForm snapshot renders correctly 1`] = `
           >
             <div
               className="form-group"
+              data-cy="contactFirstName"
             >
               <input
                 aria-label="First name"
@@ -71,6 +73,7 @@ exports[`ContactForm snapshot renders correctly 1`] = `
           >
             <div
               className="form-group"
+              data-cy="contactLastName"
             >
               <input
                 aria-label="Last name"
@@ -96,6 +99,7 @@ exports[`ContactForm snapshot renders correctly 1`] = `
         </div>
         <div
           className="form-group"
+          data-cy="contactEmail"
         >
           <label
             className="form-label"
@@ -120,6 +124,7 @@ exports[`ContactForm snapshot renders correctly 1`] = `
         </div>
         <div
           className="form-group"
+          data-cy="contactSubject"
         >
           <label
             className="form-label"
@@ -144,6 +149,7 @@ exports[`ContactForm snapshot renders correctly 1`] = `
         </div>
         <div
           className="form-group"
+          data-cy="contactMessage"
         >
           <label
             className="form-label"
@@ -167,6 +173,7 @@ exports[`ContactForm snapshot renders correctly 1`] = `
         </div>
         <div
           className="form-group"
+          data-cy="contactRecaptcha"
         >
           <div
             className="contactFormReCaptcha"
@@ -201,6 +208,7 @@ exports[`ContactForm snapshot renders correctly 1`] = `
     >
       <div
         className="fade contactFormSuccess alert alert-success show"
+        data-cy="contactFormSuccess"
         role="alert"
       >
         <p>
