@@ -49,4 +49,5 @@ jobs:
           SITE_RECAPTCHA_SECRET: ${{ secrets.SITE_RECAPTCHA_SECRET }}
         run: |
           npm install
+          echo SITE_RECAPTCHA_KEY=$SITE_RECAPTCHA_KEY >> .env.development
           npm run test:e2e:ci

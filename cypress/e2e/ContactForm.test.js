@@ -98,7 +98,7 @@ const submitValidData = () => {
     cy.get('[data-cy=contactForm]').should('not.be.visible');
 };
 
-describe('Footer', () => {
+describe('Contact form', () => {
     beforeEach(() => {
         cy.visit('/contact');
     });
