@@ -45,6 +45,8 @@ jobs:
       - name: Run Cypress
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          SITE_RECAPTCHA_KEY: ${{ secrets.SITE_RECAPTCHA_KEY }}
+          SITE_RECAPTCHA_SECRET: ${{ secrets.SITE_RECAPTCHA_SECRET }}
         run: |
           npm install
           npm run test:e2e:ci
