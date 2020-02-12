@@ -1,4 +1,6 @@
 const login = () => {
+    Cypress.config('defaultCommandTimeout', 60000);
+
     cy.get('#nc-root')
         .find('button')
         .click();
@@ -18,7 +20,7 @@ const login = () => {
             .find('form')
             .submit();
 
-        cy.get('main', { timeout: 60000 })
+        cy.get('main')
             .find('h1')
             .should('contain', 'Page');
     });
