@@ -47,6 +47,8 @@ jobs:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           SITE_RECAPTCHA_KEY: ${{ secrets.SITE_RECAPTCHA_KEY }}
           SITE_RECAPTCHA_SECRET: ${{ secrets.SITE_RECAPTCHA_SECRET }}
+          CYPRESS_NETLIFY_CMS_EMAIL: ${{ secrets.CYPRESS_NETLIFY_CMS_EMAIL }}
+          CYPRESS_NETLIFY_CMS_PASSWORD: ${{ secrets.CYPRESS_NETLIFY_CMS_PASSWORD }}
         run: |
           npm install
           echo SITE_RECAPTCHA_KEY=$SITE_RECAPTCHA_KEY >> .env.development

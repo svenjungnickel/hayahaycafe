@@ -77,6 +77,7 @@ yarn-error.log
 .lighthouseci
 
 # Cypress
+cypress.env.json
 cypress/fixtures/
 cypress/integration/
 cypress/screenshots/
