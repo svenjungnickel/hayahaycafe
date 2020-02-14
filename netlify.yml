@@ -6,6 +6,7 @@ build:
       npm run test
       echo SITE_RECAPTCHA_KEY=$SITE_RECAPTCHA_KEY >> .env.development
       echo NETLIFY_SITE_URL=$NETLIFY_SITE_URL >> .env.development
+      cypress install
       npm run test:e2e:ci
       echo SITE_RECAPTCHA_KEY=$SITE_RECAPTCHA_KEY >> .env.production
     onBuild: gatsby build
