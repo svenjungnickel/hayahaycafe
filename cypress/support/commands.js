@@ -36,19 +36,20 @@ Cypress.Commands.add('useMobile', () => {
     cy.viewport(320, 480);
 });
 
-Cypress.Commands.add('iframeLoaded', { prevSubject: 'element' }, $iframe => {
-    const contentWindow = $iframe.prop('contentWindow');
-    return new Promise(resolve => {
-        if (contentWindow && contentWindow.document.readyState === 'complete') {
-            resolve(contentWindow);
-        } else {
-            $iframe.on('load', () => {
-                resolve(contentWindow);
-            });
-        }
-    });
-});
+// https://cypress.io/blog/2020/02/12/working-with-iframes-in-cypress/
+Cypress.Commands.add('getIframeBody', $selector => {
+    cy.log(`getIframeBody from ${$selector}`);
 
-Cypress.Commands.add('getInDocument', { prevSubject: 'document' }, (document, selector) =>
-    Cypress.$(selector, document)
-);
+    // get the iframe > document > body
+    // and retry until the body element is not empty
+    return (
+        cy
+            .get($selector, { log: false })
+            .its('0.contentDocument.body', { log: false })
+            .should('not.be.empty')
+            // wraps "body" DOM element to allow
+            // chaining more Cypress commands, like ".find(...)"
+            // https://on.cypress.io/wrap
+            .then(body => cy.wrap(body, { log: false }))
+    );
+});

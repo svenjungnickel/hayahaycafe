@@ -81,16 +81,12 @@ const submitValidData = () => {
         .type('Test message')
         .should('have.value', 'Test message');
 
-    // Wait for recaptcha iframe to load. then click checkbox
-    cy.get("iframe[src*='recaptcha']:visible")
-        .iframeLoaded()
-        .its('document')
-        .getInDocument('#recaptcha-token')
-        .click({ force: true });
+    cy.getIframeBody("iframe[src*='recaptcha']:visible")
+        .find('.recaptcha-checkbox')
+        .click();
 
-    // Unfortunately we can not figure out how when the captcha is solved at the moment.
+    // Unfortunately we can not spy on the recaptcha request to wait for the response.
     // Therefore we are waiting an arbitrary time until we continue.
-    // @TODO fix that via https://www.npmjs.com/package/cypress-wait-until
     cy.wait(10000);
 
     cy.get('[data-cy=contactForm]', { timeout: 10000 }).submit();
