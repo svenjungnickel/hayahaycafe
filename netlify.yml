@@ -1,5 +1,11 @@
 build:
   publish: public/
   lifecycle:
-    onPreBuild: echo SITE_RECAPTCHA_KEY=$SITE_RECAPTCHA_KEY >> .env.production
+    onPreBuild: |
+      npm run lint
+      npm run test
+      echo SITE_RECAPTCHA_KEY=$SITE_RECAPTCHA_KEY >> .env.development
+      echo NETLIFY_SITE_URL=$NETLIFY_SITE_URL >> .env.development
+      npm run test:e2e:ci
+      echo SITE_RECAPTCHA_KEY=$SITE_RECAPTCHA_KEY >> .env.production
     onBuild: gatsby build
