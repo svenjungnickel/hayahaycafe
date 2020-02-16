@@ -134,3 +134,30 @@ npm run test:e2e:ci
 ```
 
 E2E tests running in CI are recorded. You can find all recorded tests in the [![Cypress Dashboard](https://img.shields.io/badge/cypress-dashboard-brightgreen.svg)](https://dashboard.cypress.io/projects/imkh2i/runs)
+
+## Preventing Commits to the master branch
+
+This project is setup to reject push and commits directly to master. To prevent commits to master on your local machine
+install following pre-commit hook to your `.git/hooks/pre-commit` file. 
+
+```sh
+#!/bin/sh
+
+branch="$(git rev-parse --abbrev-ref HEAD)"
+
+if [ "$branch" = "master" ]; then
+  echo "You can't commit directly to master branch"
+  exit 1
+fi
+```
+
+After your created the file you have to make it executable:
+
+
+```sh
+chmod +x .git/hooks/pre-commit
+```
+
+### Trouble shooting
+
+If you work on a Mac OS using OS X Mojave and get weird error messages, try following [work around](https://meyerweb.com/eric/thoughts/2020/02/10/preventing-commits-to-the-master-branch-in-os-x-mojave/). 
