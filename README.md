@@ -1,5 +1,7 @@
 # Hayahay Café
 
+![](https://github.com/svenjungnickel/hayahaycafe//workflows/Run%20linting%20and%20tests/badge.svg)
+
 ## 🚀 Quick start
 
 1.  **Clone repository.**
@@ -58,7 +60,7 @@ To deploy on [Netlify](https://www.netlify.com/) just hit following button:
 
 You can also test the Netlify build before you deploy. 
 
-1.  **Install Netlify CLI**
+1.  **Install Netlify CLI.**
 
     First install the Netlify CLI to your local dev environment. 
 
@@ -66,7 +68,7 @@ You can also test the Netlify build before you deploy.
     npm install netlify-cli -g
     ```
 
-2.  **Run test build**
+2.  **Run test build.**
     
     To test the build run following command:
     
@@ -131,4 +133,4 @@ To run all tests in headless mode use following command:
 npm run test:e2e:ci
 ```
 
-E2E tests running in CI are recorded. You can find all recorded tests in the [cypress dashboard](https://dashboard.cypress.io/).
+E2E tests running in CI are recorded. You can find all recorded tests in the [![Cypress Dashboard](https://img.shields.io/badge/cypress-dashboard-brightgreen.svg)](https://dashboard.cypress.io/projects/imkh2i/runs)
