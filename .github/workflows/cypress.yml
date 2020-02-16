@@ -1,4 +1,4 @@
-name: Build project and Run CI
+name: Run Cypress
 on:
   push:
     branches:
@@ -7,32 +7,6 @@ on:
     branches:
       - master
 jobs:
-  eslint:
-    name: Linting
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-      - name: Use Node.js 10.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: 10.x
-      - name: Run ESLint
-        run: |
-            npm install -D
-            npm run lint
-  jest:
-    name: Unit Tests
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-      - name: Use Node.js 10.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: 10.x
-      - name: Run Jest
-        run: |
-            npm install -D
-            npm run test
   cypress:
     name: E2E Tests
     runs-on: ubuntu-latest
