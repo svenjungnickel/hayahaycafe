@@ -1,97 +1,134 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's default starter
-</h1>
-
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
-
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+# Hayahay Café
 
 ## 🚀 Quick start
 
-1.  **Create a Gatsby site.**
+1.  **Clone repository.**
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+    Clone this repository to your local environment
 
     ```sh
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
+    git clone https://github.com/svenjungnickel/hayahaycafe.git
     ```
 
-1.  **Start developing.**
+2.  **Install dependencies.**
 
-    Navigate into your new site’s directory and start it up.
+    Navigate into the cloned repo and install dependencies.
 
     ```sh
-    cd my-default-starter/
+    cd hayahaycafe/
+    npm install
+    ```
+    
+3.  **Define environment variables.**
+
+    Define your environment variables before you start. To do so, simply copy `.env.dist` and rename it to `.env.development`.
+    Then update the variables with your parameters.
+    
+    > Hint: Use the predefined SITE_RECAPTCHA_KEY and SITE_RECAPTCHA_SECRET for automated tests. More details under **E2E tests**.
+
+4.  **Start developing.**
+
+    Start a local server for developing via gatsby.
+
+    ```sh
     gatsby develop
     ```
+    
+    Alternatively you can use a predefined npm command which cleans also the gatsby cache and makes the dev server 
+    accessible in your local network (for visiting from your mobile device). 
+    
+    ```sh
+    npm run develop
+    ```
 
-1.  **Open the source code and start editing!**
+5.  **Open the source code and start editing!**
 
     Your site is now running at `http://localhost:8000`!
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment 
+    with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
-
-## 🧐 What's inside?
-
-A quick look at the top-level files and directories you'll see in a Gatsby project.
-
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
-
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
-
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
-
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
-
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
-
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
-
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
-
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
-
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
-
-9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
-
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
-
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-
-12. **`README.md`**: A text file containing useful reference information about your project.
-
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
-
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+    Open the `hayahaycafe` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and 
+    the browser will update in real time!
 
 ## 💫 Deploy
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+To deploy on [Netlify](https://www.netlify.com/) just hit following button:
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/svenjungnickel/hayahaycafe)
 
-<!-- AUTO-GENERATED-CONTENT:END -->
+You can also test the Netlify build before you deploy. 
+
+1.  **Install Netlify CLI**
+
+    First install the Netlify CLI to your local dev environment. 
+
+    ```sh
+    npm install netlify-cli -g
+    ```
+
+2.  **Run test build**
+    
+    To test the build run following command:
+    
+    ```sh
+    netlify build
+    ```
+
+    This will run the build on your local dev environment. The logs will show if the build will be successful or has 
+    any errors.
+
+## 🚨 Linting
+
+We are using [EsLint](https://eslint.org/) for Javascript linting. Simply run following command to lint your code:
+
+```sh
+npm run lint
+```
+
+To fix any issues simply run the fix command:
+
+```sh
+npm run lint:fix
+```
+
+## ✅ Unit tests
+
+We are using [Jest](https://jestjs.io/) for unit tests. You can find more details in the [gatsby docs](https://www.gatsbyjs.org/docs/unit-testing/).
+
+To run all unit tests simply use following command:
+
+```sh
+npm run test
+```
+
+You can also watch unit tests while developing:
+
+```sh
+npx jest --watch
+```
+
+To watch all unit tests run following:
+
+```sh
+npx jest --watchAll
+```
+
+All unit tests generate also code coverage. You can find the generated code coverage under `<rootDir>/coverage/index.html`. 
+
+## 🎉 E2E tests
+
+We are using [Cypress](https://www.cypress.io/) for E2E tests. You can find more details in the [gatsby docs](https://www.gatsbyjs.org/docs/end-to-end-testing/).
+
+To start cypress simply use following command:
+
+```sh
+npm run test:e2e
+```
+
+To run all tests in headless mode use following command:
+
+```sh
+npm run test:e2e:ci
+```
+
+E2E tests running in CI are recorded. You can find all recorded tests in the [cypress dashboard](https://dashboard.cypress.io/).
