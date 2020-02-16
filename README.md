@@ -1,6 +1,8 @@
 # Hayahay Café
 
-![](https://github.com/svenjungnickel/hayahaycafe//workflows/Run%20linting%20and%20tests/badge.svg)
+![](https://github.com/svenjungnickel/hayahaycafe//workflows/Run%20ESLint/badge.svg)
+![](https://github.com/svenjungnickel/hayahaycafe//workflows/Run%20Jest/badge.svg)
+![](https://github.com/svenjungnickel/hayahaycafe//workflows/Run%20Cypress/badge.svg)
 
 ## 🚀 Quick start
 
