@@ -3,6 +3,7 @@
 ![](https://github.com/svenjungnickel/hayahaycafe//workflows/Run%20ESLint/badge.svg)
 ![](https://github.com/svenjungnickel/hayahaycafe//workflows/Run%20Jest/badge.svg)
 ![](https://github.com/svenjungnickel/hayahaycafe//workflows/Run%20Cypress/badge.svg)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e70d696f-4174-47d1-a9c9-db1c5599246b/deploy-status)](https://app.netlify.com/sites/hayahaycafe/deploys)
 
 ## 🚀 Quick start
 
