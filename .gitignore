@@ -73,9 +73,6 @@ yarn-error.log
 # Netlify
 .netlify
 
-# Lighthouse CI
-.lighthouseci
-
 # Cypress
 cypress.env.json
 cypress/fixtures/

@@ -48,7 +48,8 @@
     "babel-jest": "^25.1.0",
     "babel-loader": "^8.0.6",
     "babel-preset-gatsby": "^0.2.27",
-    "cypress": "^3.8.3",
+    "cypress": "^4.0.2",
+    "cypress-audit": "^0.0.3",
     "cypress-axe": "^0.5.3",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
@@ -85,7 +86,9 @@
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "test:e2e": "start-server-and-test start http://localhost:8000 cy:open",
-    "test:e2e:ci": "start-server-and-test start http://localhost:8000 cy:run"
+    "test:e2e:ci": "start-server-and-test start http://localhost:8000 cy:run",
+    "lighthouse": "cypress open --config-file cypress-lighthouse.json",
+    "lighthouse:ci": "cypress run --config-file cypress-lighthouse.json"
   },
   "homepage": "https://www.hayahaycafe.com"
 }

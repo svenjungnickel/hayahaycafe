@@ -138,7 +138,25 @@ npm run test:e2e:ci
 
 E2E tests running in CI are recorded. You can find all recorded tests in the [![Cypress Dashboard](https://img.shields.io/badge/cypress-dashboard-brightgreen.svg)](https://dashboard.cypress.io/projects/imkh2i/runs)
 
-## Preventing Commits to the master branch
+## 🎉 Lighthouse audits
+
+We are running lighthouse audits in cypress via [cypress-audit](https://www.npmjs.com/package/cypress-audit/).
+
+To start Lighthouse audits simply use following command:
+
+```sh
+npm run lighthouse
+```
+
+To run all Lighthouse audits in headless mode use following command:
+
+```sh
+npm run lighthouse:ci
+```
+
+Audits are recorded too and therefore also available in the [![Cypress Dashboard](https://img.shields.io/badge/cypress-dashboard-brightgreen.svg)](https://dashboard.cypress.io/projects/imkh2i/runs)
+
+## Preventing commits to the master branch
 
 This project is setup to reject push and commits directly to master. To prevent commits to master on your local machine
 install following pre-commit hook to your `.git/hooks/pre-commit` file. 
