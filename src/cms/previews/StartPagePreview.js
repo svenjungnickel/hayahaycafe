@@ -8,7 +8,6 @@ const StartPagePreview = ({ entry, widgetFor }) => (
         subtitle={entry.toJS().data.subtitle}
         headerImage={entry.toJS().data.headerImage}
         content={widgetFor('body')}
-        gallery={entry.toJS().data.gallery}
     />
 );
 

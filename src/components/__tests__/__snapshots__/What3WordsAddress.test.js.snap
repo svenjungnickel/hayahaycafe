@@ -7,12 +7,14 @@ exports[`What3WordsAddress does not render empty globalSettings data 1`] = `null
 exports[`What3WordsAddress does not render empty location data 1`] = `null`;
 
 exports[`What3WordsAddress renders correctly 1`] = `
-Array [
+<div
+  className="what3words"
+>
   <h2>
     Map
-  </h2>,
+  </h2>
   <a
-    className="what3words"
+    className="what3words__link"
     href="https://what3words.com/what3WordsAddress"
     rel="noopener noreferrer"
     target="_blank"
@@ -26,6 +28,6 @@ Array [
     >
       ///what3WordsAddress
     </p>
-  </a>,
-]
+  </a>
+</div>
 `;

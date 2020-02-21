@@ -4,7 +4,6 @@ import { graphql } from 'gatsby';
 import { Col, Container, Row } from 'react-bootstrap';
 import Layout from '../components/Layout';
 import Image from '../components/Image';
-import Gallery from '../components/Gallery';
 import Content, { HTMLContent } from '../components/Content';
 import Location from '../components/Location';
 import Separator from '../components/Separator';
@@ -13,7 +12,7 @@ import What3WordsAddress from '../components/What3WordsAddress';
 import StartPageStyles from '../styles/pages/Start.module.scss';
 import SectionStyles from '../styles/components/Section.module.scss';
 
-export const StartPageTemplate = ({ title, subtitle, headerImage, content, contentComponent, gallery }) => {
+export const StartPageTemplate = ({ title, subtitle, headerImage, content, contentComponent }) => {
     const PostContent = contentComponent || Content;
 
     return (
@@ -49,17 +48,6 @@ export const StartPageTemplate = ({ title, subtitle, headerImage, content, conte
                             <Separator className="d-block d-sm-none" />
                             <OpeningHours />
                         </Col>
-                        {gallery && gallery.length > 0 && (
-                            <>
-                                <Col xs={12}>
-                                    <Separator />
-                                </Col>
-                                <div className="container">
-                                    <h2 className="display-5 text-center">Gallery</h2>
-                                    <Gallery images={gallery} />
-                                </div>
-                            </>
-                        )}
                     </Row>
                 </Container>
             </section>
@@ -73,7 +61,6 @@ StartPageTemplate.propTypes = {
     headerImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
     content: PropTypes.node.isRequired,
     contentComponent: PropTypes.func,
-    gallery: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 const StartPage = ({ data: { page } }) => (
@@ -109,18 +96,6 @@ export const pageQuery = graphql`
                         }
                     }
                     publicURL
-                }
-                gallery {
-                    src {
-                        childImageSharp {
-                            fluid(maxWidth: 1600, maxHeight: 800) {
-                                ...GatsbyImageSharpFluid
-                            }
-                        }
-                        publicURL
-                    }
-                    alt
-                    title
                 }
                 meta {
                     title

@@ -4,7 +4,6 @@ import StartPagePreview from '../StartPagePreview';
 import StartPageData from '../../../__fixtures__/StartPageData';
 
 jest.mock('../../../components/Image');
-jest.mock('../../../components/Gallery');
 jest.mock('../../../components/Header');
 jest.mock('../../../components/Location/Location');
 jest.mock('../../../components/Separator');

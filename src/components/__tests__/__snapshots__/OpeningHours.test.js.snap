@@ -5,10 +5,12 @@ exports[`OpeningHours does not render empty data 1`] = `null`;
 exports[`OpeningHours does not render empty globalSettings data 1`] = `null`;
 
 exports[`OpeningHours renders correctly 1`] = `
-Array [
+<div
+  className="openingHours"
+>
   <h2>
     Opening Hours
-  </h2>,
+  </h2>
   <div
     dangerouslySetInnerHTML={
       Object {
@@ -17,6 +19,6 @@ Array [
         </p>,
       }
     }
-  />,
-]
+  />
+</div>
 `;

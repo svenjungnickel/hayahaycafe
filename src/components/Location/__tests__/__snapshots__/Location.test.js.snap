@@ -7,41 +7,49 @@ exports[`Location does not render empty globalSettings data 1`] = `null`;
 exports[`Location does not render empty location data 1`] = `null`;
 
 exports[`Location renders address data with company, first address line and postal code 1`] = `
-Array [
+<div
+  className="listAddress"
+>
   <h2>
     Location
-  </h2>,
-  "company",
-  <br />,
-  "addressLine1",
-  <br />,
-  "postalCode",
-  <br />,
-]
+  </h2>
+  company
+  <br />
+  addressLine1
+  <br />
+  postalCode
+  <br />
+</div>
 `;
 
 exports[`Location renders complete address data (company, first and second address line, province, postal code and country 1`] = `
-Array [
+<div
+  className="listAddress"
+>
   <h2>
     Location
-  </h2>,
-  "company",
-  <br />,
-  "addressLine1",
-  <br />,
-  "addressLine2",
-  <br />,
-  "province",
-  <br />,
-  "postalCode",
-  <br />,
-  "country",
-  <br />,
-]
+  </h2>
+  company
+  <br />
+  addressLine1
+  <br />
+  addressLine2
+  <br />
+  province
+  <br />
+  postalCode
+  <br />
+  country
+  <br />
+</div>
 `;
 
 exports[`Location renders empty address data 1`] = `
-<h2>
-  Location
-</h2>
+<div
+  className="listAddress"
+>
+  <h2>
+    Location
+  </h2>
+</div>
 `;
