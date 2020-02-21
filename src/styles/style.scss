@@ -1,3 +1,5 @@
+@import "mixins/media-queries";
+
 body {
     --color-primary: #662721;
     --color-secondary: #d2a795;
@@ -28,6 +30,12 @@ body {
 
     h1, h2, h3, h4, h5 {
         margin-bottom: 30px;
+    }
+
+    h1 {
+        @include respond-below(sm) {
+            font-size: 5rem !important;
+        }
     }
 
     // workaround to get active links in nav bar working
