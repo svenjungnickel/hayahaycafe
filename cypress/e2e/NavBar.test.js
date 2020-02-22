@@ -71,6 +71,23 @@ const storyLink = (mobile = false) => {
     cy.get('[data-cy=navBarLinkStory]').should('have.class', 'active');
 };
 
+const galleryLink = (mobile = false) => {
+    cy.visit('/');
+
+    cy.get('[data-cy=navBarLinkGallery]')
+        .should('have.attr', 'href')
+        .and('include', 'gallery');
+
+    if (true === mobile) {
+        cy.get('[data-cy=navBarToggle]').click();
+    }
+
+    cy.get('[data-cy=navBarLinkGallery]').click();
+    cy.get('header');
+    cy.url().should('contain', '/gallery');
+    cy.get('[data-cy=navBarLinkGallery]').should('have.class', 'active');
+};
+
 describe('Navigation bar', () => {
     describe('Desktop', () => {
         beforeEach(() => {
@@ -95,6 +112,10 @@ describe('Navigation bar', () => {
 
         it('Story link', () => {
             storyLink();
+        });
+
+        it('Gallery link', () => {
+            galleryLink();
         });
     });
 
@@ -121,6 +142,10 @@ describe('Navigation bar', () => {
 
         it('Story link', () => {
             storyLink(true);
+        });
+
+        it('Gallery link', () => {
+            galleryLink(true);
         });
     });
 });

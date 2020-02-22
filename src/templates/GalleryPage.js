@@ -61,6 +61,7 @@ export const GalleryPageTemplate = ({ title, subtitle, headerImage, content, con
                                         lg={4}
                                         key={index}
                                         className={GalleryStyles.gallery__image}
+                                        data-cy="galleryImage"
                                     >
                                         <a onClick={() => openLightBox(index)}>
                                             <Image src={image.src} alt={image.alt} title={image.title} />
