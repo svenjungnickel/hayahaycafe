@@ -59,6 +59,15 @@ const pages = () => {
     cy.visit('/admin/#/collections/pages');
 
     cy.get('main')
+        .find("a[href*='gallery']")
+        .click();
+
+    cy.url().should('contain', '/gallery');
+    cy.get('header');
+
+    cy.visit('/admin/#/collections/pages');
+
+    cy.get('main')
         .find("a[href*='story']")
         .click();
 
@@ -82,8 +91,6 @@ const pages = () => {
 
     cy.url().should('contain', '/data-privacy');
     cy.get('header');
-
-    //@TODO add test for gallery page after merge to master
 };
 
 describe('Admin', () => {

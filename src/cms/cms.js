@@ -8,6 +8,7 @@ import CMS from 'netlify-cms-app';
 
 import StartPagePreview from './previews/StartPagePreview';
 import ContactPagePreview from './previews/ContactPagePreview';
+import GalleryPagePreview from './previews/GalleryPagePreview';
 import DefaultPagePreview from './previews/DefaultPagePreview';
 
 if (window.location.hostname === 'localhost') {
@@ -30,6 +31,7 @@ if (window.location.hostname === 'localhost') {
  */
 CMS.registerPreviewTemplate('start-page', StartPagePreview);
 CMS.registerPreviewTemplate('contact-page', ContactPagePreview);
+CMS.registerPreviewTemplate('gallery-page', GalleryPagePreview);
 CMS.registerPreviewTemplate('story-page', DefaultPagePreview);
 CMS.registerPreviewTemplate('legal-page', DefaultPagePreview);
 CMS.registerPreviewTemplate('data-privacy-page', DefaultPagePreview);
