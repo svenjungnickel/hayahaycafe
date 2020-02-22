@@ -37,6 +37,10 @@ describe('Accessibility checks', () => {
                 checkA11yForPage('/contact');
             });
 
+            it('Has no detectable accessibility violations on gallery page', () => {
+                checkA11yForPage('/gallery');
+            });
+
             it('Has no detectable accessibility violations on legal page', () => {
                 checkA11yForPage('/legal');
             });
@@ -65,6 +69,10 @@ describe('Accessibility checks', () => {
 
             it('Has no detectable accessibility violations on contact page', () => {
                 checkA11yForPage('/contact');
+            });
+
+            it('Has no detectable accessibility violations on gallery page', () => {
+                checkA11yForPage('/gallery');
             });
 
             it('Has no detectable accessibility violations on legal page', () => {
@@ -103,6 +111,10 @@ describe('Accessibility checks', () => {
                 checkA11yForPage('/contact');
             });
 
+            it('Has no detectable accessibility violations on gallery page', () => {
+                checkA11yForPage('/gallery');
+            });
+
             it('Has no detectable accessibility violations on legal page', () => {
                 checkA11yForPage('/legal');
             });
@@ -131,6 +143,10 @@ describe('Accessibility checks', () => {
 
             it('Has no detectable accessibility violations on contact page', () => {
                 checkA11yForPage('/contact');
+            });
+
+            it('Has no detectable accessibility violations on gallery page', () => {
+                checkA11yForPage('/gallery');
             });
 
             it('Has no detectable accessibility violations on legal page', () => {

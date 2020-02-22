@@ -1,21 +1,18 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import StartPagePreview from '../StartPagePreview';
-import StartPageData from '../../../__fixtures__/StartPageData';
+import GalleryPagePreview from '../GalleryPagePreview';
+import GalleryPageData from '../../../__fixtures__/GalleryPageData';
 
-jest.mock('../../../components/Image');
 jest.mock('../../../components/Header');
-jest.mock('../../../components/Location/Location');
 jest.mock('../../../components/Separator');
-jest.mock('../../../components/OpeningHours');
-jest.mock('../../../components/What3WordsAddress');
+jest.mock('../../../components/Image');
 
-describe('StartPagePreview', () => {
+describe('GalleryPagePreview', () => {
     it('renders without entry throws prop type error', () => {
         const renderStartPagePreview = () => {
             const widgetFor = () => {};
 
-            const component = <StartPagePreview widgetFor={widgetFor} />;
+            const component = <GalleryPagePreview widgetFor={widgetFor} />;
             renderer.create(component);
         };
 
@@ -28,7 +25,7 @@ describe('StartPagePreview', () => {
                 toJS: () => {},
             };
 
-            const component = <StartPagePreview entry={entry} />;
+            const component = <GalleryPagePreview entry={entry} />;
             renderer.create(component);
         };
 
@@ -42,7 +39,7 @@ describe('StartPagePreview', () => {
             };
             const widgetFor = () => {};
 
-            const component = <StartPagePreview entry={entry} widgetFor={widgetFor} />;
+            const component = <GalleryPagePreview entry={entry} widgetFor={widgetFor} />;
             renderer.create(component);
         };
 
@@ -56,7 +53,7 @@ describe('StartPagePreview', () => {
             };
             const widgetFor = {};
 
-            const component = <StartPagePreview entry={entry} widgetFor={widgetFor} />;
+            const component = <GalleryPagePreview entry={entry} widgetFor={widgetFor} />;
             renderer.create(component);
         };
 
@@ -67,13 +64,13 @@ describe('StartPagePreview', () => {
         const entry = {
             toJS: () => {
                 return {
-                    data: StartPageData,
+                    data: GalleryPageData,
                 };
             },
         };
         const widgetFor = () => 'content';
 
-        const component = <StartPagePreview entry={entry} widgetFor={widgetFor} />;
+        const component = <GalleryPagePreview entry={entry} widgetFor={widgetFor} />;
         const tree = renderer.create(component).toJSON();
 
         expect(tree).toMatchSnapshot();

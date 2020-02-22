@@ -86,23 +86,6 @@ exports[`StartPage renders correctly 1`] = `
             Opening Hours
           </p>
         </div>
-        <div
-          className="col-12"
-        >
-          <hr />
-        </div>
-        <div
-          className="container"
-        >
-          <h2
-            className="display-5 text-center"
-          >
-            Gallery
-          </h2>
-          <p>
-            Gallery
-          </p>
-        </div>
       </div>
     </div>
   </section>
@@ -187,23 +170,6 @@ Array [
           <hr />
           <p>
             Opening Hours
-          </p>
-        </div>
-        <div
-          className="col-12"
-        >
-          <hr />
-        </div>
-        <div
-          className="container"
-        >
-          <h2
-            className="display-5 text-center"
-          >
-            Gallery
-          </h2>
-          <p>
-            Gallery
           </p>
         </div>
       </div>
@@ -296,23 +262,6 @@ Array [
           <hr />
           <p>
             Opening Hours
-          </p>
-        </div>
-        <div
-          className="col-12"
-        >
-          <hr />
-        </div>
-        <div
-          className="container"
-        >
-          <h2
-            className="display-5 text-center"
-          >
-            Gallery
-          </h2>
-          <p>
-            Gallery
           </p>
         </div>
       </div>

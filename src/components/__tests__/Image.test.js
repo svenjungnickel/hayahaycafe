@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import Image from '../Image';
+import { defaultImage, childImageSharpFluid, childImageSharpFixed } from '../../__fixtures__/Images';
 
 describe('Image', () => {
     it('renders without required src throws prop type error', () => {
@@ -24,45 +25,21 @@ describe('Image', () => {
     });
 
     it('renders <img>', () => {
-        const src = 'src';
-
-        const component = <Image src={src} />;
+        const component = <Image src={defaultImage} />;
         const tree = renderer.create(component).toJSON();
 
         expect(tree).toMatchSnapshot();
     });
 
     it('renders childImageSharp fluid', () => {
-        const image = {
-            childImageSharp: {
-                fluid: {
-                    aspectRatio: 1,
-                    src: 'src',
-                    srcSet: 'srcSet',
-                    sizes: '(max-width: 250px) 100vw, 250px',
-                },
-            },
-        };
-
-        const component = <Image src={image} />;
+        const component = <Image src={childImageSharpFluid} />;
         const tree = renderer.create(component).toJSON();
 
         expect(tree).toMatchSnapshot();
     });
 
     it('renders childImageSharp fixed', () => {
-        const image = {
-            childImageSharp: {
-                fixed: {
-                    width: 250,
-                    height: 250,
-                    src: 'src',
-                    srcSet: 'srcSet',
-                },
-            },
-        };
-
-        const component = <Image src={image} />;
+        const component = <Image src={childImageSharpFixed} />;
         const tree = renderer.create(component).toJSON();
 
         expect(tree).toMatchSnapshot();

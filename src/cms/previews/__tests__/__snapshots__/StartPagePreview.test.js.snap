@@ -80,23 +80,6 @@ Array [
             Opening Hours
           </p>
         </div>
-        <div
-          className="col-12"
-        >
-          <hr />
-        </div>
-        <div
-          className="container"
-        >
-          <h2
-            className="display-5 text-center"
-          >
-            Gallery
-          </h2>
-          <p>
-            Gallery
-          </p>
-        </div>
       </div>
     </div>
   </section>,

@@ -1,0 +1,7 @@
+@import "../mixins/media-queries";
+
+.openingHours {
+    @include respond-below(lg) {
+        text-align: center;
+    }
+}

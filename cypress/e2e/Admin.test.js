@@ -82,6 +82,8 @@ const pages = () => {
 
     cy.url().should('contain', '/data-privacy');
     cy.get('header');
+
+    //@TODO add test for gallery page after merge to master
 };
 
 describe('Admin', () => {

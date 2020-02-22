@@ -41,6 +41,7 @@ exports[`NavBar renders with disabled dark mode (default) 1`] = `
         src="logo"
       />
       <nav />
+      <nav />
     </div>
   </div>
   <div

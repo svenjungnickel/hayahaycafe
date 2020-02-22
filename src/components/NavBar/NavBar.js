@@ -59,6 +59,7 @@ const NavBar = ({ currentPage }) => {
                             <NavItem link="/" name="Home" active={currentPage === '/'} />
                             <Logo logo={data.logo.childImageSharp.fixed} className="d-none d-md-block" />
                             <NavItem link="/story" name="Story" active={currentPage === '/story'} />
+                            <NavItem link="/gallery" name="Gallery" active={currentPage === '/gallery'} />
                         </Nav>
                     </Navbar.Collapse>
                     <div className={DarkModeToggleStyle.darkModeToggle}>

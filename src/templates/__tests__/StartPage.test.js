@@ -6,7 +6,6 @@ import StartPageData from '../../__fixtures__/StartPageData';
 
 jest.mock('../../components/Layout');
 jest.mock('../../components/Image');
-jest.mock('../../components/Gallery');
 jest.mock('../../components/Header');
 jest.mock('../../components/Location/Location');
 jest.mock('../../components/Separator');
@@ -19,11 +18,8 @@ describe('StartPageTemplate', () => {
             const subtitle = 'subtitle';
             const headerImage = 'headerImage';
             const content = 'content';
-            const gallery = [{}];
 
-            const component = (
-                <StartPageTemplate subtitle={subtitle} headerImage={headerImage} content={content} gallery={gallery} />
-            );
+            const component = <StartPageTemplate subtitle={subtitle} headerImage={headerImage} content={content} />;
             renderer.create(component);
         };
 
@@ -35,11 +31,8 @@ describe('StartPageTemplate', () => {
             const title = 'title';
             const headerImage = 'headerImage';
             const content = 'content';
-            const gallery = [{}];
 
-            const component = (
-                <StartPageTemplate title={title} headerImage={headerImage} content={content} gallery={gallery} />
-            );
+            const component = <StartPageTemplate title={title} headerImage={headerImage} content={content} />;
             renderer.create(component);
         };
 
@@ -51,11 +44,8 @@ describe('StartPageTemplate', () => {
             const title = 'title';
             const subtitle = 'subtitle';
             const content = 'content';
-            const gallery = [{}];
 
-            const component = (
-                <StartPageTemplate title={title} subtitle={subtitle} content={content} gallery={gallery} />
-            );
+            const component = <StartPageTemplate title={title} subtitle={subtitle} content={content} />;
             renderer.create(component);
         };
 
@@ -67,20 +57,17 @@ describe('StartPageTemplate', () => {
             const title = 'title';
             const subtitle = 'subtitle';
             const headerImage = 'headerImage';
-            const gallery = [{}];
 
-            const component = (
-                <StartPageTemplate title={title} subtitle={subtitle} headerImage={headerImage} gallery={gallery} />
-            );
+            const component = <StartPageTemplate title={title} subtitle={subtitle} headerImage={headerImage} />;
             renderer.create(component);
         };
 
         expect(renderStartPageTemplate).toThrowError('Warning: Failed prop type');
     });
 
-    it('renders without gallery throws prop type error', () => {
+    it('renders with invalid title throws prop type error', () => {
         const renderStartPageTemplate = () => {
-            const title = 'title';
+            const title = 123;
             const subtitle = 'subtitle';
             const headerImage = 'headerImage';
             const content = 'content';
@@ -94,45 +81,15 @@ describe('StartPageTemplate', () => {
         expect(renderStartPageTemplate).toThrowError('Warning: Failed prop type');
     });
 
-    it('renders with invalid title throws prop type error', () => {
-        const renderStartPageTemplate = () => {
-            const title = 123;
-            const subtitle = 'subtitle';
-            const headerImage = 'headerImage';
-            const content = 'content';
-            const gallery = [{}];
-
-            const component = (
-                <StartPageTemplate
-                    title={title}
-                    subtitle={subtitle}
-                    headerImage={headerImage}
-                    content={content}
-                    gallery={gallery}
-                />
-            );
-            renderer.create(component);
-        };
-
-        expect(renderStartPageTemplate).toThrowError('Warning: Failed prop type');
-    });
-
     it('renders with invalid subtitle throws prop type error', () => {
         const renderStartPageTemplate = () => {
             const title = 'title';
             const subtitle = 123;
             const headerImage = 'headerImage';
             const content = 'content';
-            const gallery = [{}];
 
             const component = (
-                <StartPageTemplate
-                    title={title}
-                    subtitle={subtitle}
-                    headerImage={headerImage}
-                    content={content}
-                    gallery={gallery}
-                />
+                <StartPageTemplate title={title} subtitle={subtitle} headerImage={headerImage} content={content} />
             );
             renderer.create(component);
         };
@@ -146,16 +103,9 @@ describe('StartPageTemplate', () => {
             const subtitle = 'subtitle';
             const headerImage = 123;
             const content = 'content';
-            const gallery = [{}];
 
             const component = (
-                <StartPageTemplate
-                    title={title}
-                    subtitle={subtitle}
-                    headerImage={headerImage}
-                    content={content}
-                    gallery={gallery}
-                />
+                <StartPageTemplate title={title} subtitle={subtitle} headerImage={headerImage} content={content} />
             );
             renderer.create(component);
         };
@@ -169,16 +119,9 @@ describe('StartPageTemplate', () => {
             const subtitle = 'subtitle';
             const headerImage = 'headerImage';
             const content = {};
-            const gallery = [{}];
 
             const component = (
-                <StartPageTemplate
-                    title={title}
-                    subtitle={subtitle}
-                    headerImage={headerImage}
-                    content={content}
-                    gallery={gallery}
-                />
+                <StartPageTemplate title={title} subtitle={subtitle} headerImage={headerImage} content={content} />
             );
             renderer.create(component);
         };
@@ -193,7 +136,6 @@ describe('StartPageTemplate', () => {
             const headerImage = 'headerImage';
             const content = 'content';
             const contentComponent = false;
-            const gallery = [{}];
 
             const component = (
                 <StartPageTemplate
@@ -202,30 +144,6 @@ describe('StartPageTemplate', () => {
                     headerImage={headerImage}
                     content={content}
                     contentComponent={contentComponent}
-                    gallery={gallery}
-                />
-            );
-            renderer.create(component);
-        };
-
-        expect(renderStartPageTemplate).toThrowError('Warning: Failed prop type');
-    });
-
-    it('renders with invalid gallery throws prop type error', () => {
-        const renderStartPageTemplate = () => {
-            const title = 'title';
-            const subtitle = 'subtitle';
-            const headerImage = 'headerImage';
-            const content = 'content';
-            const gallery = false;
-
-            const component = (
-                <StartPageTemplate
-                    title={title}
-                    subtitle={subtitle}
-                    headerImage={headerImage}
-                    content={content}
-                    gallery={gallery}
                 />
             );
             renderer.create(component);
@@ -239,16 +157,9 @@ describe('StartPageTemplate', () => {
         const subtitle = 'subtitle';
         const headerImage = 'headerImage';
         const content = 'content';
-        const gallery = [{}];
 
         const component = (
-            <StartPageTemplate
-                title={title}
-                subtitle={subtitle}
-                headerImage={headerImage}
-                content={content}
-                gallery={gallery}
-            />
+            <StartPageTemplate title={title} subtitle={subtitle} headerImage={headerImage} content={content} />
         );
         const tree = renderer.create(component).toJSON();
 
@@ -260,7 +171,6 @@ describe('StartPageTemplate', () => {
         const subtitle = 'subtitle';
         const headerImage = 'headerImage';
         const content = <p>HTML content</p>;
-        const gallery = [{}];
 
         const component = (
             <StartPageTemplate
@@ -269,7 +179,6 @@ describe('StartPageTemplate', () => {
                 headerImage={headerImage}
                 content={content}
                 contentComponent={HTMLContent}
-                gallery={gallery}
             />
         );
         const tree = renderer.create(component).toJSON();

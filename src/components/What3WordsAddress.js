@@ -9,7 +9,7 @@ export const What3Words = ({ what3WordsAddress, what3WordsIcon }) => (
         href={`https://what3words.com/${what3WordsAddress}`}
         target="_blank"
         rel="noopener noreferrer"
-        className={What3WordsAddressStyles.what3words}
+        className={What3WordsAddressStyles.what3words__link}
     >
         <Image src={what3WordsIcon} alt="What3words address" />
         <p className={What3WordsAddressStyles.what3words__address}>{`///${what3WordsAddress}`}</p>
@@ -43,13 +43,13 @@ const What3WordsAddress = () => (
         render={({ globalSettings, what3WordsIcon }) => (
             <>
                 {!!globalSettings && !!globalSettings.location && !!globalSettings.location.what3WordsAddress && (
-                    <>
+                    <div className={What3WordsAddressStyles.what3words}>
                         <h2>Map</h2>
                         <What3Words
                             what3WordsAddress={globalSettings.location.what3WordsAddress}
                             what3WordsIcon={what3WordsIcon}
                         />
-                    </>
+                    </div>
                 )}
             </>
         )}

@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GalleryPagePreview renders correctly 1`] = `
+Array [
+  <header />,
+  <section
+    className="section"
+  >
+    <div
+      className="gallery container"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col-12"
+        >
+          <div>
+            content
+          </div>
+          <hr />
+        </div>
+        <div
+          className="gallery__image col-lg-4 col-md-6 col-sm-12 col-12"
+          data-cy="galleryImage"
+        >
+          <a
+            onClick={[Function]}
+          >
+            <img
+              alt="alt"
+              src="src"
+            />
+          </a>
+        </div>
+        <div
+          className="gallery__image col-lg-4 col-md-6 col-sm-12 col-12"
+          data-cy="galleryImage"
+        >
+          <a
+            onClick={[Function]}
+          >
+            <img
+              alt="alt"
+              src="src"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>,
+]
+`;

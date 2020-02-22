@@ -1,21 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StartPageTemplate } from '../../templates/StartPage';
+import { GalleryPageTemplate } from '../../templates/GalleryPage';
 
-const StartPagePreview = ({ entry, widgetFor }) => (
-    <StartPageTemplate
+const GalleryPagePreview = ({ entry, widgetFor }) => (
+    <GalleryPageTemplate
         title={entry.toJS().data.title}
         subtitle={entry.toJS().data.subtitle}
         headerImage={entry.toJS().data.headerImage}
         content={widgetFor('body')}
+        images={entry.toJS().data.images}
     />
 );
 
-StartPagePreview.propTypes = {
+GalleryPagePreview.propTypes = {
     entry: PropTypes.shape({
         toJS: PropTypes.func,
     }).isRequired,
     widgetFor: PropTypes.func.isRequired,
 };
 
-export default StartPagePreview;
+export default GalleryPagePreview;

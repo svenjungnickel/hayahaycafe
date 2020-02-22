@@ -1,0 +1,13 @@
+.gallery {
+    .gallery__image {
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        img {
+            &:hover {
+                cursor: pointer;
+                opacity: 0.7 !important;
+            }
+        }
+    }
+}
