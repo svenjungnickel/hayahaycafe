@@ -33,13 +33,6 @@ collections: # A list of collections the CMS should be able to edit
           - { label: Subtitle, name: subtitle, widget: string }
           - { label: Header Image, name: headerImage, widget: image }
           - { label: Body, name: body, widget: markdown }
-          - label: 'Gallery'
-            name: 'gallery'
-            widget: 'list'
-            fields:
-              - { name: src, label: Image, widget: image }
-              - { name: alt, label: Alt, widget: string }
-              - { name: title, label: Title, widget: string, required: false }
           - label: 'Meta'
             required: false
             name: 'meta'
@@ -69,7 +62,7 @@ collections: # A list of collections the CMS should be able to edit
               - { label: Keywords, name: keywords, widget: string, required: false }
 
       - file: 'content/pages/gallery.md'
-        label: 'Gallery Page'
+        label: 'Gallery'
         name: 'gallery-page'
         fields:
           - { label: Template, name: template, widget: hidden, default: GalleryPage }
