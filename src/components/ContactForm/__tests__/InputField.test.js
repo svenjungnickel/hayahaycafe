@@ -194,6 +194,31 @@ describe('InputField', () => {
         expect(renderInputField).toThrowError('Warning: Failed prop type');
     });
 
+    it('renders with invalid type throws prop type error', () => {
+        const renderInputField = () => {
+            const controlId = 'controlId';
+            const name = 'name';
+            const label = 'label';
+            const errorMessage = 'errorMessage';
+            const onChange = () => {};
+            const type = 'invalid';
+
+            const component = (
+                <InputField
+                    controlId={controlId}
+                    name={name}
+                    label={label}
+                    errorMessage={errorMessage}
+                    onChange={onChange}
+                    type={type}
+                />
+            );
+            renderer.create(component);
+        };
+
+        expect(renderInputField).toThrowError('Warning: Failed prop type');
+    });
+
     it('renders with invalid description throws prop type error', () => {
         const renderInputField = () => {
             const controlId = 'controlId';

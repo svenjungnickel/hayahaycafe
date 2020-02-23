@@ -34,17 +34,6 @@ exports[`Footer renders correctly 1`] = `
         >
           <a
             className="nav-link"
-            data-cy="footerLinkContact"
-            href="/contact"
-          >
-            Contact
-          </a>
-        </div>
-        <div
-          className="nav-item"
-        >
-          <a
-            className="nav-link"
             data-cy="footerLinkLegal"
             href="/legal"
           >

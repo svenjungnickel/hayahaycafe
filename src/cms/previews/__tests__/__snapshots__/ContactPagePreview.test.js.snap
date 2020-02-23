@@ -20,35 +20,13 @@ Array [
           </div>
           <hr />
         </div>
+      </div>
+      <div
+        className="justify-content-md-center row"
+      >
         <div
-          className="col-sm-4 col-12"
+          className="col-md-8 col-12"
         >
-          <p>
-            Location
-          </p>
-          <hr />
-          <a
-            href="what3WordsAddress"
-          >
-            <img
-              alt="what3WordsIcon"
-              src="src"
-            />
-          </a>
-          <hr />
-          <p>
-            Opening Hours
-          </p>
-          <hr />
-        </div>
-        <div
-          className="col-sm-8 col-12"
-        >
-          <h2
-            className="d-block d-sm-none"
-          >
-            Contact us
-          </h2>
           <form />
         </div>
       </div>

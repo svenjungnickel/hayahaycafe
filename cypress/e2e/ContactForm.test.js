@@ -1,4 +1,13 @@
-const submitInvalidData = () => {
+const recaptchaDarkTheme = () => {
+    cy.getIframeBody("iframe[src*='recaptcha']:visible").find('.rc-anchor-light');
+
+    cy.setDarkMode(true);
+    cy.visit('/contact');
+
+    cy.getIframeBody("iframe[src*='recaptcha']:visible").find('.rc-anchor-dark');
+};
+
+const submitEmptyData = () => {
     cy.get('[data-cy=contactForm]').should('be.visible');
 
     cy.get('[data-cy=contactFirstName]')
@@ -53,6 +62,26 @@ const submitInvalidData = () => {
         .should('be.visible');
 };
 
+const submitInvalidEmail = () => {
+    cy.get('[data-cy=contactForm]').should('be.visible');
+
+    cy.get('[data-cy=contactEmail]')
+        .find('.invalid-feedback')
+        .should('not.be.visible');
+
+    cy.get('[data-cy=contactEmail]')
+        .find('input')
+        .type('invalid_email')
+        .should('have.value', 'invalid_email');
+
+    cy.get('[data-cy=contactForm]').submit();
+    cy.get('[data-cy=contactForm]').should('be.visible');
+
+    cy.get('[data-cy=contactEmail]')
+        .find('.invalid-feedback')
+        .should('be.visible');
+};
+
 const submitValidData = () => {
     cy.get('[data-cy=contactForm]').should('be.visible');
 
@@ -96,6 +125,7 @@ const submitValidData = () => {
 
 describe('Contact form', () => {
     beforeEach(() => {
+        cy.setDarkMode(false);
         cy.visit('/contact');
     });
 
@@ -104,25 +134,42 @@ describe('Contact form', () => {
             cy.useDesktop();
         });
 
-        it('Submit with invalid data displays error messages', () => {
-            submitInvalidData();
+        it('Load Recaptcha dark theme', () => {
+            recaptchaDarkTheme();
         });
 
-        it('Submit with valid data', () => {
+        it('Submit empty data displays error messages', () => {
+            submitEmptyData();
+        });
+
+        it('Submit invalid email address displays email address error messages', () => {
+            submitInvalidEmail();
+        });
+
+        it('Submit valid data displays success message', () => {
             submitValidData();
         });
     });
 
     describe('Mobile', () => {
         beforeEach(() => {
+            cy.setDarkMode(false);
             cy.useMobile();
         });
 
-        it('Submit with empty fields', () => {
-            submitInvalidData();
+        it('Load Recaptcha dark theme', () => {
+            recaptchaDarkTheme();
         });
 
-        it('Submit with valid data', () => {
+        it('Submit empty data displays error messages', () => {
+            submitEmptyData();
+        });
+
+        it('Submit invalid email address displays email address error messages', () => {
+            submitInvalidEmail();
+        });
+
+        it('Submit valid data displays success message', () => {
             submitValidData();
         });
     });

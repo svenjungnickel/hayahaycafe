@@ -114,7 +114,7 @@ exports[`ContactForm snapshot renders correctly 1`] = `
             name="email"
             onChange={[Function]}
             required={true}
-            type="text"
+            type="email"
           />
           <div
             className="invalid-feedback"

@@ -7,10 +7,7 @@ import ContactPageData from '../../__fixtures__/ContactPageData';
 jest.mock('../../components/Layout');
 jest.mock('../../components/Header');
 jest.mock('../../components/ContactForm/ContactForm');
-jest.mock('../../components/Location/Location');
 jest.mock('../../components/Separator');
-jest.mock('../../components/What3WordsAddress');
-jest.mock('../../components/OpeningHours');
 
 describe('ContactPageTemplate', () => {
     it('renders without title throws prop type error', () => {

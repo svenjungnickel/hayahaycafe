@@ -88,6 +88,23 @@ const galleryLink = (mobile = false) => {
     cy.get('[data-cy=navBarLinkGallery]').should('have.class', 'active');
 };
 
+const contactLink = (mobile = false) => {
+    cy.visit('/');
+
+    cy.get('[data-cy=navBarLinkContact]')
+        .should('have.attr', 'href')
+        .and('include', 'contact');
+
+    if (true === mobile) {
+        cy.get('[data-cy=navBarToggle]').click();
+    }
+
+    cy.get('[data-cy=navBarLinkContact]').click();
+    cy.get('header');
+    cy.url().should('contain', '/contact');
+    cy.get('[data-cy=navBarLinkContact]').should('have.class', 'active');
+};
+
 describe('Navigation bar', () => {
     describe('Desktop', () => {
         beforeEach(() => {
@@ -112,6 +129,10 @@ describe('Navigation bar', () => {
 
         it('Story link', () => {
             storyLink();
+        });
+
+        it('Contact link', () => {
+            contactLink();
         });
 
         it('Gallery link', () => {
@@ -142,6 +163,10 @@ describe('Navigation bar', () => {
 
         it('Story link', () => {
             storyLink(true);
+        });
+
+        it('Contact link', () => {
+            contactLink(true);
         });
 
         it('Gallery link', () => {
