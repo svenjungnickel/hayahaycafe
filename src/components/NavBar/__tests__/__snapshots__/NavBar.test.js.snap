@@ -36,6 +36,7 @@ exports[`NavBar renders with disabled dark mode (default) 1`] = `
       onKeyDown={[Function]}
     >
       <nav />
+      <nav />
       <img
         alt="logo"
         src="logo"

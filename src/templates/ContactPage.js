@@ -6,10 +6,7 @@ import Layout from '../components/Layout';
 import Header from '../components/Header';
 import ContactForm from '../components/ContactForm';
 import Content, { HTMLContent } from '../components/Content';
-import Location from '../components/Location';
 import Separator from '../components/Separator';
-import What3WordsAddress from '../components/What3WordsAddress';
-import OpeningHours from '../components/OpeningHours';
 import SectionStyles from '../styles/components/Section.module.scss';
 
 export const ContactPageTemplate = ({ title, subtitle, headerImage, content, contentComponent }) => {
@@ -21,23 +18,16 @@ export const ContactPageTemplate = ({ title, subtitle, headerImage, content, con
 
             <section className={SectionStyles.section}>
                 <Container>
-                    <Row>
-                        {!!content && (
+                    {!!content && (
+                        <Row>
                             <Col xs={12}>
                                 <PostContent content={content} />
                                 <Separator />
                             </Col>
-                        )}
-                        <Col xs={12} sm={4}>
-                            <Location />
-                            <Separator />
-                            <What3WordsAddress />
-                            <Separator />
-                            <OpeningHours />
-                            <Separator className="d-block d-sm-none" />
-                        </Col>
-                        <Col xs={12} sm={8}>
-                            <h2 className="d-block d-sm-none">Contact us</h2>
+                        </Row>
+                    )}
+                    <Row className="justify-content-md-center">
+                        <Col xs={12} md={8}>
                             <ContactForm />
                         </Col>
                     </Row>

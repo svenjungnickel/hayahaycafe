@@ -27,7 +27,6 @@ const Footer = () => (
         <div className={FooterStyles.footer__main}>
             <Container className="text-center">
                 <Nav className="justify-content-center">
-                    <NavItem link="/contact" name="Contact" />
                     <NavItem link="/legal" name="Legal" />
                     <NavItem link="/data-privacy" name="Data Privacy" />
                 </Nav>
