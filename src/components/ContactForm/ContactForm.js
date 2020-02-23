@@ -104,6 +104,7 @@ const ContactForm = () => {
                         label="Email"
                         errorMessage="Please enter a valid email address."
                         onChange={handleChange}
+                        type="email"
                     />
 
                     <InputField
