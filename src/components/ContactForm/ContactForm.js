@@ -2,6 +2,7 @@ import React, { useState, createRef } from 'react';
 import { Alert, Button, Col, Form } from 'react-bootstrap';
 import Recaptcha from 'react-google-recaptcha';
 import Fade from 'react-reveal/Fade';
+import useDarkMode from 'use-dark-mode';
 import InputField from './InputField';
 import Encode from './Encode';
 import ContactFormStyles from '../../styles/components/ContactForm/ContactForm.module.scss';
@@ -15,6 +16,7 @@ const ContactForm = () => {
     const [state, setState] = useState({});
     const [recaptchaError, setRecaptchaError] = useState(false);
     const [success, setSuccess] = useState(false);
+    const darkMode = useDarkMode(false);
     const recaptchaRef = createRef();
 
     const handleChange = e => {
@@ -131,6 +133,7 @@ const ContactForm = () => {
                             ref={recaptchaRef}
                             sitekey={RECAPTCHA_KEY}
                             onChange={handleRecaptcha}
+                            theme={true === darkMode.value ? 'dark' : 'light'}
                             className={ContactFormStyles.contactFormReCaptcha}
                         />
                         {true === recaptchaError && (

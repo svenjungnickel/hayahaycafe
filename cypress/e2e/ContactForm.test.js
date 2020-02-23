@@ -94,8 +94,18 @@ const submitValidData = () => {
     cy.get('[data-cy=contactForm]').should('not.be.visible');
 };
 
+const recaptchaDarkTheme = () => {
+    cy.getIframeBody("iframe[src*='recaptcha']:visible").find('.rc-anchor-light');
+
+    cy.setDarkMode(true);
+    cy.visit('/contact');
+
+    cy.getIframeBody("iframe[src*='recaptcha']:visible").find('.rc-anchor-dark');
+};
+
 describe('Contact form', () => {
     beforeEach(() => {
+        cy.setDarkMode(false);
         cy.visit('/contact');
     });
 
@@ -111,10 +121,15 @@ describe('Contact form', () => {
         it('Submit with valid data', () => {
             submitValidData();
         });
+
+        it('Load Recaptcha dark theme', () => {
+            recaptchaDarkTheme();
+        });
     });
 
     describe('Mobile', () => {
         beforeEach(() => {
+            cy.setDarkMode(false);
             cy.useMobile();
         });
 
@@ -124,6 +139,10 @@ describe('Contact form', () => {
 
         it('Submit with valid data', () => {
             submitValidData();
+        });
+
+        it('Load Recaptcha dark theme', () => {
+            recaptchaDarkTheme();
         });
     });
 });
