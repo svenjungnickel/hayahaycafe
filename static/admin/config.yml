@@ -30,9 +30,9 @@ collections: # A list of collections the CMS should be able to edit
           - { label: Template, name: template, widget: hidden, default: StartPage }
           - { label: Slug, name: slug, widget: hidden, default: '' }
           - { label: Title, name: title, widget: string }
-          - { label: Subtitle, name: subtitle, widget: string }
+          - { label: Subtitle, name: subtitle, widget: string, required: false }
           - { label: Header Image, name: headerImage, widget: image }
-          - { label: Body, name: body, widget: markdown }
+          - { label: Body, name: body, widget: markdown, required: false }
           - label: 'Meta'
             required: false
             name: 'meta'
@@ -49,7 +49,7 @@ collections: # A list of collections the CMS should be able to edit
           - { label: Template, name: template, widget: hidden, default: ContactPage }
           - { label: Slug, name: slug, widget: hidden, default: 'contact' }
           - { label: Title, name: title, widget: string }
-          - { label: Subtitle, name: subtitle, widget: string }
+          - { label: Subtitle, name: subtitle, widget: string, required: false }
           - { label: Header Image, name: headerImage, widget: image }
           - { label: Body, name: body, widget: markdown, required: false }
           - label: 'Meta'
@@ -68,9 +68,9 @@ collections: # A list of collections the CMS should be able to edit
           - { label: Template, name: template, widget: hidden, default: GalleryPage }
           - { label: Slug, name: slug, widget: hidden, default: '' }
           - { label: Title, name: title, widget: string }
-          - { label: Subtitle, name: subtitle, widget: string }
+          - { label: Subtitle, name: subtitle, widget: string, required: false }
           - { label: Header Image, name: headerImage, widget: image }
-          - { label: Body, name: body, widget: markdown }
+          - { label: Body, name: body, widget: markdown, required: false }
           - label: 'Images'
             name: 'images'
             widget: 'list'
@@ -94,9 +94,9 @@ collections: # A list of collections the CMS should be able to edit
           - { label: Template, name: template, widget: hidden, default: DefaultPage }
           - { label: Slug, name: slug, widget: hidden, default: 'story' }
           - { label: Title, name: title, widget: string }
-          - { label: Subtitle, name: subtitle, widget: string }
+          - { label: Subtitle, name: subtitle, widget: string, required: false }
           - { label: Header Image, name: headerImage, widget: image }
-          - { label: Body, name: body, widget: markdown, required: false }
+          - { label: Body, name: body, widget: markdown }
           - label: 'Meta'
             name: 'meta'
             widget: 'object'
