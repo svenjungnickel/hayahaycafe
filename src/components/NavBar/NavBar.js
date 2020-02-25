@@ -57,10 +57,10 @@ const NavBar = ({ currentPage }) => {
                     <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">
                         <Nav className={NavBarStyles.navBar__items}>
                             <NavItem link="/" name="Home" active={currentPage === '/'} />
-                            <NavItem link="/story" name="Story" active={currentPage === '/story'} />
+                            <NavItem link="/about" name="About" active={currentPage === '/about'} />
                             <Logo logo={data.logo.childImageSharp.fixed} className="d-none d-md-block" />
-                            <NavItem link="/contact" name="Contact" active={currentPage === '/contact'} />
                             <NavItem link="/gallery" name="Gallery" active={currentPage === '/gallery'} />
+                            <NavItem link="/contact" name="Contact" active={currentPage === '/contact'} />
                         </Nav>
                     </Navbar.Collapse>
                     <div className={DarkModeToggleStyle.darkModeToggle}>

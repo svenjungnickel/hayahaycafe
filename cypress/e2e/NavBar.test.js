@@ -54,21 +54,21 @@ const logoLink = (mobile = false) => {
     cy.get('[data-cy=navBarLinkHome]').should('have.class', 'active');
 };
 
-const storyLink = (mobile = false) => {
+const aboutLink = (mobile = false) => {
     cy.visit('/');
 
-    cy.get('[data-cy=navBarLinkStory]')
+    cy.get('[data-cy=navBarLinkAbout]')
         .should('have.attr', 'href')
-        .and('include', 'story');
+        .and('include', 'about');
 
     if (true === mobile) {
         cy.get('[data-cy=navBarToggle]').click();
     }
 
-    cy.get('[data-cy=navBarLinkStory]').click();
+    cy.get('[data-cy=navBarLinkAbout]').click();
     cy.get('header');
-    cy.url().should('contain', '/story');
-    cy.get('[data-cy=navBarLinkStory]').should('have.class', 'active');
+    cy.url().should('contain', '/about');
+    cy.get('[data-cy=navBarLinkAbout]').should('have.class', 'active');
 };
 
 const galleryLink = (mobile = false) => {
@@ -127,16 +127,16 @@ describe('Navigation bar', () => {
             logoLink();
         });
 
-        it('Story link', () => {
-            storyLink();
-        });
-
-        it('Contact link', () => {
-            contactLink();
+        it('About link', () => {
+            aboutLink();
         });
 
         it('Gallery link', () => {
             galleryLink();
+        });
+
+        it('Contact link', () => {
+            contactLink();
         });
     });
 
@@ -161,16 +161,16 @@ describe('Navigation bar', () => {
             logoLink(true);
         });
 
-        it('Story link', () => {
-            storyLink(true);
-        });
-
-        it('Contact link', () => {
-            contactLink(true);
+        it('About link', () => {
+            aboutLink(true);
         });
 
         it('Gallery link', () => {
             galleryLink(true);
+        });
+
+        it('Contact link', () => {
+            contactLink(true);
         });
     });
 });

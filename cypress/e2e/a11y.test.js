@@ -29,8 +29,8 @@ describe('Accessibility checks', () => {
                 checkA11yForPage('/');
             });
 
-            it('Has no detectable accessibility violations on story page ', () => {
-                checkA11yForPage('/story');
+            it('Has no detectable accessibility violations on about page ', () => {
+                checkA11yForPage('/about');
             });
 
             it('Has no detectable accessibility violations on contact page', () => {
@@ -63,8 +63,8 @@ describe('Accessibility checks', () => {
                 checkA11yForPage('/');
             });
 
-            it('Has no detectable accessibility violations on story page ', () => {
-                checkA11yForPage('/story');
+            it('Has no detectable accessibility violations on about page ', () => {
+                checkA11yForPage('/about');
             });
 
             it('Has no detectable accessibility violations on contact page', () => {
@@ -103,8 +103,8 @@ describe('Accessibility checks', () => {
                 checkA11yForPage('/');
             });
 
-            it('Has no detectable accessibility violations on story page ', () => {
-                checkA11yForPage('/story');
+            it('Has no detectable accessibility violations on about page ', () => {
+                checkA11yForPage('/about');
             });
 
             it('Has no detectable accessibility violations on contact page', () => {
@@ -137,8 +137,8 @@ describe('Accessibility checks', () => {
                 checkA11yForPage('/');
             });
 
-            it('Has no detectable accessibility violations on story page ', () => {
-                checkA11yForPage('/story');
+            it('Has no detectable accessibility violations on about page ', () => {
+                checkA11yForPage('/about');
             });
 
             it('Has no detectable accessibility violations on contact page', () => {

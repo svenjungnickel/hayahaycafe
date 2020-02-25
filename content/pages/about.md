@@ -1,11 +1,11 @@
 ---
 template: DefaultPage
-slug: story
-title: Story
+slug: about
+title: About
 subtitle: ''
 headerImage: /images/default.jpg
 meta:
-  title: Story
+  title: About
   description: This is a meta description.
   keywords: ''
 ---

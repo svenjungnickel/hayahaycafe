@@ -16,4 +16,4 @@ Founded on the beautiful Island of Camiguin. est 2017. It was created to provide
 Our hipster style cafe was built around the principle of creating an utterly welcoming space, for individuals, families and groups.
 
 <br />
-<a class="btn btn-primary" href="/story" data-cy="startPageStoryButton">Read more about us</a>
+<a class="btn btn-primary" href="/about" data-cy="startPageAboutButton">Read more about us</a>

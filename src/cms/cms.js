@@ -32,6 +32,6 @@ if (window.location.hostname === 'localhost') {
 CMS.registerPreviewTemplate('start-page', StartPagePreview);
 CMS.registerPreviewTemplate('contact-page', ContactPagePreview);
 CMS.registerPreviewTemplate('gallery-page', GalleryPagePreview);
-CMS.registerPreviewTemplate('story-page', DefaultPagePreview);
+CMS.registerPreviewTemplate('about-page', DefaultPagePreview);
 CMS.registerPreviewTemplate('legal-page', DefaultPagePreview);
 CMS.registerPreviewTemplate('data-privacy-page', DefaultPagePreview);
