@@ -8,8 +8,8 @@ describe('Lighthouse audits', () => {
         auditForPage('/');
     });
 
-    it('Story page ', () => {
-        auditForPage('/story');
+    it('About page ', () => {
+        auditForPage('/about');
     });
 
     it('Contact page', () => {
