@@ -38,6 +38,15 @@ body {
         }
     }
 
+    a {
+        color: var(--textLink);
+
+        &:hover {
+            text-decoration: none;
+            color: var(--textLink__hover);
+        }
+    }
+
     // workaround to get active links in nav bar working
     .navbar-light,
     .navbar-dark {
