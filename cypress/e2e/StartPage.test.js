@@ -1,12 +1,12 @@
-const storyButton = () => {
-    cy.get('[data-cy=startPageStoryButton]')
+const aboutButton = () => {
+    cy.get('[data-cy=startPageAboutButton]')
         .should('have.class', 'btn btn-primary')
         .and('have.attr', 'href')
-        .and('include', 'story');
+        .and('include', 'about');
 
-    cy.get('[data-cy=startPageStoryButton]').click();
+    cy.get('[data-cy=startPageAboutButton]').click();
     cy.get('header');
-    cy.url().should('contain', '/story');
+    cy.url().should('contain', '/about');
 };
 
 const location = () => {
@@ -41,8 +41,8 @@ describe('Start page', () => {
             cy.useDesktop();
         });
 
-        it('Story button', () => {
-            storyButton();
+        it('About button', () => {
+            aboutButton();
         });
 
         it('Location', () => {
@@ -63,8 +63,8 @@ describe('Start page', () => {
             cy.useMobile();
         });
 
-        it('Story button', () => {
-            storyButton();
+        it('About button', () => {
+            aboutButton();
         });
 
         it('Location', () => {

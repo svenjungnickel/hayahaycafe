@@ -25,4 +25,3 @@ meta:
   description: This is a meta description.
   keywords: ''
 ---
-This is an example description.
