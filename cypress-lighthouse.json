@@ -4,6 +4,7 @@
   "videoUploadOnPasses": false,
   "projectId": "imkh2i",
   "chromeWebSecurity": false,
+  "blacklistHosts": "www.google-analytics.com",
   "lighthouse": {
     "performance": 100,
     "accessibility": 100,

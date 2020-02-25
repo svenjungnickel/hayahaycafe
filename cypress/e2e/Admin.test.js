@@ -67,13 +67,12 @@ const pages = () => {
 
     cy.visit('/admin/#/collections/pages');
 
-    // @TODO temporary disable check for "about" page until merged to master
-    // cy.get('main')
-    //     .find("a[href*='about']")
-    //     .click();
-    //
-    // cy.url().should('contain', '/about');
-    // cy.get('header');
+    cy.get('main')
+        .find("a[href*='about']")
+        .click();
+
+    cy.url().should('contain', '/about');
+    cy.get('header');
 
     cy.visit('/admin/#/collections/pages');
 
