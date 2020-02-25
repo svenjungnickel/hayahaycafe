@@ -3,5 +3,6 @@
   "integrationFolder": "cypress/e2e",
   "videoUploadOnPasses": false,
   "projectId": "imkh2i",
-  "chromeWebSecurity": false
+  "chromeWebSecurity": false,
+  "blacklistHosts": "www.google-analytics.com"
 }
