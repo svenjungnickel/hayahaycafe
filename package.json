@@ -84,11 +84,11 @@
     "lint:fix": "eslint --fix ./src/ && echo 'Lint fix complete.'",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "cy:open": "cypress open",
-    "cy:run": "cypress run",
+    "cy:run": "cypress run --record",
     "test:e2e": "start-server-and-test start http://localhost:8000 cy:open",
     "test:e2e:ci": "start-server-and-test start http://localhost:8000 cy:run",
     "lighthouse": "cypress open --config-file cypress-lighthouse.json",
-    "lighthouse:ci": "cypress run --config-file cypress-lighthouse.json"
+    "lighthouse:ci": "cypress run --record --config-file cypress-lighthouse.json"
   },
   "homepage": "https://www.hayahaycafe.com"
 }

@@ -1,5 +1,5 @@
 {
-  "baseUrl": "https://hayahaycafe.netlify.com/",
+  "baseUrl": "https://hayahaycafe.netlify.app/",
   "integrationFolder": "cypress/lighthouse",
   "videoUploadOnPasses": false,
   "projectId": "imkh2i",
