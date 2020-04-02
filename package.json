@@ -88,7 +88,7 @@
     "test:e2e": "start-server-and-test start http://localhost:8000 cy:open",
     "test:e2e:ci": "start-server-and-test start http://localhost:8000 cy:run",
     "lighthouse": "cypress open --config-file cypress-lighthouse.json",
-    "lighthouse:ci": "cypress run --config-file cypress-lighthouse.json"
+    "lighthouse:ci": "cypress run --record --config-file cypress-lighthouse.json"
   },
   "homepage": "https://www.hayahaycafe.com"
 }
