@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { graphql, StaticQuery } from 'gatsby';
 
 export const ListFooterAddress = ({ address }) => {
-    const filteredAddressItems = Object.values(address).filter(item => '' !== item);
+    const filteredAddressItems = Object.values(address).filter((item) => '' !== item);
 
     return <p>{0 < filteredAddressItems.length && <>{filteredAddressItems.join(', ')}</>}</p>;
 };

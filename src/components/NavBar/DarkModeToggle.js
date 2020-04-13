@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ReactSwitch from 'react-switch';
 
-const Switch = props => <ReactSwitch {...props} />;
+const Switch = (props) => <ReactSwitch {...props} />;
 
 Switch.defaultProps = {
     checkedIcon: false,

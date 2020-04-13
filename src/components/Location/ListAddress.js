@@ -4,7 +4,7 @@ import AddressItem from './AddressItem';
 import ListAddressStyles from '../../styles/components/Location/ListAddress.module.scss';
 
 const ListAddress = ({ address }) => {
-    const filteredAddressItems = Object.values(address).filter(item => '' !== item);
+    const filteredAddressItems = Object.values(address).filter((item) => '' !== item);
 
     return (
         <div className={ListAddressStyles.listAddress}>

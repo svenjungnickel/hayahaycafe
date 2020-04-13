@@ -46,7 +46,7 @@ const SocialMediaIcons = () => (
                         className={`container text-center ${SocialMediaIconsStyles.socialMediaIcon}`}
                         data-cy="footerSocialMediaIcons"
                     >
-                        {globalSettings.socialMedia.map(item => (
+                        {globalSettings.socialMedia.map((item) => (
                             <SocialMediaIcon item={item} key={item.type} />
                         ))}
                     </div>

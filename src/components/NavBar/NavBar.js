@@ -41,7 +41,7 @@ const NavBar = ({ currentPage }) => {
                     }
                 }
             `}
-            render={data => (
+            render={(data) => (
                 <Navbar
                     collapseOnSelect
                     variant={true === darkMode.value ? 'dark' : 'light'}
