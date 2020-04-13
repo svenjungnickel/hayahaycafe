@@ -28,7 +28,7 @@ jobs:
           npm install
           echo SITE_RECAPTCHA_KEY=$SITE_RECAPTCHA_KEY >> .env.development
           echo NETLIFY_SITE_URL=$NETLIFY_SITE_URL >> .env.development
-          npm run test:e2e:ci
+          npm run test:e2e:ci:record
   lighthouse:
     name: Lighthouse Audits
     runs-on: ubuntu-latest
@@ -43,4 +43,4 @@ jobs:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
         run: |
           npm install
-          npm run lighthouse:ci
+          npm run lighthouse:ci:record
