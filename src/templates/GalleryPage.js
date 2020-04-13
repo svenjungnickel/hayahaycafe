@@ -19,7 +19,7 @@ export const GalleryPageTemplate = ({ title, subtitle, headerImage, content, con
         slideIndex: 0,
     });
 
-    const imageSources = images.map(image => {
+    const imageSources = images.map((image) => {
         if (!!image.src && !!image.src.childImageSharp) {
             if (image.src.childImageSharp.fluid) {
                 return image.src.childImageSharp.fluid.src;
@@ -31,7 +31,7 @@ export const GalleryPageTemplate = ({ title, subtitle, headerImage, content, con
         return image.src;
     });
 
-    const openLightBox = index => {
+    const openLightBox = (index) => {
         setLightBoxController({
             toggler: !lightBoxController.toggler,
             index: index,

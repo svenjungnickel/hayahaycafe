@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 
-const Image = props => {
+const Image = (props) => {
     const { src } = props;
 
     if (!!src && !!src.childImageSharp) {

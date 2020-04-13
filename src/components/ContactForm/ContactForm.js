@@ -19,7 +19,7 @@ const ContactForm = () => {
     const darkMode = useDarkMode(false);
     const recaptchaRef = createRef();
 
-    const handleChange = e => {
+    const handleChange = (e) => {
         setState({ ...state, [e.target.name]: e.target.value });
     };
 
@@ -27,7 +27,7 @@ const ContactForm = () => {
         setRecaptchaError(false);
     };
 
-    const handleSubmit = event => {
+    const handleSubmit = (event) => {
         event.preventDefault();
         event.stopPropagation();
         setValidated(true);
@@ -55,7 +55,7 @@ const ContactForm = () => {
             .then(() => {
                 setSuccess(true);
             })
-            .catch(error => alert(error));
+            .catch((error) => alert(error));
     };
 
     return (

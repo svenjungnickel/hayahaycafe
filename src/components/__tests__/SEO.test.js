@@ -95,10 +95,10 @@ describe('SEO', () => {
         mount(<SEO title={title} description={description} />);
         const helmet = Helmet.peek();
 
-        const metaKeywords = helmet.metaTags.filter(item => item.name === 'keywords')[0].content;
-        const metaDescription = helmet.metaTags.filter(item => item.name === 'description')[0].content;
-        const metaOGTitle = helmet.metaTags.filter(item => item.property === 'og:title')[0].content;
-        const metaOGDescription = helmet.metaTags.filter(item => item.property === 'og:description')[0].content;
+        const metaKeywords = helmet.metaTags.filter((item) => item.name === 'keywords')[0].content;
+        const metaDescription = helmet.metaTags.filter((item) => item.name === 'description')[0].content;
+        const metaOGTitle = helmet.metaTags.filter((item) => item.property === 'og:title')[0].content;
+        const metaOGDescription = helmet.metaTags.filter((item) => item.property === 'og:description')[0].content;
 
         expect(helmet.title).toEqual(data.globalSettings.meta.title);
         expect(metaDescription).toEqual(data.globalSettings.meta.description);
@@ -127,10 +127,10 @@ describe('SEO', () => {
         mount(<SEO title={title} description={description} keywords={keywords} />);
         const helmet = Helmet.peek();
 
-        const metaKeywords = helmet.metaTags.filter(item => item.name === 'keywords')[0].content;
-        const metaDescription = helmet.metaTags.filter(item => item.name === 'description')[0].content;
-        const metaOGTitle = helmet.metaTags.filter(item => item.property === 'og:title')[0].content;
-        const metaOGDescription = helmet.metaTags.filter(item => item.property === 'og:description')[0].content;
+        const metaKeywords = helmet.metaTags.filter((item) => item.name === 'keywords')[0].content;
+        const metaDescription = helmet.metaTags.filter((item) => item.name === 'description')[0].content;
+        const metaOGTitle = helmet.metaTags.filter((item) => item.property === 'og:title')[0].content;
+        const metaOGDescription = helmet.metaTags.filter((item) => item.property === 'og:description')[0].content;
 
         const expectedTitle = `${title} | ${data.globalSettings.meta.title}`;
         expect(helmet.title).toEqual(expectedTitle);

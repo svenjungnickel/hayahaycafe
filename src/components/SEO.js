@@ -50,7 +50,7 @@ HTMLHead.propTypes = {
     keywords: PropTypes.string,
 };
 
-const SEO = props => (
+const SEO = (props) => (
     <StaticQuery
         query={graphql`
             query {

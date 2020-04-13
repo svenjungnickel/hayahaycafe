@@ -1,10 +1,10 @@
-const Encode = data => {
+const Encode = (data) => {
     if ('object' !== typeof data) {
         return;
     }
 
     return Object.keys(data)
-        .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+        .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
         .join('&');
 };
 

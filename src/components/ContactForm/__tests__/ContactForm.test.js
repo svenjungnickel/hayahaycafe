@@ -10,7 +10,7 @@ jest.mock('react', () => ({
 
 describe('ContactForm snapshot', () => {
     beforeEach(() => {
-        useStateMock.mockImplementation(init => [init, jest.fn()]);
+        useStateMock.mockImplementation((init) => [init, jest.fn()]);
     });
 
     afterEach(() => {
@@ -34,10 +34,10 @@ describe('ContactForm events', () => {
 
     beforeEach(() => {
         useStateMock
-            .mockImplementationOnce(init => [init, setValidatedMock])
-            .mockImplementationOnce(init => [init, setStateMock])
-            .mockImplementationOnce(init => [init, setRecaptchaErrorMock])
-            .mockImplementationOnce(init => [init, setSuccessMock]);
+            .mockImplementationOnce((init) => [init, setValidatedMock])
+            .mockImplementationOnce((init) => [init, setStateMock])
+            .mockImplementationOnce((init) => [init, setRecaptchaErrorMock])
+            .mockImplementationOnce((init) => [init, setSuccessMock]);
         ContactFormComponent = mount(<ContactForm />);
     });
 
