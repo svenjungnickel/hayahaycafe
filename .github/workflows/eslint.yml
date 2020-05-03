@@ -1,8 +1,5 @@
 name: Run ESLint
 on:
-  push:
-    branches:
-      - master
   pull_request:
     branches:
       - master
@@ -18,5 +15,5 @@ jobs:
           node-version: 10.x
       - name: Run ESLint
         run: |
-            npm install -D
+            npm ci -D
             npm run lint

@@ -10,109 +10,61 @@ const recaptchaDarkTheme = () => {
 const submitEmptyData = () => {
     cy.get('[data-cy=contactForm]').should('be.visible');
 
-    cy.get('[data-cy=contactFirstName]')
-        .find('.invalid-feedback')
-        .should('not.be.visible');
+    cy.get('[data-cy=contactFirstName]').find('.invalid-feedback').should('not.be.visible');
 
-    cy.get('[data-cy=contactLastName]')
-        .find('.invalid-feedback')
-        .should('not.be.visible');
+    cy.get('[data-cy=contactLastName]').find('.invalid-feedback').should('not.be.visible');
 
-    cy.get('[data-cy=contactEmail]')
-        .find('.invalid-feedback')
-        .should('not.be.visible');
+    cy.get('[data-cy=contactEmail]').find('.invalid-feedback').should('not.be.visible');
 
-    cy.get('[data-cy=contactSubject]')
-        .find('.invalid-feedback')
-        .should('not.be.visible');
+    cy.get('[data-cy=contactSubject]').find('.invalid-feedback').should('not.be.visible');
 
-    cy.get('[data-cy=contactMessage]')
-        .find('.invalid-feedback')
-        .should('not.be.visible');
+    cy.get('[data-cy=contactMessage]').find('.invalid-feedback').should('not.be.visible');
 
-    cy.get('[data-cy=contactRecaptcha]')
-        .find('.invalid-feedback')
-        .should('not.be.visible');
+    cy.get('[data-cy=contactRecaptcha]').find('.invalid-feedback').should('not.be.visible');
 
     cy.get('[data-cy=contactForm]').submit();
     cy.get('[data-cy=contactForm]').should('be.visible');
 
-    cy.get('[data-cy=contactFirstName]')
-        .find('.invalid-feedback')
-        .should('be.visible');
+    cy.get('[data-cy=contactFirstName]').find('.invalid-feedback').should('be.visible');
 
-    cy.get('[data-cy=contactLastName]')
-        .find('.invalid-feedback')
-        .should('be.visible');
+    cy.get('[data-cy=contactLastName]').find('.invalid-feedback').should('be.visible');
 
-    cy.get('[data-cy=contactEmail]')
-        .find('.invalid-feedback')
-        .should('be.visible');
+    cy.get('[data-cy=contactEmail]').find('.invalid-feedback').should('be.visible');
 
-    cy.get('[data-cy=contactSubject]')
-        .find('.invalid-feedback')
-        .should('be.visible');
+    cy.get('[data-cy=contactSubject]').find('.invalid-feedback').should('be.visible');
 
-    cy.get('[data-cy=contactMessage]')
-        .find('.invalid-feedback')
-        .should('be.visible');
+    cy.get('[data-cy=contactMessage]').find('.invalid-feedback').should('be.visible');
 
-    cy.get('[data-cy=contactRecaptcha]')
-        .find('.invalid-feedback')
-        .should('be.visible');
+    cy.get('[data-cy=contactRecaptcha]').find('.invalid-feedback').should('be.visible');
 };
 
 const submitInvalidEmail = () => {
     cy.get('[data-cy=contactForm]').should('be.visible');
 
-    cy.get('[data-cy=contactEmail]')
-        .find('.invalid-feedback')
-        .should('not.be.visible');
+    cy.get('[data-cy=contactEmail]').find('.invalid-feedback').should('not.be.visible');
 
-    cy.get('[data-cy=contactEmail]')
-        .find('input')
-        .type('invalid_email')
-        .should('have.value', 'invalid_email');
+    cy.get('[data-cy=contactEmail]').find('input').type('invalid_email').should('have.value', 'invalid_email');
 
     cy.get('[data-cy=contactForm]').submit();
     cy.get('[data-cy=contactForm]').should('be.visible');
 
-    cy.get('[data-cy=contactEmail]')
-        .find('.invalid-feedback')
-        .should('be.visible');
+    cy.get('[data-cy=contactEmail]').find('.invalid-feedback').should('be.visible');
 };
 
 const submitValidData = () => {
     cy.get('[data-cy=contactForm]').should('be.visible');
 
-    cy.get('[data-cy=contactFirstName]')
-        .find('input')
-        .type('First name')
-        .should('have.value', 'First name');
+    cy.get('[data-cy=contactFirstName]').find('input').type('First name').should('have.value', 'First name');
 
-    cy.get('[data-cy=contactLastName]')
-        .find('input')
-        .type('Last name')
-        .should('have.value', 'Last name');
+    cy.get('[data-cy=contactLastName]').find('input').type('Last name').should('have.value', 'Last name');
 
-    cy.get('[data-cy=contactEmail]')
-        .find('input')
-        .type('fake@email.com')
-        .should('have.value', 'fake@email.com');
+    cy.get('[data-cy=contactEmail]').find('input').type('fake@email.com').should('have.value', 'fake@email.com');
 
-    cy.get('[data-cy=contactSubject]')
-        .find('input')
-        .type('Test subject')
-        .should('have.value', 'Test subject');
+    cy.get('[data-cy=contactSubject]').find('input').type('Test subject').should('have.value', 'Test subject');
 
-    cy.get('[data-cy=contactMessage]')
-        .find('textarea')
-        .type('Test message')
-        .should('have.value', 'Test message');
+    cy.get('[data-cy=contactMessage]').find('textarea').type('Test message').should('have.value', 'Test message');
 
-    cy.getIframeBody("iframe[src*='recaptcha']:visible")
-        .find('.recaptcha-checkbox')
-        .click();
+    cy.getIframeBody("iframe[src*='recaptcha']:visible").find('.recaptcha-checkbox').click();
 
     // Unfortunately we can not spy on the recaptcha request to wait for the response.
     // Therefore we are waiting an arbitrary time until we continue.

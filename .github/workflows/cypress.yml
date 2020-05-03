@@ -1,8 +1,5 @@
 name: Run Cypress
 on:
-  push:
-    branches:
-      - master
   pull_request:
     branches:
       - master
@@ -25,7 +22,7 @@ jobs:
           CYPRESS_NETLIFY_CMS_EMAIL: ${{ secrets.CYPRESS_NETLIFY_CMS_EMAIL }}
           CYPRESS_NETLIFY_CMS_PASSWORD: ${{ secrets.CYPRESS_NETLIFY_CMS_PASSWORD }}
         run: |
-          npm install
+          npm ci
           echo SITE_RECAPTCHA_KEY=$SITE_RECAPTCHA_KEY >> .env.development
           echo NETLIFY_SITE_URL=$NETLIFY_SITE_URL >> .env.development
           npm run test:e2e:ci:record
@@ -42,5 +39,5 @@ jobs:
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
         run: |
-          npm install
+          npm ci
           npm run lighthouse:ci:record
