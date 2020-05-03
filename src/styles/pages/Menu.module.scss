@@ -1,0 +1,15 @@
+.menu {
+    .menu__image {
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        img {
+            max-width: 100%;
+
+            &:hover {
+                cursor: pointer;
+                opacity: 0.7 !important;
+            }
+        }
+    }
+}

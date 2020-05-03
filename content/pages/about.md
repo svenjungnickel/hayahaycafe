@@ -2,7 +2,7 @@
 template: DefaultPage
 slug: about
 title: About
-subtitle: ""
+subtitle: ''
 headerImage: /images/default.jpg
 meta:
   title: About
