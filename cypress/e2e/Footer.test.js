@@ -1,15 +1,9 @@
 const socialIcons = () => {
-    cy.get('[data-cy=footerSocialMediaIcons]')
-        .find('a')
-        .first()
-        .should('have.attr', 'href')
-        .and('include', 'https://');
+    cy.get('[data-cy=footerSocialMediaIcons]').find('a').first().should('have.attr', 'href').and('include', 'https://');
 };
 
 const legalLink = () => {
-    cy.get('[data-cy=footerLinkLegal]')
-        .should('have.attr', 'href')
-        .and('include', '/legal');
+    cy.get('[data-cy=footerLinkLegal]').should('have.attr', 'href').and('include', '/legal');
 
     cy.get('[data-cy=footerLinkLegal]').click();
     cy.get('header');
@@ -17,9 +11,7 @@ const legalLink = () => {
 };
 
 const dataPrivacyLink = () => {
-    cy.get('[data-cy=footerLinkDataPrivacy]')
-        .should('have.attr', 'href')
-        .and('include', '/data-privacy');
+    cy.get('[data-cy=footerLinkDataPrivacy]').should('have.attr', 'href').and('include', '/data-privacy');
 
     cy.get('[data-cy=footerLinkDataPrivacy]').click();
     cy.get('header');

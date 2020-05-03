@@ -23,9 +23,7 @@ const darkMode = () => {
 const homeLink = (mobile = false) => {
     cy.visit('/404');
 
-    cy.get('[data-cy=navBarLinkHome]')
-        .should('have.attr', 'href')
-        .and('include', '/');
+    cy.get('[data-cy=navBarLinkHome]').should('have.attr', 'href').and('include', '/');
 
     if (true === mobile) {
         cy.get('[data-cy=navBarToggle]').click();
@@ -40,9 +38,7 @@ const homeLink = (mobile = false) => {
 const logoLink = (mobile = false) => {
     cy.visit('/404');
 
-    cy.get('[data-cy=navBarLinkLogo]:visible')
-        .should('have.attr', 'href')
-        .and('include', '/');
+    cy.get('[data-cy=navBarLinkLogo]:visible').should('have.attr', 'href').and('include', '/');
 
     if (true === mobile) {
         cy.get('[data-cy=navBarToggle]').click();
@@ -57,9 +53,7 @@ const logoLink = (mobile = false) => {
 const aboutLink = (mobile = false) => {
     cy.visit('/');
 
-    cy.get('[data-cy=navBarLinkAbout]')
-        .should('have.attr', 'href')
-        .and('include', 'about');
+    cy.get('[data-cy=navBarLinkAbout]').should('have.attr', 'href').and('include', 'about');
 
     if (true === mobile) {
         cy.get('[data-cy=navBarToggle]').click();
@@ -74,9 +68,7 @@ const aboutLink = (mobile = false) => {
 const galleryLink = (mobile = false) => {
     cy.visit('/');
 
-    cy.get('[data-cy=navBarLinkGallery]')
-        .should('have.attr', 'href')
-        .and('include', 'gallery');
+    cy.get('[data-cy=navBarLinkGallery]').should('have.attr', 'href').and('include', 'gallery');
 
     if (true === mobile) {
         cy.get('[data-cy=navBarToggle]').click();
@@ -91,9 +83,7 @@ const galleryLink = (mobile = false) => {
 const contactLink = (mobile = false) => {
     cy.visit('/');
 
-    cy.get('[data-cy=navBarLinkContact]')
-        .should('have.attr', 'href')
-        .and('include', 'contact');
+    cy.get('[data-cy=navBarLinkContact]').should('have.attr', 'href').and('include', 'contact');
 
     if (true === mobile) {
         cy.get('[data-cy=navBarToggle]').click();

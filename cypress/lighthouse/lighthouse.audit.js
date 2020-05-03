@@ -1,4 +1,4 @@
-const auditForPage = page => {
+const auditForPage = (page) => {
     cy.visit(page);
     cy.audit();
 };

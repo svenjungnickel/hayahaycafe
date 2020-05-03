@@ -1,4 +1,4 @@
-const checkA11yForPage = page => {
+const checkA11yForPage = (page) => {
     cy.visit(page);
     cy.injectAxe();
     cy.get('header');

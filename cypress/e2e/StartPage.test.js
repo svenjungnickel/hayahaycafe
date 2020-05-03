@@ -20,9 +20,7 @@ const location = () => {
 const what3Words = () => {
     const full3WordAddressRegex = /^\/{0,}[^0-9`~!@#$%^&*()+\-_=[{\]}\\|'<,.>?/";:£§º©®\s]{1,}[・.。][^0-9`~!@#$%^&*()+\-_=[{\]}\\|'<,.>?/";:£§º©®\s]{1,}[・.。][^0-9`~!@#$%^&*()+\-_=[{\]}\\|'<,.>?/";:£§º©®\s]{1,}$/i;
 
-    cy.get('[data-cy=startPageWhat3Words]')
-        .should('contain', 'Map')
-        .contains('p', full3WordAddressRegex);
+    cy.get('[data-cy=startPageWhat3Words]').should('contain', 'Map').contains('p', full3WordAddressRegex);
 
     cy.get('[data-cy=startPageWhat3Words]').find('img');
 };
