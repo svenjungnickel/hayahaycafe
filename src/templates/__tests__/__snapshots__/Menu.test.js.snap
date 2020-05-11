@@ -14,6 +14,7 @@ exports[`MenuPage renders correctly 1`] = `
       >
         <div
           className="col-12"
+          data-cy="menuContent"
         >
           <div
             dangerouslySetInnerHTML={
@@ -72,6 +73,7 @@ Array [
       >
         <div
           className="col-12"
+          data-cy="menuContent"
         >
           <div>
             content
@@ -111,6 +113,7 @@ Array [
       >
         <div
           className="col-12"
+          data-cy="menuContent"
         >
           <div>
             content
@@ -150,6 +153,7 @@ Array [
       >
         <div
           className="col-12"
+          data-cy="menuContent"
         >
           <div>
             content
@@ -189,6 +193,7 @@ Array [
       >
         <div
           className="col-12"
+          data-cy="menuContent"
         >
           <div
             dangerouslySetInnerHTML={
