@@ -1,0 +1,226 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MenuPage renders correctly 1`] = `
+<main>
+  <header />
+  <section
+    className="section"
+  >
+    <div
+      className="menu container"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col-12"
+          data-cy="menuContent"
+        >
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": <p>
+                  HTML
+                </p>,
+              }
+            }
+          />
+          <hr />
+        </div>
+        <div
+          className="menu__image col-lg-6 col-md-12"
+          data-cy="menuImage"
+        >
+          <a
+            onClick={[Function]}
+          >
+            <img
+              alt="alt"
+              src="src"
+            />
+          </a>
+        </div>
+        <div
+          className="menu__image col-lg-6 col-md-12"
+          data-cy="menuImage"
+        >
+          <a
+            onClick={[Function]}
+          >
+            <img
+              alt="alt"
+              src="src"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+`;
+
+exports[`MenuPageTemplate renders childImageSharp fixe 1`] = `
+Array [
+  <header />,
+  <section
+    className="section"
+  >
+    <div
+      className="menu container"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col-12"
+          data-cy="menuContent"
+        >
+          <div>
+            content
+          </div>
+          <hr />
+        </div>
+        <div
+          className="menu__image col-lg-6 col-md-12"
+          data-cy="menuImage"
+        >
+          <a
+            onClick={[Function]}
+          >
+            <img
+              alt="alt"
+              src="src"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>,
+]
+`;
+
+exports[`MenuPageTemplate renders childImageSharp fluid 1`] = `
+Array [
+  <header />,
+  <section
+    className="section"
+  >
+    <div
+      className="menu container"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col-12"
+          data-cy="menuContent"
+        >
+          <div>
+            content
+          </div>
+          <hr />
+        </div>
+        <div
+          className="menu__image col-lg-6 col-md-12"
+          data-cy="menuImage"
+        >
+          <a
+            onClick={[Function]}
+          >
+            <img
+              alt="alt"
+              src="src"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>,
+]
+`;
+
+exports[`MenuPageTemplate renders content correctly 1`] = `
+Array [
+  <header />,
+  <section
+    className="section"
+  >
+    <div
+      className="menu container"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col-12"
+          data-cy="menuContent"
+        >
+          <div>
+            content
+          </div>
+          <hr />
+        </div>
+        <div
+          className="menu__image col-lg-6 col-md-12"
+          data-cy="menuImage"
+        >
+          <a
+            onClick={[Function]}
+          >
+            <img
+              alt="alt"
+              src="src"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>,
+]
+`;
+
+exports[`MenuPageTemplate renders html content correctly 1`] = `
+Array [
+  <header />,
+  <section
+    className="section"
+  >
+    <div
+      className="menu container"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col-12"
+          data-cy="menuContent"
+        >
+          <div
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": <p>
+                  HTML content
+                </p>,
+              }
+            }
+          />
+          <hr />
+        </div>
+        <div
+          className="menu__image col-lg-6 col-md-12"
+          data-cy="menuImage"
+        >
+          <a
+            onClick={[Function]}
+          >
+            <img
+              alt="alt"
+              src="src"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>,
+]
+`;

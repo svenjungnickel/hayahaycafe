@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MenuPagePreview renders correctly 1`] = `
+Array [
+  <header />,
+  <section
+    className="section"
+  >
+    <div
+      className="menu container"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col-12"
+          data-cy="menuContent"
+        >
+          <div>
+            content
+          </div>
+          <hr />
+        </div>
+        <div
+          className="menu__image col-lg-6 col-md-12"
+          data-cy="menuImage"
+        >
+          <a
+            onClick={[Function]}
+          >
+            <img
+              alt="alt"
+              src="src"
+            />
+          </a>
+        </div>
+        <div
+          className="menu__image col-lg-6 col-md-12"
+          data-cy="menuImage"
+        >
+          <a
+            onClick={[Function]}
+          >
+            <img
+              alt="alt"
+              src="src"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>,
+]
+`;

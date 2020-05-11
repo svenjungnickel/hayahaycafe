@@ -26,11 +26,19 @@
     
 3.  **Define environment variables.**
 
-    Define your environment variables before you start. To do so, simply copy `.env.dist` and rename it to `.env.development`.
-    Then update the variables with your parameters.
+    - Gatsby
     
-    > Hint: Use the predefined SITE_RECAPTCHA_KEY and SITE_RECAPTCHA_SECRET for automated tests. More details under **E2E tests**.
+        Define your environment variables before you start. To do so, simply copy `.env.dist` and rename it to `.env.development`.
+        Then update the variables with your parameters.
+    
+        > Hint: Use the predefined SITE_RECAPTCHA_KEY and SITE_RECAPTCHA_SECRET for automated tests. More details under **E2E tests**.
 
+    - Cypress
+    
+        You have to define the Netlify CMS login details in the cypress environment files in order to run E2E Tests. 
+        Copy `cypress.env.json.dist`, rename it to `cypress.env.json` and enter the login credentials.
+    
+    
 4.  **Start developing.**
 
     Start a local server for developing via gatsby.
