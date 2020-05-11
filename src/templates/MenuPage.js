@@ -46,7 +46,7 @@ export const MenuPageTemplate = ({ title, subtitle, headerImage, content, conten
                 <Container className={MenuStyles.menu}>
                     <Row>
                         {!!content && (
-                            <Col xs={12}>
+                            <Col xs={12} data-cy="menuContent">
                                 <PostContent content={content} />
                                 <Separator />
                             </Col>
