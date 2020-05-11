@@ -4,6 +4,7 @@ module.exports = {
         'gatsby-plugin-sass',
         'gatsby-plugin-use-dark-mode',
         'gatsby-transformer-yaml',
+        'gatsby-plugin-catch-links',
         {
             resolve: 'gatsby-plugin-google-analytics',
             options: {
