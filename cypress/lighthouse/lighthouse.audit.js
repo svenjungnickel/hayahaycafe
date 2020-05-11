@@ -8,8 +8,16 @@ describe('Lighthouse audits', () => {
         auditForPage('/');
     });
 
+    it('Menu page ', () => {
+        auditForPage('/menu');
+    });
+
     it('About page ', () => {
         auditForPage('/about');
+    });
+
+    it('Gallery page', () => {
+        auditForPage('/gallery');
     });
 
     it('Contact page', () => {

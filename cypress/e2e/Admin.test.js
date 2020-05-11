@@ -54,6 +54,13 @@ const pages = () => {
 
     cy.visit('/admin/#/collections/pages');
 
+    cy.get('main').find("a[href*='menu']").click();
+
+    cy.url().should('contain', '/menu');
+    cy.get('header');
+
+    cy.visit('/admin/#/collections/pages');
+
     cy.get('main').find("a[href*='legal']").click();
 
     cy.url().should('contain', '/legal');
