@@ -2,6 +2,8 @@ build:
   publish: public/
   lifecycle:
     onPreBuild: echo SITE_RECAPTCHA_KEY=$SITE_RECAPTCHA_KEY >> .env.production
-    onBuild: gatsby build
+    onBuild: GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build
   ignore:
     git log -1 --pretty=%B | grep dependabot
+plugins:
+  - package: netlify-plugin-gatsby-cache
