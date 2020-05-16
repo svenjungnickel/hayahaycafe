@@ -1,12 +1,14 @@
 ---
 template: StartPage
-slug: ''
+slug: ""
 title: Hayahay Cafe
 subtitle: Locally Sourced - Crafted With Love
 headerImage: /images/index.jpg
 meta:
-  description: Locally Sourced - Crafted With Love
-  keywords: 'Cafe, Super Food, Camiguin, Philippines'
+  description: Founded on the beautiful Island of Camiguin. est 2017. It was
+    created to provide a decadent sense of great tasting food for our bodies and
+    mind. An organic and eco-friendly cafe.
+  keywords: cafe, super food, camiguin island, philippines
   title: Hayahay Cafe
 ---
 ## 1st Smoothie Bowls in Camiguin
