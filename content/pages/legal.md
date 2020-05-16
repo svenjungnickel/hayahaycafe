@@ -2,11 +2,11 @@
 template: DefaultPage
 slug: legal
 title: Legal
-subtitle: ''
+subtitle: ""
 headerImage: /images/default.jpg
 meta:
-  description: This is a meta description.
-  keywords: ''
+  description: Responsibility, liability and copyright of our website content.
+  keywords: legal, copyright
   title: Legal
 ---
 ## Operator and responsible for content
