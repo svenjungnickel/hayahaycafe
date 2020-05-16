@@ -3,3 +3,5 @@ build:
   lifecycle:
     onPreBuild: echo SITE_RECAPTCHA_KEY=$SITE_RECAPTCHA_KEY >> .env.production
     onBuild: gatsby build
+  ignore:
+    git log -1 --pretty=%B | grep dependabot
