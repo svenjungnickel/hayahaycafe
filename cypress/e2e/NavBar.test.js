@@ -50,6 +50,21 @@ const logoLink = (mobile = false) => {
     cy.get('[data-cy=navBarLinkHome]').should('have.class', 'active');
 };
 
+const menuLink = (mobile = false) => {
+    cy.visit('/');
+
+    cy.get('[data-cy=navBarLinkAbout]').should('have.attr', 'href').and('include', 'menu');
+
+    if (true === mobile) {
+        cy.get('[data-cy=navBarToggle]').click();
+    }
+
+    cy.get('[data-cy=navBarLinkAbout]').click();
+    cy.get('header');
+    cy.url().should('contain', '/menu');
+    cy.get('[data-cy=navBarLinkMenu]').should('have.class', 'active');
+};
+
 const aboutLink = (mobile = false) => {
     cy.visit('/');
 
@@ -115,6 +130,10 @@ describe('Navigation bar', () => {
 
         it('Logo link', () => {
             logoLink();
+        });
+
+        it('Menu link', () => {
+            aboutLink();
         });
 
         it('About link', () => {
