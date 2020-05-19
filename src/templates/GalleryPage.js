@@ -63,9 +63,9 @@ export const GalleryPageTemplate = ({ title, subtitle, headerImage, content, con
                                         className={GalleryStyles.gallery__image}
                                         data-cy="galleryImage"
                                     >
-                                        <a onClick={() => openLightBox(index)}>
+                                        <div onClick={() => openLightBox(index)}>
                                             <Image src={image.src} alt={image.alt} title={image.title} />
-                                        </a>
+                                        </div>
                                     </Col>
                                 ))}
                                 <FsLightbox

@@ -30,27 +30,27 @@ exports[`GalleryPage renders correctly 1`] = `
           className="gallery__image col-lg-4 col-md-6 col-sm-12 col-12"
           data-cy="galleryImage"
         >
-          <a
+          <div
             onClick={[Function]}
           >
             <img
               alt="alt"
               src="src"
             />
-          </a>
+          </div>
         </div>
         <div
           className="gallery__image col-lg-4 col-md-6 col-sm-12 col-12"
           data-cy="galleryImage"
         >
-          <a
+          <div
             onClick={[Function]}
           >
             <img
               alt="alt"
               src="src"
             />
-          </a>
+          </div>
         </div>
       </div>
     </div>
@@ -82,14 +82,14 @@ Array [
           className="gallery__image col-lg-4 col-md-6 col-sm-12 col-12"
           data-cy="galleryImage"
         >
-          <a
+          <div
             onClick={[Function]}
           >
             <img
               alt="alt"
               src="src"
             />
-          </a>
+          </div>
         </div>
       </div>
     </div>
@@ -121,14 +121,14 @@ Array [
           className="gallery__image col-lg-4 col-md-6 col-sm-12 col-12"
           data-cy="galleryImage"
         >
-          <a
+          <div
             onClick={[Function]}
           >
             <img
               alt="alt"
               src="src"
             />
-          </a>
+          </div>
         </div>
       </div>
     </div>
@@ -160,14 +160,14 @@ Array [
           className="gallery__image col-lg-4 col-md-6 col-sm-12 col-12"
           data-cy="galleryImage"
         >
-          <a
+          <div
             onClick={[Function]}
           >
             <img
               alt="alt"
               src="src"
             />
-          </a>
+          </div>
         </div>
       </div>
     </div>
@@ -205,14 +205,14 @@ Array [
           className="gallery__image col-lg-4 col-md-6 col-sm-12 col-12"
           data-cy="galleryImage"
         >
-          <a
+          <div
             onClick={[Function]}
           >
             <img
               alt="alt"
               src="src"
             />
-          </a>
+          </div>
         </div>
       </div>
     </div>
