@@ -1,6 +1,6 @@
 const auditForPage = (page) => {
     cy.visit(page);
-    cy.audit();
+    cy.lighthouse();
 };
 
 describe('Lighthouse audits', () => {
