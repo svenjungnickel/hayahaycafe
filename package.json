@@ -2,7 +2,6 @@
   "name": "hayahaycafe",
   "private": true,
   "description": "www.hayahaycafe.com based on gatsby",
-  "version": "0.1.0",
   "author": "Sven Jungnickel <svenjungnickel@googlemail.com>",
   "dependencies": {
     "bootstrap": "^4.5.0",
