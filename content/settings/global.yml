@@ -1,25 +1,22 @@
 meta:
   title: Hayahay Cafe
-  description: >-
-    Locally Sourced - Crafted With Love
-  keywords: ''
-  language: 'en'
+  description: Locally Sourced - Crafted With Love
+  keywords: ""
+  language: en
 location:
   address:
-    company: 'Hayahay Cafe'
-    addressLine1: 'Bug-ong, Mambajao'
-    addressLine2: ''
-    province: 'Camiguin'
-    postalCode: '9100'
-    country: 'Philippines'
-  what3WordsAddress: 'doings.beeping.motel'
-openingHours: |-
-  Mo closed<br />
-  Tu-Su 8:00–19:30
+    company: Hayahay Cafe
+    addressLine1: Bug-ong, Mambajao
+    addressLine2: ""
+    province: Camiguin
+    postalCode: "9100"
+    country: Philippines
+  what3WordsAddress: doings.beeping.motel
+openingHours: Mo closed<br /> Tu-Su 8:00–18:30
 socialMedia:
-  - url: 'https://www.instagram.com/hayahaycafe/'
-    type: 'instagram'
-  - url: 'https://www.facebook.com/hayahaycafesacamiguin/'
-    type: 'facebook'
-  - url: 'https://www.tripadvisor.de/Restaurant_Review-g811339-d12653875-Reviews-Hayahay_Cafe-Mambajao_Camiguin_Mindanao.html'
-    type: 'tripadvisor'
+  - url: https://www.instagram.com/hayahaycafe/
+    type: instagram
+  - url: https://www.facebook.com/hayahaycafesacamiguin/
+    type: facebook
+  - url: https://www.tripadvisor.de/Restaurant_Review-g811339-d12653875-Reviews-Hayahay_Cafe-Mambajao_Camiguin_Mindanao.html
+    type: tripadvisor
