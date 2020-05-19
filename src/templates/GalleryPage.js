@@ -125,14 +125,14 @@ export const pageQuery = graphql`
                     src {
                         childImageSharp {
                             fluid(
-                                maxWidth: 1600
-                                maxHeight: 1600
+                                maxWidth: 1200
+                                maxHeight: 1200
                                 toFormat: PNG
                                 fit: CONTAIN
                                 background: "transparent"
                                 pngCompressionSpeed: 10
                                 pngQuality: 50
-                                srcSetBreakpoints: [320, 420, 768, 1200]
+                                srcSetBreakpoints: [320, 420, 768]
                             ) {
                                 ...GatsbyImageSharpFluid
                             }

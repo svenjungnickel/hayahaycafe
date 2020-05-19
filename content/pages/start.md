@@ -24,7 +24,7 @@ Our hipster style cafe was built around the principle of creating an utterly wel
 
 ## Current COVID-19 Situation
 
-Due to COVID-19 we remain closed for walk in guests. As an alternative we started accepting **takeouts**. Additional we reduce all our takeout meals up to 15%. 
+Due to COVID-19 we remain closed for walk in guests until further notice. Our services are limited to **takeouts and deliveries** only. 
 
-Check out our <a class="btn btn-primary" href="/menu">Menu</a> and give us a call under <a href="tel:+639165290283">+63 916 529 0283</a>.
+Check our <a class="btn btn-primary" href="/menu">Menu</a> and give us a call  <a href="tel:+639165290283">+63 916 529 0283</a>.
 

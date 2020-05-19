@@ -11,7 +11,7 @@
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
 
-const { audit, prepareAudit } = require('cypress-audit');
+const { lighthouse, pa11y, prepareAudit } = require('cypress-audit');
 
 module.exports = (on, config) => {
     // `on` is used to hook into various events Cypress emits
@@ -22,6 +22,7 @@ module.exports = (on, config) => {
     });
 
     on('task', {
-        audit,
+        lighthouse,
+        pa11y,
     });
 };
