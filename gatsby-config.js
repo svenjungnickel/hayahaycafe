@@ -83,12 +83,20 @@ module.exports = {
                 // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
                 display: 'standalone',
                 icon: 'assets/hayahay.png', // This path is relative to the root of the site.
+                cache_busting_mode: 'none',
             },
         },
         // This (optional) plugin enables Progressive Web App + Offline functionality.
         // The offline plugin should be listed after the manifest plugin so that the offline plugin can cache the
         // created manifest.webmanifest
-        'gatsby-plugin-offline',
+        {
+            resolve: 'gatsby-plugin-offline',
+            options: {
+                workboxConfig: {
+                    globPatterns: ['**/*'],
+                },
+            },
+        },
 
         {
             resolve: 'gatsby-plugin-netlify-cms',
