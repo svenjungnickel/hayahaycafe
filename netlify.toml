@@ -3,6 +3,13 @@
   ignore = "git log -1 --pretty=%B | grep dependabot"
   command = "echo SITE_RECAPTCHA_KEY=$SITE_RECAPTCHA_KEY >> .env.production && echo NETLIFY_SITE_URL=$NETLIFY_SITE_URL >> .env.production && npm run build"
 
+  [build.environment]
+  # cache Cypress binary in local "node_modules" folder
+  # so Netlify caches it
+  CYPRESS_CACHE_FOLDER = "./node_modules/CypressBinary"
+  # set TERM variable for terminal output
+  TERM = "xterm"
+
 [[plugins]]
   package = "netlify-plugin-gatsby-cache"
 
