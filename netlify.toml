@@ -1,7 +1,7 @@
 [build]
   publish = "public/"
   ignore = "git log -1 --pretty=%B | grep dependabot"
-  command = "echo SITE_RECAPTCHA_KEY=$SITE_RECAPTCHA_KEY >> .env.production && npm run build"
+  command = "echo SITE_RECAPTCHA_KEY=$SITE_RECAPTCHA_KEY >> .env.production && echo NETLIFY_SITE_URL=$NETLIFY_SITE_URL >> .env.production && npm run build"
 
 [[plugins]]
   package = "netlify-plugin-gatsby-cache"
