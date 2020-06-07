@@ -4,6 +4,28 @@ on:
     branches:
       - master
 jobs:
+  cypress:
+    name: E2E Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js 10.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 10.x
+      - name: Run Cypress
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          SITE_RECAPTCHA_KEY: ${{ secrets.SITE_RECAPTCHA_KEY }}
+          SITE_RECAPTCHA_SECRET: ${{ secrets.SITE_RECAPTCHA_SECRET }}
+          NETLIFY_SITE_URL: ${{ secrets.NETLIFY_SITE_URL }}
+          CYPRESS_NETLIFY_CMS_EMAIL: ${{ secrets.CYPRESS_NETLIFY_CMS_EMAIL }}
+          CYPRESS_NETLIFY_CMS_PASSWORD: ${{ secrets.CYPRESS_NETLIFY_CMS_PASSWORD }}
+        run: |
+          npm ci
+          echo SITE_RECAPTCHA_KEY=$SITE_RECAPTCHA_KEY >> .env.development
+          echo NETLIFY_SITE_URL=$NETLIFY_SITE_URL >> .env.development
+          npm run test:e2e:ci
   lighthouse:
     name: Lighthouse Audits
     runs-on: ubuntu-latest
