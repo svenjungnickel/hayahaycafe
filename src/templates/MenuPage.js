@@ -114,7 +114,7 @@ export const pageQuery = graphql`
                 headerImage {
                     childImageSharp {
                         fluid {
-                            ...GatsbyImageSharpFluid
+                            ...GatsbyImageSharpFluid_withWebp
                         }
                     }
                     publicURL
@@ -123,7 +123,7 @@ export const pageQuery = graphql`
                     src {
                         childImageSharp {
                             fluid(maxWidth: 1138, maxHeight: 1600) {
-                                ...GatsbyImageSharpFluid
+                                ...GatsbyImageSharpFluid_withWebp
                             }
                         }
                         publicURL

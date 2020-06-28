@@ -33,7 +33,7 @@ const What3WordsAddress = () => (
                 what3WordsIcon: file(relativePath: { eq: "what3words-icon.png" }) {
                     childImageSharp {
                         fixed(width: 80, height: 80) {
-                            ...GatsbyImageSharpFixed
+                            ...GatsbyImageSharpFixed_withWebp
                         }
                     }
                     publicURL
