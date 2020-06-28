@@ -28,14 +28,14 @@ const NavBar = ({ currentPage }) => {
                     logoMobile: file(relativePath: { eq: "logo.png" }) {
                         childImageSharp {
                             fixed(height: 80) {
-                                ...GatsbyImageSharpFixed
+                                ...GatsbyImageSharpFixed_withWebp
                             }
                         }
                     }
                     logo: file(relativePath: { eq: "logo.png" }) {
                         childImageSharp {
                             fixed(height: 120) {
-                                ...GatsbyImageSharpFixed
+                                ...GatsbyImageSharpFixed_withWebp
                             }
                         }
                     }

@@ -92,7 +92,7 @@ export const pageQuery = graphql`
                 headerImage {
                     childImageSharp {
                         fluid {
-                            ...GatsbyImageSharpFluid
+                            ...GatsbyImageSharpFluid_withWebp
                         }
                     }
                     publicURL

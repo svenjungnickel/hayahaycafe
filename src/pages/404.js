@@ -41,7 +41,7 @@ export const query = graphql`
         headerImage: file(relativePath: { eq: "default.jpg" }) {
             childImageSharp {
                 fluid(maxHeight: 500) {
-                    ...GatsbyImageSharpFluid
+                    ...GatsbyImageSharpFluid_withWebp
                 }
             }
         }
