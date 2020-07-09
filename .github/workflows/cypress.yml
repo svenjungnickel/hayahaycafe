@@ -23,10 +23,10 @@ jobs:
       - name: Cache cache folder
         uses: actions/cache@v2
         with:
-          path: cache
-          key: cache-cache-${{ github.sha }}
+          path: .cache
+          key: cache-.cache-${{ github.sha }}
           restore-keys: |
-            cache-cache-
+            cache-.cache-
       - name: Run Cypress
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
