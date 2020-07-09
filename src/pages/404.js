@@ -12,7 +12,7 @@ const meta = {
 };
 
 const NotFoundPage = ({ data: { headerImage } }) => (
-    <Layout meta={meta}>
+    <Layout meta={meta} currentPage="404">
         <Header headerImage={headerImage} title="404" />
 
         <section className={SectionStyles.section}>
