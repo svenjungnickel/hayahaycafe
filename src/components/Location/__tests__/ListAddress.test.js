@@ -30,7 +30,7 @@ describe('Listaddress', () => {
         expect(renderListAddress).toThrowError('Warning: Failed prop type');
     });
 
-    it('renders correctly ', () => {
+    it('renders correctly', () => {
         const address = {
             company: '',
             addressLine1: 'addressLine1',
