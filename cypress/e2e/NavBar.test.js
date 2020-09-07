@@ -53,16 +53,31 @@ const logoLink = (mobile = false) => {
 const menuLink = (mobile = false) => {
     cy.visit('/');
 
-    cy.get('[data-cy=navBarLinkAbout]').should('have.attr', 'href').and('include', 'menu');
+    cy.get('[data-cy=navBarLinkMenu]').should('have.attr', 'href').and('include', 'menu');
 
     if (true === mobile) {
         cy.get('[data-cy=navBarToggle]').click();
     }
 
-    cy.get('[data-cy=navBarLinkAbout]').click();
+    cy.get('[data-cy=navBarLinkMenu]').click();
     cy.get('header');
     cy.url().should('contain', '/menu');
     cy.get('[data-cy=navBarLinkMenu]').should('have.class', 'active');
+};
+
+const boodleBilaoLink = (mobile = false) => {
+    cy.visit('/');
+
+    cy.get('[data-cy=navBarLinkBoodleBilao]').should('have.attr', 'href').and('include', 'boodle-bilao');
+
+    if (true === mobile) {
+        cy.get('[data-cy=navBarToggle]').click();
+    }
+
+    cy.get('[data-cy=navBarLinkBoodleBilao]').click();
+    cy.get('header');
+    cy.url().should('contain', '/boodle-bilao');
+    cy.get('[data-cy=navBarLinkBoodleBilao]').should('have.class', 'active');
 };
 
 const aboutLink = (mobile = false) => {
@@ -128,12 +143,16 @@ describe('Navigation bar', () => {
             homeLink();
         });
 
-        it('Logo link', () => {
-            logoLink();
+        it('Menu link', () => {
+            menuLink();
         });
 
-        it('Menu link', () => {
-            aboutLink();
+        it('Boodle Bilao link', () => {
+            boodleBilaoLink();
+        });
+
+        it('Logo link', () => {
+            logoLink();
         });
 
         it('About link', () => {
@@ -164,6 +183,14 @@ describe('Navigation bar', () => {
 
         it('Home link', () => {
             homeLink(true);
+        });
+
+        it('Menu link', () => {
+            menuLink(true);
+        });
+
+        it('Boodle Bilao link', () => {
+            boodleBilaoLink(true);
         });
 
         it('Logo link', () => {
