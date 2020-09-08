@@ -74,6 +74,7 @@
   "license": "MIT",
   "scripts": {
     "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
+    "netlifycms:proxyserver": "npx netlify-cms-proxy-server",
     "develop": "gatsby clean && gatsby develop -H 0.0.0.0 -p 8000",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "gatsby develop",
