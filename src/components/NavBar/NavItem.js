@@ -6,7 +6,11 @@ import NavBarStyles from '../../styles/components/NavBar/NavBar.module.scss';
 
 const NavItem = ({ link, name, active }) => (
     <Nav.Item className={NavBarStyles.navBar__item}>
-        <Link to={link} className={true === active ? 'nav-link active' : 'nav-link'} data-cy={`navBarLink${name}`}>
+        <Link
+            to={link}
+            className={true === active ? 'nav-link active' : 'nav-link'}
+            data-cy={`navBarLink${name.replace(/\s/g, '')}`}
+        >
             {name}
         </Link>
     </Nav.Item>

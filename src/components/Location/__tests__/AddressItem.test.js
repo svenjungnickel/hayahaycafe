@@ -23,7 +23,7 @@ describe('AddressItem', () => {
         expect(renderAddressItem).toThrowError('Warning: Failed prop type');
     });
 
-    it('renders correctly ', () => {
+    it('renders correctly', () => {
         const item = 'item';
 
         const component = <AddressItem item={item} />;

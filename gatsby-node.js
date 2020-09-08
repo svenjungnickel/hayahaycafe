@@ -3,7 +3,6 @@ const each = require('lodash/each');
 const get = require('lodash/get');
 const kebabCase = require('lodash/kebabCase');
 const path = require('path');
-const { fmImagesToRelative } = require('gatsby-remark-relative-images');
 
 exports.createPages = ({ actions, graphql }) => {
     const { createPage } = actions;
@@ -63,9 +62,6 @@ exports.createPages = ({ actions, graphql }) => {
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
     const { createNodeField } = actions;
-
-    // convert image paths for gatsby images
-    fmImagesToRelative(node);
 
     // Create smart slugs
     // https://github.com/Vagr9K/gatsby-advanced-starter/blob/master/gatsby-node.js
