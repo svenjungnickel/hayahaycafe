@@ -74,7 +74,7 @@ const pages = () => {
     cy.get('header');
 };
 
-describe('Admin', () => {
+describe.skip('Admin', () => {
     beforeEach(() => {
         cy.visit('/admin');
     });
