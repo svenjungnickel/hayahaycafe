@@ -4,5 +4,9 @@
   "videoUploadOnPasses": false,
   "projectId": "imkh2i",
   "chromeWebSecurity": false,
-  "blacklistHosts": "www.google-analytics.com"
+  "blockHosts": "www.google-analytics.com",
+  "retries": {
+    "runMode": 2,
+    "openMode": 0
+  }
 }

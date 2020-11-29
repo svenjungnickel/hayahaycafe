@@ -6,10 +6,10 @@ exports[`NavItem renders active 1`] = `
 >
   <a
     className="nav-link active"
-    data-cy="navBarLinklink"
-    href="name"
+    data-cy="navBarLinknamewithemptyspace"
+    href="link"
   >
-    link
+    name with empty space
   </a>
 </div>
 `;
@@ -20,10 +20,10 @@ exports[`NavItem renders default (inactive) 1`] = `
 >
   <a
     className="nav-link"
-    data-cy="navBarLinklink"
-    href="name"
+    data-cy="navBarLinkname"
+    href="link"
   >
-    link
+    name
   </a>
 </div>
 `;

@@ -42,18 +42,35 @@
     
 4.  **Start developing.**
 
-    Start a local server for developing via gatsby.
-
-    ```sh
-    gatsby develop
-    ```
+    4.1 Netlify CMS local backend
+        
+        If you want to use Netlify CMS locally to edit your content first start the Netlify CMS proxy server before you
+        start the gatsby developer server.
+        
+        ```sh
+        npx netlify-cms-proxy-server
+        ```
+        
+        Alternatively you can use a predefined npm command
+                
+        ```sh
+        npm run netlifycms:proxyserver
+        ```
+        
+    4.2 Gatsby local developer server
     
-    Alternatively you can use a predefined npm command which cleans also the gatsby cache and makes the dev server 
-    accessible in your local network (for visiting from your mobile device). 
+        Start a local server for developing via gatsby.
     
-    ```sh
-    npm run develop
-    ```
+        ```sh
+        gatsby develop
+        ```
+        
+        Alternatively you can use a predefined npm command which cleans also the gatsby cache and makes the dev server 
+        accessible in your local network (for visiting from your mobile device). 
+        
+        ```sh
+        npm run develop
+        ```
 
 5.  **Open the source code and start editing!**
 

@@ -51,8 +51,8 @@ describe('NavItem', () => {
 
     it('renders with invalid active status throws prop type error', () => {
         const renderNavItem = () => {
-            const link = 'name';
-            const name = 'link';
+            const link = 'link';
+            const name = 'name';
             const active = 'active';
 
             const component = <NavItem link={link} name={name} active={active} />;
@@ -63,8 +63,8 @@ describe('NavItem', () => {
     });
 
     it('renders default (inactive)', () => {
-        const link = 'name';
-        const name = 'link';
+        const link = 'link';
+        const name = 'name';
 
         const component = <NavItem link={link} name={name} />;
         const tree = renderer.create(component).toJSON();
@@ -73,8 +73,8 @@ describe('NavItem', () => {
     });
 
     it('renders active', () => {
-        const link = 'name';
-        const name = 'link';
+        const link = 'link';
+        const name = 'name with empty space';
         const active = true;
 
         const component = <NavItem link={link} name={name} active={active} />;
