@@ -9,7 +9,7 @@
     "dashboard"
   ],
   "dashboard": {
-    "project": "https://github.com/svenjungnickel/hayahaycafe",
+    "project": "github.com/svenjungnickel/hayahaycafe",
     "version": "master",
     "baseUrl": "https://dashboard.stryker-mutator.io",
     "reportType": "full"
