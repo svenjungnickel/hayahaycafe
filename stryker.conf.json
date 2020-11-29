@@ -5,8 +5,15 @@
   "reporters": [
     "progress",
     "clear-text",
-    "html"
+    "html",
+    "dashboard"
   ],
+  "dashboard": {
+    "project": "https://github.com/svenjungnickel/hayahaycafe",
+    "version": "master",
+    "baseUrl": "https://dashboard.stryker-mutator.io",
+    "reportType": "full"
+  },
   "mutate": [
     "src/**/*.js?(x)",
     "!src/**/__tests__/**/*.js?(x)",

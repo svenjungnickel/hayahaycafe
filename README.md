@@ -4,6 +4,7 @@
 ![](https://github.com/svenjungnickel/hayahaycafe//workflows/Run%20Jest/badge.svg)
 ![](https://github.com/svenjungnickel/hayahaycafe//workflows/Run%20Cypress/badge.svg)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e70d696f-4174-47d1-a9c9-db1c5599246b/deploy-status)](https://app.netlify.com/sites/hayahaycafe/deploys)
+[![Mutation testing badge](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Fsvenjungnickel%2Fhayahaycafe%2Fmaster)](https://dashboard.stryker-mutator.io/reports/github.com/svenjungnickel/hayahaycafe/master)
 
 ## 🚀 Quick start
 
@@ -163,6 +164,18 @@ npm run lighthouse:ci
 ```
 
 Audits are recorded too and therefore also available in the [![Cypress Dashboard](https://img.shields.io/badge/cypress-dashboard-brightgreen.svg)](https://dashboard.cypress.io/projects/imkh2i/runs)
+
+## ✅ Mutations tests
+
+We are using [stryker](https://stryker-mutator.io/docs/stryker/introduction) for mutation tests.
+
+To start stryker simply use following command:
+
+```sh
+npm run stryker:run
+```
+
+You can find a full report of the mutation tests in the [Stryker Dashboard](https://dashboard.stryker-mutator.io/reports/github.com/svenjungnickel/hayahaycafe/master)
 
 ## Preventing commits to the master branch
 
