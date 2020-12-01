@@ -6,7 +6,7 @@
   "dependencies": {
     "bootstrap": "^4.5.3",
     "fslightbox-react": "^1.6.0",
-    "gatsby": "^2.27.4",
+    "gatsby": "^2.27.5",
     "gatsby-image": "^2.6.0",
     "gatsby-plugin-catch-links": "^2.5.0",
     "gatsby-plugin-google-analytics": "^2.6.0",
@@ -26,7 +26,7 @@
     "gatsby-transformer-sharp": "^2.7.0",
     "gatsby-transformer-yaml": "^2.6.0",
     "lodash": "^4.17.20",
-    "netlify-cms-app": "^2.14.1",
+    "netlify-cms-app": "^2.14.3",
     "netlify-plugin-gatsby-cache": "^0.3.2",
     "node-sass": "^4.14.1",
     "prop-types": "^15.7.2",
