@@ -5,6 +5,10 @@
   "projectId": "imkh2i",
   "chromeWebSecurity": false,
   "blockHosts": "www.google-analytics.com",
+  "retries": {
+    "runMode": 2,
+    "openMode": 0
+  },
   "lighthouse": {
     "performance": 100,
     "accessibility": 100,
