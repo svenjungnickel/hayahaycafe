@@ -54,4 +54,4 @@ jobs:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
         run: |
           npm ci
-          npm run lighthouse:ci
+          npm run lighthouse:ci:record
