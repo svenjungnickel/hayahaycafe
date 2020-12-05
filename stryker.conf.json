@@ -1,0 +1,29 @@
+{
+  "$schema": "./node_modules/@stryker-mutator/core/schema/stryker-schema.json",
+  "_comment": "This config was generated using a preset. Please see the handbook for more information: https://github.com/stryker-mutator/stryker-handbook/blob/master/stryker/guides/react.md#react",
+  "testRunner": "jest",
+  "reporters": [
+    "progress",
+    "clear-text",
+    "html",
+    "dashboard"
+  ],
+  "dashboard": {
+    "project": "github.com/svenjungnickel/hayahaycafe",
+    "version": "master",
+    "baseUrl": "https://dashboard.stryker-mutator.io/api/reports",
+    "reportType": "full"
+  },
+  "mutate": [
+    "src/**/*.js?(x)",
+    "!src/**/__tests__/**/*.js?(x)",
+    "!src/**/__mocks__/**/*.js?(x)",
+    "!src/**/__fixtures__/**/*.js?(x)"
+  ],
+  "coverageAnalysis": "off",
+  "jest": {
+    "projectType": "custom",
+    "configFile": "./jest.config.js",
+    "enableFindRelatedTests": true
+  }
+}

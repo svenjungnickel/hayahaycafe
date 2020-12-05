@@ -52,6 +52,7 @@ jobs:
       - name: Run Cypress
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          NODE_ENV: test
         run: |
           npm ci
-          npm run lighthouse:ci
+          npm run lighthouse:ci:record

@@ -67,6 +67,7 @@ public
 yarn-error.log
 .pnp/
 .pnp.js
+
 # Yarn Integrity file
 .yarn-integrity
 
@@ -79,3 +80,7 @@ cypress/fixtures/
 cypress/integration/
 cypress/screenshots/
 cypress/videos/
+
+# Stryker
+.stryker-tmp
+reports/
