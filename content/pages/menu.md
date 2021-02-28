@@ -16,6 +16,6 @@ meta:
   description: Find the Hayahay Cafe menu here.
   keywords: menu
 ---
-Due to the current COVID-19 situation our services are limited to takeout and delivery only. Please call <a class="btn btn-primary btn-sm" href="tel:+639165290283">+63 916 529 0283</a> and place your order.
+If you want to place an order for pick up please call <a class="btn btn-primary btn-sm" href="tel:+639165290283">+63 916 529 0283</a>
 
 See our menu below.
