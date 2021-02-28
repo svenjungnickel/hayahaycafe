@@ -147,7 +147,7 @@ describe('Navigation bar', () => {
             menuLink();
         });
 
-        it('Boodle Bilao link', () => {
+        it.skip('Boodle Bilao link', () => {
             boodleBilaoLink();
         });
 
@@ -189,7 +189,7 @@ describe('Navigation bar', () => {
             menuLink(true);
         });
 
-        it('Boodle Bilao link', () => {
+        it.skip('Boodle Bilao link', () => {
             boodleBilaoLink(true);
         });
 

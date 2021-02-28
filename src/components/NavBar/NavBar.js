@@ -58,13 +58,8 @@ const NavBar = ({ currentPage }) => {
                         <Nav className={NavBarStyles.navBar__items}>
                             <NavItem link="/" name="Home" active={currentPage === '/'} />
                             <NavItem link="/menu" name="Menu" active={currentPage === '/menu'} />
-                            <NavItem
-                                link="/boodle-bilao"
-                                name="Boodle Bilao"
-                                active={currentPage === '/boodle-bilao'}
-                            />
-                            <Logo logo={data.logo.childImageSharp.fixed} className="d-none d-md-block" />
                             <NavItem link="/about" name="About" active={currentPage === '/about'} />
+                            <Logo logo={data.logo.childImageSharp.fixed} className="d-none d-md-block" />
                             <NavItem link="/gallery" name="Gallery" active={currentPage === '/gallery'} />
                             <NavItem link="/contact" name="Contact" active={currentPage === '/contact'} />
                         </Nav>

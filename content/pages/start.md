@@ -11,24 +11,6 @@ meta:
   keywords: cafe, super food, camiguin island, philippines
   title: Hayahay Cafe
 ---
-## Boodle Bilao, Anyone?
-We are temporarily changing our food concepts in the next weeks to fit in with this COVID-19 situation.
-Check <a class="btn btn-primary" href="/boodle-bilao">Boodle Bilao</a> to find out how to order.
-
-<a href="/boodle-bilao">
-    <img src="/images/boodle-bilao.jpg" alt="Boodle Bilao bowl" title="Boodle Bilao, Anyone?" class="img-fluid">
-</a>
-
-<p>&nbsp;</p>
-
-## Current COVID-19 Situation
-
-Due to COVID-19 we remain closed for walk in guests until further notice. Our services are limited to **takeout and delivery** only. 
-
-Check our <a class="btn btn-primary" href="/menu">Menu</a> and give us a call  <a href="tel:+639165290283">+63 916 529 0283</a>.
-
-<p>&nbsp;</p>
-
 ## 1st Smoothie Bowls in Camiguin
 
 Founded on the beautiful Island of Camiguin. est 2017. It was created to provide a decadent sense of great tasting food for our bodies and mind. An organic and eco-friendly cafe.
@@ -37,3 +19,7 @@ Our hipster style cafe was built around the principle of creating an utterly wel
 
 <br />
 <a class="btn btn-primary" href="/about" data-cy="startPageAboutButton">Read more about us</a>
+
+<p>&nbsp;</p>
+
+If you want to place an order for pick up please check our <a href="/menu">menu</a> and call <a class="btn btn-primary btn-sm" href="tel:+639165290283">+63 916 529 0283</a>
