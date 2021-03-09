@@ -84,3 +84,6 @@ cypress/videos/
 # Stryker
 .stryker-tmp
 reports/
+
+# IDE
+.idea/
