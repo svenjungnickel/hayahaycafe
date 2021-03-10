@@ -2,7 +2,7 @@
 template: MenuPage
 slug: menu
 title: Menu
-subtitle: We deliver direct to your doorstep
+subtitle: ""
 headerImage: /images/default.jpg
 images:
   - src: /images/hayahay_menu_page_1.jpg
