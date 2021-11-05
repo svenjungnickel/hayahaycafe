@@ -1,7 +1,7 @@
 ---
 template: StartPage
 slug: ""
-title: Hayahay Cafe
+title: Hayahay Cafe dakjaskjndasd
 subtitle: Locally Sourced - Crafted With Love
 headerImage: /images/index.jpg
 meta:
