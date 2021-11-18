@@ -29,11 +29,11 @@ describe('Accessibility checks', () => {
                 checkA11yForPage('/');
             });
 
-            it('Has no detectable accessibility violations on menu page ', () => {
+            it('Has no detectable accessibility violations on menu page', () => {
                 checkA11yForPage('/menu');
             });
 
-            it('Has no detectable accessibility violations on about page ', () => {
+            it('Has no detectable accessibility violations on about page', () => {
                 checkA11yForPage('/about');
             });
 
@@ -67,7 +67,7 @@ describe('Accessibility checks', () => {
                 checkA11yForPage('/');
             });
 
-            it('Has no detectable accessibility violations on about page ', () => {
+            it('Has no detectable accessibility violations on about page', () => {
                 checkA11yForPage('/about');
             });
 
@@ -107,7 +107,7 @@ describe('Accessibility checks', () => {
                 checkA11yForPage('/');
             });
 
-            it('Has no detectable accessibility violations on about page ', () => {
+            it('Has no detectable accessibility violations on about page', () => {
                 checkA11yForPage('/about');
             });
 
@@ -141,7 +141,7 @@ describe('Accessibility checks', () => {
                 checkA11yForPage('/');
             });
 
-            it('Has no detectable accessibility violations on about page ', () => {
+            it('Has no detectable accessibility violations on about page', () => {
                 checkA11yForPage('/about');
             });
 
