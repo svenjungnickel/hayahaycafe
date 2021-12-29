@@ -26,49 +26,49 @@ const globalSettings = () => {
 };
 
 const pages = () => {
-    cy.get('main').find("a[href*='start-page']").click();
+    cy.get('main').find("a[href*='start-page']").click({ force: true });
 
     cy.url().should('contain', '/start-page');
     cy.get('header');
 
     cy.visit('/admin/#/collections/pages');
 
-    cy.get('main').find("a[href*='contact']").click();
+    cy.get('main').find("a[href*='contact']").click({ force: true });
 
     cy.url().should('contain', '/contact');
     cy.get('header');
 
     cy.visit('/admin/#/collections/pages');
 
-    cy.get('main').find("a[href*='gallery']").click();
+    cy.get('main').find("a[href*='gallery']").click({ force: true });
 
     cy.url().should('contain', '/gallery');
     cy.get('header');
 
     cy.visit('/admin/#/collections/pages');
 
-    cy.get('main').find("a[href*='about']").click();
+    cy.get('main').find("a[href*='about']").click({ force: true });
 
     cy.url().should('contain', '/about');
     cy.get('header');
 
     cy.visit('/admin/#/collections/pages');
 
-    cy.get('main').find("a[href*='menu']").click();
+    cy.get('main').find("a[href*='menu']").click({ force: true });
 
     cy.url().should('contain', '/menu');
     cy.get('header');
 
     cy.visit('/admin/#/collections/pages');
 
-    cy.get('main').find("a[href*='legal']").click();
+    cy.get('main').find("a[href*='legal']").click({ force: true });
 
     cy.url().should('contain', '/legal');
     cy.get('header');
 
     cy.visit('/admin/#/collections/pages');
 
-    cy.get('main').find("a[href*='data-privacy']").click();
+    cy.get('main').find("a[href*='data-privacy']").click({ force: true });
 
     cy.url().should('contain', '/data-privacy');
     cy.get('header');
