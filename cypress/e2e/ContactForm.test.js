@@ -20,7 +20,7 @@ const submitEmptyData = () => {
 
     cy.get('[data-cy=contactMessage]').find('.invalid-feedback').should('not.be.visible');
 
-    cy.get('[data-cy=contactRecaptcha]').find('.invalid-feedback').should('not.be.visible');
+    cy.get('[data-cy=contactRecaptcha]').find('.invalid-feedback').should('not.exist');
 
     cy.get('[data-cy=contactForm]').submit();
     cy.get('[data-cy=contactForm]').should('be.visible');
@@ -52,6 +52,8 @@ const submitInvalidEmail = () => {
 };
 
 const submitValidData = () => {
+    cy.intercept('POST', '/recaptcha/api2/userverify*').as('recaptchaUserVerify');
+
     cy.get('[data-cy=contactForm]').should('be.visible');
 
     cy.get('[data-cy=contactFirstName]').find('input').type('First name').should('have.value', 'First name');
@@ -66,13 +68,12 @@ const submitValidData = () => {
 
     cy.getIframeBody("iframe[src*='recaptcha']:visible").find('.recaptcha-checkbox').click();
 
-    // Unfortunately we can not spy on the recaptcha request to wait for the response.
-    // Therefore we are waiting an arbitrary time until we continue.
-    cy.wait(10000);
+    // Wait for recaptcha verification response
+    cy.wait('@recaptchaUserVerify');
 
     cy.get('[data-cy=contactForm]', { timeout: 10000 }).submit();
     cy.get('[data-cy=contactFormSuccess]').should('be.visible');
-    cy.get('[data-cy=contactForm]').should('not.be.visible');
+    cy.get('[data-cy=contactForm]').should('not.exist');
 };
 
 describe('Contact form', () => {
