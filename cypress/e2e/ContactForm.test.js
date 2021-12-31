@@ -71,7 +71,10 @@ const submitValidData = () => {
     // Wait for recaptcha verification response
     cy.wait('@recaptchaUserVerify');
 
-    cy.get('[data-cy=contactForm]', { timeout: 10000 }).submit();
+    // Wait a moment before submitting the form to avoid flaky tests
+    cy.wait(500);
+    cy.get('[data-cy=contactForm]').submit();
+
     cy.get('[data-cy=contactFormSuccess]').should('be.visible');
     cy.get('[data-cy=contactForm]').should('not.exist');
 };
