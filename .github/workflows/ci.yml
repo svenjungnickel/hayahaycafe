@@ -50,9 +50,8 @@ jobs:
           echo NETLIFY_SITE_URL=$NETLIFY_SITE_URL >> .env.development
           npm run test:e2e:ci
 
-      - name: Upload cypress artifacts 📦
+      - name: Upload cypress artifacts 📁
         uses: actions/upload-artifact@v2.3.1
-        if: failure()
         with:
           name: cypress-artifacts
           path: |
