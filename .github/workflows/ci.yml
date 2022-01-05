@@ -23,9 +23,10 @@ jobs:
         uses: actions/cache@v2.1.7
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-node-${{ secrets.CACHE_NAME }}-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-node-${{ env.CACHE_NAME }}
+            ${{ runner.os }}-node-
+            ${{ runner.os }}-
 
       - name: Install dependencies 👨🏻‍💻
         run: npm ci --prefer-offline --no-audit
@@ -48,3 +49,11 @@ jobs:
           echo SITE_RECAPTCHA_KEY=$SITE_RECAPTCHA_KEY >> .env.development
           echo NETLIFY_SITE_URL=$NETLIFY_SITE_URL >> .env.development
           npm run test:e2e:ci
+
+      - name: Upload cypress artifacts 📁
+        uses: actions/upload-artifact@v2.3.1
+        with:
+          name: cypress-artifacts
+          path: |
+            cypress/screenshots
+            cypress/videos
