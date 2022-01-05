@@ -32,7 +32,7 @@
     "netlify-cms-app": "^2.14.3",
     "netlify-plugin-gatsby-cache": "^0.3.2",
     "node-sass": "^4.14.1",
-    "prop-types": "^15.8.0",
+    "prop-types": "^15.8.1",
     "react": "^16.14.0",
     "react-bootstrap": "^1.4.0",
     "react-dom": "^16.14.0",
