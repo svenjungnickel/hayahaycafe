@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import { graphql, StaticQuery } from 'gatsby';
 
 export const HTMLHead = ({ globalMeta, title, description, keywords }) => {
@@ -15,6 +15,7 @@ export const HTMLHead = ({ globalMeta, title, description, keywords }) => {
         <Helmet
             htmlAttributes={{ lang }}
             title={metaTitle}
+            defer={false}
             meta={[
                 {
                     name: 'description',

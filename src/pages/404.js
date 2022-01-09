@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 import { Container, Row, Col } from 'react-bootstrap';
 import Layout from '../components/Layout';
 import Header from '../components/Header';
-import SectionStyles from '../styles/components/Section.module.scss';
+import { section } from '../styles/components/Section.module.scss';
 
 const meta = {
     title: '404: Not found',
@@ -15,7 +15,7 @@ const NotFoundPage = ({ data: { headerImage } }) => (
     <Layout meta={meta} currentPage="404">
         <Header headerImage={headerImage} title="404" />
 
-        <section className={SectionStyles.section}>
+        <section className={section}>
             <Container>
                 <Row>
                     <Col>

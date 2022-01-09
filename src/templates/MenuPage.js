@@ -8,8 +8,8 @@ import Content, { HTMLContent } from '../components/Content';
 import Separator from '../components/Separator';
 import Image from '../components/Image';
 import FsLightbox from 'fslightbox-react';
-import SectionStyles from '../styles/components/Section.module.scss';
-import MenuStyles from '../styles/pages/Menu.module.scss';
+import { section } from '../styles/components/Section.module.scss';
+import { menu, menu__image } from '../styles/pages/Menu.module.scss';
 
 export const MenuPageTemplate = ({ title, subtitle, headerImage, content, contentComponent, images }) => {
     const PostContent = contentComponent || Content;
@@ -42,8 +42,8 @@ export const MenuPageTemplate = ({ title, subtitle, headerImage, content, conten
         <>
             <Header headerImage={headerImage} title={title} subtitle={subtitle} />
 
-            <section className={SectionStyles.section}>
-                <Container className={MenuStyles.menu}>
+            <section className={section}>
+                <Container className={menu}>
                     <Row>
                         {!!content && (
                             <Col xs={12} data-cy="menuContent">
@@ -54,13 +54,7 @@ export const MenuPageTemplate = ({ title, subtitle, headerImage, content, conten
                         {images && images.length > 0 && (
                             <>
                                 {images.map((image, index) => (
-                                    <Col
-                                        md={12}
-                                        lg={6}
-                                        key={index}
-                                        className={MenuStyles.menu__image}
-                                        data-cy="menuImage"
-                                    >
+                                    <Col md={12} lg={6} key={index} className={menu__image} data-cy="menuImage">
                                         <a onClick={() => openLightBox(index)}>
                                             <Image src={image.src} alt={image.alt} title={image.title} />
                                         </a>

@@ -9,20 +9,25 @@ import Location from '../components/Location';
 import Separator from '../components/Separator';
 import OpeningHours from '../components/OpeningHours';
 import What3WordsAddress from '../components/What3WordsAddress';
-import StartPageStyles from '../styles/pages/Start.module.scss';
-import SectionStyles from '../styles/components/Section.module.scss';
+import {
+    startHeader,
+    startHeader__image,
+    startHeader__content,
+    startHeader__contentInner,
+} from '../styles/pages/Start.module.scss';
+import { section } from '../styles/components/Section.module.scss';
 
 export const StartPageTemplate = ({ title, subtitle, headerImage, content, contentComponent }) => {
     const PostContent = contentComponent || Content;
 
     return (
         <>
-            <header className={StartPageStyles.startHeader}>
-                <Image src={headerImage} alt={title} className={StartPageStyles.startHeader__image} />
+            <header className={startHeader}>
+                <Image src={headerImage} alt={title} className={startHeader__image} />
 
-                <div className={StartPageStyles.startHeader__content}>
+                <div className={startHeader__content}>
                     <Container>
-                        <div className={StartPageStyles.startHeader__contentInner}>
+                        <div className={startHeader__contentInner}>
                             <h1 className="display-1">{title}</h1>
                             <p className="lead">{subtitle}</p>
                         </div>
@@ -30,7 +35,7 @@ export const StartPageTemplate = ({ title, subtitle, headerImage, content, conte
                 </div>
             </header>
 
-            <section className={SectionStyles.section}>
+            <section className={section}>
                 <Container>
                     <Row>
                         <Col xs={12}>

@@ -6,8 +6,8 @@ import useDarkMode from 'use-dark-mode';
 import Logo from './Logo';
 import NavItem from './NavItem';
 import DarkModeToggle from './DarkModeToggle';
-import NavBarStyles from '../../styles/components/NavBar/NavBar.module.scss';
-import DarkModeToggleStyle from '../../styles/components/NavBar/DarkModeToggle.module.scss';
+import { navBar, navBar__items, navBarSmall } from '../../styles/components/NavBar/NavBar.module.scss';
+import { darkModeToggle } from '../../styles/components/NavBar/DarkModeToggle.module.scss';
 
 const NavBar = ({ currentPage }) => {
     currentPage = `/${currentPage}`;
@@ -48,14 +48,14 @@ const NavBar = ({ currentPage }) => {
                     expand="md"
                     fixed="top"
                     id="site-navbar"
-                    className={true === smallNavBar ? NavBarStyles.navBarSmall : NavBarStyles.navBar}
+                    className={true === smallNavBar ? navBarSmall : navBar}
                     data-cy="navBar"
                 >
                     <Logo logo={data.logoMobile.childImageSharp.fixed} className="d-block d-md-none" />
                     <DarkModeToggle darkMode={darkMode} className="d-block d-md-none" />
                     <Navbar.Toggle aria-controls="basic-navbar-nav" className="ml-right" data-cy="navBarToggle" />
                     <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">
-                        <Nav className={NavBarStyles.navBar__items}>
+                        <Nav className={navBar__items}>
                             <NavItem link="/" name="Home" active={currentPage === '/'} />
                             <NavItem link="/menu" name="Menu" active={currentPage === '/menu'} />
                             <NavItem link="/about" name="About" active={currentPage === '/about'} />
@@ -64,7 +64,7 @@ const NavBar = ({ currentPage }) => {
                             <NavItem link="/contact" name="Contact" active={currentPage === '/contact'} />
                         </Nav>
                     </Navbar.Collapse>
-                    <div className={DarkModeToggleStyle.darkModeToggle}>
+                    <div className={darkModeToggle}>
                         <DarkModeToggle darkMode={darkMode} className="d-none d-md-block" />
                     </div>
                 </Navbar>

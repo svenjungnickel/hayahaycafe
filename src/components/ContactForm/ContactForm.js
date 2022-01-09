@@ -5,7 +5,12 @@ import Fade from 'react-reveal/Fade';
 import useDarkMode from 'use-dark-mode';
 import InputField from './InputField';
 import Encode from './Encode';
-import ContactFormStyles from '../../styles/components/ContactForm/ContactForm.module.scss';
+import {
+    contactForm,
+    contactFormReCaptcha,
+    contactFormSubmitButton,
+    contactFormSuccess,
+} from '../../styles/components/ContactForm/ContactForm.module.scss';
 
 const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY;
 const CONTACT_FORM_FADE_UP_DURATION = 400;
@@ -59,7 +64,7 @@ const ContactForm = () => {
     };
 
     return (
-        <div className={ContactFormStyles.contactForm}>
+        <div className={contactForm}>
             <Fade top collapse when={false === success} duration={CONTACT_FORM_FADE_UP_DURATION} unmountOnExit={true}>
                 <Form
                     noValidate
@@ -135,7 +140,7 @@ const ContactForm = () => {
                             sitekey={RECAPTCHA_KEY}
                             onChange={handleRecaptcha}
                             theme={true === darkMode.value ? 'dark' : 'light'}
-                            className={ContactFormStyles.contactFormReCaptcha}
+                            className={contactFormReCaptcha}
                         />
                         {true === recaptchaError && (
                             <div className="invalid-feedback" style={{ display: 'block' }}>
@@ -144,7 +149,7 @@ const ContactForm = () => {
                         )}
                     </Form.Group>
 
-                    <Button variant="primary" type="submit" className={ContactFormStyles.contactFormSubmitButton}>
+                    <Button variant="primary" type="submit" className={contactFormSubmitButton}>
                         Submit
                     </Button>
                 </Form>
@@ -155,7 +160,7 @@ const ContactForm = () => {
                 duration={SUCCESS_MESSAGE_FADE_IN_DURATION}
                 delay={CONTACT_FORM_FADE_UP_DURATION}
             >
-                <Alert variant="success" className={ContactFormStyles.contactFormSuccess} data-cy="contactFormSuccess">
+                <Alert variant="success" className={contactFormSuccess} data-cy="contactFormSuccess">
                     <p>{"Thank you for your message. We're getting in touch with you soon."}</p>
                 </Alert>
             </Fade>

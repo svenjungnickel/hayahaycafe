@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import Image from '../Image';
-import NavBarStyles from '../../styles/components/NavBar/NavBar.module.scss';
+import { navBar__logo } from '../../styles/components/NavBar/NavBar.module.scss';
 
 const Logo = ({ logo, className }) => (
     <div className={className}>
         <Link to="/" data-cy="navBarLinkLogo">
-            <Image src={logo.src} alt="Logo" className={NavBarStyles.navBar__logo} />
+            <Image src={logo.src} alt="Logo" className={navBar__logo} />
         </Link>
     </div>
 );

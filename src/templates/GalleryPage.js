@@ -8,8 +8,8 @@ import Content, { HTMLContent } from '../components/Content';
 import Separator from '../components/Separator';
 import Image from '../components/Image';
 import FsLightbox from 'fslightbox-react';
-import SectionStyles from '../styles/components/Section.module.scss';
-import GalleryStyles from '../styles/pages/Gallery.module.scss';
+import { section } from '../styles/components/Section.module.scss';
+import { gallery, gallery__image } from '../styles/pages/Gallery.module.scss';
 
 export const GalleryPageTemplate = ({ title, subtitle, headerImage, content, contentComponent, images }) => {
     const PostContent = contentComponent || Content;
@@ -42,8 +42,8 @@ export const GalleryPageTemplate = ({ title, subtitle, headerImage, content, con
         <>
             <Header headerImage={headerImage} title={title} subtitle={subtitle} />
 
-            <section className={SectionStyles.section}>
-                <Container className={GalleryStyles.gallery}>
+            <section className={section}>
+                <Container className={gallery}>
                     <Row>
                         {!!content && (
                             <Col xs={12}>
@@ -60,7 +60,7 @@ export const GalleryPageTemplate = ({ title, subtitle, headerImage, content, con
                                         md={6}
                                         lg={4}
                                         key={index}
-                                        className={GalleryStyles.gallery__image}
+                                        className={gallery__image}
                                         data-cy="galleryImage"
                                     >
                                         <div onClick={() => openLightBox(index)}>
