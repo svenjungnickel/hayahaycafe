@@ -51,7 +51,7 @@ describe('Gallery page', () => {
             cy.useMobile();
         });
 
-        it('Open images in light box', () => {
+        it('Open images in light box and verify sources', () => {
             openLightBoxAndVerifyImageSource();
         });
     });
