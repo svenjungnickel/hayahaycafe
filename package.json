@@ -3,6 +3,7 @@
   "private": true,
   "description": "www.hayahaycafe.com based on gatsby",
   "author": "Sven Jungnickel <svenjungnickel@googlemail.com>",
+  "homepage": "https://www.hayahaycafe.com",
   "engines": {
     "node": ">=14"
   },
@@ -81,9 +82,9 @@
   "scripts": {
     "build": "gatsby build --log-pages",
     "netlifycms:proxyserver": "npx netlify-cms-proxy-server",
-    "develop": "gatsby clean && gatsby develop -H 0.0.0.0 -p 8000",
+    "develop": "gatsby develop",
+    "clean:develop": "gatsby clean && gatsby develop -H 0.0.0.0 -p 8000",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "gatsby develop",
     "serve": "gatsby clean && gatsby build && gatsby serve",
     "test": "jest",
     "lint": "eslint ./src/ && echo 'Lint complete.'",
@@ -91,13 +92,12 @@
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
     "cypress:run:record": "cypress run --record",
-    "test:e2e": "start-server-and-test start http://localhost:8000 cypress:open",
-    "test:e2e:ci": "start-server-and-test start http://localhost:8000 cypress:run",
-    "test:e2e:ci:record": "start-server-and-test start http://localhost:8000 cypress:run:record",
+    "test:e2e": "start-server-and-test develop http://localhost:8000 cypress:open",
+    "test:e2e:ci": "start-server-and-test develop http://localhost:8000 cypress:run",
+    "test:e2e:ci:record": "start-server-and-test develop http://localhost:8000 cypress:run:record",
     "lighthouse": "cypress open --config-file cypress-lighthouse.json",
     "lighthouse:ci": "cypress run --config-file cypress-lighthouse.json",
     "lighthouse:ci:record": "cypress run --record --config-file cypress-lighthouse.json",
     "stryker:run": "stryker run"
-  },
-  "homepage": "https://www.hayahaycafe.com"
+  }
 }
