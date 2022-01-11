@@ -59,9 +59,7 @@ export const pageQuery = graphql`
                 subtitle
                 headerImage {
                     childImageSharp {
-                        fluid(maxHeight: 500) {
-                            ...GatsbyImageSharpFluid_withWebp
-                        }
+                        gatsbyImageData(layout: FULL_WIDTH)
                     }
                     publicURL
                 }

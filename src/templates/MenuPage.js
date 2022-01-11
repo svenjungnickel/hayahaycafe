@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import { Col, Container, Row } from 'react-bootstrap';
+import { getSrc } from 'gatsby-plugin-image';
 import Layout from '../components/Layout';
 import Header from '../components/Header';
 import Content, { HTMLContent } from '../components/Content';
@@ -20,12 +21,9 @@ export const MenuPageTemplate = ({ title, subtitle, headerImage, content, conten
     });
 
     const imageSources = images.map((image) => {
-        if (!!image.src && !!image.src.childImageSharp) {
-            if (image.src.childImageSharp.fluid) {
-                return image.src.childImageSharp.fluid.src;
-            }
-
-            return image.src.childImageSharp.fixed.src;
+        const imageSrc = getSrc(image.src);
+        if (imageSrc) {
+            return imageSrc;
         }
 
         return image.src;
@@ -107,18 +105,14 @@ export const pageQuery = graphql`
                 subtitle
                 headerImage {
                     childImageSharp {
-                        fluid {
-                            ...GatsbyImageSharpFluid_withWebp
-                        }
+                        gatsbyImageData(layout: FULL_WIDTH)
                     }
                     publicURL
                 }
                 images {
                     src {
                         childImageSharp {
-                            fluid(maxWidth: 1138, maxHeight: 1600) {
-                                ...GatsbyImageSharpFluid_withWebp
-                            }
+                            gatsbyImageData(layout: CONSTRAINED, width: 1138, height: 1600)
                         }
                         publicURL
                     }

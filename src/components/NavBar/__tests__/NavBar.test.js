@@ -1,9 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { StaticQuery } from 'gatsby';
 import NavBar from '../NavBar';
 
-jest.mock('../Logo');
 jest.mock('../NavItem');
 jest.mock('../DarkModeToggle');
 
@@ -30,23 +28,6 @@ describe('NavBar', () => {
 
     it('renders with disabled dark mode (default)', () => {
         const currentPage = '/';
-        const data = {
-            logoMobile: {
-                childImageSharp: {
-                    fixed: {
-                        src: 'src',
-                    },
-                },
-            },
-            logo: {
-                childImageSharp: {
-                    fixed: {
-                        src: 'src',
-                    },
-                },
-            },
-        };
-        StaticQuery.mockImplementationOnce(({ render }) => render(data));
 
         const component = <NavBar currentPage={currentPage} />;
         const tree = renderer.create(component).toJSON();

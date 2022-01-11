@@ -10,6 +10,7 @@ import Image from '../components/Image';
 import FsLightbox from 'fslightbox-react';
 import { section } from '../styles/components/Section.module.scss';
 import { gallery, gallery__image } from '../styles/pages/Gallery.module.scss';
+import { getSrc } from 'gatsby-plugin-image';
 
 export const GalleryPageTemplate = ({ title, subtitle, headerImage, content, contentComponent, images }) => {
     const PostContent = contentComponent || Content;
@@ -20,12 +21,9 @@ export const GalleryPageTemplate = ({ title, subtitle, headerImage, content, con
     });
 
     const imageSources = images.map((image) => {
-        if (!!image.src && !!image.src.childImageSharp) {
-            if (image.src.childImageSharp.fluid) {
-                return image.src.childImageSharp.fluid.src;
-            }
-
-            return image.src.childImageSharp.fixed.src;
+        const imageSrc = getSrc(image.src);
+        if (imageSrc) {
+            return imageSrc;
         }
 
         return image.src;
@@ -115,27 +113,23 @@ export const pageQuery = graphql`
                 subtitle
                 headerImage {
                     childImageSharp {
-                        fluid {
-                            ...GatsbyImageSharpFluid_withWebp
-                        }
+                        gatsbyImageData(layout: FULL_WIDTH)
                     }
                     publicURL
                 }
                 images {
                     src {
                         childImageSharp {
-                            fluid(
-                                maxWidth: 1200
-                                maxHeight: 1200
-                                toFormat: PNG
-                                fit: CONTAIN
-                                background: "transparent"
-                                pngCompressionSpeed: 10
-                                pngQuality: 50
-                                srcSetBreakpoints: [320, 420, 768]
-                            ) {
-                                ...GatsbyImageSharpFluid_withWebp
-                            }
+                            gatsbyImageData(
+                                layout: CONSTRAINED
+                                width: 1200
+                                height: 1200
+                                transformOptions: { fit: CONTAIN }
+                                formats: [PNG]
+                                backgroundColor: "transparent"
+                                pngOptions: { compressionSpeed: 10, quality: 50 }
+                                breakpoints: [320, 420, 768]
+                            )
                         }
                         publicURL
                     }

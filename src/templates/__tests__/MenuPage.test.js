@@ -1,98 +1,96 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import GalleryPage, { GalleryPageTemplate } from '../GalleryPage';
+import { getSrc } from 'gatsby-plugin-image';
+import MenuPage, { MenuPageTemplate } from '../MenuPage';
 import { HTMLContent } from '../../components/Content';
-import { childImageSharpFluid, childImageSharpFixed } from '../../__fixtures__/Images';
-import GalleryPageData from '../../__fixtures__/GalleryPageData';
+import MenuPageData from '../../__fixtures__/MenuPageData';
 
 jest.mock('../../components/Layout');
 jest.mock('../../components/Header');
 jest.mock('../../components/Separator');
 jest.mock('../../components/Image');
 
-describe('GalleryPageTemplate', () => {
+describe('MenuPageTemplate', () => {
     it('renders without title throws prop type error', () => {
-        const renderGalleryPageTemplate = () => {
+        const renderMenuPageTemplate = () => {
             const subtitle = 'subtitle';
             const headerImage = 'headerImage';
             const content = 'content';
             const images = [{}];
 
             const component = (
-                <GalleryPageTemplate subtitle={subtitle} headerImage={headerImage} content={content} images={images} />
+                <MenuPageTemplate subtitle={subtitle} headerImage={headerImage} content={content} images={images} />
             );
             renderer.create(component);
         };
 
-        expect(renderGalleryPageTemplate).toThrowError('Warning: Failed prop type');
+        expect(renderMenuPageTemplate).toThrowError('Warning: Failed prop type');
     });
 
     it('renders without subtitle throws prop type error', () => {
-        const renderGalleryPageTemplate = () => {
+        const renderMenuPageTemplate = () => {
             const title = 'title';
             const headerImage = 'headerImage';
             const content = 'content';
             const images = [{}];
 
             const component = (
-                <GalleryPageTemplate title={title} headerImage={headerImage} content={content} images={images} />
+                <MenuPageTemplate title={title} headerImage={headerImage} content={content} images={images} />
             );
             renderer.create(component);
         };
 
-        expect(renderGalleryPageTemplate).toThrowError('Warning: Failed prop type');
+        expect(renderMenuPageTemplate).toThrowError('Warning: Failed prop type');
     });
 
     it('renders without headerImage throws prop type error', () => {
-        const renderGalleryPageTemplate = () => {
+        const renderMenuPageTemplate = () => {
             const title = 'title';
             const subtitle = 'subtitle';
             const content = 'content';
             const images = [{}];
 
-            const component = (
-                <GalleryPageTemplate title={title} subtitle={subtitle} content={content} images={images} />
-            );
+            const component = <MenuPageTemplate title={title} subtitle={subtitle} content={content} images={images} />;
             renderer.create(component);
         };
 
-        expect(renderGalleryPageTemplate).toThrowError('Warning: Failed prop type');
+        expect(renderMenuPageTemplate).toThrowError('Warning: Failed prop type');
     });
 
     it('renders without content throws prop type error', () => {
-        const renderGalleryPageTemplate = () => {
+        const renderMenuPageTemplate = () => {
             const title = 'title';
             const subtitle = 'subtitle';
             const headerImage = 'headerImage';
             const images = [{}];
 
             const component = (
-                <GalleryPageTemplate title={title} subtitle={subtitle} headerImage={headerImage} images={images} />
+                <MenuPageTemplate title={title} subtitle={subtitle} headerImage={headerImage} images={images} />
             );
             renderer.create(component);
         };
 
-        expect(renderGalleryPageTemplate).toThrowError('Warning: Failed prop type');
+        expect(renderMenuPageTemplate).toThrowError('Warning: Failed prop type');
     });
 
     it('renders without images throws prop type error', () => {
-        const renderGalleryPageTemplate = () => {
+        const renderMenuPageTemplate = () => {
             const title = 'title';
             const subtitle = 'subtitle';
             const headerImage = 'headerImage';
             const content = 'content';
 
             const component = (
-                <GalleryPageTemplate title={title} subtitle={subtitle} headerImage={headerImage} content={content} />
+                <MenuPageTemplate title={title} subtitle={subtitle} headerImage={headerImage} content={content} />
             );
             renderer.create(component);
         };
 
-        expect(renderGalleryPageTemplate).toThrowError('Warning: Failed prop type');
+        expect(renderMenuPageTemplate).toThrowError('Warning: Failed prop type');
     });
 
     it('renders with invalid title throws prop type error', () => {
-        const renderGalleryPageTemplate = () => {
+        const renderMenuPageTemplate = () => {
             const title = 123;
             const subtitle = 'subtitle';
             const headerImage = 'headerImage';
@@ -100,7 +98,7 @@ describe('GalleryPageTemplate', () => {
             const images = [{}];
 
             const component = (
-                <GalleryPageTemplate
+                <MenuPageTemplate
                     title={title}
                     subtitle={subtitle}
                     headerImage={headerImage}
@@ -111,11 +109,11 @@ describe('GalleryPageTemplate', () => {
             renderer.create(component);
         };
 
-        expect(renderGalleryPageTemplate).toThrowError('Warning: Failed prop type');
+        expect(renderMenuPageTemplate).toThrowError('Warning: Failed prop type');
     });
 
     it('renders with invalid subtitle throws prop type error', () => {
-        const renderGalleryPageTemplate = () => {
+        const renderMenuPageTemplate = () => {
             const title = 'title';
             const subtitle = 123;
             const headerImage = 'headerImage';
@@ -123,7 +121,7 @@ describe('GalleryPageTemplate', () => {
             const images = [{}];
 
             const component = (
-                <GalleryPageTemplate
+                <MenuPageTemplate
                     title={title}
                     subtitle={subtitle}
                     headerImage={headerImage}
@@ -134,11 +132,11 @@ describe('GalleryPageTemplate', () => {
             renderer.create(component);
         };
 
-        expect(renderGalleryPageTemplate).toThrowError('Warning: Failed prop type');
+        expect(renderMenuPageTemplate).toThrowError('Warning: Failed prop type');
     });
 
     it('renders with invalid headerImage throws prop type error', () => {
-        const renderGalleryPageTemplate = () => {
+        const renderMenuPageTemplate = () => {
             const title = 'title';
             const subtitle = 'subtitle';
             const headerImage = 123;
@@ -146,7 +144,7 @@ describe('GalleryPageTemplate', () => {
             const images = [{}];
 
             const component = (
-                <GalleryPageTemplate
+                <MenuPageTemplate
                     title={title}
                     subtitle={subtitle}
                     headerImage={headerImage}
@@ -157,11 +155,11 @@ describe('GalleryPageTemplate', () => {
             renderer.create(component);
         };
 
-        expect(renderGalleryPageTemplate).toThrowError('Warning: Failed prop type');
+        expect(renderMenuPageTemplate).toThrowError('Warning: Failed prop type');
     });
 
     it('renders with invalid content throws prop type error', () => {
-        const renderGalleryPageTemplate = () => {
+        const renderMenuPageTemplate = () => {
             const title = 'title';
             const subtitle = 'subtitle';
             const headerImage = 'headerImage';
@@ -169,7 +167,7 @@ describe('GalleryPageTemplate', () => {
             const images = [{}];
 
             const component = (
-                <GalleryPageTemplate
+                <MenuPageTemplate
                     title={title}
                     subtitle={subtitle}
                     headerImage={headerImage}
@@ -180,11 +178,11 @@ describe('GalleryPageTemplate', () => {
             renderer.create(component);
         };
 
-        expect(renderGalleryPageTemplate).toThrowError('Warning: Failed prop type');
+        expect(renderMenuPageTemplate).toThrowError('Warning: Failed prop type');
     });
 
     it('renders with invalid contentComponent throws prop type error', () => {
-        const renderGalleryPageTemplate = () => {
+        const renderMenuPageTemplate = () => {
             const title = 'title';
             const subtitle = 'subtitle';
             const headerImage = 'headerImage';
@@ -193,7 +191,7 @@ describe('GalleryPageTemplate', () => {
             const images = [{}];
 
             const component = (
-                <GalleryPageTemplate
+                <MenuPageTemplate
                     title={title}
                     subtitle={subtitle}
                     headerImage={headerImage}
@@ -205,11 +203,11 @@ describe('GalleryPageTemplate', () => {
             renderer.create(component);
         };
 
-        expect(renderGalleryPageTemplate).toThrowError('Warning: Failed prop type');
+        expect(renderMenuPageTemplate).toThrowError('Warning: Failed prop type');
     });
 
     it('renders with invalid images throws prop type error', () => {
-        const renderGalleryPageTemplate = () => {
+        const renderMenuPageTemplate = () => {
             const title = 'title';
             const subtitle = 'subtitle';
             const headerImage = 'headerImage';
@@ -217,7 +215,7 @@ describe('GalleryPageTemplate', () => {
             const images = false;
 
             const component = (
-                <GalleryPageTemplate
+                <MenuPageTemplate
                     title={title}
                     subtitle={subtitle}
                     headerImage={headerImage}
@@ -228,7 +226,7 @@ describe('GalleryPageTemplate', () => {
             renderer.create(component);
         };
 
-        expect(renderGalleryPageTemplate).toThrowError('Warning: Failed prop type');
+        expect(renderMenuPageTemplate).toThrowError('Warning: Failed prop type');
     });
 
     it('renders content correctly', () => {
@@ -239,7 +237,7 @@ describe('GalleryPageTemplate', () => {
         const images = [{}];
 
         const component = (
-            <GalleryPageTemplate
+            <MenuPageTemplate
                 title={title}
                 subtitle={subtitle}
                 headerImage={headerImage}
@@ -260,7 +258,7 @@ describe('GalleryPageTemplate', () => {
         const images = [{}];
 
         const component = (
-            <GalleryPageTemplate
+            <MenuPageTemplate
                 title={title}
                 subtitle={subtitle}
                 headerImage={headerImage}
@@ -274,44 +272,17 @@ describe('GalleryPageTemplate', () => {
         expect(tree).toMatchSnapshot();
     });
 
-    it('renders childImageSharp fluid', () => {
+    it('renders GatsbyImage', () => {
         const title = 'title';
         const subtitle = 'subtitle';
         const headerImage = 'headerImage';
         const content = 'content';
-        const images = [
-            {
-                src: childImageSharpFluid,
-            },
-        ];
+        const images = [{ src: { publicURL: 'publicURL' } }];
+
+        getSrc.mockImplementation(() => true);
 
         const component = (
-            <GalleryPageTemplate
-                title={title}
-                subtitle={subtitle}
-                headerImage={headerImage}
-                content={content}
-                images={images}
-            />
-        );
-        const tree = renderer.create(component).toJSON();
-
-        expect(tree).toMatchSnapshot();
-    });
-
-    it('renders childImageSharp fixe', () => {
-        const title = 'title';
-        const subtitle = 'subtitle';
-        const headerImage = 'headerImage';
-        const content = 'content';
-        const images = [
-            {
-                src: childImageSharpFixed,
-            },
-        ];
-
-        const component = (
-            <GalleryPageTemplate
+            <MenuPageTemplate
                 title={title}
                 subtitle={subtitle}
                 headerImage={headerImage}
@@ -325,10 +296,10 @@ describe('GalleryPageTemplate', () => {
     });
 });
 
-describe('GalleryPage', () => {
+describe('MenuPage', () => {
     it('renders without data throws prop type error', () => {
         const renderStartPage = () => {
-            const component = <GalleryPage />;
+            const component = <MenuPage />;
             renderer.create(component);
         };
 
@@ -339,7 +310,7 @@ describe('GalleryPage', () => {
         const renderStartPage = () => {
             const data = {};
 
-            const component = <GalleryPage data={data} />;
+            const component = <MenuPage data={data} />;
             renderer.create(component);
         };
 
@@ -350,11 +321,11 @@ describe('GalleryPage', () => {
         const data = {
             page: {
                 html: <p>HTML</p>,
-                frontmatter: GalleryPageData,
+                frontmatter: MenuPageData,
             },
         };
 
-        const component = <GalleryPage data={data} />;
+        const component = <MenuPage data={data} />;
         const tree = renderer.create(component).toJSON();
 
         expect(tree).toMatchSnapshot();

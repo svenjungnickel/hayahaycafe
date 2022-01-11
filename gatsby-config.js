@@ -39,7 +39,16 @@ module.exports = {
         },
 
         // images
-        'gatsby-plugin-sharp',
+        {
+            resolve: 'gatsby-plugin-sharp',
+            options: {
+                defaults: {
+                    formats: ['auto', 'webp', 'avif'],
+                    placeholder: 'blurred',
+                    loading: 'lazy',
+                },
+            },
+        },
         'gatsby-transformer-sharp',
         {
             resolve: 'gatsby-transformer-remark',
@@ -72,6 +81,9 @@ module.exports = {
                 ],
             },
         },
+        'gatsby-plugin-image',
+
+        // pwa
         {
             resolve: 'gatsby-plugin-manifest',
             options: {
@@ -91,6 +103,7 @@ module.exports = {
         // created manifest.webmanifest
         'gatsby-plugin-offline',
 
+        // netlify cms
         {
             resolve: 'gatsby-plugin-netlify-cms',
             options: {

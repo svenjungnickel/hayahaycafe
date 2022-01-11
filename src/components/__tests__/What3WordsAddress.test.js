@@ -8,20 +8,7 @@ jest.mock('../Image');
 describe('What3WordsAddress', () => {
     it('renders without required what3WordsAddress throws prop type error', () => {
         const renderWhat3Words = () => {
-            const what3WordsIcon = 'what3WordsIcon';
-
-            const component = <What3Words what3WordsIcon={what3WordsIcon} />;
-            renderer.create(component);
-        };
-
-        expect(renderWhat3Words).toThrowError('Warning: Failed prop type');
-    });
-
-    it('renders without required what3WordsIcon throws prop type error', () => {
-        const renderWhat3Words = () => {
-            const what3WordsAddress = 'what3WordsAddress';
-
-            const component = <What3Words what3WordsAddress={what3WordsAddress} />;
+            const component = <What3Words />;
             renderer.create(component);
         };
 
@@ -31,21 +18,8 @@ describe('What3WordsAddress', () => {
     it('renders with invalid what3WordsAddress throws prop type error', () => {
         const renderWhat3Words = () => {
             const what3WordsAddress = 123;
-            const what3WordsIcon = 'what3WordsIcon';
 
-            const component = <What3Words what3WordsAddress={what3WordsAddress} what3WordsIcon={what3WordsIcon} />;
-            renderer.create(component);
-        };
-
-        expect(renderWhat3Words).toThrowError('Warning: Failed prop type');
-    });
-
-    it('renders with invalid what3WordsIcon throws prop type error', () => {
-        const renderWhat3Words = () => {
-            const what3WordsAddress = 'what3WordsAddress';
-            const what3WordsIcon = 123;
-
-            const component = <What3Words what3WordsAddress={what3WordsAddress} what3WordsIcon={what3WordsIcon} />;
+            const component = <What3Words what3WordsAddress={what3WordsAddress} />;
             renderer.create(component);
         };
 
@@ -94,9 +68,6 @@ describe('What3WordsAddress', () => {
                 location: {
                     what3WordsAddress: 'what3WordsAddress',
                 },
-            },
-            what3WordsIcon: {
-                publicURL: 'publicURL',
             },
         };
         StaticQuery.mockImplementationOnce(({ render }) => render(data));
