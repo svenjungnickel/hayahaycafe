@@ -39,6 +39,7 @@ jobs:
 
       - name: Run cypress 🎉
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           SITE_RECAPTCHA_KEY: ${{ secrets.SITE_RECAPTCHA_KEY }}
           SITE_RECAPTCHA_SECRET: ${{ secrets.SITE_RECAPTCHA_SECRET }}
