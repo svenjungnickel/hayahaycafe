@@ -2,78 +2,9 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { mount } from 'enzyme';
 import { StaticQuery } from 'gatsby';
-import SEO, { HTMLHead } from '../SEO';
+import SEO from '../SEO';
 
 describe('SEO', () => {
-    it('renders without required globalMeta throws prop type error', () => {
-        const renderSEO = () => {
-            const title = 'title';
-            const description = 'description';
-
-            mount(<HTMLHead title={title} description={description} />);
-        };
-
-        expect(renderSEO).toThrowError('Warning: Failed prop type');
-    });
-
-    it('renders without required title throws prop type error', () => {
-        const renderSEO = () => {
-            const globalMeta = {};
-            const description = 'description';
-
-            mount(<HTMLHead globalMeta={globalMeta} description={description} />);
-        };
-
-        expect(renderSEO).toThrowError('Warning: Failed prop type');
-    });
-
-    it('renders without required description throws prop type error', () => {
-        const renderSEO = () => {
-            const globalMeta = {};
-            const title = 'title';
-
-            mount(<HTMLHead globalMeta={globalMeta} title={title} />);
-        };
-
-        expect(renderSEO).toThrowError('Warning: Failed prop type');
-    });
-
-    it('renders with invalid globalMeta throws prop type error', () => {
-        const renderSEO = () => {
-            const globalMeta = 'globalMeta';
-            const title = 'title';
-            const description = 'description';
-
-            mount(<HTMLHead globalMeta={globalMeta} title={title} description={description} />);
-        };
-
-        expect(renderSEO).toThrowError('Warning: Failed prop type');
-    });
-
-    it('renders with invalid title throws prop type error', () => {
-        const renderSEO = () => {
-            const globalMeta = {};
-            const title = 123;
-            const description = 'description';
-
-            mount(<HTMLHead globalMeta={globalMeta} title={title} description={description} />);
-        };
-
-        expect(renderSEO).toThrowError('Warning: Failed prop type');
-    });
-
-    it('renders with invalid description throws prop type error', () => {
-        const renderSEO = () => {
-            const globalMeta = {};
-            const title = 'title';
-            const description = 123;
-
-            mount(<HTMLHead globalMeta={globalMeta} title={title} description={description} />);
-        };
-
-        expect(renderSEO).toThrowError('Warning: Failed prop type');
-    });
-
     // Jest snapshot tests are not working here because Helmet is not getting rendered via react-test-renderer.
     // To test Helmet, we have to actual mount Helmet, use Helmet.peek() to get the markup content and verify every
     // field by hand.

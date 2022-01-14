@@ -4,24 +4,6 @@ import { StaticQuery } from 'gatsby';
 import FooterAddress, { ListFooterAddress } from '../FooterAddress';
 
 describe('FooterAddress', () => {
-    it('renders with invalid address data throws prop type error', () => {
-        const renderListFooterAddress = () => {
-            const address = {
-                company: '',
-                addressLine1: 'addressLine1',
-                addressLine2: '',
-                province: 'province',
-                postalCode: 12345,
-                country: '',
-            };
-
-            const component = <ListFooterAddress address={address} />;
-            renderer.create(component);
-        };
-
-        expect(renderListFooterAddress).toThrowError('Warning: Failed prop type');
-    });
-
     it('does not render empty data', () => {
         const data = {};
         StaticQuery.mockImplementationOnce(({ render }) => render(data));

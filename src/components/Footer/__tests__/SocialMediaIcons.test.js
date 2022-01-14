@@ -4,69 +4,6 @@ import { StaticQuery } from 'gatsby';
 import SocialMediaIcons, { SocialMediaIcon } from '../SocialMediaIcons';
 
 describe('SocialMediaIcons', () => {
-    it('renders without required item throws prop type error', () => {
-        const renderSocialMediaIcon = () => {
-            const component = <SocialMediaIcon />;
-            renderer.create(component);
-        };
-
-        expect(renderSocialMediaIcon).toThrowError('Warning: Failed prop type');
-    });
-
-    it('renders without required item url throws prop type error', () => {
-        const renderSocialMediaIcon = () => {
-            const icon = {
-                type: 'type',
-            };
-
-            const component = <SocialMediaIcon item={icon} />;
-            renderer.create(component);
-        };
-
-        expect(renderSocialMediaIcon).toThrowError('Warning: Failed prop type');
-    });
-
-    it('renders without required item type throws prop type error', () => {
-        const renderSocialMediaIcon = () => {
-            const icon = {
-                url: 'url',
-            };
-
-            const component = <SocialMediaIcon item={icon} />;
-            renderer.create(component);
-        };
-
-        expect(renderSocialMediaIcon).toThrowError('Warning: Failed prop type');
-    });
-
-    it('renders with invalid item url throws prop type error', () => {
-        const renderSocialMediaIcon = () => {
-            const icon = {
-                url: 123,
-                type: 'facebook',
-            };
-
-            const component = <SocialMediaIcon item={icon} />;
-            renderer.create(component);
-        };
-
-        expect(renderSocialMediaIcon).toThrowError('Warning: Failed prop type');
-    });
-
-    it('renders with unknown icon throws prop type error', () => {
-        const renderSocialMediaIcon = () => {
-            const icon = {
-                url: 'url',
-                type: 'unknown',
-            };
-
-            const component = <SocialMediaIcon item={icon} />;
-            renderer.create(component);
-        };
-
-        expect(renderSocialMediaIcon).toThrowError('Warning: Failed prop type');
-    });
-
     it('renders facebook icon correctly', () => {
         const icon = {
             url: 'url',
