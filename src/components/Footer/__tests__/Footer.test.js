@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Footer, { NavItem } from '../Footer';
+import Footer from '../Footer';
 
 jest.mock('../SocialMediaIcons');
 jest.mock('../FooterAddress');

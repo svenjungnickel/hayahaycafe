@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { StaticQuery } from 'gatsby';
-import FooterAddress, { ListFooterAddress } from '../FooterAddress';
+import FooterAddress from '../FooterAddress';
 
 describe('FooterAddress', () => {
     it('does not render empty data', () => {
