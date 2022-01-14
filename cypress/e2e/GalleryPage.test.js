@@ -1,9 +1,8 @@
 const openLightBoxAndVerifyImageSource = () => {
     let imgSource;
 
-    cy.get('[data-cy=galleryImage]')
+    cy.get('[data-cy=galleryImage] img[loading=lazy]')
         .first()
-        .find('img[loading=lazy]')
         .then(($img) => {
             imgSource = $img.attr('src');
         })
@@ -17,9 +16,8 @@ const openLightBoxAndVerifyImageSource = () => {
     // Close light box again
     cy.get('.fslightbox-toolbar').find('.fslightbox-toolbar-button').last().click();
 
-    cy.get('[data-cy=galleryImage]')
+    cy.get('[data-cy=galleryImage] img[loading=lazy]')
         .last()
-        .find('img[loading=lazy]')
         .then(($img) => {
             imgSource = $img.attr('src');
         })
@@ -51,7 +49,7 @@ describe('Gallery page', () => {
             cy.useMobile();
         });
 
-        it('Open images in light box', () => {
+        it('Open images in light box and verify sources', () => {
             openLightBoxAndVerifyImageSource();
         });
     });

@@ -5,7 +5,7 @@ const minimizeNavBar = () => {
         .should('have.attr', 'class')
         .and('match', /navBar/);
 
-    cy.scrollTo('bottom');
+    cy.scrollTo('bottom', { duration: 300 });
 
     cy.get('[data-cy=navBar]')
         .should('have.attr', 'class')

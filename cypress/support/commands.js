@@ -24,7 +24,7 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
-Cypress.Commands.add('setDarkMode', mode => {
+Cypress.Commands.add('setDarkMode', (mode) => {
     window.localStorage.setItem('darkMode', mode.toString());
 });
 
@@ -37,7 +37,7 @@ Cypress.Commands.add('useMobile', () => {
 });
 
 // https://cypress.io/blog/2020/02/12/working-with-iframes-in-cypress/
-Cypress.Commands.add('getIframeBody', $selector => {
+Cypress.Commands.add('getIframeBody', ($selector) => {
     cy.log(`getIframeBody from ${$selector}`);
 
     // get the iframe > document > body
@@ -50,6 +50,6 @@ Cypress.Commands.add('getIframeBody', $selector => {
             // wraps "body" DOM element to allow
             // chaining more Cypress commands, like ".find(...)"
             // https://on.cypress.io/wrap
-            .then(body => cy.wrap(body, { log: false }))
+            .then((body) => cy.wrap(body, { log: false }))
     );
 });

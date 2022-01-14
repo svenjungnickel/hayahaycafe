@@ -12,7 +12,7 @@ module.exports = {
     globals: {
         __PATH_PREFIX__: '',
     },
-    setupFiles: ['<rootDir>/loadershim.js', 'jest-prop-type-error', '<rootDir>/setJestEnvVars.js'],
+    setupFiles: ['<rootDir>/loadershim.js', '<rootDir>/setJestEnvVars.js'],
     setupFilesAfterEnv: ['<rootDir>/setupEnzyme.js'],
     collectCoverage: true,
     collectCoverageFrom: ['<rootDir>/src/**/*.{js,jsx}', '!**/node_modules/**', '!**/vendor/**'],

@@ -1,16 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Img from 'gatsby-image';
+import { getImage, GatsbyImage } from 'gatsby-plugin-image';
 
 const Image = (props) => {
     const { src } = props;
+    const image = getImage(src);
 
-    if (!!src && !!src.childImageSharp) {
-        if (src.childImageSharp.fluid) {
-            return <Img fluid={src.childImageSharp.fluid} {...props} />;
-        }
-
-        return <Img fixed={src.childImageSharp.fixed} {...props} />;
+    if (image) {
+        return <GatsbyImage image={image} loading="lazy" {...props} />;
     }
 
     return <img src={src} loading="lazy" {...props} />;
