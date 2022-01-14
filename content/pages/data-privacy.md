@@ -31,7 +31,7 @@ We would like to make sure you are fully aware of all of your data protection ri
 
 **The right to data portability** - You have the right to request that we transfer the data that we have collected to another organization, or directly to you, under certain conditions. 
 
-If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us at our email: <a href="mailto:hayahaycafe@gmail.com">hayahaycafe@gmail.com</a>
+If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us at our email: <a href="mailto:hayahaycafe@gmail.com" aria-label="email address">hayahaycafe@gmail.com</a>
 
 <br />
 
@@ -77,4 +77,4 @@ We keep its privacy policy under regular review and places any updates on this w
 
 ## How to contact us
 
-If you have any questions about our privacy policy, the data we hold on you, or you would like to exercise one of your data protection rights, please do not hesitate to contact us.  Email us at: <a href="mailto:hayahaycafe@gmail.com">hayahaycafe@gmail.com</a>
+If you have any questions about our privacy policy, the data we hold on you, or you would like to exercise one of your data protection rights, please do not hesitate to contact us.  Email us at: <a href="emailto:hayahaycafe@gmail.com" aria-label="mail address">hayahaycafe@gmail.com</a>
