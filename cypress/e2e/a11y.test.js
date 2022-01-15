@@ -1,7 +1,7 @@
 const checkA11yForPage = (page) => {
     cy.visit(page);
     cy.injectAxe();
-    cy.get('header');
+    cy.get('header img[loading=lazy]').should('be.visible');
 
     // To turn off uncaught exception handling
     // https://docs.cypress.io/api/events/catalog-of-events.html#Examples

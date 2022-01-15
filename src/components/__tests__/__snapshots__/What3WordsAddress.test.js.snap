@@ -20,8 +20,10 @@ exports[`What3WordsAddress renders correctly 1`] = `
     target="_blank"
   >
     <img
-      alt="alt"
-      src="src"
+      alt="What3words address"
+      height={80}
+      src="../../assets/what3words-icon.png"
+      width={80}
     />
     <p
       className="what3words__address"

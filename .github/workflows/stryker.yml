@@ -33,4 +33,5 @@ jobs:
       - name: Run Stryker 🚀
         env:
           STRYKER_DASHBOARD_API_KEY: ${{ secrets.STRYKER_DASHBOARD_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run stryker:run

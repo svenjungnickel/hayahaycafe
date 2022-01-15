@@ -1,19 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GalleryPage renders correctly 1`] = `
+exports[`MenuPage renders correctly 1`] = `
 <main>
   <header />
   <section
     className="section"
   >
     <div
-      className="gallery container"
+      className="menu container"
     >
       <div
         className="row"
       >
         <div
           className="col-12"
+          data-cy="menuContent"
         >
           <div
             dangerouslySetInnerHTML={
@@ -27,30 +28,30 @@ exports[`GalleryPage renders correctly 1`] = `
           <hr />
         </div>
         <div
-          className="gallery__image col-lg-4 col-md-6 col-sm-12 col-12"
-          data-cy="galleryImage"
+          className="menu__image col-lg-6 col-md-12"
+          data-cy="menuImage"
         >
-          <div
+          <a
             onClick={[Function]}
           >
             <img
               alt="alt"
               src="src"
             />
-          </div>
+          </a>
         </div>
         <div
-          className="gallery__image col-lg-4 col-md-6 col-sm-12 col-12"
-          data-cy="galleryImage"
+          className="menu__image col-lg-6 col-md-12"
+          data-cy="menuImage"
         >
-          <div
+          <a
             onClick={[Function]}
           >
             <img
               alt="alt"
               src="src"
             />
-          </div>
+          </a>
         </div>
       </div>
     </div>
@@ -58,20 +59,21 @@ exports[`GalleryPage renders correctly 1`] = `
 </main>
 `;
 
-exports[`GalleryPageTemplate renders childImageSharp fixe 1`] = `
+exports[`MenuPageTemplate renders GatsbyImage 1`] = `
 Array [
   <header />,
   <section
     className="section"
   >
     <div
-      className="gallery container"
+      className="menu container"
     >
       <div
         className="row"
       >
         <div
           className="col-12"
+          data-cy="menuContent"
         >
           <div>
             content
@@ -79,17 +81,17 @@ Array [
           <hr />
         </div>
         <div
-          className="gallery__image col-lg-4 col-md-6 col-sm-12 col-12"
-          data-cy="galleryImage"
+          className="menu__image col-lg-6 col-md-12"
+          data-cy="menuImage"
         >
-          <div
+          <a
             onClick={[Function]}
           >
             <img
               alt="alt"
               src="src"
             />
-          </div>
+          </a>
         </div>
       </div>
     </div>
@@ -97,20 +99,21 @@ Array [
 ]
 `;
 
-exports[`GalleryPageTemplate renders childImageSharp fluid 1`] = `
+exports[`MenuPageTemplate renders content correctly 1`] = `
 Array [
   <header />,
   <section
     className="section"
   >
     <div
-      className="gallery container"
+      className="menu container"
     >
       <div
         className="row"
       >
         <div
           className="col-12"
+          data-cy="menuContent"
         >
           <div>
             content
@@ -118,17 +121,17 @@ Array [
           <hr />
         </div>
         <div
-          className="gallery__image col-lg-4 col-md-6 col-sm-12 col-12"
-          data-cy="galleryImage"
+          className="menu__image col-lg-6 col-md-12"
+          data-cy="menuImage"
         >
-          <div
+          <a
             onClick={[Function]}
           >
             <img
               alt="alt"
               src="src"
             />
-          </div>
+          </a>
         </div>
       </div>
     </div>
@@ -136,59 +139,21 @@ Array [
 ]
 `;
 
-exports[`GalleryPageTemplate renders content correctly 1`] = `
+exports[`MenuPageTemplate renders html content correctly 1`] = `
 Array [
   <header />,
   <section
     className="section"
   >
     <div
-      className="gallery container"
+      className="menu container"
     >
       <div
         className="row"
       >
         <div
           className="col-12"
-        >
-          <div>
-            content
-          </div>
-          <hr />
-        </div>
-        <div
-          className="gallery__image col-lg-4 col-md-6 col-sm-12 col-12"
-          data-cy="galleryImage"
-        >
-          <div
-            onClick={[Function]}
-          >
-            <img
-              alt="alt"
-              src="src"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>,
-]
-`;
-
-exports[`GalleryPageTemplate renders html content correctly 1`] = `
-Array [
-  <header />,
-  <section
-    className="section"
-  >
-    <div
-      className="gallery container"
-    >
-      <div
-        className="row"
-      >
-        <div
-          className="col-12"
+          data-cy="menuContent"
         >
           <div
             dangerouslySetInnerHTML={
@@ -202,17 +167,17 @@ Array [
           <hr />
         </div>
         <div
-          className="gallery__image col-lg-4 col-md-6 col-sm-12 col-12"
-          data-cy="galleryImage"
+          className="menu__image col-lg-6 col-md-12"
+          data-cy="menuImage"
         >
-          <div
+          <a
             onClick={[Function]}
           >
             <img
               alt="alt"
               src="src"
             />
-          </div>
+          </a>
         </div>
       </div>
     </div>

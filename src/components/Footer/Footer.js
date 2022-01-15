@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import { Container, Nav } from 'react-bootstrap';
 import SocialMediaIcons from './SocialMediaIcons';
 import FooterAddress from './FooterAddress';
-import FooterStyles from '../../styles/components/Footer/Footer.module.scss';
+import { footer, footer__pre, footer__main, footer__address } from '../../styles/components/Footer/Footer.module.scss';
 
 export const NavItem = ({ link, name }) => (
     <Nav.Item>
@@ -20,17 +20,17 @@ NavItem.propTypes = {
 };
 
 const Footer = () => (
-    <footer className={FooterStyles.footer}>
-        <div className={FooterStyles.footer__pre}>
+    <footer className={footer}>
+        <div className={footer__pre}>
             <SocialMediaIcons />
         </div>
-        <div className={FooterStyles.footer__main}>
+        <div className={footer__main}>
             <Container className="text-center">
                 <Nav className="justify-content-center">
                     <NavItem link="/legal" name="Legal" />
                     <NavItem link="/data-privacy" name="Data Privacy" />
                 </Nav>
-                <div className={FooterStyles.footer__address} data-cy="footerAddress">
+                <div className={footer__address} data-cy="footerAddress">
                     <FooterAddress />
                 </div>
             </Container>

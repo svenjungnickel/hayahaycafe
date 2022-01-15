@@ -11,58 +11,6 @@ jest.mock('../../../components/What3WordsAddress');
 jest.mock('../../../components/OpeningHours');
 
 describe('ContactPagePreview', () => {
-    it('renders without entry throws prop type error', () => {
-        const renderContactPagePreview = () => {
-            const widgetFor = () => {};
-
-            const component = <ContactPagePreview widgetFor={widgetFor} />;
-            renderer.create(component);
-        };
-
-        expect(renderContactPagePreview).toThrowError('Warning: Failed prop type');
-    });
-
-    it('renders without widgetFor throws prop type error', () => {
-        const renderContactPagePreview = () => {
-            const entry = {
-                toJS: () => {},
-            };
-
-            const component = <ContactPagePreview entry={entry} />;
-            renderer.create(component);
-        };
-
-        expect(renderContactPagePreview).toThrowError('Warning: Failed prop type');
-    });
-
-    it('renders with invalid entry throws prop type error', () => {
-        const renderContactPagePreview = () => {
-            const entry = {
-                toJS: 123,
-            };
-            const widgetFor = () => {};
-
-            const component = <ContactPagePreview entry={entry} widgetFor={widgetFor} />;
-            renderer.create(component);
-        };
-
-        expect(renderContactPagePreview).toThrowError('Warning: Failed prop type');
-    });
-
-    it('renders with invalid widgetFor throws prop type error', () => {
-        const renderContactPagePreview = () => {
-            const entry = {
-                toJS: () => {},
-            };
-            const widgetFor = {};
-
-            const component = <ContactPagePreview entry={entry} widgetFor={widgetFor} />;
-            renderer.create(component);
-        };
-
-        expect(renderContactPagePreview).toThrowError('Warning: Failed prop type');
-    });
-
     it('renders correctly', () => {
         const entry = {
             toJS: () => {

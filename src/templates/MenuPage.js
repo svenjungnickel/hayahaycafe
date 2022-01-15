@@ -2,14 +2,15 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import { Col, Container, Row } from 'react-bootstrap';
+import { getSrc } from 'gatsby-plugin-image';
 import Layout from '../components/Layout';
 import Header from '../components/Header';
 import Content, { HTMLContent } from '../components/Content';
 import Separator from '../components/Separator';
 import Image from '../components/Image';
 import FsLightbox from 'fslightbox-react';
-import SectionStyles from '../styles/components/Section.module.scss';
-import MenuStyles from '../styles/pages/Menu.module.scss';
+import { section } from '../styles/components/Section.module.scss';
+import { menu, menu__image } from '../styles/pages/Menu.module.scss';
 
 export const MenuPageTemplate = ({ title, subtitle, headerImage, content, contentComponent, images }) => {
     const PostContent = contentComponent || Content;
@@ -20,12 +21,9 @@ export const MenuPageTemplate = ({ title, subtitle, headerImage, content, conten
     });
 
     const imageSources = images.map((image) => {
-        if (!!image.src && !!image.src.childImageSharp) {
-            if (image.src.childImageSharp.fluid) {
-                return image.src.childImageSharp.fluid.src;
-            }
-
-            return image.src.childImageSharp.fixed.src;
+        const imageSrc = getSrc(image.src);
+        if (imageSrc) {
+            return imageSrc;
         }
 
         return image.src;
@@ -42,8 +40,8 @@ export const MenuPageTemplate = ({ title, subtitle, headerImage, content, conten
         <>
             <Header headerImage={headerImage} title={title} subtitle={subtitle} />
 
-            <section className={SectionStyles.section}>
-                <Container className={MenuStyles.menu}>
+            <section className={section}>
+                <Container className={menu}>
                     <Row>
                         {!!content && (
                             <Col xs={12} data-cy="menuContent">
@@ -54,13 +52,7 @@ export const MenuPageTemplate = ({ title, subtitle, headerImage, content, conten
                         {images && images.length > 0 && (
                             <>
                                 {images.map((image, index) => (
-                                    <Col
-                                        md={12}
-                                        lg={6}
-                                        key={index}
-                                        className={MenuStyles.menu__image}
-                                        data-cy="menuImage"
-                                    >
+                                    <Col md={12} lg={6} key={index} className={menu__image} data-cy="menuImage">
                                         <a onClick={() => openLightBox(index)}>
                                             <Image src={image.src} alt={image.alt} title={image.title} />
                                         </a>
@@ -113,18 +105,14 @@ export const pageQuery = graphql`
                 subtitle
                 headerImage {
                     childImageSharp {
-                        fluid {
-                            ...GatsbyImageSharpFluid_withWebp
-                        }
+                        gatsbyImageData(layout: FULL_WIDTH)
                     }
                     publicURL
                 }
                 images {
                     src {
                         childImageSharp {
-                            fluid(maxWidth: 1138, maxHeight: 1600) {
-                                ...GatsbyImageSharpFluid_withWebp
-                            }
+                            gatsbyImageData(layout: CONSTRAINED, width: 1138, height: 1600)
                         }
                         publicURL
                     }

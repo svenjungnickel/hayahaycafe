@@ -2,15 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Container } from 'react-bootstrap';
 import Image from './Image';
-import HeaderStyles from '../styles/components/Header.module.scss';
+import { header, header__image, header__content, header__contentInner } from '../styles/components/Header.module.scss';
 
 const Header = ({ headerImage, title, subtitle }) => (
-    <header className={HeaderStyles.header}>
-        <Image src={headerImage} alt="header" className={HeaderStyles.header__image} />
+    <header className={header}>
+        <Image src={headerImage} alt="header" className={header__image} />
 
-        <div className={HeaderStyles.header__content}>
+        <div className={header__content}>
             <Container>
-                <div className={HeaderStyles.header__contentInner}>
+                <div className={header__contentInner}>
                     <h1 className="display-1">{title}</h1>
                     {subtitle && <p className="lead">{subtitle}</p>}
                 </div>

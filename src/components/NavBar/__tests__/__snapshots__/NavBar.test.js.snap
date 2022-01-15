@@ -6,10 +6,23 @@ exports[`NavBar renders with disabled dark mode (default) 1`] = `
   data-cy="navBar"
   id="site-navbar"
 >
-  <img
-    alt="logo"
-    src="logo"
-  />
+  <div
+    className="d-block d-md-none"
+  >
+    <a
+      aria-label="back to startpage"
+      data-cy="navBarLinkLogo"
+      href="/"
+    >
+      <img
+        alt="Logo"
+        height={80}
+        loading="eager"
+        src="../../../assets/logo.png"
+        width={97}
+      />
+    </a>
+  </div>
   <input
     role="switch"
     type="checkbox"
@@ -38,10 +51,23 @@ exports[`NavBar renders with disabled dark mode (default) 1`] = `
       <nav />
       <nav />
       <nav />
-      <img
-        alt="logo"
-        src="logo"
-      />
+      <div
+        className="d-none d-md-block"
+      >
+        <a
+          aria-label="back to startpage"
+          data-cy="navBarLinkLogo"
+          href="/"
+        >
+          <img
+            alt="Logo"
+            height={120}
+            loading="eager"
+            src="../../../assets/logo.png"
+            width={146}
+          />
+        </a>
+      </div>
       <nav />
       <nav />
     </div>

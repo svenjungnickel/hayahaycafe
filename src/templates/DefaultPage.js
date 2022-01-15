@@ -5,7 +5,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import Layout from '../components/Layout';
 import Header from '../components/Header';
 import Content, { HTMLContent } from '../components/Content';
-import SectionStyles from '../styles/components/Section.module.scss';
+import { section } from '../styles/components/Section.module.scss';
 
 export const DefaultPageTemplate = ({ title, subtitle, headerImage, content, contentComponent }) => {
     const PostContent = contentComponent || Content;
@@ -14,7 +14,7 @@ export const DefaultPageTemplate = ({ title, subtitle, headerImage, content, con
         <>
             <Header headerImage={headerImage} title={title} subtitle={subtitle} />
 
-            <section className={SectionStyles.section}>
+            <section className={section}>
                 <Container>
                     <Row>
                         <Col xs={12}>
@@ -59,9 +59,7 @@ export const pageQuery = graphql`
                 subtitle
                 headerImage {
                     childImageSharp {
-                        fluid(maxHeight: 500) {
-                            ...GatsbyImageSharpFluid_withWebp
-                        }
+                        gatsbyImageData(layout: FULL_WIDTH)
                     }
                     publicURL
                 }

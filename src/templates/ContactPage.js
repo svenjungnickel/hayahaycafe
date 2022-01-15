@@ -7,7 +7,7 @@ import Header from '../components/Header';
 import ContactForm from '../components/ContactForm';
 import Content, { HTMLContent } from '../components/Content';
 import Separator from '../components/Separator';
-import SectionStyles from '../styles/components/Section.module.scss';
+import { section } from '../styles/components/Section.module.scss';
 
 export const ContactPageTemplate = ({ title, subtitle, headerImage, content, contentComponent }) => {
     const PostContent = contentComponent || Content;
@@ -16,7 +16,7 @@ export const ContactPageTemplate = ({ title, subtitle, headerImage, content, con
         <>
             <Header title={title} subtitle={subtitle} headerImage={headerImage} />
 
-            <section className={SectionStyles.section}>
+            <section className={section}>
                 <Container>
                     {!!content && (
                         <Row>
@@ -69,9 +69,7 @@ export const pageQuery = graphql`
                 subtitle
                 headerImage {
                     childImageSharp {
-                        fluid(maxHeight: 500) {
-                            ...GatsbyImageSharpFluid_withWebp
-                        }
+                        gatsbyImageData(layout: FULL_WIDTH)
                     }
                     publicURL
                 }

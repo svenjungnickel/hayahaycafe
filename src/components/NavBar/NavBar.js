@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { StaticQuery, graphql } from 'gatsby';
+import { Link } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
 import { Navbar, Nav } from 'react-bootstrap';
 import useDarkMode from 'use-dark-mode';
-import Logo from './Logo';
 import NavItem from './NavItem';
 import DarkModeToggle from './DarkModeToggle';
-import NavBarStyles from '../../styles/components/NavBar/NavBar.module.scss';
-import DarkModeToggleStyle from '../../styles/components/NavBar/DarkModeToggle.module.scss';
+import { navBar, navBar__items, navBarSmall } from '../../styles/components/NavBar/NavBar.module.scss';
+import { darkModeToggle } from '../../styles/components/NavBar/DarkModeToggle.module.scss';
+import { navBar__logo } from '../../styles/components/NavBar/NavBar.module.scss';
 
 const NavBar = ({ currentPage }) => {
     currentPage = `/${currentPage}`;
@@ -22,54 +23,54 @@ const NavBar = ({ currentPage }) => {
     });
 
     return (
-        <StaticQuery
-            query={graphql`
-                query {
-                    logoMobile: file(relativePath: { eq: "logo.png" }) {
-                        childImageSharp {
-                            fixed(height: 80) {
-                                ...GatsbyImageSharpFixed_withWebp
-                            }
-                        }
-                    }
-                    logo: file(relativePath: { eq: "logo.png" }) {
-                        childImageSharp {
-                            fixed(height: 120) {
-                                ...GatsbyImageSharpFixed_withWebp
-                            }
-                        }
-                    }
-                }
-            `}
-            render={(data) => (
-                <Navbar
-                    collapseOnSelect
-                    variant={true === darkMode.value ? 'dark' : 'light'}
-                    expand="md"
-                    fixed="top"
-                    id="site-navbar"
-                    className={true === smallNavBar ? NavBarStyles.navBarSmall : NavBarStyles.navBar}
-                    data-cy="navBar"
-                >
-                    <Logo logo={data.logoMobile.childImageSharp.fixed} className="d-block d-md-none" />
-                    <DarkModeToggle darkMode={darkMode} className="d-block d-md-none" />
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" className="ml-right" data-cy="navBarToggle" />
-                    <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">
-                        <Nav className={NavBarStyles.navBar__items}>
-                            <NavItem link="/" name="Home" active={currentPage === '/'} />
-                            <NavItem link="/menu" name="Menu" active={currentPage === '/menu'} />
-                            <NavItem link="/about" name="About" active={currentPage === '/about'} />
-                            <Logo logo={data.logo.childImageSharp.fixed} className="d-none d-md-block" />
-                            <NavItem link="/gallery" name="Gallery" active={currentPage === '/gallery'} />
-                            <NavItem link="/contact" name="Contact" active={currentPage === '/contact'} />
-                        </Nav>
-                    </Navbar.Collapse>
-                    <div className={DarkModeToggleStyle.darkModeToggle}>
-                        <DarkModeToggle darkMode={darkMode} className="d-none d-md-block" />
+        <Navbar
+            collapseOnSelect
+            variant={true === darkMode.value ? 'dark' : 'light'}
+            expand="md"
+            fixed="top"
+            id="site-navbar"
+            className={true === smallNavBar ? navBarSmall : navBar}
+            data-cy="navBar"
+        >
+            <div className="d-block d-md-none">
+                <Link to="/" data-cy="navBarLinkLogo" aria-label="back to startpage">
+                    <StaticImage
+                        src="../../../assets/logo.png"
+                        width={97}
+                        height={80}
+                        alt="Logo"
+                        loading="eager"
+                        className={navBar__logo}
+                    />
+                </Link>
+            </div>
+            <DarkModeToggle darkMode={darkMode} className="d-block d-md-none" />
+            <Navbar.Toggle aria-controls="basic-navbar-nav" className="ml-right" data-cy="navBarToggle" />
+            <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">
+                <Nav className={navBar__items}>
+                    <NavItem link="/" name="Home" active={currentPage === '/'} />
+                    <NavItem link="/menu" name="Menu" active={currentPage === '/menu'} />
+                    <NavItem link="/about" name="About" active={currentPage === '/about'} />
+                    <div className="d-none d-md-block">
+                        <Link to="/" data-cy="navBarLinkLogo" aria-label="back to startpage">
+                            <StaticImage
+                                src="../../../assets/logo.png"
+                                width={146}
+                                height={120}
+                                alt="Logo"
+                                loading="eager"
+                                className={navBar__logo}
+                            />
+                        </Link>
                     </div>
-                </Navbar>
-            )}
-        />
+                    <NavItem link="/gallery" name="Gallery" active={currentPage === '/gallery'} />
+                    <NavItem link="/contact" name="Contact" active={currentPage === '/contact'} />
+                </Nav>
+            </Navbar.Collapse>
+            <div className={darkModeToggle}>
+                <DarkModeToggle darkMode={darkMode} className="d-none d-md-block" />
+            </div>
+        </Navbar>
     );
 };
 
