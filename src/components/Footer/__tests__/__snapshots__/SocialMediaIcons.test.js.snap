@@ -18,7 +18,10 @@ exports[`SocialMediaIcons renders all icons correctly 1`] = `
     onClick={[Function]}
     onKeyDown={[Function]}
     rel="noreferrer"
+    role="button"
+    tabIndex={0}
     target="_blank"
+    type="button"
   >
     <svg
       fill="currentColor"
@@ -46,7 +49,10 @@ exports[`SocialMediaIcons renders all icons correctly 1`] = `
     onClick={[Function]}
     onKeyDown={[Function]}
     rel="noreferrer"
+    role="button"
+    tabIndex={0}
     target="_blank"
+    type="button"
   >
     <svg
       fill="currentColor"
@@ -74,7 +80,10 @@ exports[`SocialMediaIcons renders all icons correctly 1`] = `
     onClick={[Function]}
     onKeyDown={[Function]}
     rel="noreferrer"
+    role="button"
+    tabIndex={0}
     target="_blank"
+    type="button"
   >
     <svg
       fill="currentColor"
@@ -106,7 +115,10 @@ exports[`SocialMediaIcons renders facebook icon correctly 1`] = `
   onClick={[Function]}
   onKeyDown={[Function]}
   rel="noreferrer"
+  role="button"
+  tabIndex={0}
   target="_blank"
+  type="button"
 >
   <svg
     fill="currentColor"
@@ -137,7 +149,10 @@ exports[`SocialMediaIcons renders instagram icon correctly 1`] = `
   onClick={[Function]}
   onKeyDown={[Function]}
   rel="noreferrer"
+  role="button"
+  tabIndex={0}
   target="_blank"
+  type="button"
 >
   <svg
     fill="currentColor"
@@ -168,7 +183,10 @@ exports[`SocialMediaIcons renders tripadvisor icon correctly 1`] = `
   onClick={[Function]}
   onKeyDown={[Function]}
   rel="noreferrer"
+  role="button"
+  tabIndex={0}
   target="_blank"
+  type="button"
 >
   <svg
     fill="currentColor"

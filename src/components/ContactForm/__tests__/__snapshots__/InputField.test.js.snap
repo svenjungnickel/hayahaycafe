@@ -2,7 +2,7 @@
 
 exports[`InputField renders with description 1`] = `
 <div
-  className="form-group"
+  className="mb-3"
   data-cy="controlId"
 >
   <label
@@ -35,7 +35,7 @@ exports[`InputField renders with description 1`] = `
 
 exports[`InputField renders with empty label and filled ariaLabel 1`] = `
 <div
-  className="form-group"
+  className="mb-3"
   data-cy="controlId"
 >
   <input
@@ -57,7 +57,7 @@ exports[`InputField renders with empty label and filled ariaLabel 1`] = `
 
 exports[`InputField renders with required parameters 1`] = `
 <div
-  className="form-group"
+  className="mb-3"
   data-cy="controlId"
 >
   <label

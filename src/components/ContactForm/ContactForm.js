@@ -1,5 +1,5 @@
 import React, { useState, createRef } from 'react';
-import { Alert, Button, Col, Form } from 'react-bootstrap';
+import { Alert, Button, Row, Col, Form } from 'react-bootstrap';
 import Recaptcha from 'react-google-recaptcha';
 import Fade from 'react-reveal/Fade';
 import useDarkMode from 'use-dark-mode';
@@ -78,7 +78,7 @@ const ContactForm = () => {
                     data-cy="contactForm"
                 >
                     <Form.Label htmlFor="contactFirstName">Name *</Form.Label>
-                    <Form.Row>
+                    <Row>
                         <Col xs={12} lg={6}>
                             <InputField
                                 controlId="contactFirstName"
@@ -101,7 +101,7 @@ const ContactForm = () => {
                                 ariaLabel="Last name"
                             />
                         </Col>
-                    </Form.Row>
+                    </Row>
 
                     <InputField
                         controlId="contactEmail"
@@ -120,7 +120,7 @@ const ContactForm = () => {
                         onChange={handleChange}
                     />
 
-                    <Form.Group controlId="contactMessage" data-cy="contactMessage">
+                    <Form.Group className="mb-3" controlId="contactMessage" data-cy="contactMessage">
                         <Form.Label>Message *</Form.Label>
                         <textarea
                             name="message"
@@ -133,7 +133,7 @@ const ContactForm = () => {
                         <Form.Control.Feedback type="invalid">Please enter your message.</Form.Control.Feedback>
                     </Form.Group>
 
-                    <Form.Group controlId="contactRecaptcha" data-cy="contactRecaptcha">
+                    <Form.Group className="mb-3" controlId="contactRecaptcha" data-cy="contactRecaptcha">
                         <Recaptcha
                             id="contactRecaptcha"
                             ref={recaptchaRef}
