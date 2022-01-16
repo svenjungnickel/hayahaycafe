@@ -4,7 +4,7 @@ const aboutButton = () => {
         .and('have.attr', 'href')
         .and('include', 'about');
 
-    cy.get('[data-cy=startPageAboutButton]').click();
+    cy.get('[data-cy=startPageAboutButton]').click({ force: true });
     cy.get('header');
     cy.url().should('contain', '/about');
 };

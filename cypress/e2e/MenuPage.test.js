@@ -3,6 +3,7 @@ const openLightBoxAndVerifyImageSource = () => {
 
     cy.get('[data-cy=menuImage]')
         .first()
+        .scrollIntoView()
         .find('img[loading=lazy]')
         .then(($img) => {
             imgSource = $img.attr('src');

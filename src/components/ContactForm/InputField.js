@@ -4,7 +4,7 @@ import { Form } from 'react-bootstrap';
 import { contactFormTextMuted } from '../../styles/components/ContactForm/ContactForm.module.scss';
 
 const InputField = ({ controlId, name, label, errorMessage, onChange, type, description, ariaLabel }) => (
-    <Form.Group controlId={controlId} data-cy={controlId}>
+    <Form.Group className="mb-3" controlId={controlId} data-cy={controlId}>
         {'' !== label && <Form.Label>{label} *</Form.Label>}
         <Form.Control name={name} type={type} required onChange={onChange} aria-label={ariaLabel} />
         {description && <Form.Text className={`text-muted ${contactFormTextMuted}`}>{description}</Form.Text>}

@@ -45,7 +45,6 @@ module.exports = {
                 defaults: {
                     formats: ['auto', 'webp', 'avif'],
                     placeholder: 'blurred',
-                    loading: 'lazy',
                 },
             },
         },

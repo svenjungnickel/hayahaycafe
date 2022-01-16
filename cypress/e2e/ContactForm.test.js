@@ -10,45 +10,45 @@ const recaptchaDarkTheme = () => {
 const submitEmptyData = () => {
     cy.get('[data-cy=contactForm]').should('be.visible');
 
-    cy.get('[data-cy=contactFirstName]').find('.invalid-feedback').should('not.be.visible');
+    cy.get('[data-cy=contactFirstName] .invalid-feedback').should('not.be.visible');
 
-    cy.get('[data-cy=contactLastName]').find('.invalid-feedback').should('not.be.visible');
+    cy.get('[data-cy=contactLastName] .invalid-feedback').should('not.be.visible');
 
-    cy.get('[data-cy=contactEmail]').find('.invalid-feedback').should('not.be.visible');
+    cy.get('[data-cy=contactEmail] .invalid-feedback').should('not.be.visible');
 
-    cy.get('[data-cy=contactSubject]').find('.invalid-feedback').should('not.be.visible');
+    cy.get('[data-cy=contactSubject] .invalid-feedback').should('not.be.visible');
 
-    cy.get('[data-cy=contactMessage]').find('.invalid-feedback').should('not.be.visible');
+    cy.get('[data-cy=contactMessage] .invalid-feedback').should('not.be.visible');
 
-    cy.get('[data-cy=contactRecaptcha]').find('.invalid-feedback').should('not.exist');
+    cy.get('[data-cy=contactRecaptcha] .invalid-feedback').should('not.exist');
 
     cy.get('[data-cy=contactForm]').submit();
     cy.get('[data-cy=contactForm]').should('be.visible');
 
-    cy.get('[data-cy=contactFirstName]').find('.invalid-feedback').should('be.visible');
+    cy.get('[data-cy=contactFirstName] .invalid-feedback').should('be.visible');
 
-    cy.get('[data-cy=contactLastName]').find('.invalid-feedback').should('be.visible');
+    cy.get('[data-cy=contactLastName] .invalid-feedback').should('be.visible');
 
-    cy.get('[data-cy=contactEmail]').find('.invalid-feedback').should('be.visible');
+    cy.get('[data-cy=contactEmail] .invalid-feedback').should('be.visible');
 
-    cy.get('[data-cy=contactSubject]').find('.invalid-feedback').should('be.visible');
+    cy.get('[data-cy=contactSubject] .invalid-feedback').should('be.visible');
 
-    cy.get('[data-cy=contactMessage]').find('.invalid-feedback').should('be.visible');
+    cy.get('[data-cy=contactMessage] .invalid-feedback').should('be.visible');
 
-    cy.get('[data-cy=contactRecaptcha]').find('.invalid-feedback').should('be.visible');
+    cy.get('[data-cy=contactRecaptcha] .invalid-feedback').should('be.visible');
 };
 
 const submitInvalidEmail = () => {
     cy.get('[data-cy=contactForm]').should('be.visible');
 
-    cy.get('[data-cy=contactEmail]').find('.invalid-feedback').should('not.be.visible');
+    cy.get('[data-cy=contactEmail] .invalid-feedback').should('not.be.visible');
 
-    cy.get('[data-cy=contactEmail]').find('input').type('invalid_email').should('have.value', 'invalid_email');
+    cy.get('[data-cy=contactEmail] input').type('invalid_email', { force: true }).should('have.value', 'invalid_email');
 
     cy.get('[data-cy=contactForm]').submit();
     cy.get('[data-cy=contactForm]').should('be.visible');
 
-    cy.get('[data-cy=contactEmail]').find('.invalid-feedback').should('be.visible');
+    cy.get('[data-cy=contactEmail] .invalid-feedback').should('be.visible');
 };
 
 const submitValidData = () => {
@@ -56,15 +56,19 @@ const submitValidData = () => {
 
     cy.get('[data-cy=contactForm]').should('be.visible');
 
-    cy.get('[data-cy=contactFirstName]').find('input').type('First name').should('have.value', 'First name');
+    cy.get('[data-cy=contactFirstName] input').type('First name', { force: true }).should('have.value', 'First name');
 
-    cy.get('[data-cy=contactLastName]').find('input').type('Last name').should('have.value', 'Last name');
+    cy.get('[data-cy=contactLastName] input').type('Last name', { force: true }).should('have.value', 'Last name');
 
-    cy.get('[data-cy=contactEmail]').find('input').type('fake@email.com').should('have.value', 'fake@email.com');
+    cy.get('[data-cy=contactEmail] input')
+        .type('fake@email.com', { force: true })
+        .should('have.value', 'fake@email.com');
 
-    cy.get('[data-cy=contactSubject]').find('input').type('Test subject').should('have.value', 'Test subject');
+    cy.get('[data-cy=contactSubject] input').type('Test subject', { force: true }).should('have.value', 'Test subject');
 
-    cy.get('[data-cy=contactMessage]').find('textarea').type('Test message').should('have.value', 'Test message');
+    cy.get('[data-cy=contactMessage] textarea')
+        .type('Test message', { force: true })
+        .should('have.value', 'Test message');
 
     cy.getIframeBody("iframe[src*='recaptcha']:visible").find('.recaptcha-checkbox').click();
 

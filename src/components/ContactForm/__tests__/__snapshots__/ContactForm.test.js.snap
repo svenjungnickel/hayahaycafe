@@ -38,13 +38,13 @@ exports[`ContactForm snapshot renders correctly 1`] = `
           Name *
         </label>
         <div
-          className="form-row"
+          className="row"
         >
           <div
             className="col-lg-6 col-12"
           >
             <div
-              className="form-group"
+              className="mb-3"
               data-cy="contactFirstName"
             >
               <input
@@ -72,7 +72,7 @@ exports[`ContactForm snapshot renders correctly 1`] = `
             className="col-lg-6 col-12"
           >
             <div
-              className="form-group"
+              className="mb-3"
               data-cy="contactLastName"
             >
               <input
@@ -98,7 +98,7 @@ exports[`ContactForm snapshot renders correctly 1`] = `
           </div>
         </div>
         <div
-          className="form-group"
+          className="mb-3"
           data-cy="contactEmail"
         >
           <label
@@ -123,7 +123,7 @@ exports[`ContactForm snapshot renders correctly 1`] = `
           </div>
         </div>
         <div
-          className="form-group"
+          className="mb-3"
           data-cy="contactSubject"
         >
           <label
@@ -148,7 +148,7 @@ exports[`ContactForm snapshot renders correctly 1`] = `
           </div>
         </div>
         <div
-          className="form-group"
+          className="mb-3"
           data-cy="contactMessage"
         >
           <label
@@ -172,7 +172,7 @@ exports[`ContactForm snapshot renders correctly 1`] = `
           </div>
         </div>
         <div
-          className="form-group"
+          className="mb-3"
           data-cy="contactRecaptcha"
         >
           <div
