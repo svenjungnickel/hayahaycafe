@@ -1,8 +1,6 @@
 # Hayahay Café
 
-![](https://github.com/svenjungnickel/hayahaycafe//workflows/Run%20ESLint/badge.svg)
-![](https://github.com/svenjungnickel/hayahaycafe//workflows/Run%20Jest/badge.svg)
-![](https://github.com/svenjungnickel/hayahaycafe//workflows/Run%20Cypress/badge.svg)
+![](https://github.com/svenjungnickel/hayahaycafe//workflows/CI/badge.svg)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e70d696f-4174-47d1-a9c9-db1c5599246b/deploy-status)](https://app.netlify.com/sites/hayahaycafe/deploys)
 [![Mutation testing badge](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Fsvenjungnickel%2Fhayahaycafe%2Fmaster)](https://dashboard.stryker-mutator.io/reports/github.com/svenjungnickel/hayahaycafe/master)
 
