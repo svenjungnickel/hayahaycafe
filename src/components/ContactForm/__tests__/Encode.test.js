@@ -1,3 +1,7 @@
+/**
+ * @jest-environment node
+ * For more visit https://jestjs.io/docs/configuration#testenvironment-string
+ * */
 import Encode from '../Encode';
 
 describe('Encode', () => {
