@@ -14,6 +14,7 @@ exports[`SocialMediaIcons renders all icons correctly 1`] = `
   <a
     aria-label="Visit Hayahay Cafe at instagram"
     className="btn btn-primary btn-lg"
+    disabled={false}
     href="url"
     onClick={[Function]}
     onKeyDown={[Function]}
@@ -45,6 +46,7 @@ exports[`SocialMediaIcons renders all icons correctly 1`] = `
   <a
     aria-label="Visit Hayahay Cafe at facebook"
     className="btn btn-primary btn-lg"
+    disabled={false}
     href="url"
     onClick={[Function]}
     onKeyDown={[Function]}
@@ -76,6 +78,7 @@ exports[`SocialMediaIcons renders all icons correctly 1`] = `
   <a
     aria-label="Visit Hayahay Cafe at tripadvisor"
     className="btn btn-primary btn-lg"
+    disabled={false}
     href="url"
     onClick={[Function]}
     onKeyDown={[Function]}
@@ -111,6 +114,7 @@ exports[`SocialMediaIcons renders facebook icon correctly 1`] = `
 <a
   aria-label="Visit Hayahay Cafe at facebook"
   className="btn btn-primary btn-lg"
+  disabled={false}
   href="url"
   onClick={[Function]}
   onKeyDown={[Function]}
@@ -145,6 +149,7 @@ exports[`SocialMediaIcons renders instagram icon correctly 1`] = `
 <a
   aria-label="Visit Hayahay Cafe at instagram"
   className="btn btn-primary btn-lg"
+  disabled={false}
   href="url"
   onClick={[Function]}
   onKeyDown={[Function]}
@@ -179,6 +184,7 @@ exports[`SocialMediaIcons renders tripadvisor icon correctly 1`] = `
 <a
   aria-label="Visit Hayahay Cafe at tripadvisor"
   className="btn btn-primary btn-lg"
+  disabled={false}
   href="url"
   onClick={[Function]}
   onKeyDown={[Function]}
