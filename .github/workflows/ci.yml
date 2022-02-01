@@ -39,6 +39,9 @@ jobs:
       - name: Run tests 🧪
         run: npm run test
 
+      - name: Run build 🚀
+          run: npm run build
+
       - name: Run cypress 🎉
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
