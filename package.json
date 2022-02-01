@@ -43,7 +43,7 @@
     "react-icons": "^4.3.1",
     "react-reveal": "^1.2.2",
     "react-switch": "^6.0.0",
-    "sass": "^1.49.0",
+    "sass": "^1.49.2",
     "use-dark-mode": "^2.3.1"
   },
   "devDependencies": {
@@ -52,11 +52,11 @@
     "@stryker-mutator/jest-runner": "^5.6.1",
     "@testing-library/cypress": "^8.0.2",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.6",
-    "axe-core": "^4.1.1",
+    "axe-core": "^4.4.0",
     "babel-jest": "^27.4.6",
     "babel-loader": "^8.2.2",
     "babel-preset-gatsby": "^2.6.0",
-    "cypress": "^9.3.1",
+    "cypress": "^9.4.1",
     "cypress-audit": "^1.1.0",
     "cypress-axe": "^0.14.0",
     "cypress-intellij-reporter": "^0.0.7",
