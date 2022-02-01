@@ -40,7 +40,7 @@ jobs:
         run: npm run test
 
       - name: Run build 🚀
-          run: npm run build
+        run: npm run build
 
       - name: Run cypress 🎉
         env:
