@@ -87,13 +87,15 @@ To deploy on [Netlify](https://www.netlify.com/) just hit following button:
 
 You can also test the Netlify build before you deploy. 
 
-1.  **Install Netlify CLI.**
+1.  **Link Netlify Project.**
 
-    First install the Netlify CLI to your local dev environment. 
+    Run following command to link the project.
 
     ```sh
-    npm install netlify-cli -g
+    netlify link
     ```
+    
+    Select a way to link the project.
 
 2.  **Run test build.**
     
