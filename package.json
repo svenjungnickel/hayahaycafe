@@ -70,7 +70,7 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.4.7",
-    "netlify-cli": "^8.15.2",
+    "netlify-cli": "^8.16.1",
     "prettier": "^2.5.1",
     "react-test-renderer": "^17.0.2",
     "start-server-and-test": "^1.11.6"
