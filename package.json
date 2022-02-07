@@ -53,7 +53,7 @@
     "@testing-library/cypress": "^8.0.2",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.6",
     "axe-core": "^4.4.0",
-    "babel-jest": "^27.4.6",
+    "babel-jest": "^27.5.0",
     "babel-loader": "^8.2.2",
     "babel-preset-gatsby": "^2.6.0",
     "cypress": "^9.4.1",
