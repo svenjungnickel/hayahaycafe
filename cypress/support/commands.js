@@ -1,42 +1,31 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add("login", (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add("drag", { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add("dismiss", { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
-
+/**
+ * @func cy.setDarkMode
+ * @param {boolean} mode - true for dark mode, false for light mode
+ */
 Cypress.Commands.add('setDarkMode', (mode) => {
     window.localStorage.setItem('darkMode', mode.toString());
 });
 
+/**
+ * @func cy.useDesktop
+ */
 Cypress.Commands.add('useDesktop', () => {
     cy.viewport(1024, 768);
 });
 
+/**
+ * @func cy.useMobile
+ */
 Cypress.Commands.add('useMobile', () => {
     cy.viewport(320, 480);
 });
 
-// https://cypress.io/blog/2020/02/12/working-with-iframes-in-cypress/
+/**
+ * https://cypress.io/blog/2020/02/12/working-with-iframes-in-cypress/
+ *
+ * @func cy.getIframeBody
+ * @param {String} selector - The selector of the iframe
+ */
 Cypress.Commands.add('getIframeBody', ($selector) => {
     cy.log(`getIframeBody from ${$selector}`);
 
