@@ -1,6 +1,6 @@
 [build]
   publish = "public/"
-  command = "echo SITE_RECAPTCHA_KEY=$SITE_RECAPTCHA_KEY >> .env.production && npm run build"
+  command = "npm run build"
   [context.deploy-preview]
     ignore = "git log -1 --pretty=%B | grep dependabot"
 
