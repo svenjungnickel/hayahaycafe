@@ -12,7 +12,7 @@ import {
     contactFormSuccess,
 } from '../../styles/components/ContactForm/ContactForm.module.scss';
 
-const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY;
+const RECAPTCHA_KEY = process.env.GATSBY_SITE_RECAPTCHA_KEY;
 const CONTACT_FORM_FADE_UP_DURATION = 400;
 const SUCCESS_MESSAGE_FADE_IN_DURATION = 200;
 
