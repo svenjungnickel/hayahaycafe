@@ -10,7 +10,7 @@ const login = () => {
 
         cy.wrap($body).find('input[type=password]').type(Cypress.env('NETLIFY_CMS_PASSWORD'));
 
-        cy.wrap($body).find('form').submit();
+        cy.wrap($body).find('button[type=submit]').click({ force: true });
     });
 
     cy.get('main').find('h1').should('contain', 'Page');
