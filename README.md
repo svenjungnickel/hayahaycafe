@@ -194,6 +194,17 @@ npm run stryker:run
 
 You can find a full report of the mutation tests in the [Stryker Dashboard](https://dashboard.stryker-mutator.io/reports/github.com/svenjungnickel/hayahaycafe/master)
 
+## 🎬 Run GitHub actions locally
+
+To test GitHub actions locally before pushing to GitHub we are using [nektos/act](https://github.com/nektos/act).
+You have to install it first via brew `brew install act`. Then you can run actions via following command:
+
+```sh
+act -j <workflow-name>
+```
+
+Visit the docs for more [example commands](https://github.com/nektos/act#example-commands).
+
 ## Preventing commits to the master branch
 
 This project is setup to reject push and commits directly to master. To prevent commits to master on your local machine
