@@ -35,4 +35,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           NODE_ENV: test
-        run: npm run lighthouse:ci:record
+        run: npm run lighthouse:ci
