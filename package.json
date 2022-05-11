@@ -55,7 +55,7 @@
     "axe-core": "^4.4.1",
     "babel-jest": "^28.0.2",
     "babel-loader": "^8.2.5",
-    "babel-preset-gatsby": "^2.13.0",
+    "babel-preset-gatsby": "^2.14.0",
     "cypress": "^9.6.1",
     "cypress-audit": "^1.1.0",
     "cypress-axe": "^0.14.0",
