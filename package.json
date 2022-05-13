@@ -52,7 +52,7 @@
     "@stryker-mutator/jest-runner": "^5.6.1",
     "@testing-library/cypress": "^8.0.2",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.7",
-    "axe-core": "^4.4.1",
+    "axe-core": "^4.4.2",
     "babel-jest": "^28.0.2",
     "babel-loader": "^8.2.5",
     "babel-preset-gatsby": "^2.14.0",
