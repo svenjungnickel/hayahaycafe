@@ -47,7 +47,7 @@
     "use-dark-mode": "^2.3.1"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.17.0",
+    "@babel/eslint-parser": "^7.18.2",
     "@stryker-mutator/core": "^6.0.2",
     "@stryker-mutator/jest-runner": "^6.0.2",
     "@testing-library/cypress": "^8.0.2",
