@@ -50,7 +50,7 @@
     "@babel/eslint-parser": "^7.18.2",
     "@stryker-mutator/core": "^6.0.2",
     "@stryker-mutator/jest-runner": "^6.0.2",
-    "@testing-library/cypress": "^8.0.2",
+    "@testing-library/cypress": "^8.0.3",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.7",
     "axe-core": "^4.4.2",
     "babel-jest": "^28.0.2",
