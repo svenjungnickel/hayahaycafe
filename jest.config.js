@@ -9,7 +9,7 @@ module.exports = {
     },
     testEnvironment: 'jsdom',
     testPathIgnorePatterns: ['node_modules', '.cache', 'public', 'cypress'],
-    transformIgnorePatterns: ['node_modules/(?!(gatsby)/)'],
+    transformIgnorePatterns: ['node_modules/(?!(gatsby|gatsby-script)/)'],
     globals: {
         __PATH_PREFIX__: '',
     },
