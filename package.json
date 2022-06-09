@@ -42,7 +42,7 @@
     "react-helmet": "^6.1.0",
     "react-icons": "^4.4.0",
     "react-reveal": "^1.2.2",
-    "react-switch": "^6.0.0",
+    "react-switch": "^7.0.0",
     "sass": "^1.52.3",
     "use-dark-mode": "^2.3.1"
   },
@@ -55,7 +55,7 @@
     "axe-core": "^4.4.2",
     "babel-jest": "^28.0.2",
     "babel-loader": "^8.2.5",
-    "babel-preset-gatsby": "^2.15.0",
+    "babel-preset-gatsby": "^2.16.0",
     "cypress": "^10.0.3",
     "cypress-audit": "^1.1.0",
     "cypress-axe": "^0.14.0",
