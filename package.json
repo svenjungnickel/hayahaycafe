@@ -42,7 +42,7 @@
     "react-helmet": "^6.1.0",
     "react-icons": "^4.4.0",
     "react-reveal": "^1.2.2",
-    "react-switch": "^6.0.0",
+    "react-switch": "^7.0.0",
     "sass": "^1.52.3",
     "use-dark-mode": "^2.3.1"
   },
@@ -50,13 +50,13 @@
     "@babel/eslint-parser": "^7.18.2",
     "@stryker-mutator/core": "^6.0.2",
     "@stryker-mutator/jest-runner": "^6.0.2",
-    "@testing-library/cypress": "^8.0.2",
+    "@testing-library/cypress": "^8.0.3",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.7",
     "axe-core": "^4.4.2",
     "babel-jest": "^28.0.2",
     "babel-loader": "^8.2.5",
-    "babel-preset-gatsby": "^2.15.0",
-    "cypress": "^9.7.0",
+    "babel-preset-gatsby": "^2.16.0",
+    "cypress": "^10.0.3",
     "cypress-audit": "^1.1.0",
     "cypress-axe": "^0.14.0",
     "cypress-intellij-reporter": "^0.0.7",
@@ -96,9 +96,9 @@
     "test:e2e": "start-server-and-test develop http://localhost:8000 cypress:open",
     "test:e2e:ci": "start-server-and-test develop http://localhost:8000 cypress:run",
     "test:e2e:ci:record": "start-server-and-test develop http://localhost:8000 cypress:run:record",
-    "lighthouse": "cypress open --config-file cypress-lighthouse.json",
-    "lighthouse:ci": "cypress run --config-file cypress-lighthouse.json",
-    "lighthouse:ci:record": "cypress run --record --config-file cypress-lighthouse.json",
+    "lighthouse": "cypress open --config-file cypress-lighthouse.config.js",
+    "lighthouse:ci": "cypress run --config-file cypress-lighthouse.config.js",
+    "lighthouse:ci:record": "cypress run --record --config-file cypress-lighthouse.config.js",
     "stryker:run": "stryker run"
   }
 }
