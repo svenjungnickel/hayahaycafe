@@ -11,12 +11,10 @@ module.exports = defineConfig({
         projectId: 'imkh2i',
         chromeWebSecurity: false,
         blockHosts: 'www.google-analytics.com',
-
         retries: {
             runMode: 2,
             openMode: 0,
         },
-
         setupNodeEvents(on, config) {
             on('before:browser:launch', (browser = {}, launchOptions) => {
                 prepareAudit(launchOptions);
