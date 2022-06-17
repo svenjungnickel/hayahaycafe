@@ -72,7 +72,7 @@
     "jest": "^28.1.1",
     "jest-environment-jsdom": "^28.1.1",
     "netlify-cli": "^10.5.1",
-    "prettier": "^2.7.0",
+    "prettier": "^2.7.1",
     "react-test-renderer": "^17.0.2",
     "start-server-and-test": "^1.11.6"
   },
