@@ -42,15 +42,19 @@ jobs:
       - name: Run build 🚀
         run: npm run build
 
-      - name: Run lighthouse audit 📱
-        env:
-          LHCI_GITHUB_APP_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GATSBY_SITE_RECAPTCHA_KEY: ${{ secrets.SITE_RECAPTCHA_KEY }}
-          SITE_RECAPTCHA_SECRET: ${{ secrets.SITE_RECAPTCHA_SECRET }}
-        run: |
-          echo GATSBY_SITE_RECAPTCHA_KEY=$SITE_RECAPTCHA_KEY >> .env.production
-          echo NETLIFY_SITE_URL=$NETLIFY_SITE_URL >> .env.production
-          npm run lighthouse
+      - name: Wait for the Netlify Preview 🚀
+        uses: jakepartusch/wait-for-netlify-action@v1
+        id: netlify
+        with:
+          site_name: 'svenjungnickel'
+
+      - name: Audit URLs using Lighthouse 🎉
+        uses: treosh/lighthouse-ci-action@v9
+        with:
+          urls: ${{ steps.netlify.outputs.url }}
+          uploadArtifacts: true
+          temporaryPublicStorage: true
+          runs: 3
 
       - name: Run cypress 🎉
         env:
