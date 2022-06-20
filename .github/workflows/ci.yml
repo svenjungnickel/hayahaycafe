@@ -42,6 +42,16 @@ jobs:
       - name: Run build 🚀
         run: npm run build
 
+      - name: Run lighthouse audit 📱
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GATSBY_SITE_RECAPTCHA_KEY: ${{ secrets.SITE_RECAPTCHA_KEY }}
+          SITE_RECAPTCHA_SECRET: ${{ secrets.SITE_RECAPTCHA_SECRET }}
+        run: |
+          echo GATSBY_SITE_RECAPTCHA_KEY=$SITE_RECAPTCHA_KEY >> .env.production
+          echo NETLIFY_SITE_URL=$NETLIFY_SITE_URL >> .env.production
+          npm run lighthouse
+
       - name: Run cypress 🎉
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -52,8 +62,6 @@ jobs:
           CYPRESS_NETLIFY_CMS_EMAIL: ${{ secrets.CYPRESS_NETLIFY_CMS_EMAIL }}
           CYPRESS_NETLIFY_CMS_PASSWORD: ${{ secrets.CYPRESS_NETLIFY_CMS_PASSWORD }}
         run: |
-          echo GATSBY_SITE_RECAPTCHA_KEY=$SITE_RECAPTCHA_KEY >> .env.development
-          echo NETLIFY_SITE_URL=$NETLIFY_SITE_URL >> .env.development
           npm run test:e2e:ci
 
       - name: Upload cypress artifacts 📁

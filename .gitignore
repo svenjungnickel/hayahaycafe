@@ -87,3 +87,6 @@ reports/
 
 # IDE
 .idea/
+
+# Lighthouse ci results
+.lighthouseci/
