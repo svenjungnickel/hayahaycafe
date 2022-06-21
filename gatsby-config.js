@@ -99,6 +99,20 @@ module.exports = {
                 // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
                 display: 'standalone',
                 icon: 'assets/hayahay.png', // This path is relative to the root of the site.
+                icons: [
+                    {
+                        src: 'assets/hayahay.png',
+                        sizes: '512x512',
+                        type: 'image/png',
+                        purpose: 'any',
+                    },
+                    {
+                        src: 'assets/hayahay-maskable-icon.png',
+                        sizes: '512x512',
+                        type: 'image/png',
+                        purpose: 'maskable',
+                    },
+                ],
             },
         },
         // This (optional) plugin enables Progressive Web App + Offline functionality.
