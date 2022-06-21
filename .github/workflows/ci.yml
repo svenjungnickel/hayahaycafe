@@ -40,17 +40,18 @@ jobs:
         run: npm run test
 
       - name: Run build 🚀
-        run: npm run build
-
-      - name: Run lighthouse audit 📱
         env:
-          LHCI_GITHUB_APP_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GATSBY_SITE_RECAPTCHA_KEY: ${{ secrets.SITE_RECAPTCHA_KEY }}
           SITE_RECAPTCHA_SECRET: ${{ secrets.SITE_RECAPTCHA_SECRET }}
         run: |
           echo GATSBY_SITE_RECAPTCHA_KEY=$SITE_RECAPTCHA_KEY >> .env.production
           echo NETLIFY_SITE_URL=$NETLIFY_SITE_URL >> .env.production
-          npm run lighthouse
+          npm run build
+
+      - name: Run lighthouse audit 📱
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run lighthouse
 
       - name: Run cypress 🎉
         env:
