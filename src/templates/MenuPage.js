@@ -53,9 +53,9 @@ export const MenuPageTemplate = ({ title, subtitle, headerImage, content, conten
                             <>
                                 {images.map((image, index) => (
                                     <Col md={12} lg={6} key={index} className={menu__image} data-cy="menuImage">
-                                        <a onClick={() => openLightBox(index)}>
+                                        <div onClick={() => openLightBox(index)}>
                                             <Image src={image.src} alt={image.alt} title={image.title} />
-                                        </a>
+                                        </div>
                                     </Col>
                                 ))}
                                 <FsLightbox

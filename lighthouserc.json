@@ -12,7 +12,7 @@
         "http://localhost:9000/data-privacy",
         "http://localhost:9000/404"
       ],
-      "numberOfRuns": 1
+      "numberOfRuns": 3
     },
     "upload": {
       "target": "temporary-public-storage"
