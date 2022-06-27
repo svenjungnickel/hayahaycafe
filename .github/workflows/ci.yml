@@ -42,9 +42,11 @@ jobs:
       - name: Run build 🚀
         env:
           GATSBY_SITE_RECAPTCHA_KEY: ${{ secrets.SITE_RECAPTCHA_KEY }}
+          SITE_RECAPTCHA_SECRET: ${{ secrets.SITE_RECAPTCHA_SECRET }}
           NETLIFY_SITE_URL: ${{ secrets.NETLIFY_SITE_URL }}
         run: |
           echo GATSBY_SITE_RECAPTCHA_KEY=$SITE_RECAPTCHA_KEY >> .env.production
+          echo SITE_RECAPTCHA_SECRET=$SITE_RECAPTCHA_SECRET >> .env.production
           echo NETLIFY_SITE_URL=$NETLIFY_SITE_URL >> .env.production
           npm run build
 
