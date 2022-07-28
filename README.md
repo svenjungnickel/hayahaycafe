@@ -30,12 +30,14 @@
         Define your environment variables before you start. To do so, simply copy `.env.dist` and rename it to `.env.development`.
         Then update the variables with your parameters.
     
-        > Hint: Use the predefined SITE_RECAPTCHA_KEY and SITE_RECAPTCHA_SECRET for automated tests. More details under **E2E tests**.
+        > Hint: Use the predefined SITE_RECAPTCHA_KEY and GATSBY_SITE_RECAPTCHA_KEY for automated tests. More details under **E2E tests**.
 
     - Cypress
     
         You have to define the Netlify CMS login details in the cypress environment files in order to run E2E Tests. 
         Copy `cypress.env.json.dist`, rename it to `cypress.env.json` and enter the login credentials.
+        Additional copy the `.env.development` and rename it to `.env.production`. This is necessary because we are 
+        running the cypress tests against a local production server.
     
     
 4.  **Start developing.**
@@ -166,21 +168,13 @@ E2E tests running in CI are recorded. You can find all recorded tests in the [![
 
 ## 🎉 Lighthouse audits
 
-We are running lighthouse audits in cypress via [cypress-audit](https://www.npmjs.com/package/cypress-audit/).
+We are running lighthouse audits via [lighthouse CI CLI](https://github.com/GoogleChrome/lighthouse-ci).
 
 To start Lighthouse audits simply use following command:
 
 ```sh
 npm run lighthouse
 ```
-
-To run all Lighthouse audits in headless mode use following command:
-
-```sh
-npm run lighthouse:ci
-```
-
-Audits are recorded too and therefore also available in the [![Cypress Dashboard](https://img.shields.io/badge/cypress-dashboard-brightgreen.svg)](https://dashboard.cypress.io/projects/imkh2i/runs)
 
 ## ✅ Mutations tests
 

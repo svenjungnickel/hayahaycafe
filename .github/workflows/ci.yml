@@ -40,7 +40,20 @@ jobs:
         run: npm run test
 
       - name: Run build 🚀
-        run: npm run build
+        env:
+          GATSBY_SITE_RECAPTCHA_KEY: ${{ secrets.SITE_RECAPTCHA_KEY }}
+          SITE_RECAPTCHA_SECRET: ${{ secrets.SITE_RECAPTCHA_SECRET }}
+          NETLIFY_SITE_URL: ${{ secrets.NETLIFY_SITE_URL }}
+        run: |
+          echo GATSBY_SITE_RECAPTCHA_KEY=$SITE_RECAPTCHA_KEY >> .env.production
+          echo SITE_RECAPTCHA_SECRET=$SITE_RECAPTCHA_SECRET >> .env.production
+          echo NETLIFY_SITE_URL=$NETLIFY_SITE_URL >> .env.production
+          npm run build
+
+      - name: Run lighthouse audit 📱
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run lighthouse
 
       - name: Run cypress 🎉
         env:
@@ -52,8 +65,6 @@ jobs:
           CYPRESS_NETLIFY_CMS_EMAIL: ${{ secrets.CYPRESS_NETLIFY_CMS_EMAIL }}
           CYPRESS_NETLIFY_CMS_PASSWORD: ${{ secrets.CYPRESS_NETLIFY_CMS_PASSWORD }}
         run: |
-          echo GATSBY_SITE_RECAPTCHA_KEY=$SITE_RECAPTCHA_KEY >> .env.development
-          echo NETLIFY_SITE_URL=$NETLIFY_SITE_URL >> .env.development
           npm run test:e2e:ci
 
       - name: Upload cypress artifacts 📁

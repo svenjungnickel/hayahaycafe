@@ -48,6 +48,7 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.18.9",
+    "@lhci/cli": "^0.9.0",
     "@stryker-mutator/core": "^6.0.2",
     "@stryker-mutator/jest-runner": "^6.1.2",
     "@testing-library/cypress": "^8.0.3",
@@ -82,23 +83,22 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build --log-pages",
-    "netlifycms:proxyserver": "npx netlify-cms-proxy-server",
     "develop": "gatsby develop",
+    "serve": "gatsby serve",
     "clean:develop": "gatsby clean && gatsby develop -H 0.0.0.0 -p 8000",
+    "clean:serve": "gatsby clean && gatsby build && gatsby serve",
+    "netlifycms:proxyserver": "npx netlify-cms-proxy-server",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "serve": "gatsby clean && gatsby build && gatsby serve",
     "test": "jest",
     "lint": "eslint ./src/ && echo 'Lint complete.'",
     "lint:fix": "eslint --fix ./src/ && echo 'Lint fix complete.'",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
     "cypress:run:record": "cypress run --record",
-    "test:e2e": "start-server-and-test develop http://localhost:8000 cypress:open",
-    "test:e2e:ci": "start-server-and-test develop http://localhost:8000 cypress:run",
-    "test:e2e:ci:record": "start-server-and-test develop http://localhost:8000 cypress:run:record",
-    "lighthouse": "cypress open --config-file cypress-lighthouse.config.js",
-    "lighthouse:ci": "cypress run --config-file cypress-lighthouse.config.js",
-    "lighthouse:ci:record": "cypress run --record --config-file cypress-lighthouse.config.js",
+    "test:e2e": "start-server-and-test serve http://localhost:9000 cypress:open",
+    "test:e2e:ci": "start-server-and-test serve http://localhost:9000 cypress:run",
+    "test:e2e:ci:record": "start-server-and-test serve http://localhost:9000 cypress:run:record",
+    "lighthouse": "lhci autorun",
     "stryker:run": "stryker run"
   }
 }
