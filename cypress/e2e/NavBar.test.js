@@ -21,7 +21,7 @@ const darkMode = () => {
 };
 
 const homeLink = (mobile = false) => {
-    cy.visit('/404');
+    cy.visit('/404/');
 
     cy.get('[data-cy=navBarLinkHome]').should('have.attr', 'href').and('include', '/');
 
@@ -36,7 +36,7 @@ const homeLink = (mobile = false) => {
 };
 
 const logoLink = (mobile = false) => {
-    cy.visit('/404');
+    cy.visit('/404/');
 
     cy.get('[data-cy=navBarLinkLogo]:visible').should('have.attr', 'href').and('include', '/');
 
@@ -61,7 +61,7 @@ const menuLink = (mobile = false) => {
 
     cy.get('[data-cy=navBarLinkMenu]').click();
     cy.get('header');
-    cy.url().should('contain', '/menu');
+    cy.url().should('contain', '/menu/');
     cy.get('[data-cy=navBarLinkMenu]').should('have.class', 'active');
 };
 

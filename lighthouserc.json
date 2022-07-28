@@ -4,13 +4,13 @@
       "startServerCommand": "npm run serve",
       "url": [
         "http://localhost:9000/",
-        "http://localhost:9000/menu",
-        "http://localhost:9000/about",
-        "http://localhost:9000/gallery",
-        "http://localhost:9000/contact",
-        "http://localhost:9000/legal",
-        "http://localhost:9000/data-privacy",
-        "http://localhost:9000/404"
+        "http://localhost:9000/menu/",
+        "http://localhost:9000/about/",
+        "http://localhost:9000/gallery/",
+        "http://localhost:9000/contact/",
+        "http://localhost:9000/legal/",
+        "http://localhost:9000/data-privacy/",
+        "http://localhost:9000/404/"
       ],
       "numberOfRuns": 1
     },

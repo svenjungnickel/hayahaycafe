@@ -40,7 +40,7 @@ const contentContainsValidPhoneNumber = () => {
 
 describe('Menu page', () => {
     beforeEach(() => {
-        cy.visit('/menu');
+        cy.visit('/menu/');
     });
 
     describe('Desktop', () => {

@@ -2,7 +2,7 @@ const recaptchaDarkTheme = () => {
     cy.getIframeBody("iframe[src*='recaptcha']:visible").find('.rc-anchor-light');
 
     cy.setDarkMode(true);
-    cy.visit('/contact');
+    cy.visit('/contact/');
 
     cy.getIframeBody("iframe[src*='recaptcha']:visible").find('.rc-anchor-dark');
 };
@@ -86,7 +86,7 @@ const submitValidData = () => {
 describe('Contact form', () => {
     beforeEach(() => {
         cy.setDarkMode(false);
-        cy.visit('/contact');
+        cy.visit('/contact/');
     });
 
     describe('Desktop', () => {

@@ -30,31 +30,31 @@ describe('Accessibility checks', () => {
             });
 
             it('Has no detectable accessibility violations on menu page', () => {
-                checkA11yForPage('/menu');
+                checkA11yForPage('/menu/');
             });
 
             it('Has no detectable accessibility violations on about page', () => {
-                checkA11yForPage('/about');
+                checkA11yForPage('/about/');
             });
 
             it('Has no detectable accessibility violations on gallery page', () => {
-                checkA11yForPage('/gallery');
+                checkA11yForPage('/gallery/');
             });
 
             it('Has no detectable accessibility violations on contact page', () => {
-                checkA11yForPage('/contact');
+                checkA11yForPage('/contact/');
             });
 
             it('Has no detectable accessibility violations on legal page', () => {
-                checkA11yForPage('/legal');
+                checkA11yForPage('/legal/');
             });
 
             it('Has no detectable accessibility violations on data privacy page', () => {
-                checkA11yForPage('/data-privacy');
+                checkA11yForPage('/data-privacy/');
             });
 
             it('Has no detectable accessibility violations on 404 page', () => {
-                checkA11yForPage('/404');
+                checkA11yForPage('/404/');
             });
         });
 
