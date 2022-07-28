@@ -31,7 +31,7 @@ const openLightBoxAndVerifyImageSource = () => {
 
 describe('Gallery page', () => {
     beforeEach(() => {
-        cy.visit('/gallery');
+        cy.visit('/gallery/');
     });
 
     describe('Desktop', () => {
