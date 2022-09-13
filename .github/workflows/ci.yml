@@ -65,7 +65,7 @@ jobs:
           CYPRESS_NETLIFY_CMS_EMAIL: ${{ secrets.CYPRESS_NETLIFY_CMS_EMAIL }}
           CYPRESS_NETLIFY_CMS_PASSWORD: ${{ secrets.CYPRESS_NETLIFY_CMS_PASSWORD }}
         run: |
-          npm run test:e2e:ci
+          npm run test:e2e:ci:record
 
       - name: Upload cypress artifacts 📁
         uses: actions/upload-artifact@v3
