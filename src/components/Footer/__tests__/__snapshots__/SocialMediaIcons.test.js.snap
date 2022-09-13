@@ -30,7 +30,7 @@ exports[`SocialMediaIcons renders all icons correctly 1`] = `
       stroke="currentColor"
       strokeWidth="0"
       style={
-        Object {
+        {
           "color": undefined,
         }
       }
@@ -62,7 +62,7 @@ exports[`SocialMediaIcons renders all icons correctly 1`] = `
       stroke="currentColor"
       strokeWidth="0"
       style={
-        Object {
+        {
           "color": undefined,
         }
       }
@@ -94,7 +94,7 @@ exports[`SocialMediaIcons renders all icons correctly 1`] = `
       stroke="currentColor"
       strokeWidth="0"
       style={
-        Object {
+        {
           "color": undefined,
         }
       }
@@ -130,7 +130,7 @@ exports[`SocialMediaIcons renders facebook icon correctly 1`] = `
     stroke="currentColor"
     strokeWidth="0"
     style={
-      Object {
+      {
         "color": undefined,
       }
     }
@@ -165,7 +165,7 @@ exports[`SocialMediaIcons renders instagram icon correctly 1`] = `
     stroke="currentColor"
     strokeWidth="0"
     style={
-      Object {
+      {
         "color": undefined,
       }
     }
@@ -200,7 +200,7 @@ exports[`SocialMediaIcons renders tripadvisor icon correctly 1`] = `
     stroke="currentColor"
     strokeWidth="0"
     style={
-      Object {
+      {
         "color": undefined,
       }
     }

@@ -6,7 +6,7 @@ exports[`ContactForm snapshot renders correctly 1`] = `
 >
   <div
     style={
-      Object {
+      {
         "height": 0,
         "visibility": undefined,
       }
@@ -15,7 +15,7 @@ exports[`ContactForm snapshot renders correctly 1`] = `
     <div
       className="react-reveal"
       style={
-        Object {
+        {
           "opacity": undefined,
         }
       }
@@ -192,7 +192,7 @@ exports[`ContactForm snapshot renders correctly 1`] = `
   </div>
   <div
     style={
-      Object {
+      {
         "height": 0,
         "visibility": "hidden",
       }
@@ -201,7 +201,7 @@ exports[`ContactForm snapshot renders correctly 1`] = `
     <div
       className="react-reveal"
       style={
-        Object {
+        {
           "opacity": 0,
         }
       }

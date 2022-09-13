@@ -13,7 +13,7 @@ exports[`OpeningHours renders correctly 1`] = `
   </h2>
   <div
     dangerouslySetInnerHTML={
-      Object {
+      {
         "__html": <p>
           openingHours
         </p>,

@@ -7,7 +7,7 @@ exports[`DarkModeToggle renders darkMode value null (default) 1`] = `
   <div
     className="className"
     style={
-      Object {
+      {
         "MozTransition": "opacity 0.25s",
         "MozUserSelect": "none",
         "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
@@ -31,7 +31,7 @@ exports[`DarkModeToggle renders darkMode value null (default) 1`] = `
       onClick={[Function]}
       onMouseDown={[Function]}
       style={
-        Object {
+        {
           "MozTransition": "background 0.25s",
           "WebkitTransition": "background 0.25s",
           "background": "#000000",
@@ -47,7 +47,7 @@ exports[`DarkModeToggle renders darkMode value null (default) 1`] = `
     >
       <div
         style={
-          Object {
+          {
             "MozTransition": "opacity 0.25s",
             "WebkitTransition": "opacity 0.25s",
             "height": 24,
@@ -61,7 +61,7 @@ exports[`DarkModeToggle renders darkMode value null (default) 1`] = `
       >
         <div
           style={
-            Object {
+            {
               "alignItems": "center",
               "color": "yellow",
               "display": "flex",
@@ -77,7 +77,7 @@ exports[`DarkModeToggle renders darkMode value null (default) 1`] = `
       </div>
       <div
         style={
-          Object {
+          {
             "MozTransition": "opacity 0.25s",
             "WebkitTransition": "opacity 0.25s",
             "height": 24,
@@ -93,7 +93,7 @@ exports[`DarkModeToggle renders darkMode value null (default) 1`] = `
       >
         <div
           style={
-            Object {
+            {
               "alignItems": "center",
               "color": "yellow",
               "display": "flex",
@@ -117,7 +117,7 @@ exports[`DarkModeToggle renders darkMode value null (default) 1`] = `
       onTouchMove={[Function]}
       onTouchStart={[Function]}
       style={
-        Object {
+        {
           "MozTransition": "background-color 0.25s, transform 0.25s, box-shadow 0.15s",
           "WebkitTransition": "background-color 0.25s, transform 0.25s, box-shadow 0.15s",
           "background": "#ffffff",
@@ -147,7 +147,7 @@ exports[`DarkModeToggle renders darkMode value null (default) 1`] = `
       onKeyUp={[Function]}
       role="switch"
       style={
-        Object {
+        {
           "border": 0,
           "clip": "rect(0 0 0 0)",
           "height": 1,
@@ -172,7 +172,7 @@ exports[`DarkModeToggle renders darkMode value true 1`] = `
   <div
     className="className"
     style={
-      Object {
+      {
         "MozTransition": "opacity 0.25s",
         "MozUserSelect": "none",
         "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
@@ -196,7 +196,7 @@ exports[`DarkModeToggle renders darkMode value true 1`] = `
       onClick={[Function]}
       onMouseDown={[Function]}
       style={
-        Object {
+        {
           "MozTransition": "background 0.25s",
           "WebkitTransition": "background 0.25s",
           "background": "#000000",
@@ -212,7 +212,7 @@ exports[`DarkModeToggle renders darkMode value true 1`] = `
     >
       <div
         style={
-          Object {
+          {
             "MozTransition": "opacity 0.25s",
             "WebkitTransition": "opacity 0.25s",
             "height": 24,
@@ -226,7 +226,7 @@ exports[`DarkModeToggle renders darkMode value true 1`] = `
       >
         <div
           style={
-            Object {
+            {
               "alignItems": "center",
               "color": "yellow",
               "display": "flex",
@@ -242,7 +242,7 @@ exports[`DarkModeToggle renders darkMode value true 1`] = `
       </div>
       <div
         style={
-          Object {
+          {
             "MozTransition": "opacity 0.25s",
             "WebkitTransition": "opacity 0.25s",
             "height": 24,
@@ -258,7 +258,7 @@ exports[`DarkModeToggle renders darkMode value true 1`] = `
       >
         <div
           style={
-            Object {
+            {
               "alignItems": "center",
               "color": "yellow",
               "display": "flex",
@@ -282,7 +282,7 @@ exports[`DarkModeToggle renders darkMode value true 1`] = `
       onTouchMove={[Function]}
       onTouchStart={[Function]}
       style={
-        Object {
+        {
           "MozTransition": "background-color 0.25s, transform 0.25s, box-shadow 0.15s",
           "WebkitTransition": "background-color 0.25s, transform 0.25s, box-shadow 0.15s",
           "background": "#ffffff",
@@ -312,7 +312,7 @@ exports[`DarkModeToggle renders darkMode value true 1`] = `
       onKeyUp={[Function]}
       role="switch"
       style={
-        Object {
+        {
           "border": 0,
           "clip": "rect(0 0 0 0)",
           "height": 1,

@@ -18,7 +18,7 @@ exports[`MenuPage renders correctly 1`] = `
         >
           <div
             dangerouslySetInnerHTML={
-              Object {
+              {
                 "__html": <p>
                   HTML
                 </p>,
@@ -60,7 +60,7 @@ exports[`MenuPage renders correctly 1`] = `
 `;
 
 exports[`MenuPageTemplate renders GatsbyImage 1`] = `
-Array [
+[
   <header />,
   <section
     className="section"
@@ -100,7 +100,7 @@ Array [
 `;
 
 exports[`MenuPageTemplate renders content correctly 1`] = `
-Array [
+[
   <header />,
   <section
     className="section"
@@ -140,7 +140,7 @@ Array [
 `;
 
 exports[`MenuPageTemplate renders html content correctly 1`] = `
-Array [
+[
   <header />,
   <section
     className="section"
@@ -157,7 +157,7 @@ Array [
         >
           <div
             dangerouslySetInnerHTML={
-              Object {
+              {
                 "__html": <p>
                   HTML content
                 </p>,
