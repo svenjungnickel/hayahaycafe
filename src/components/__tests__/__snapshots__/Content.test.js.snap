@@ -24,7 +24,7 @@ exports[`HTMLContent renders classname 1`] = `
 <div
   className="className"
   dangerouslySetInnerHTML={
-    Object {
+    {
       "__html": undefined,
     }
   }
@@ -34,7 +34,7 @@ exports[`HTMLContent renders classname 1`] = `
 exports[`HTMLContent renders content 1`] = `
 <div
   dangerouslySetInnerHTML={
-    Object {
+    {
       "__html": <div>
         HTMLContent
       </div>,
@@ -47,7 +47,7 @@ exports[`HTMLContent renders content and classname 1`] = `
 <div
   className="className"
   dangerouslySetInnerHTML={
-    Object {
+    {
       "__html": <div>
         HTMLContent
       </div>,

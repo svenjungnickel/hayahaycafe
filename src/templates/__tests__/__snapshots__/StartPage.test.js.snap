@@ -46,7 +46,7 @@ exports[`StartPage renders correctly 1`] = `
         >
           <div
             dangerouslySetInnerHTML={
-              Object {
+              {
                 "__html": <p>
                   HTML
                 </p>,
@@ -93,7 +93,7 @@ exports[`StartPage renders correctly 1`] = `
 `;
 
 exports[`StartPageTemplate renders content correctly 1`] = `
-Array [
+[
   <header
     className="startHeader"
   >
@@ -179,7 +179,7 @@ Array [
 `;
 
 exports[`StartPageTemplate renders html content correctly 1`] = `
-Array [
+[
   <header
     className="startHeader"
   >
@@ -224,7 +224,7 @@ Array [
         >
           <div
             dangerouslySetInnerHTML={
-              Object {
+              {
                 "__html": <p>
                   HTML content
                 </p>,

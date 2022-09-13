@@ -24,7 +24,7 @@ exports[`ContactPage renders correctly 1`] = `
 `;
 
 exports[`ContactPageTemplate renders with content 1`] = `
-Array [
+[
   <header />,
   <section
     className="section"
@@ -59,7 +59,7 @@ Array [
 `;
 
 exports[`ContactPageTemplate renders with html content 1`] = `
-Array [
+[
   <header />,
   <section
     className="section"
@@ -75,7 +75,7 @@ Array [
         >
           <div
             dangerouslySetInnerHTML={
-              Object {
+              {
                 "__html": <p>
                   HTML content
                 </p>,
@@ -100,7 +100,7 @@ Array [
 `;
 
 exports[`ContactPageTemplate renders without content 1`] = `
-Array [
+[
   <header />,
   <section
     className="section"

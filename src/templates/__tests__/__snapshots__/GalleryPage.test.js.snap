@@ -17,7 +17,7 @@ exports[`GalleryPage renders correctly 1`] = `
         >
           <div
             dangerouslySetInnerHTML={
-              Object {
+              {
                 "__html": <p>
                   HTML
                 </p>,
@@ -59,7 +59,7 @@ exports[`GalleryPage renders correctly 1`] = `
 `;
 
 exports[`GalleryPageTemplate renders GatsbyImage 1`] = `
-Array [
+[
   <header />,
   <section
     className="section"
@@ -98,7 +98,7 @@ Array [
 `;
 
 exports[`GalleryPageTemplate renders content correctly 1`] = `
-Array [
+[
   <header />,
   <section
     className="section"
@@ -137,7 +137,7 @@ Array [
 `;
 
 exports[`GalleryPageTemplate renders html content correctly 1`] = `
-Array [
+[
   <header />,
   <section
     className="section"
@@ -153,7 +153,7 @@ Array [
         >
           <div
             dangerouslySetInnerHTML={
-              Object {
+              {
                 "__html": <p>
                   HTML content
                 </p>,
