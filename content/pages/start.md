@@ -11,9 +11,11 @@ meta:
   keywords: cafe, super food, camiguin island, philippines
   title: Hayahay Cafe
 ---
-## Hayahay Cafe is temporarily closed
+## It's Happening - Reopening our doors!
 
-Hi Guys! We regret to inform you that our doors are still temporarily closed to the public. Therefore, we want to use this time to do renovations and improvements for a better service and environment for everyone! Until then, hold on tight and keep safe as always.
+**Sept 21, 2022**
+
+We are happy to welcome you back to our cafe with safety precautions in place to protect you, our beloved customers and employees.
 
 <p>&nbsp;</p>
 
