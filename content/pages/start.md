@@ -13,9 +13,9 @@ meta:
 ---
 ## It's Happening - Reopening our doors!
 
-#### Sept 21, 2022
+**Sept 21, 2022**
 
-We are happy to welcome you back to our Caf with safety precautions in place to protect you, our beloved customers and employees.
+We are happy to welcome you back to our cafe with safety precautions in place to protect you, our beloved customers and employees.
 
 <p>&nbsp;</p>
 
