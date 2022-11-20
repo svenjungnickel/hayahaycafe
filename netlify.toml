@@ -4,6 +4,3 @@
   environment = { NPM_FLAGS = "--legacy-peer-deps" }
   [context.deploy-preview]
     ignore = "git log -1 --pretty=%B | grep dependabot"
-
-[[plugins]]
-  package = "netlify-plugin-gatsby-cache"
