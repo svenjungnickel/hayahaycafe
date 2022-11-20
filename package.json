@@ -93,7 +93,7 @@
     "lint": "eslint ./src/ && echo 'Lint complete.'",
     "lint:fix": "eslint --fix ./src/ && echo 'Lint fix complete.'",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run",
+    "cypress:run": "cypress run --record false",
     "cypress:run:record": "cypress run --record",
     "test:e2e": "start-server-and-test serve http://localhost:9000 cypress:open",
     "test:e2e:ci": "start-server-and-test serve http://localhost:9000 cypress:run",
