@@ -147,10 +147,6 @@ describe('Navigation bar', () => {
             menuLink();
         });
 
-        it.skip('Boodle Bilao link', () => {
-            boodleBilaoLink();
-        });
-
         it('Logo link', () => {
             logoLink();
         });
@@ -187,10 +183,6 @@ describe('Navigation bar', () => {
 
         it('Menu link', () => {
             menuLink(true);
-        });
-
-        it.skip('Boodle Bilao link', () => {
-            boodleBilaoLink(true);
         });
 
         it('Logo link', () => {
