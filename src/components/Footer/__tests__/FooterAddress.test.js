@@ -1,12 +1,12 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { StaticQuery } from 'gatsby';
+import { useStaticQuery } from 'gatsby';
 import FooterAddress from '../FooterAddress';
 
 describe('FooterAddress', () => {
     it('does not render empty data', () => {
         const data = {};
-        StaticQuery.mockImplementationOnce(({ render }) => render(data));
+        useStaticQuery.mockImplementationOnce(() => data);
 
         const component = <FooterAddress />;
         const tree = renderer.create(component).toJSON();
@@ -18,7 +18,7 @@ describe('FooterAddress', () => {
         const data = {
             globalSettings: {},
         };
-        StaticQuery.mockImplementationOnce(({ render }) => render(data));
+        useStaticQuery.mockImplementationOnce(() => data);
 
         const component = <FooterAddress />;
         const tree = renderer.create(component).toJSON();
@@ -32,7 +32,7 @@ describe('FooterAddress', () => {
                 location: {},
             },
         };
-        StaticQuery.mockImplementationOnce(({ render }) => render(data));
+        useStaticQuery.mockImplementationOnce(() => data);
 
         const component = <FooterAddress />;
         const tree = renderer.create(component).toJSON();
@@ -48,7 +48,7 @@ describe('FooterAddress', () => {
                 },
             },
         };
-        StaticQuery.mockImplementationOnce(({ render }) => render(data));
+        useStaticQuery.mockImplementationOnce(() => data);
 
         const component = <FooterAddress />;
         const tree = renderer.create(component).toJSON();
@@ -71,7 +71,7 @@ describe('FooterAddress', () => {
                 },
             },
         };
-        StaticQuery.mockImplementationOnce(({ render }) => render(data));
+        useStaticQuery.mockImplementationOnce(() => data);
 
         const component = <FooterAddress />;
         const tree = renderer.create(component).toJSON();
@@ -94,7 +94,7 @@ describe('FooterAddress', () => {
                 },
             },
         };
-        StaticQuery.mockImplementationOnce(({ render }) => render(data));
+        useStaticQuery.mockImplementationOnce(() => data);
 
         const component = <FooterAddress />;
         const tree = renderer.create(component).toJSON();

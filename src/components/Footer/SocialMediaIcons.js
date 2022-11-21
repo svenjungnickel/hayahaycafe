@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { graphql, StaticQuery } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import Button from 'react-bootstrap/Button';
 import { FaFacebookF, FaInstagram, FaTripadvisor } from 'react-icons/fa';
 import { socialMediaIcon } from '../../styles/components/Footer/SocialMediaIcons.module.scss';
@@ -27,30 +27,29 @@ SocialMediaIcon.propTypes = {
     }).isRequired,
 };
 
-const SocialMediaIcons = () => (
-    <StaticQuery
-        query={graphql`
-            query {
-                globalSettings: settingsYaml {
-                    socialMedia {
-                        url
-                        type
-                    }
+const SocialMediaIcons = () => {
+    const { globalSettings } = useStaticQuery(graphql`
+        query {
+            globalSettings: settingsYaml {
+                socialMedia {
+                    url
+                    type
                 }
             }
-        `}
-        render={({ globalSettings }) => (
-            <>
-                {globalSettings && globalSettings.socialMedia && 0 < globalSettings.socialMedia.length && (
-                    <div className={`container text-center ${socialMediaIcon}`} data-cy="footerSocialMediaIcons">
-                        {globalSettings.socialMedia.map((item) => (
-                            <SocialMediaIcon item={item} key={item.type} />
-                        ))}
-                    </div>
-                )}
-            </>
-        )}
-    />
-);
+        }
+    `);
+
+    return (
+        <>
+            {globalSettings && globalSettings.socialMedia && 0 < globalSettings.socialMedia.length && (
+                <div className={`container text-center ${socialMediaIcon}`} data-cy="footerSocialMediaIcons">
+                    {globalSettings.socialMedia.map((item) => (
+                        <SocialMediaIcon item={item} key={item.type} />
+                    ))}
+                </div>
+            )}
+        </>
+    );
+};
 
 export default SocialMediaIcons;

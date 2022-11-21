@@ -1,12 +1,12 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { StaticQuery } from 'gatsby';
+import { useStaticQuery } from 'gatsby';
 import Location from '../Location';
 
 describe('Location', () => {
     it('does not render empty data', () => {
         const data = {};
-        StaticQuery.mockImplementationOnce(({ render }) => render(data));
+        useStaticQuery.mockImplementationOnce(() => data);
 
         const component = <Location />;
         const tree = renderer.create(component).toJSON();
@@ -18,7 +18,7 @@ describe('Location', () => {
         const data = {
             globalSettings: {},
         };
-        StaticQuery.mockImplementationOnce(({ render }) => render(data));
+        useStaticQuery.mockImplementationOnce(() => data);
 
         const component = <Location />;
         const tree = renderer.create(component).toJSON();
@@ -32,7 +32,7 @@ describe('Location', () => {
                 location: {},
             },
         };
-        StaticQuery.mockImplementationOnce(({ render }) => render(data));
+        useStaticQuery.mockImplementationOnce(() => data);
 
         const component = <Location />;
         const tree = renderer.create(component).toJSON();
@@ -48,7 +48,7 @@ describe('Location', () => {
                 },
             },
         };
-        StaticQuery.mockImplementationOnce(({ render }) => render(data));
+        useStaticQuery.mockImplementationOnce(() => data);
 
         const component = <Location />;
         const tree = renderer.create(component).toJSON();
@@ -71,7 +71,7 @@ describe('Location', () => {
                 },
             },
         };
-        StaticQuery.mockImplementationOnce(({ render }) => render(data));
+        useStaticQuery.mockImplementationOnce(() => data);
 
         const component = <Location />;
         const tree = renderer.create(component).toJSON();
@@ -94,7 +94,7 @@ describe('Location', () => {
                 },
             },
         };
-        StaticQuery.mockImplementationOnce(({ render }) => render(data));
+        useStaticQuery.mockImplementationOnce(() => data);
 
         const component = <Location />;
         const tree = renderer.create(component).toJSON();

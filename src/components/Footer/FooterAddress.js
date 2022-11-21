@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { graphql, StaticQuery } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 
 export const ListFooterAddress = ({ address }) => {
     const filteredAddressItems = Object.values(address).filter((item) => '' !== item);
@@ -19,32 +19,31 @@ ListFooterAddress.propTypes = {
     }).isRequired,
 };
 
-const FooterAddress = () => (
-    <StaticQuery
-        query={graphql`
-            query {
-                globalSettings: settingsYaml {
-                    location {
-                        address {
-                            company
-                            addressLine1
-                            addressLine2
-                            province
-                            postalCode
-                            country
-                        }
+const FooterAddress = () => {
+    const { globalSettings } = useStaticQuery(graphql`
+        query {
+            globalSettings: settingsYaml {
+                location {
+                    address {
+                        company
+                        addressLine1
+                        addressLine2
+                        province
+                        postalCode
+                        country
                     }
                 }
             }
-        `}
-        render={({ globalSettings }) => (
-            <>
-                {!!globalSettings && !!globalSettings.location && !!globalSettings.location.address && (
-                    <ListFooterAddress address={globalSettings.location.address} />
-                )}
-            </>
-        )}
-    />
-);
+        }
+    `);
+
+    return (
+        <>
+            {!!globalSettings && !!globalSettings.location && !!globalSettings.location.address && (
+                <ListFooterAddress address={globalSettings.location.address} />
+            )}
+        </>
+    );
+};
 
 export default FooterAddress;

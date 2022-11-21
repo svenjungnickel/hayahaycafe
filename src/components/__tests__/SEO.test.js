@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { mount } from 'enzyme';
-import { StaticQuery } from 'gatsby';
+import { useStaticQuery } from 'gatsby';
 import SEO from '../SEO';
 
 describe('SEO', () => {
@@ -21,7 +21,7 @@ describe('SEO', () => {
                 },
             },
         };
-        StaticQuery.mockImplementationOnce(({ render }) => render(data));
+        useStaticQuery.mockImplementationOnce(() => data);
 
         mount(<SEO title={title} description={description} />);
         const helmet = Helmet.peek();
@@ -53,7 +53,7 @@ describe('SEO', () => {
                 },
             },
         };
-        StaticQuery.mockImplementationOnce(({ render }) => render(data));
+        useStaticQuery.mockImplementationOnce(() => data);
 
         mount(<SEO title={title} description={description} keywords={keywords} />);
         const helmet = Helmet.peek();

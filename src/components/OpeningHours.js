@@ -1,28 +1,27 @@
 import React from 'react';
-import { graphql, StaticQuery } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import { HTMLContent } from './Content';
 import { openingHours } from '../styles/components/OpeningHours.module.scss';
 
-const OpeningHours = () => (
-    <StaticQuery
-        query={graphql`
-            query {
-                globalSettings: settingsYaml {
-                    openingHours
-                }
+const OpeningHours = () => {
+    const { globalSettings } = useStaticQuery(graphql`
+        query {
+            globalSettings: settingsYaml {
+                openingHours
             }
-        `}
-        render={({ globalSettings }) => (
-            <>
-                {!!globalSettings && !!globalSettings.openingHours && (
-                    <div className={openingHours}>
-                        <h2>Opening Hours</h2>
-                        <HTMLContent content={globalSettings.openingHours} />
-                    </div>
-                )}
-            </>
-        )}
-    />
-);
+        }
+    `);
+
+    return (
+        <>
+            {!!globalSettings && !!globalSettings.openingHours && (
+                <div className={openingHours}>
+                    <h2>Opening Hours</h2>
+                    <HTMLContent content={globalSettings.openingHours} />
+                </div>
+            )}
+        </>
+    );
+};
 
 export default OpeningHours;

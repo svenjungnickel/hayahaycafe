@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
-import { graphql, StaticQuery } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 
 export const HTMLHead = ({ globalMeta, title, description, keywords }) => {
     const lang = globalMeta.language || 'en';
@@ -51,24 +51,21 @@ HTMLHead.propTypes = {
     keywords: PropTypes.string,
 };
 
-const SEO = (props) => (
-    <StaticQuery
-        query={graphql`
-            query {
-                globalSettings: settingsYaml {
-                    meta {
-                        title
-                        description
-                        keywords
-                        language
-                    }
+const SEO = (props) => {
+    const { globalSettings } = useStaticQuery(graphql`
+        query {
+            globalSettings: settingsYaml {
+                meta {
+                    title
+                    description
+                    keywords
+                    language
                 }
             }
-        `}
-        render={({ globalSettings }) => (
-            <>{!!globalSettings && !!globalSettings.meta && <HTMLHead globalMeta={globalSettings.meta} {...props} />}</>
-        )}
-    />
-);
+        }
+    `);
+
+    return <>{!!globalSettings && !!globalSettings.meta && <HTMLHead globalMeta={globalSettings.meta} {...props} />}</>;
+};
 
 export default SEO;

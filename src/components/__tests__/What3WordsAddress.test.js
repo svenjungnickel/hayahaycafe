@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { StaticQuery } from 'gatsby';
+import { useStaticQuery } from 'gatsby';
 import What3WordsAddress from '../What3WordsAddress';
 
 jest.mock('../Image');
@@ -8,7 +8,7 @@ jest.mock('../Image');
 describe('What3WordsAddress', () => {
     it('does not render empty data', () => {
         const data = {};
-        StaticQuery.mockImplementationOnce(({ render }) => render(data));
+        useStaticQuery.mockImplementationOnce(() => data);
 
         const component = <What3WordsAddress />;
         const tree = renderer.create(component).toJSON();
@@ -20,7 +20,7 @@ describe('What3WordsAddress', () => {
         const data = {
             globalSettings: {},
         };
-        StaticQuery.mockImplementationOnce(({ render }) => render(data));
+        useStaticQuery.mockImplementationOnce(() => data);
 
         const component = <What3WordsAddress />;
         const tree = renderer.create(component).toJSON();
@@ -34,7 +34,7 @@ describe('What3WordsAddress', () => {
                 location: {},
             },
         };
-        StaticQuery.mockImplementationOnce(({ render }) => render(data));
+        useStaticQuery.mockImplementationOnce(() => data);
 
         const component = <What3WordsAddress />;
         const tree = renderer.create(component).toJSON();
@@ -50,7 +50,7 @@ describe('What3WordsAddress', () => {
                 },
             },
         };
-        StaticQuery.mockImplementationOnce(({ render }) => render(data));
+        useStaticQuery.mockImplementationOnce(() => data);
 
         const component = <What3WordsAddress />;
         const tree = renderer.create(component).toJSON();
