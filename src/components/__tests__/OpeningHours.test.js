@@ -1,12 +1,12 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { StaticQuery } from 'gatsby';
+import { useStaticQuery } from 'gatsby';
 import OpeningHours from '../OpeningHours';
 
 describe('OpeningHours', () => {
     it('does not render empty data', () => {
         const data = {};
-        StaticQuery.mockImplementationOnce(({ render }) => render(data));
+        useStaticQuery.mockImplementationOnce(() => data);
 
         const component = <OpeningHours />;
         const tree = renderer.create(component).toJSON();
@@ -18,7 +18,7 @@ describe('OpeningHours', () => {
         const data = {
             globalSettings: {},
         };
-        StaticQuery.mockImplementationOnce(({ render }) => render(data));
+        useStaticQuery.mockImplementationOnce(() => data);
 
         const component = <OpeningHours />;
         const tree = renderer.create(component).toJSON();
@@ -32,7 +32,7 @@ describe('OpeningHours', () => {
                 openingHours: <p>openingHours</p>,
             },
         };
-        StaticQuery.mockImplementationOnce(({ render }) => render(data));
+        useStaticQuery.mockImplementationOnce(() => data);
 
         const component = <OpeningHours />;
         const tree = renderer.create(component).toJSON();

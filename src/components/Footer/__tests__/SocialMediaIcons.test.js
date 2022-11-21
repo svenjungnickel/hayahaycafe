@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { StaticQuery } from 'gatsby';
+import { useStaticQuery } from 'gatsby';
 import SocialMediaIcons, { SocialMediaIcon } from '../SocialMediaIcons';
 
 describe('SocialMediaIcons', () => {
@@ -42,7 +42,7 @@ describe('SocialMediaIcons', () => {
 
     it('does not render empty data', () => {
         const data = {};
-        StaticQuery.mockImplementationOnce(({ render }) => render(data));
+        useStaticQuery.mockImplementationOnce(() => data);
 
         const component = <SocialMediaIcons />;
         const tree = renderer.create(component).toJSON();
@@ -54,7 +54,7 @@ describe('SocialMediaIcons', () => {
         const data = {
             globalSettings: {},
         };
-        StaticQuery.mockImplementationOnce(({ render }) => render(data));
+        useStaticQuery.mockImplementationOnce(() => data);
 
         const component = <SocialMediaIcons />;
         const tree = renderer.create(component).toJSON();
@@ -68,7 +68,7 @@ describe('SocialMediaIcons', () => {
                 socialMedia: [],
             },
         };
-        StaticQuery.mockImplementationOnce(({ render }) => render(data));
+        useStaticQuery.mockImplementationOnce(() => data);
 
         const component = <SocialMediaIcons />;
         const tree = renderer.create(component).toJSON();
@@ -95,7 +95,7 @@ describe('SocialMediaIcons', () => {
                 ],
             },
         };
-        StaticQuery.mockImplementationOnce(({ render }) => render(data));
+        useStaticQuery.mockImplementationOnce(() => data);
 
         const component = <SocialMediaIcons />;
         const tree = renderer.create(component).toJSON();
