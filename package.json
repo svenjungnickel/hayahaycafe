@@ -24,7 +24,7 @@
     "gatsby-plugin-sharp": "^5.0.0",
     "gatsby-plugin-use-dark-mode": "^1.6.0",
     "gatsby-remark-copy-linked-files": "^6.2.0",
-    "gatsby-remark-images": "^7.0.0",
+    "gatsby-remark-images": "^7.2.0",
     "gatsby-remark-relative-images": "^2.0.2",
     "gatsby-source-filesystem": "^5.2.0",
     "gatsby-transformer-remark": "^6.2.0",
