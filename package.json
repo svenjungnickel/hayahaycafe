@@ -12,7 +12,7 @@
     "fslightbox-react": "^1.6.2-2",
     "gatsby": "^5.0.1",
     "gatsby-plugin-catch-links": "^5.2.0",
-    "gatsby-plugin-google-analytics": "^5.0.0",
+    "gatsby-plugin-google-analytics": "^5.2.0",
     "gatsby-plugin-image": "^3.2.0",
     "gatsby-plugin-manifest": "^5.0.0",
     "gatsby-plugin-netlify": "^5.0.1",
