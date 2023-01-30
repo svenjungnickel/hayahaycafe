@@ -2,16 +2,20 @@ const light2dark = () => {
     cy.setDarkMode(false);
 
     cy.get('body').should('have.class', 'light-mode');
+    cy.get('[data-cy=navBar]').should('have.class', 'navbar-light');
     cy.get('[data-cy=darkModeToggle]:visible').click();
     cy.get('body').should('have.class', 'dark-mode');
+    cy.get('[data-cy=navBar]').should('have.class', 'navbar-dark');
 };
 
 const dark2light = () => {
     cy.setDarkMode(true);
 
     cy.get('body').should('have.class', 'dark-mode');
+    cy.get('[data-cy=navBar]').should('have.class', 'navbar-dark');
     cy.get('[data-cy=darkModeToggle]:visible').click();
     cy.get('body').should('have.class', 'light-mode');
+    cy.get('[data-cy=navBar]').should('have.class', 'navbar-light');
 };
 
 describe('Dark mode toggle', () => {

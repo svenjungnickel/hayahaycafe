@@ -12,14 +12,6 @@ const minimizeNavBar = () => {
         .and('match', /navBar-small/);
 };
 
-const darkMode = () => {
-    cy.setDarkMode(false);
-    cy.get('[data-cy=navBar]').should('have.class', 'navbar-light');
-
-    cy.setDarkMode(true);
-    cy.get('[data-cy=navBar]').should('have.class', 'navbar-dark');
-};
-
 const checkLinks = (mobile, visit, selector, link, selector2 = null) => {
     cy.visit(visit);
 
@@ -69,10 +61,6 @@ describe('Navigation bar', () => {
             minimizeNavBar();
         });
 
-        it('Dark mode', () => {
-            darkMode();
-        });
-
         it('Home link', () => {
             homeLink();
         });
@@ -105,10 +93,6 @@ describe('Navigation bar', () => {
 
         it('Scroll down minimizes the navigation bar', () => {
             minimizeNavBar();
-        });
-
-        it('Dark mode', () => {
-            darkMode();
         });
 
         it('Home link', () => {
