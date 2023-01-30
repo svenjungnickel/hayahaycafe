@@ -3,14 +3,14 @@
     "collect": {
       "startServerCommand": "npm run serve",
       "url": [
-        "http://localhost:9000/",
-        "http://localhost:9000/menu/",
-        "http://localhost:9000/about/",
-        "http://localhost:9000/gallery/",
-        "http://localhost:9000/contact/",
-        "http://localhost:9000/legal/",
-        "http://localhost:9000/data-privacy/",
-        "http://localhost:9000/404/"
+        "http://localhost:9090/",
+        "http://localhost:9090/menu/",
+        "http://localhost:9090/about/",
+        "http://localhost:9090/gallery/",
+        "http://localhost:9090/contact/",
+        "http://localhost:9090/legal/",
+        "http://localhost:9090/data-privacy/",
+        "http://localhost:9090/404/"
       ],
       "numberOfRuns": 1
     },
