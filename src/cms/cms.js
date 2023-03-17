@@ -35,6 +35,5 @@ CMS.registerPreviewTemplate('contact-page', ContactPagePreview);
 CMS.registerPreviewTemplate('gallery-page', GalleryPagePreview);
 CMS.registerPreviewTemplate('about-page', DefaultPagePreview);
 CMS.registerPreviewTemplate('menu-page', MenuPagePreview);
-CMS.registerPreviewTemplate('boodle-bilao-page', DefaultPagePreview);
 CMS.registerPreviewTemplate('legal-page', DefaultPagePreview);
 CMS.registerPreviewTemplate('data-privacy-page', DefaultPagePreview);

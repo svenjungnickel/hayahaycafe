@@ -14,7 +14,7 @@ meta:
 Hayahay Cafe\
 Bug-ong, Mambajao, Camiguin, 9100, Philippines\
 **Website:** [www.hayahaycafe.com](https://www.hayahaycafe.com)\
-**Phone:** <a href="tel:+639165290283">0916 529 0283</a>
+**Phone:** <a href="tel:+639958147827">+63 995 814 7827</a>
 
 <br />
 
