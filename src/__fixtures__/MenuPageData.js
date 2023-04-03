@@ -20,6 +20,13 @@ export default {
             alt: 'Menu page 02',
             title: 'Menu page 02',
         },
+        {
+            src: {
+                publicURL: 'publicURL',
+            },
+            alt: 'Menu page 03',
+            title: 'Menu page 03',
+        },
     ],
     meta: {
         title: 'meta title',

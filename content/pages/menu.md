@@ -11,6 +11,9 @@ images:
   - src: /images/hayahay_menu_page_2.jpg
     alt: Hayahay Menu Page 2
     title: Hayahay Menu Page 2
+  - src: /images/hayahay_menu_page_3.jpg
+    alt: Hayahay Menu Page 3
+    title: Hayahay Menu Page 3
 meta:
   title: Menu
   description: Find the Hayahay Cafe menu here.
