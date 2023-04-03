@@ -28,7 +28,7 @@ exports[`MenuPage renders correctly 1`] = `
           <hr />
         </div>
         <div
-          className="menu__image col-lg-6 col-md-12"
+          className="menu__image col-lg-4 col-md-6"
           data-cy="menuImage"
         >
           <div
@@ -41,7 +41,20 @@ exports[`MenuPage renders correctly 1`] = `
           </div>
         </div>
         <div
-          className="menu__image col-lg-6 col-md-12"
+          className="menu__image col-lg-4 col-md-6"
+          data-cy="menuImage"
+        >
+          <div
+            onClick={[Function]}
+          >
+            <img
+              alt="alt"
+              src="src"
+            />
+          </div>
+        </div>
+        <div
+          className="menu__image col-lg-4 col-md-6"
           data-cy="menuImage"
         >
           <div
@@ -81,7 +94,7 @@ exports[`MenuPageTemplate renders GatsbyImage 1`] = `
           <hr />
         </div>
         <div
-          className="menu__image col-lg-6 col-md-12"
+          className="menu__image col-lg-4 col-md-6"
           data-cy="menuImage"
         >
           <div
@@ -121,7 +134,7 @@ exports[`MenuPageTemplate renders content correctly 1`] = `
           <hr />
         </div>
         <div
-          className="menu__image col-lg-6 col-md-12"
+          className="menu__image col-lg-4 col-md-6"
           data-cy="menuImage"
         >
           <div
@@ -167,7 +180,7 @@ exports[`MenuPageTemplate renders html content correctly 1`] = `
           <hr />
         </div>
         <div
-          className="menu__image col-lg-6 col-md-12"
+          className="menu__image col-lg-4 col-md-6"
           data-cy="menuImage"
         >
           <div
