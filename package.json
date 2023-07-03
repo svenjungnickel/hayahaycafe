@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.0",
-    "fslightbox-react": "^1.7.2",
+    "fslightbox-react": "^1.7.6",
     "gatsby": "^5.11.0",
     "gatsby-plugin-catch-links": "^5.11.0",
     "gatsby-plugin-google-analytics": "^5.11.0",

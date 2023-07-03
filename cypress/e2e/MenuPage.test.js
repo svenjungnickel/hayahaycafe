@@ -10,7 +10,7 @@ const openLightBoxAndVerifyImageSource = () => {
         })
         .click();
 
-    cy.get('.fslightbox-source:visible').then(($img) => {
+    cy.get('.fslightboxs:visible').then(($img) => {
         // Verify light box source
         expect($img.attr('src')).to.equal(imgSource);
     });
@@ -20,13 +20,14 @@ const openLightBoxAndVerifyImageSource = () => {
 
     cy.get('[data-cy=menuImage]')
         .last()
+        .scrollIntoView()
         .find('img[loading=lazy]')
         .then(($img) => {
             imgSource = $img.attr('src');
         })
         .click();
 
-    cy.get('.fslightbox-source:visible').then(($img) => {
+    cy.get('.fslightboxs:visible').then(($img) => {
         // Verify light box source
         expect($img.attr('src')).to.equal(imgSource);
     });
