@@ -19,6 +19,6 @@ meta:
   description: Find the Hayahay Cafe menu here.
   keywords: menu
 ---
-If you want to place an order for pickup please call <a class="btn btn-primary btn-sm" href="tel:+639958147827">+63 995 814 7827</a>
+If you want to place an order for pickup please call <a class="btn btn-primary btn-sm" href="tel:+639274256404">+63 927 425 6404</a>
 
 See our menu below.
