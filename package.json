@@ -5,12 +5,12 @@
   "author": "Sven Jungnickel <svenjungnickel@googlemail.com>",
   "homepage": "https://www.hayahaycafe.com",
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
   "dependencies": {
     "bootstrap": "^5.3.2",
     "fslightbox-react": "^1.7.6",
-    "gatsby": "^5.11.0",
+    "gatsby": "^5.13.1",
     "gatsby-plugin-catch-links": "^5.13.0",
     "gatsby-plugin-google-analytics": "^5.13.0",
     "gatsby-plugin-image": "^3.13.0",
