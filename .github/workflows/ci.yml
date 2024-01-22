@@ -28,7 +28,7 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Install dependencies 👨🏻‍💻
-        run: npm ci --prefer-offline --no-audit --legacy-peer-deps
+        run: npm install --prefer-offline --no-audit --legacy-peer-deps
 
       - name: Run linter 👀
         env:
