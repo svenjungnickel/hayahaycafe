@@ -10,4 +10,4 @@ meta:
     touch with us, feel free to use our contact form.
   keywords: contact, contact form, contact us
 ---
-If you want to get in contact with us please call <a class="btn btn-primary btn-sm" href="tel:+639274256404">+63 927 425 6404</a> or use the contact form below.
+If you want to get in contact with us please call <a class="btn btn-primary btn-sm" href="tel:+639674966824">+63 967 496 6824</a> or use the contact form below.
