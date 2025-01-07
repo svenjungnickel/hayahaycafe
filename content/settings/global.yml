@@ -12,7 +12,14 @@ location:
     postalCode: "9100"
     country: Philippines
   what3WordsAddress: doings.beeping.motel
-openingHours: Mo-Su 8:00–18:00
+openingHours:
+  Mo&nbsp;8:00 – 18:00<br />
+  <strong>Tu&nbsp;closed</strong><br />
+  We&nbsp;8:00 – 18:00<br />
+  Th&nbsp;&nbsp;8:00 – 18:00<br />
+  Fr&nbsp;&nbsp;&nbsp;8:00 – 18:00<br />
+  Sa&nbsp;&nbsp;8:00 – 18:00<br />
+  Su&nbsp;&nbsp;8:00 – 18:00<br />
 socialMedia:
   - url: https://www.instagram.com/hayahaycafecamiguin/
     type: instagram
