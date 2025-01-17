@@ -75,7 +75,7 @@
     "netlify-cli": "^17.38.1",
     "prettier": "^3.4.2",
     "react-test-renderer": "^18.3.1",
-    "start-server-and-test": "^2.0.9"
+    "start-server-and-test": "^2.0.10"
   },
   "keywords": [
     "gatsby"
