@@ -51,7 +51,7 @@
     "@cfaester/enzyme-adapter-react-18": "^0.8.0",
     "@lhci/cli": "^0.13.0",
     "@stryker-mutator/core": "^8.2.6",
-    "@stryker-mutator/jest-runner": "^8.7.1",
+    "@stryker-mutator/jest-runner": "^9.0.1",
     "@testing-library/cypress": "^10.0.3",
     "axe-core": "^4.10.2",
     "babel-jest": "^29.7.0",
