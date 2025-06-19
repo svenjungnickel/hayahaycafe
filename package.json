@@ -8,7 +8,7 @@
     "node": ">=20"
   },
   "dependencies": {
-    "bootstrap": "^5.3.6",
+    "bootstrap": "^5.3.7",
     "fslightbox-react": "^1.8.0",
     "gatsby": "^5.14.4",
     "gatsby-plugin-catch-links": "^5.14.0",
