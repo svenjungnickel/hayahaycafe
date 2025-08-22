@@ -26,7 +26,7 @@ Following items are currently unavailable:
 - Spiced Arabic Coffee
 - Desserts
 - Fitness Palette
-- Dumblings
+- Dumplings
 - Toast Hawaii
 - Fisherman's Friend
 - Crostinis
