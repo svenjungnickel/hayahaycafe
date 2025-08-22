@@ -25,7 +25,7 @@ Following items are currently unavailable:
 - Fizzy drinks
 - Spiced Arabic Coffee
 - Desserts
-- Fitness Pallete
+- Fitness Palette
 - Dumblings
 - Toast Hawaii
 - Fisherman's Friend
