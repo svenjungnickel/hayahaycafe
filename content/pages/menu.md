@@ -19,6 +19,15 @@ meta:
   description: Find the Hayahay Cafe menu here.
   keywords: menu
 ---
-If you want to place an order for pickup please call <a class="btn btn-primary btn-sm" href="tel:+639674966824">+63 967 496 6824</a>
+We’re currently working on refreshing our menu! Due to logistics and the use of seasonal ingredients, some dishes and drinks may be temporarily unavailable during this transition. Thank you for your understanding - we can’t wait to share our updated offerings with you soon!
 
-See our menu below.
+Following items are currently unavailable:
+- Fizzy drinks
+- Spiced Arabic Coffee
+- Desserts
+- Fitness Pallete
+- Dumblings
+- Toast Hawaii
+- Fisherman's Friend
+- Crostinis
+- Berry Merry
