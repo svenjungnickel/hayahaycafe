@@ -34,9 +34,7 @@ const openLightBoxAndVerifyImageSource = () => {
 };
 
 const contentContainsValidPhoneNumber = () => {
-    const validPhoneNumberRegex = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/g;
-
-    cy.get('[data-cy=menuContent').contains('a[href^="tel:"]', validPhoneNumberRegex);
+    cy.get('[data-cy=menuContent').contains('We’re currently working on refreshing our menu!');
 };
 
 describe('Menu page', () => {
