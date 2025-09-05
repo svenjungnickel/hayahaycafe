@@ -1,7 +1,13 @@
 @import "../mixins/media-queries";
 
 .menu {
-    .menu__image {
+    &__section {
+        $block: &;
+        color: var(--color-primary);
+        padding-top: 15px;
+    }
+
+    &__image {
         padding-top: 15px;
         padding-bottom: 15px;
         margin: auto;

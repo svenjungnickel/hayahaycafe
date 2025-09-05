@@ -1,10 +1,10 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`MenuPage renders correctly 1`] = `
 <main>
   <header />
   <section
-    className="section"
+    className="menu__section"
   >
     <div
       className="menu container"
@@ -76,7 +76,7 @@ exports[`MenuPageTemplate renders GatsbyImage 1`] = `
 [
   <header />,
   <section
-    className="section"
+    className="menu__section"
   >
     <div
       className="menu container"
@@ -116,7 +116,7 @@ exports[`MenuPageTemplate renders content correctly 1`] = `
 [
   <header />,
   <section
-    className="section"
+    className="menu__section"
   >
     <div
       className="menu container"
@@ -156,7 +156,7 @@ exports[`MenuPageTemplate renders html content correctly 1`] = `
 [
   <header />,
   <section
-    className="section"
+    className="menu__section"
   >
     <div
       className="menu container"
