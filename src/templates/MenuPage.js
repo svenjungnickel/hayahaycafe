@@ -9,8 +9,7 @@ import Content, { HTMLContent } from '../components/Content';
 import Separator from '../components/Separator';
 import Image from '../components/Image';
 import FsLightbox from 'fslightbox-react';
-import { section } from '../styles/components/Section.module.scss';
-import { menu, menu__image } from '../styles/pages/Menu.module.scss';
+import { menu, menu__image, menu__section } from '../styles/pages/Menu.module.scss';
 
 export const MenuPageTemplate = ({ title, subtitle, headerImage, content, contentComponent, images }) => {
     const PostContent = contentComponent || Content;
@@ -30,6 +29,10 @@ export const MenuPageTemplate = ({ title, subtitle, headerImage, content, conten
     });
 
     const openLightBox = (index) => {
+        if (window.matchMedia('(width < 992px)').matches === true) {
+            return;
+        }
+
         setLightBoxController({
             toggler: !lightBoxController.toggler,
             index: index,
@@ -40,7 +43,7 @@ export const MenuPageTemplate = ({ title, subtitle, headerImage, content, conten
         <>
             <Header headerImage={headerImage} title={title} subtitle={subtitle} />
 
-            <section className={section}>
+            <section className={menu__section}>
                 <Container className={menu}>
                     <Row>
                         {!!content && (

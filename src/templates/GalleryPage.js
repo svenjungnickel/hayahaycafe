@@ -30,6 +30,10 @@ export const GalleryPageTemplate = ({ title, subtitle, headerImage, content, con
     });
 
     const openLightBox = (index) => {
+        if (window.matchMedia('(width < 992px)').matches === true) {
+            return;
+        }
+
         setLightBoxController({
             toggler: !lightBoxController.toggler,
             index: index,
@@ -124,10 +128,6 @@ export const pageQuery = graphql`
                                 layout: CONSTRAINED
                                 width: 1200
                                 height: 1200
-                                transformOptions: { fit: CONTAIN }
-                                formats: [PNG]
-                                backgroundColor: "transparent"
-                                pngOptions: { compressionSpeed: 10, quality: 50 }
                                 breakpoints: [320, 420, 768]
                             )
                         }
