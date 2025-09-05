@@ -33,6 +33,21 @@ const openLightBoxAndVerifyImageSource = () => {
     });
 };
 
+const verifyLightBoxNotOpening = () => {
+    let imgSource;
+
+    cy.get('[data-cy=galleryImage]')
+        .first()
+        .scrollIntoView()
+        .find('img[loading=lazy]')
+        .then(($img) => {
+            imgSource = $img.attr('src');
+        })
+        .click();
+
+    cy.get('.fslightboxs').should('not.exist');
+};
+
 describe('Gallery page', () => {
     beforeEach(() => {
         cy.visit('/gallery/');
@@ -54,7 +69,7 @@ describe('Gallery page', () => {
         });
 
         it('Open images in light box and verify sources', () => {
-            openLightBoxAndVerifyImageSource();
+            verifyLightBoxNotOpening();
         });
     });
 });

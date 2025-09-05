@@ -30,6 +30,10 @@ export const GalleryPageTemplate = ({ title, subtitle, headerImage, content, con
     });
 
     const openLightBox = (index) => {
+        if (window.matchMedia('(width < 992px)').matches === true) {
+            return;
+        }
+
         setLightBoxController({
             toggler: !lightBoxController.toggler,
             index: index,
