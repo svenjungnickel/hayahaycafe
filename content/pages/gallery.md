@@ -35,6 +35,27 @@ images:
   - title: Gallery Image 10
     alt: gallery image 10
     src: /images/gallery10.jpg
+  - title: Gallery Image 11
+    alt: gallery image 11
+    src: /images/gallery11.jpg
+  - title: Gallery Image 12
+    alt: gallery image 12
+    src: /images/gallery12.jpg
+  - title: Gallery Image 13
+    alt: gallery image 13
+    src: /images/gallery13.jpg
+  - title: Gallery Image 14
+    alt: gallery image 14
+    src: /images/gallery14.jpg
+  - title: Gallery Image 15
+    alt: gallery image 15
+    src: /images/gallery15.jpg
+  - title: Gallery Image 16
+    alt: gallery image 16
+    src: /images/gallery16.jpg
+  - title: Gallery Image 17
+    alt: gallery image 17
+    src: /images/gallery17.jpg
 meta:
   title: Gallery
   description: Get a first impression of our cafe and delicious food from our gallery.
