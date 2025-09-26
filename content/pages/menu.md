@@ -38,6 +38,9 @@ images:
   - src: /images/hayahay_menu_page_10.jpg
     alt: Hayahay Menu Page 10
     title: Hayahay Menu Page 10
+  - src: /images/hayahay_menu_page_11.jpg
+    alt: Hayahay Menu Page 11
+    title: Hayahay Menu Page 11
 meta:
   title: Menu
   description: Find the Hayahay Cafe menu here.
