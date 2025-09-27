@@ -41,6 +41,10 @@ body {
         }
     }
 
+    .phone {
+        white-space: nowrap;
+    }
+
     // workaround to get active links in nav bar working
     .navbar-dark {
         .navbar-nav {

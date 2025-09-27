@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`StartPage renders correctly 1`] = `
 <main>
@@ -38,6 +38,18 @@ exports[`StartPage renders correctly 1`] = `
     <div
       className="container"
     >
+      <div
+        className="row"
+      >
+        <div
+          className="col-12"
+        >
+          <img
+            alt="alt"
+            src="src"
+          />
+        </div>
+      </div>
       <div
         className="row"
       >
@@ -136,6 +148,18 @@ exports[`StartPageTemplate renders content correctly 1`] = `
         <div
           className="col-12"
         >
+          <img
+            alt="alt"
+            src="src"
+          />
+        </div>
+      </div>
+      <div
+        className="row"
+      >
+        <div
+          className="col-12"
+        >
           <div>
             content
           </div>
@@ -216,6 +240,18 @@ exports[`StartPageTemplate renders html content correctly 1`] = `
     <div
       className="container"
     >
+      <div
+        className="row"
+      >
+        <div
+          className="col-12"
+        >
+          <img
+            alt="alt"
+            src="src"
+          />
+        </div>
+      </div>
       <div
         className="row"
       >

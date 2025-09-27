@@ -12,12 +12,13 @@ import What3WordsAddress from '../components/What3WordsAddress';
 import {
     startHeader,
     startHeader__image,
+    startHeader__dinnerReopening,
     startHeader__content,
     startHeader__contentInner,
 } from '../styles/pages/Start.module.scss';
 import { section } from '../styles/components/Section.module.scss';
 
-export const StartPageTemplate = ({ title, subtitle, headerImage, content, contentComponent }) => {
+export const StartPageTemplate = ({ title, subtitle, headerImage, dinnerReopening, content, contentComponent }) => {
     const PostContent = contentComponent || Content;
 
     return (
@@ -37,6 +38,16 @@ export const StartPageTemplate = ({ title, subtitle, headerImage, content, conte
 
             <section className={section}>
                 <Container>
+                    <Row>
+                        <Col xs={12}>
+                            <Image
+                                src={dinnerReopening}
+                                alt={title}
+                                className={startHeader__dinnerReopening}
+                                objectFit={'contain'}
+                            />
+                        </Col>
+                    </Row>
                     <Row>
                         <Col xs={12}>
                             <PostContent content={content} />
@@ -97,6 +108,12 @@ export const pageQuery = graphql`
                 headerImage {
                     childImageSharp {
                         gatsbyImageData(layout: FULL_WIDTH)
+                    }
+                    publicURL
+                }
+                dinnerReopening {
+                    childImageSharp {
+                        gatsbyImageData(layout: FIXED, width: 400)
                     }
                     publicURL
                 }
