@@ -4,7 +4,7 @@ slug: ""
 title: Hayahay Cafe
 subtitle: Locally Sourced - Crafted With Love
 headerImage: /images/index.jpg
-dinnerReopening: /images/dinner-reopening.jpg
+dinnerReopeningImage: /images/dinner-reopening.jpg
 meta:
   description: Founded on the beautiful Island of Camiguin. est 2017. It was
     created to provide a decadent sense of great tasting food for our bodies and

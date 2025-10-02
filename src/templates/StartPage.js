@@ -18,7 +18,14 @@ import {
 } from '../styles/pages/Start.module.scss';
 import { section } from '../styles/components/Section.module.scss';
 
-export const StartPageTemplate = ({ title, subtitle, headerImage, dinnerReopening, content, contentComponent }) => {
+export const StartPageTemplate = ({
+    title,
+    subtitle,
+    headerImage,
+    dinnerReopeningImage,
+    content,
+    contentComponent,
+}) => {
     const PostContent = contentComponent || Content;
 
     return (
@@ -41,7 +48,7 @@ export const StartPageTemplate = ({ title, subtitle, headerImage, dinnerReopenin
                     <Row>
                         <Col xs={12}>
                             <Image
-                                src={dinnerReopening}
+                                src={dinnerReopeningImage}
                                 alt={title}
                                 className={startHeader__dinnerReopening}
                                 objectFit={'contain'}
@@ -111,7 +118,7 @@ export const pageQuery = graphql`
                     }
                     publicURL
                 }
-                dinnerReopening {
+                dinnerReopeningImage {
                     childImageSharp {
                         gatsbyImageData(layout: FIXED, width: 400)
                     }
