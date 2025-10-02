@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`NavBar renders with disabled dark mode (default) 1`] = `
 <nav
@@ -48,6 +48,7 @@ exports[`NavBar renders with disabled dark mode (default) 1`] = `
       className="navBar__items navbar-nav"
       onKeyDown={[Function]}
     >
+      <nav />
       <nav />
       <nav />
       <nav />

@@ -44,6 +44,7 @@ module.exports = {
         },
 
         // images
+        'gatsby-plugin-image',
         {
             resolve: 'gatsby-plugin-sharp',
             options: {
@@ -85,7 +86,6 @@ module.exports = {
                 ],
             },
         },
-        'gatsby-plugin-image',
 
         // pwa
         {
