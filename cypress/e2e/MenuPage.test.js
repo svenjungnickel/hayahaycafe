@@ -48,41 +48,68 @@ const verifyLightBoxNotOpening = () => {
     cy.get('.fslightboxs').should('not.exist');
 };
 
-// @TODO currently no extra content shown in menu
-const contentContainsValidPhoneNumber = () => {
-    cy.get('[data-cy=menuContent').contains('We’re currently working on refreshing our menu!');
+const contentContainsText = () => {
+    cy.get('[data-cy=menuContent]').contains('Our menu is not your classic spread');
 };
 
 describe('Menu page', () => {
-    beforeEach(() => {
-        cy.visit('/menu/');
+    describe('Brunch', () => {
+        beforeEach(() => {
+            cy.visit('/menu/');
+        });
+
+        describe('Desktop', () => {
+            beforeEach(() => {
+                cy.useDesktop();
+            });
+
+            it('Open images in light box and verify sources', () => {
+                openLightBoxAndVerifyImageSource();
+            });
+        });
+
+        describe('Mobile', () => {
+            beforeEach(() => {
+                cy.useMobile();
+            });
+
+            it('Open images in light box', () => {
+                verifyLightBoxNotOpening();
+            });
+        });
     });
 
-    describe('Desktop', () => {
+    describe('Dinner', () => {
         beforeEach(() => {
-            cy.useDesktop();
+            cy.visit('/dinner-menu/');
         });
 
-        it.skip('Contains content', () => {
-            contentContainsValidPhoneNumber();
+        describe('Desktop', () => {
+            beforeEach(() => {
+                cy.useDesktop();
+            });
+
+            it('Contains content', () => {
+                contentContainsText();
+            });
+
+            it('Open images in light box and verify sources', () => {
+                openLightBoxAndVerifyImageSource();
+            });
         });
 
-        it('Open images in light box and verify sources', () => {
-            openLightBoxAndVerifyImageSource();
-        });
-    });
+        describe('Mobile', () => {
+            beforeEach(() => {
+                cy.useMobile();
+            });
 
-    describe('Mobile', () => {
-        beforeEach(() => {
-            cy.useMobile();
-        });
+            it('Contains content', () => {
+                contentContainsText();
+            });
 
-        it.skip('Contains content', () => {
-            contentContainsValidPhoneNumber();
-        });
-
-        it('Open images in light box', () => {
-            verifyLightBoxNotOpening();
+            it('Open images in light box', () => {
+                verifyLightBoxNotOpening();
+            });
         });
     });
 });

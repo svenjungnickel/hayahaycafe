@@ -35,8 +35,12 @@ const logoLink = (mobile = false) => {
     checkLinks(mobile, '/404/', '[data-cy=navBarLinkLogo]:visible', '/', '[data-cy=navBarLinkHome]');
 };
 
-const menuLink = (mobile = false) => {
-    checkLinks(mobile, '/', '[data-cy=navBarLinkMenu]', 'menu');
+const brunchLink = (mobile = false) => {
+    checkLinks(mobile, '/', '[data-cy=navBarLinkBrunch]', 'menu');
+};
+
+const dinnerLink = (mobile = false) => {
+    checkLinks(mobile, '/', '[data-cy=navBarLinkDinner]', 'dinner-menu');
 };
 
 const aboutLink = (mobile = false) => {
@@ -65,8 +69,12 @@ describe('Navigation bar', () => {
             homeLink();
         });
 
-        it('Menu link', () => {
-            menuLink();
+        it('Brunch link', () => {
+            brunchLink();
+        });
+
+        it('Dinner link', () => {
+            dinnerLink();
         });
 
         it('Logo link', () => {
@@ -99,8 +107,12 @@ describe('Navigation bar', () => {
             homeLink(true);
         });
 
-        it('Menu link', () => {
-            menuLink(true);
+        it('Brunch link', () => {
+            brunchLink(true);
+        });
+
+        it('Dinner link', () => {
+            dinnerLink(true);
         });
 
         it('Logo link', () => {
