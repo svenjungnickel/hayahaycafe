@@ -36,11 +36,11 @@ const logoLink = (mobile = false) => {
 };
 
 const brunchLink = (mobile = false) => {
-    checkLinks(mobile, '/', '[data-cy=navBarLinkBrunch]', 'menu');
+    checkLinks(mobile, '/', '[data-cy=navBarLinkBrunch]', 'brunch-menu');
 };
 
 const dinnerLink = (mobile = false) => {
-    checkLinks(mobile, '/', '[data-cy=navBarLinkDinner]', 'dinner-menu');
+    checkLinks(mobile, '/', '[data-cy=navBarLinkDinner]', 'menu');
 };
 
 const aboutLink = (mobile = false) => {
