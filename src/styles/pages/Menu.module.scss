@@ -23,4 +23,14 @@
             }
         }
     }
+
+    &__link {
+        text-decoration: none;
+        text-align: center;
+        color: var(--color-primary);
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }

@@ -50,7 +50,7 @@ const NavBar = ({ currentPage }) => {
                 <Nav className={navBar__items}>
                     <NavItem link="/" name="Home" active={currentPage === '/'} />
                     <NavItem link="/brunch-menu" name="Brunch" active={currentPage === '/brunch-menu'} />
-                    <NavItem link="/menu" name="Dinner" active={currentPage === '/menu'} />
+                    <NavItem link="/dinner-menu" name="Dinner" active={currentPage === '/dinner-menu'} />
                     <NavItem link="/about" name="About" active={currentPage === '/about'} />
                     <div className="d-none d-md-block">
                         <Link to="/" data-cy="navBarLinkLogo" aria-label="back to startpage">
