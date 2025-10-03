@@ -52,7 +52,39 @@ const contentContainsText = () => {
     cy.get('[data-cy=menuContent]').contains('Our menu is not your classic spread');
 };
 
+const contentContainsImagesWithLinks = () => {
+    cy.get('[data-cy=menuLinkImage]').first().scrollIntoView();
+    cy.get('[data-cy=menuLinkImage]').first().click();
+    cy.url().should('include', '/brunch-menu/');
+};
+
 describe('Menu page', () => {
+    describe('Overview', () => {
+        beforeEach(() => {
+            cy.visit('/menu/');
+        });
+
+        describe('Desktop', () => {
+            beforeEach(() => {
+                cy.useDesktop();
+            });
+
+            it('Open image link and verify url', () => {
+                contentContainsImagesWithLinks();
+            });
+        });
+
+        describe('Mobile', () => {
+            beforeEach(() => {
+                cy.useMobile();
+            });
+
+            it('Open image link and verify url', () => {
+                contentContainsImagesWithLinks();
+            });
+        });
+    });
+
     describe('Brunch', () => {
         beforeEach(() => {
             cy.visit('/brunch-menu/');
@@ -81,7 +113,7 @@ describe('Menu page', () => {
 
     describe('Dinner', () => {
         beforeEach(() => {
-            cy.visit('/menu/');
+            cy.visit('/dinner-menu/');
         });
 
         describe('Desktop', () => {
