@@ -55,7 +55,7 @@ const contentContainsText = () => {
 describe('Menu page', () => {
     describe('Brunch', () => {
         beforeEach(() => {
-            cy.visit('/menu/');
+            cy.visit('/brunch-menu/');
         });
 
         describe('Desktop', () => {
@@ -81,7 +81,7 @@ describe('Menu page', () => {
 
     describe('Dinner', () => {
         beforeEach(() => {
-            cy.visit('/dinner-menu/');
+            cy.visit('/menu/');
         });
 
         describe('Desktop', () => {

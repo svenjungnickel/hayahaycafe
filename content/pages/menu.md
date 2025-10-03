@@ -1,6 +1,6 @@
 ---
 template: MenuPage
-slug: menu
+slug: brunch-menu
 title: Brunch menu
 subtitle: ""
 headerImage: /images/default.jpg
