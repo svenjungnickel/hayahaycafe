@@ -5,9 +5,12 @@ title: Dinner Menu
 subtitle: ""
 headerImage: /images/default.jpg
 images:
-  - src: /images/dinner_menu.jpg
+  - src: /images/dinner_menu_1.jpg
     alt: Dinner Menu
     title: Dinner    
+  - src: /images/dinner_menu_2.jpg
+    alt: Dinner Refreshments Menu
+    title: Dinner Refreshments
   - src: /images/hayahay_menu_page_9.jpg
     alt: Notice
     title: Notice
