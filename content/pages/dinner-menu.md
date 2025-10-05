@@ -5,19 +5,19 @@ title: Dinner Menu
 subtitle: ""
 headerImage: /images/default.jpg
 images:
-  - src: /images/dinner_menu_1.jpg
+  - src: /images/menu/dinner_menu_1.jpg
     alt: Dinner Menu
     title: Dinner    
-  - src: /images/dinner_menu_2.jpg
+  - src: /images/menu/dinner_menu_2.jpg
     alt: Dinner Refreshments Menu
     title: Dinner Refreshments
-  - src: /images/hayahay_menu_page_9.jpg
+  - src: /images/menu/hayahay_menu_page_9.jpg
     alt: Notice
     title: Notice
-  - src: /images/hayahay_menu_page_10.jpg
+  - src: /images/menu/hayahay_menu_page_10.jpg
     alt: Ingrediens
     title: Ingrediens
-  - src: /images/hayahay_menu_page_11.jpg
+  - src: /images/menu/hayahay_menu_page_11.jpg
     alt: Tips
     title: Tips
 meta:
