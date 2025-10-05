@@ -46,7 +46,8 @@ export const StartPageTemplate = ({
             <section className={section}>
                 <Container>
                     <Row>
-                        <Col xs={12}>
+                        <Col xs={12} sm={{ span: 6, offset: 3 }}>
+                            <PostContent content={content} />
                             <Image
                                 src={dinnerReopeningImage}
                                 alt={title}
@@ -54,10 +55,7 @@ export const StartPageTemplate = ({
                                 objectFit={'contain'}
                             />
                         </Col>
-                    </Row>
-                    <Row>
                         <Col xs={12}>
-                            <PostContent content={content} />
                             <Separator />
                         </Col>
                         <Col xs={12} sm={4} data-cy="startPageLocation">

@@ -12,11 +12,8 @@ meta:
   keywords: cafe, super food, camiguin island, philippines
   title: Hayahay Cafe
 ---
-## 1st Smoothie Bowls in Camiguin
+We’re back for dinner — 5pm to 10pm — with a menu that bridges our island roots and the flavors of our travels.
 
-Founded on the beautiful Island of Camiguin. est 2017. It was created to provide a decadent sense of great tasting food for our bodies and mind. An organic and eco-friendly cafe.
+Expect raw, dry-aged, and cured fish, inspired by the vibrant traditions of ceviche and kinilaw, reimagined through new techniques and influences from around the world.
 
-Our hipster style cafe was built around the principle of creating an utterly welcoming space, for individuals, families and groups.
-
-<br />
-<a class="btn btn-primary" href="/about" data-cy="startPageAboutButton">Read more about us</a>
+It’s island soul with a modern touch - familiar, yet refreshingly different. 🐟
