@@ -8,12 +8,12 @@ links:
   - name: Brunch Menu
     time: 8:00 - 15:00
     url: /brunch-menu
-    image: /images/brunch-menu.jpg
+    image: /images/menu/brunch-menu.jpg
     imageAlt: This image shows breakfast and brunch
   - name: Dinner Menu
     time: 17:00 - 22:00
     url: /dinner-menu
-    image: /images/dinner-menu.jpg
+    image: /images/menu/dinner-menu.jpg
     imageAlt: This image shows dinner table setting
 meta:
   title: Menu
