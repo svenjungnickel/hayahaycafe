@@ -60,7 +60,8 @@ export const MenuPageTemplate = ({ title, subtitle, headerImage, content, conten
                                 {links.map((link, index) => (
                                     <Col md={6} lg={4} key={index} className={menu__image} data-cy="menuLinkImage">
                                         <Link to={link.url} className={menu__link}>
-                                            <h2 className="display-5">{link.name}</h2>
+                                            <h2 className="display-5 mb-0">{link.name}</h2>
+                                            <p>{link.time}</p>
                                             <Image src={link.image} alt={link.imageAlt} />
                                         </Link>
                                     </Col>
@@ -140,6 +141,7 @@ export const pageQuery = graphql`
                 }
                 links {
                     name
+                    time
                     url
                     image {
                         childImageSharp {
