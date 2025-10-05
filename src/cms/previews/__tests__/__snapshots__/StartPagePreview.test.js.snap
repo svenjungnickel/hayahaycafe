@@ -42,23 +42,19 @@ exports[`StartPagePreview renders correctly 1`] = `
         className="row"
       >
         <div
-          className="col-12"
+          className="col-sm-6 col-12 offset-sm-3"
         >
+          <div>
+            content
+          </div>
           <img
             alt="alt"
             src="src"
           />
         </div>
-      </div>
-      <div
-        className="row"
-      >
         <div
           className="col-12"
         >
-          <div>
-            content
-          </div>
           <hr />
         </div>
         <div

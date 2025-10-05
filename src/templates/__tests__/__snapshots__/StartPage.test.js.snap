@@ -42,19 +42,7 @@ exports[`StartPage renders correctly 1`] = `
         className="row"
       >
         <div
-          className="col-12"
-        >
-          <img
-            alt="alt"
-            src="src"
-          />
-        </div>
-      </div>
-      <div
-        className="row"
-      >
-        <div
-          className="col-12"
+          className="col-sm-6 col-12 offset-sm-3"
         >
           <div
             dangerouslySetInnerHTML={
@@ -65,6 +53,14 @@ exports[`StartPage renders correctly 1`] = `
               }
             }
           />
+          <img
+            alt="alt"
+            src="src"
+          />
+        </div>
+        <div
+          className="col-12"
+        >
           <hr />
         </div>
         <div
@@ -146,23 +142,19 @@ exports[`StartPageTemplate renders content correctly 1`] = `
         className="row"
       >
         <div
-          className="col-12"
+          className="col-sm-6 col-12 offset-sm-3"
         >
+          <div>
+            content
+          </div>
           <img
             alt="alt"
             src="src"
           />
         </div>
-      </div>
-      <div
-        className="row"
-      >
         <div
           className="col-12"
         >
-          <div>
-            content
-          </div>
           <hr />
         </div>
         <div
@@ -244,19 +236,7 @@ exports[`StartPageTemplate renders html content correctly 1`] = `
         className="row"
       >
         <div
-          className="col-12"
-        >
-          <img
-            alt="alt"
-            src="src"
-          />
-        </div>
-      </div>
-      <div
-        className="row"
-      >
-        <div
-          className="col-12"
+          className="col-sm-6 col-12 offset-sm-3"
         >
           <div
             dangerouslySetInnerHTML={
@@ -267,6 +247,14 @@ exports[`StartPageTemplate renders html content correctly 1`] = `
               }
             }
           />
+          <img
+            alt="alt"
+            src="src"
+          />
+        </div>
+        <div
+          className="col-12"
+        >
           <hr />
         </div>
         <div
