@@ -146,6 +146,17 @@ exports[`MenuPageTemplate renders content correctly 1`] = `
             />
           </div>
         </div>
+        <div
+          style={
+            {
+              "display": "none",
+            }
+          }
+        >
+          <div
+            className="fslightboxs"
+          />
+        </div>
       </div>
     </div>
   </section>,
