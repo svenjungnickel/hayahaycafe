@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`StartPagePreview renders correctly 1`] = `
 [
@@ -42,11 +42,19 @@ exports[`StartPagePreview renders correctly 1`] = `
         className="row"
       >
         <div
-          className="col-12"
+          className="col-sm-6 col-12 offset-sm-3"
         >
           <div>
             content
           </div>
+          <img
+            alt="alt"
+            src="src"
+          />
+        </div>
+        <div
+          className="col-12"
+        >
           <hr />
         </div>
         <div

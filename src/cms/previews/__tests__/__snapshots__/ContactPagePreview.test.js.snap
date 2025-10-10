@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`ContactPagePreview renders correctly 1`] = `
 [
@@ -10,10 +10,10 @@ exports[`ContactPagePreview renders correctly 1`] = `
       className="container"
     >
       <div
-        className="row"
+        className="justify-content-md-center row"
       >
         <div
-          className="col-12"
+          className="col-md-8 col-12"
         >
           <div>
             content

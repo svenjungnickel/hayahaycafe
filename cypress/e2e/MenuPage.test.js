@@ -48,41 +48,100 @@ const verifyLightBoxNotOpening = () => {
     cy.get('.fslightboxs').should('not.exist');
 };
 
-// @TODO currently no extra content shown in menu
-const contentContainsValidPhoneNumber = () => {
-    cy.get('[data-cy=menuContent').contains('We’re currently working on refreshing our menu!');
+const contentContainsText = () => {
+    cy.get('[data-cy=menuContent]').contains('Our menu is not your classic spread');
+};
+
+const contentContainsImagesWithLinks = () => {
+    cy.get('[data-cy=menuLinkImage]').first().scrollIntoView();
+    cy.get('[data-cy=menuLinkImage]').first().click();
+    cy.url().should('include', '/brunch-menu/');
 };
 
 describe('Menu page', () => {
-    beforeEach(() => {
-        cy.visit('/menu/');
+    describe('Overview', () => {
+        beforeEach(() => {
+            cy.visit('/menu/');
+        });
+
+        describe('Desktop', () => {
+            beforeEach(() => {
+                cy.useDesktop();
+            });
+
+            it('Open image link and verify url', () => {
+                contentContainsImagesWithLinks();
+            });
+        });
+
+        describe('Mobile', () => {
+            beforeEach(() => {
+                cy.useMobile();
+            });
+
+            it('Open image link and verify url', () => {
+                contentContainsImagesWithLinks();
+            });
+        });
     });
 
-    describe('Desktop', () => {
+    describe('Brunch', () => {
         beforeEach(() => {
-            cy.useDesktop();
+            cy.visit('/brunch-menu/');
         });
 
-        it.skip('Contains content', () => {
-            contentContainsValidPhoneNumber();
+        describe('Desktop', () => {
+            beforeEach(() => {
+                cy.useDesktop();
+            });
+
+            it('Open images in light box and verify sources', () => {
+                openLightBoxAndVerifyImageSource();
+            });
         });
 
-        it('Open images in light box and verify sources', () => {
-            openLightBoxAndVerifyImageSource();
+        describe('Mobile', () => {
+            beforeEach(() => {
+                cy.useMobile();
+            });
+
+            it('Open images in light box', () => {
+                verifyLightBoxNotOpening();
+            });
         });
     });
 
-    describe('Mobile', () => {
+    describe('Dinner', () => {
         beforeEach(() => {
-            cy.useMobile();
+            cy.visit('/dinner-menu/');
         });
 
-        it.skip('Contains content', () => {
-            contentContainsValidPhoneNumber();
+        describe('Desktop', () => {
+            beforeEach(() => {
+                cy.useDesktop();
+            });
+
+            it('Contains content', () => {
+                contentContainsText();
+            });
+
+            it('Open images in light box and verify sources', () => {
+                openLightBoxAndVerifyImageSource();
+            });
         });
 
-        it('Open images in light box', () => {
-            verifyLightBoxNotOpening();
+        describe('Mobile', () => {
+            beforeEach(() => {
+                cy.useMobile();
+            });
+
+            it('Contains content', () => {
+                contentContainsText();
+            });
+
+            it('Open images in light box', () => {
+                verifyLightBoxNotOpening();
+            });
         });
     });
 });

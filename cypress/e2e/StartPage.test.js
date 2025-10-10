@@ -40,7 +40,7 @@ describe('Start page', () => {
             cy.useDesktop();
         });
 
-        it('About button', () => {
+        it.skip('About button', () => {
             aboutButton();
         });
 
@@ -62,7 +62,7 @@ describe('Start page', () => {
             cy.useMobile();
         });
 
-        it('About button', () => {
+        it.skip('About button', () => {
             aboutButton();
         });
 

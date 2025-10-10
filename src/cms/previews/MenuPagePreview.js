@@ -9,6 +9,7 @@ const MenuPagePreview = ({ entry, widgetFor }) => (
         headerImage={entry.toJS().data.headerImage}
         content={widgetFor('body')}
         images={entry.toJS().data.images}
+        links={entry.toJS().data.links}
     />
 );
 

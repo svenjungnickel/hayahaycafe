@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import { Col, Container, Row } from 'react-bootstrap';
 import { getSrc } from 'gatsby-plugin-image';
 import Layout from '../components/Layout';
@@ -9,9 +9,9 @@ import Content, { HTMLContent } from '../components/Content';
 import Separator from '../components/Separator';
 import Image from '../components/Image';
 import FsLightbox from 'fslightbox-react';
-import { menu, menu__image, menu__section } from '../styles/pages/Menu.module.scss';
+import { menu, menu__image, menu__section, menu__link } from '../styles/pages/Menu.module.scss';
 
-export const MenuPageTemplate = ({ title, subtitle, headerImage, content, contentComponent, images }) => {
+export const MenuPageTemplate = ({ title, subtitle, headerImage, content, contentComponent, links, images }) => {
     const PostContent = contentComponent || Content;
 
     const [lightBoxController, setLightBoxController] = useState({
@@ -19,14 +19,17 @@ export const MenuPageTemplate = ({ title, subtitle, headerImage, content, conten
         slideIndex: 0,
     });
 
-    const imageSources = images.map((image) => {
-        const imageSrc = getSrc(image.src);
-        if (imageSrc) {
-            return imageSrc;
-        }
+    let imageSources = [];
+    if (images && images.length > 0) {
+        imageSources = images.map((image) => {
+            const imageSrc = getSrc(image.src);
+            if (imageSrc) {
+                return imageSrc;
+            }
 
-        return image.src;
-    });
+            return image.src;
+        });
+    }
 
     const openLightBox = (index) => {
         if (window.matchMedia('(width < 992px)').matches === true) {
@@ -51,6 +54,19 @@ export const MenuPageTemplate = ({ title, subtitle, headerImage, content, conten
                                 <PostContent content={content} />
                                 <Separator />
                             </Col>
+                        )}
+                        {links && links.length > 0 && (
+                            <>
+                                {links.map((link, index) => (
+                                    <Col md={6} lg={4} key={index} className={menu__image} data-cy="menuLinkImage">
+                                        <Link to={link.url} className={menu__link}>
+                                            <h2 className="display-5 mb-0">{link.name}</h2>
+                                            <p>{link.time}</p>
+                                            <Image src={link.image} alt={link.imageAlt} />
+                                        </Link>
+                                    </Col>
+                                ))}
+                            </>
                         )}
                         {images && images.length > 0 && (
                             <>
@@ -81,7 +97,8 @@ MenuPageTemplate.propTypes = {
     headerImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
     content: PropTypes.node.isRequired,
     contentComponent: PropTypes.func,
-    images: PropTypes.arrayOf(PropTypes.object).isRequired,
+    images: PropTypes.arrayOf(PropTypes.object),
+    links: PropTypes.arrayOf(PropTypes.object),
 };
 
 const MenuPage = ({ data: { page } }) => (
@@ -121,6 +138,18 @@ export const pageQuery = graphql`
                     }
                     alt
                     title
+                }
+                links {
+                    name
+                    time
+                    url
+                    image {
+                        childImageSharp {
+                            gatsbyImageData(layout: CONSTRAINED, width: 1138, height: 1600)
+                        }
+                        publicURL
+                    }
+                    imageAlt
                 }
                 meta {
                     title

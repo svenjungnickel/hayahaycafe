@@ -5,6 +5,9 @@ export default {
     headerImage: {
         publicURL: 'publicURL',
     },
+    dinnerReopeningImage: {
+        publicURL: 'publicURL',
+    },
     meta: {
         title: 'meta title',
         description: 'meta description.',

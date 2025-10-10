@@ -33,6 +33,14 @@ describe('Accessibility checks', () => {
                 checkA11yForPage('/menu/');
             });
 
+            it('Has no detectable accessibility violations on brunch menu page', () => {
+                checkA11yForPage('/brunch-menu/');
+            });
+
+            it('Has no detectable accessibility violations on dinner menu page', () => {
+                checkA11yForPage('/dinner-menu/');
+            });
+
             it('Has no detectable accessibility violations on about page', () => {
                 checkA11yForPage('/about/');
             });
