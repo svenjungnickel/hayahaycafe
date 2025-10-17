@@ -9,8 +9,8 @@ images:
     alt: Dinner Menu
     title: Dinner    
   - src: /images/menu/dinner_menu_2.jpg
-    alt: Dinner Refreshments Menu
-    title: Dinner Refreshments
+    alt: Refreshments Menu
+    title: Refreshments
   - src: /images/menu/hayahay_menu_page_9.jpg
     alt: Notice
     title: Notice
@@ -18,8 +18,8 @@ images:
     alt: Ingrediens
     title: Ingrediens
   - src: /images/menu/hayahay_menu_page_11.jpg
-    alt: Tips
-    title: Tips
+    alt: Information about tips
+    title: Information about tips
 meta:
   title: Dinner
   description: Find the Hayahay Cafe dinner menu here.
