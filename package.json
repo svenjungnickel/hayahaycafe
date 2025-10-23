@@ -47,7 +47,7 @@
     "use-dark-mode": "^2.3.1"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.28.4",
+    "@babel/eslint-parser": "^7.28.5",
     "@cfaester/enzyme-adapter-react-18": "^0.8.0",
     "@lhci/cli": "^0.13.0",
     "@stryker-mutator/core": "^9.1.1",
