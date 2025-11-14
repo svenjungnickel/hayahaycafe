@@ -9,10 +9,6 @@ updates:
       time: '00:00'
       timezone: 'Europe/Berlin'
     open-pull-requests-limit: 50
-    reviewers:
-      - svenjungnickel@googlemail.com
-    assignees:
-      - svenjungnickel@googlemail.com
     commit-message:
       prefix: fix
       prefix-development: chore
@@ -26,10 +22,6 @@ updates:
       time: '00:00'
       timezone: 'Europe/Berlin'
     open-pull-requests-limit: 10
-    reviewers:
-      - svenjungnickel@googlemail.com
-    assignees:
-      - svenjungnickel@googlemail.com
     commit-message:
       prefix: fix
       prefix-development: chore
