@@ -5,8 +5,6 @@
       "url": [
         "http://localhost:9090/",
         "http://localhost:9090/menu/",
-        "http://localhost:9090/brunch-menu/",
-        "http://localhost:9090/dinner-menu/",
         "http://localhost:9090/about/",
         "http://localhost:9090/gallery/",
         "http://localhost:9090/contact/",
