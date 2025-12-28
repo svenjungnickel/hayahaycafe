@@ -5,18 +5,6 @@ title: Gallery
 subtitle: ""
 headerImage: /images/default.jpg
 images:
-  - title: Dinner 01
-    alt: dinner 01
-    src: /images/gallery/DSC00052.jpg
-  - title: Dinner 02
-    alt: dinner 02
-    src: /images/gallery/IMG_4124.jpg
-  - title: Dinner 03
-    alt: dinner 03
-    src: /images/gallery/A7406284.jpg
-  - title: Dinner 04
-    alt: dinner 04
-    src: /images/gallery/A7406293.jpg
   - title: Gallery Image 01
     alt: gallery image 01
     src: /images/gallery/gallery01.jpg
