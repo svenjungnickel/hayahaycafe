@@ -1,22 +1,30 @@
 ---
 template: MenuPage
 slug: menu
-title: Menu overview
+title: Menu
 subtitle: ""
 headerImage: /images/default.jpg
-links:
-  - name: Brunch Menu
-    time: 8:00 - 15:00
-    url: /brunch-menu
-    image: /images/menu/brunch-menu.jpg
-    imageAlt: This image shows breakfast and brunch
-  - name: Dinner Menu
-    time: 17:00 - 22:00
-    url: /dinner-menu
-    image: /images/menu/dinner-menu.jpg
-    imageAlt: This image shows dinner table setting
+images:
+  - src: /images/menu/hayahay_menu_page_1.jpg
+    alt: Breakfast, Smoothie Bowls and Extras Menu
+    title: Breakfast, Smoothie Bowls and Extras 
+  - src: /images/menu/hayahay_menu_page_2.jpg
+    alt: Kickstarters and Hayahay Signatures Menu
+    title: Kickstarters and Hayahay Signatures
+  - src: /images/menu/hayahay_menu_page_3.jpg
+    alt: Coffee, Shakes and other Drinks Menu
+    title: Coffee, Shakes and other Drinks
+  - src: /images/menu/hayahay_menu_page_9.jpg
+    alt: Notice
+    title: Notice
+  - src: /images/menu/hayahay_menu_page_10.jpg
+    alt: Ingrediens
+    title: Ingrediens
+  - src: /images/menu/hayahay_menu_page_11.jpg
+    alt: Information about tips
+    title: Information about tips
 meta:
   title: Menu
-  description: Find the Hayahay Cafe menu overview here.
-  keywords: menu overview, food menu, drink menu, hayahay cafe
+  description: Find the Hayahay Cafe menu here.
+  keywords: menu
 ---
