@@ -1,3 +1,5 @@
+@import "../mixins/media-queries";
+
 .start-header {
     height: calc(100vh);
 
@@ -33,5 +35,10 @@
 
     &__contentInner {
         color: white;
+        margin-top: 100%;
+
+        @include respond-above(md) {
+            margin-top: 50%;
+        }
     }
 }

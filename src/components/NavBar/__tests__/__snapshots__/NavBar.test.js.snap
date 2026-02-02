@@ -51,7 +51,6 @@ exports[`NavBar renders with disabled dark mode (default) 1`] = `
       <nav />
       <nav />
       <nav />
-      <nav />
       <div
         className="d-none d-md-block"
       >

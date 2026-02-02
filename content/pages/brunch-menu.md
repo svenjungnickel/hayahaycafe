@@ -1,34 +1,19 @@
 ---
 template: MenuPage
 slug: brunch-menu
-title: Brunch menu
+title: Brunch Menu
 subtitle: ""
 headerImage: /images/default.jpg
 images:
   - src: /images/menu/hayahay_menu_page_1.jpg
-    alt: Breakfast Menu
-    title: Breakfast 
+    alt: Breakfast, Smoothie Bowls and Extras Menu
+    title: Breakfast, Smoothie Bowls and Extras 
   - src: /images/menu/hayahay_menu_page_2.jpg
-    alt: Kickstarters Menu
-    title: Kickstarters
+    alt: Kickstarters and Hayahay Signatures Menu
+    title: Kickstarters and Hayahay Signatures
   - src: /images/menu/hayahay_menu_page_3.jpg
-    alt: Plates & Bowls Menu
-    title: Plates & Bowls
-  - src: /images/menu/hayahay_menu_page_4.jpg
-    alt: Light & Hearty Menu
-    title: Light & Hearty
-  - src: /images/menu/hayahay_menu_page_5.jpg
-    alt: Smoothie Bowls Menu
-    title: Smoothie Bowls 
-  - src: /images/menu/hayahay_menu_page_6.jpg
-    alt: Coffee & More Menu
-    title: Coffee & More
-  - src: /images/menu/hayahay_menu_page_7.jpg
-    alt: Refreshments Menu
-    title: Refreshments
-  - src: /images/menu/hayahay_menu_page_8.jpg
-    alt: Extras Menu
-    title: Extras    
+    alt: Coffee, Shakes and other Drinks Menu
+    title: Coffee, Shakes and other Drinks
   - src: /images/menu/hayahay_menu_page_9.jpg
     alt: Notice
     title: Notice
@@ -36,8 +21,8 @@ images:
     alt: Ingrediens
     title: Ingrediens
   - src: /images/menu/hayahay_menu_page_11.jpg
-    alt: Tips
-    title: Tips
+    alt: Information about tips
+    title: Information about tips
 meta:
   title: Brunch Menu
   description: Find the Hayahay Cafe brunch menu here.

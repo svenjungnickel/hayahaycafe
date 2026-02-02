@@ -11,16 +11,16 @@ jobs:
 
     steps:
       - name: Checkout 🛎
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Setup node env 🏗
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           node-version: 20
           check-latest: true
 
       - name: Cache node_modules 📦
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -67,7 +67,7 @@ jobs:
           npm run test:e2e:ci
 
       - name: Upload cypress artifacts 📁
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         if: failure()
         with:
           name: cypress-artifacts
