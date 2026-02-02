@@ -1,3 +1,6 @@
+const getVisibleLightboxImage = () =>
+    cy.get('.fslightbox-container').should('be.visible').find('.fslightbox-source').filter(':visible');
+
 const openLightBoxAndVerifyImageSource = () => {
     let imgSource;
 
@@ -10,8 +13,7 @@ const openLightBoxAndVerifyImageSource = () => {
         })
         .click();
 
-    cy.get('.fslightboxs:visible').then(($img) => {
-        // Verify light box source
+    getVisibleLightboxImage().should(($img) => {
         expect($img.attr('src')).to.equal(imgSource);
     });
 
@@ -27,8 +29,7 @@ const openLightBoxAndVerifyImageSource = () => {
         })
         .click();
 
-    cy.get('.fslightboxs:visible').then(($img) => {
-        // Verify light box source
+    getVisibleLightboxImage().should(($img) => {
         expect($img.attr('src')).to.equal(imgSource);
     });
 };
@@ -45,7 +46,7 @@ const verifyLightBoxNotOpening = () => {
         })
         .click();
 
-    cy.get('.fslightboxs').should('not.exist');
+    cy.get('body').find('.fslightbox-container .fslightbox-source:visible').should('have.length', 0);
 };
 
 describe('Gallery page', () => {
