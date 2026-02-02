@@ -19,8 +19,8 @@ export const ContactPageTemplate = ({ title, subtitle, headerImage, content, con
             <section className={section}>
                 <Container>
                     {!!content && (
-                        <Row>
-                            <Col xs={12}>
+                        <Row className="justify-content-md-center">
+                            <Col xs={12} md={8}>
                                 <PostContent content={content} />
                                 <Separator />
                             </Col>

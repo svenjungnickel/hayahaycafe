@@ -48,11 +48,6 @@ const verifyLightBoxNotOpening = () => {
     cy.get('.fslightboxs').should('not.exist');
 };
 
-// @TODO currently no extra content shown in menu
-const contentContainsValidPhoneNumber = () => {
-    cy.get('[data-cy=menuContent').contains('We’re currently working on refreshing our menu!');
-};
-
 describe('Menu page', () => {
     beforeEach(() => {
         cy.visit('/menu/');
@@ -63,10 +58,6 @@ describe('Menu page', () => {
             cy.useDesktop();
         });
 
-        it.skip('Contains content', () => {
-            contentContainsValidPhoneNumber();
-        });
-
         it('Open images in light box and verify sources', () => {
             openLightBoxAndVerifyImageSource();
         });
@@ -75,10 +66,6 @@ describe('Menu page', () => {
     describe('Mobile', () => {
         beforeEach(() => {
             cy.useMobile();
-        });
-
-        it.skip('Contains content', () => {
-            contentContainsValidPhoneNumber();
         });
 
         it('Open images in light box', () => {

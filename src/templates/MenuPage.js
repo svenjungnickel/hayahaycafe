@@ -19,14 +19,17 @@ export const MenuPageTemplate = ({ title, subtitle, headerImage, content, conten
         slideIndex: 0,
     });
 
-    const imageSources = images.map((image) => {
-        const imageSrc = getSrc(image.src);
-        if (imageSrc) {
-            return imageSrc;
-        }
+    let imageSources = [];
+    if (images && images.length > 0) {
+        imageSources = images.map((image) => {
+            const imageSrc = getSrc(image.src);
+            if (imageSrc) {
+                return imageSrc;
+            }
 
-        return image.src;
-    });
+            return image.src;
+        });
+    }
 
     const openLightBox = (index) => {
         if (window.matchMedia('(width < 992px)').matches === true) {
@@ -81,7 +84,7 @@ MenuPageTemplate.propTypes = {
     headerImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
     content: PropTypes.node.isRequired,
     contentComponent: PropTypes.func,
-    images: PropTypes.arrayOf(PropTypes.object).isRequired,
+    images: PropTypes.arrayOf(PropTypes.object),
 };
 
 const MenuPage = ({ data: { page } }) => (

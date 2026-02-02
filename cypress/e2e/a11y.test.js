@@ -67,16 +67,20 @@ describe('Accessibility checks', () => {
                 checkA11yForPage('/');
             });
 
+            it('Has no detectable accessibility violations on menu page', () => {
+                checkA11yForPage('/menu/');
+            });
+
             it('Has no detectable accessibility violations on about page', () => {
                 checkA11yForPage('/about');
             });
 
-            it('Has no detectable accessibility violations on contact page', () => {
-                checkA11yForPage('/contact');
-            });
-
             it('Has no detectable accessibility violations on gallery page', () => {
                 checkA11yForPage('/gallery');
+            });
+
+            it('Has no detectable accessibility violations on contact page', () => {
+                checkA11yForPage('/contact');
             });
 
             it('Has no detectable accessibility violations on legal page', () => {
@@ -107,16 +111,20 @@ describe('Accessibility checks', () => {
                 checkA11yForPage('/');
             });
 
+            it('Has no detectable accessibility violations on menu page', () => {
+                checkA11yForPage('/menu/');
+            });
+
             it('Has no detectable accessibility violations on about page', () => {
                 checkA11yForPage('/about');
             });
 
-            it('Has no detectable accessibility violations on contact page', () => {
-                checkA11yForPage('/contact');
-            });
-
             it('Has no detectable accessibility violations on gallery page', () => {
                 checkA11yForPage('/gallery');
+            });
+
+            it('Has no detectable accessibility violations on contact page', () => {
+                checkA11yForPage('/contact');
             });
 
             it('Has no detectable accessibility violations on legal page', () => {
@@ -141,16 +149,20 @@ describe('Accessibility checks', () => {
                 checkA11yForPage('/');
             });
 
+            it('Has no detectable accessibility violations on menu page', () => {
+                checkA11yForPage('/menu/');
+            });
+
             it('Has no detectable accessibility violations on about page', () => {
                 checkA11yForPage('/about');
             });
 
-            it('Has no detectable accessibility violations on contact page', () => {
-                checkA11yForPage('/contact');
-            });
-
             it('Has no detectable accessibility violations on gallery page', () => {
                 checkA11yForPage('/gallery');
+            });
+
+            it('Has no detectable accessibility violations on contact page', () => {
+                checkA11yForPage('/contact');
             });
 
             it('Has no detectable accessibility violations on legal page', () => {

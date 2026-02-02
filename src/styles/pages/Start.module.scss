@@ -1,7 +1,9 @@
+@import "../mixins/media-queries";
+
 .start-header {
     height: calc(100vh);
 
-    .start-header__image {
+    &__image {
         background-color: var(--header-bg);
         position: absolute !important;
         top: 0;
@@ -15,7 +17,13 @@
         }
     }
 
-    .start-header__content {
+    &__dinnerReopening {
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+    }
+
+    &__content {
         position: relative;
         color: white;
         text-align: center;
@@ -23,9 +31,14 @@
         justify-content: center;
         align-items: center;
         height: 100%;
+    }
 
-        .start-header__contentInner {
-            color: white;
+    &__contentInner {
+        color: white;
+        margin-top: 100%;
+
+        @include respond-above(md) {
+            margin-top: 50%;
         }
     }
 }
