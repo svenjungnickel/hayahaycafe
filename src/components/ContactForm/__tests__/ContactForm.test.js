@@ -1,22 +1,9 @@
-import React, { useState as useStateMock } from 'react';
+import React from 'react';
 import renderer from 'react-test-renderer';
-import { mount } from 'enzyme';
+import { render, fireEvent } from '@testing-library/react';
 import ContactForm from '../ContactForm';
 
-jest.mock('react', () => ({
-    ...jest.requireActual('react'),
-    useState: jest.fn(),
-}));
-
 describe('ContactForm snapshot', () => {
-    beforeEach(() => {
-        useStateMock.mockImplementation((init) => [init, jest.fn()]);
-    });
-
-    afterEach(() => {
-        jest.clearAllMocks();
-    });
-
     it('renders correctly', () => {
         const component = <ContactForm />;
         const tree = renderer.create(component).toJSON();
@@ -26,55 +13,30 @@ describe('ContactForm snapshot', () => {
 });
 
 describe('ContactForm events', () => {
-    let ContactFormComponent;
-    const setStateMock = jest.fn();
-    const setValidatedMock = jest.fn();
-    const setRecaptchaErrorMock = jest.fn();
-    const setSuccessMock = jest.fn();
+    let container;
 
     beforeEach(() => {
-        useStateMock
-            .mockImplementationOnce((init) => [init, setValidatedMock])
-            .mockImplementationOnce((init) => [init, setStateMock])
-            .mockImplementationOnce((init) => [init, setRecaptchaErrorMock])
-            .mockImplementationOnce((init) => [init, setSuccessMock]);
-        ContactFormComponent = mount(<ContactForm />);
-    });
-
-    afterEach(() => {
-        jest.clearAllMocks();
+        ({ container } = render(<ContactForm />));
     });
 
     it('simulate change input field', () => {
-        const InputField = ContactFormComponent.find('#contactFirstName');
-        InputField.simulate('change');
+        const inputField = container.querySelector('#contactFirstName');
+        fireEvent.change(inputField, { target: { name: 'firstName', value: 'Sven' } });
 
-        expect(setValidatedMock).toHaveBeenCalledTimes(0);
-        expect(setStateMock).toHaveBeenCalledTimes(1);
-        expect(setStateMock).toHaveBeenCalledWith({ firstName: '' });
-        expect(setRecaptchaErrorMock).toHaveBeenCalledTimes(0);
-        expect(setSuccessMock).toHaveBeenCalledTimes(0);
+        expect(inputField.value).toBe('Sven');
     });
 
     it('simulate change text area', () => {
-        const TextArea = ContactFormComponent.find('#contactMessage');
-        TextArea.simulate('change');
+        const textArea = container.querySelector('#contactMessage');
+        fireEvent.change(textArea, { target: { name: 'message', value: 'Hello' } });
 
-        expect(setValidatedMock).toHaveBeenCalledTimes(0);
-        expect(setStateMock).toHaveBeenCalledTimes(1);
-        expect(setStateMock).toHaveBeenCalledWith({ message: '' });
-        expect(setRecaptchaErrorMock).toHaveBeenCalledTimes(0);
-        expect(setSuccessMock).toHaveBeenCalledTimes(0);
+        expect(textArea.value).toBe('Hello');
     });
 
     it('simulate unsuccessful form submit', () => {
-        const SubmitButton = ContactFormComponent.find('button[type="submit"]');
-        SubmitButton.simulate('submit');
+        const form = container.querySelector('form');
+        fireEvent.submit(form);
 
-        expect(setValidatedMock).toHaveBeenCalledTimes(1);
-        expect(setValidatedMock).toHaveBeenCalledWith(true);
-        expect(setStateMock).toHaveBeenCalledTimes(0);
-        expect(setRecaptchaErrorMock).toHaveBeenCalledTimes(1);
-        expect(setSuccessMock).toHaveBeenCalledTimes(0);
+        expect(container.textContent).toContain('Please answer the captcha.');
     });
 });

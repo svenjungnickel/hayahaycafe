@@ -8,12 +8,15 @@ exports[`ContactPagePreview renders correctly 1`] = `
   >
     <div
       className="container"
+      ref={null}
     >
       <div
         className="justify-content-md-center row"
+        ref={null}
       >
         <div
           className="col-md-8 col-12"
+          ref={null}
         >
           <div>
             content
@@ -23,9 +26,11 @@ exports[`ContactPagePreview renders correctly 1`] = `
       </div>
       <div
         className="justify-content-md-center row"
+        ref={null}
       >
         <div
           className="col-md-8 col-12"
+          ref={null}
         >
           <form />
         </div>

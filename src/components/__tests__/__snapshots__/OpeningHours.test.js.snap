@@ -14,9 +14,16 @@ exports[`OpeningHours renders correctly 1`] = `
   <div
     dangerouslySetInnerHTML={
       {
-        "__html": <p>
-          openingHours
-        </p>,
+        "__html": {
+          "$$typeof": Symbol(react.transitional.element),
+          "_owner": null,
+          "_store": {},
+          "key": null,
+          "props": {
+            "children": "openingHours",
+          },
+          "type": "p",
+        },
       }
     }
   />

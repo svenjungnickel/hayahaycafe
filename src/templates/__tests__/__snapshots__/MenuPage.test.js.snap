@@ -8,20 +8,30 @@ exports[`MenuPage renders correctly 1`] = `
   >
     <div
       className="menu container"
+      ref={null}
     >
       <div
         className="row"
+        ref={null}
       >
         <div
           className="col-12"
           data-cy="menuContent"
+          ref={null}
         >
           <div
             dangerouslySetInnerHTML={
               {
-                "__html": <p>
-                  HTML
-                </p>,
+                "__html": {
+                  "$$typeof": Symbol(react.transitional.element),
+                  "_owner": null,
+                  "_store": {},
+                  "key": null,
+                  "props": {
+                    "children": "HTML",
+                  },
+                  "type": "p",
+                },
               }
             }
           />
@@ -30,6 +40,7 @@ exports[`MenuPage renders correctly 1`] = `
         <div
           className="menu__image col-lg-4 col-md-6"
           data-cy="menuImage"
+          ref={null}
         >
           <div
             onClick={[Function]}
@@ -43,6 +54,7 @@ exports[`MenuPage renders correctly 1`] = `
         <div
           className="menu__image col-lg-4 col-md-6"
           data-cy="menuImage"
+          ref={null}
         >
           <div
             onClick={[Function]}
@@ -56,6 +68,7 @@ exports[`MenuPage renders correctly 1`] = `
         <div
           className="menu__image col-lg-4 col-md-6"
           data-cy="menuImage"
+          ref={null}
         >
           <div
             onClick={[Function]}
@@ -80,13 +93,16 @@ exports[`MenuPageTemplate renders GatsbyImage 1`] = `
   >
     <div
       className="menu container"
+      ref={null}
     >
       <div
         className="row"
+        ref={null}
       >
         <div
           className="col-12"
           data-cy="menuContent"
+          ref={null}
         >
           <div>
             content
@@ -96,6 +112,7 @@ exports[`MenuPageTemplate renders GatsbyImage 1`] = `
         <div
           className="menu__image col-lg-4 col-md-6"
           data-cy="menuImage"
+          ref={null}
         >
           <div
             onClick={[Function]}
@@ -120,13 +137,16 @@ exports[`MenuPageTemplate renders content correctly 1`] = `
   >
     <div
       className="menu container"
+      ref={null}
     >
       <div
         className="row"
+        ref={null}
       >
         <div
           className="col-12"
           data-cy="menuContent"
+          ref={null}
         >
           <div>
             content
@@ -136,6 +156,7 @@ exports[`MenuPageTemplate renders content correctly 1`] = `
         <div
           className="menu__image col-lg-4 col-md-6"
           data-cy="menuImage"
+          ref={null}
         >
           <div
             onClick={[Function]}
@@ -160,20 +181,30 @@ exports[`MenuPageTemplate renders html content correctly 1`] = `
   >
     <div
       className="menu container"
+      ref={null}
     >
       <div
         className="row"
+        ref={null}
       >
         <div
           className="col-12"
           data-cy="menuContent"
+          ref={null}
         >
           <div
             dangerouslySetInnerHTML={
               {
-                "__html": <p>
-                  HTML content
-                </p>,
+                "__html": {
+                  "$$typeof": Symbol(react.transitional.element),
+                  "_owner": null,
+                  "_store": {},
+                  "key": null,
+                  "props": {
+                    "children": "HTML content",
+                  },
+                  "type": "p",
+                },
               }
             }
           />
@@ -182,6 +213,7 @@ exports[`MenuPageTemplate renders html content correctly 1`] = `
         <div
           className="menu__image col-lg-4 col-md-6"
           data-cy="menuImage"
+          ref={null}
         >
           <div
             onClick={[Function]}

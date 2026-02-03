@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { mount } from 'enzyme';
+import { render, fireEvent } from '@testing-library/react';
 import DarkModeToggle from '../DarkModeToggle';
 
 describe('DarkModeToggle', () => {
@@ -38,11 +38,11 @@ describe('DarkModeToggle', () => {
         };
         const className = 'className';
 
-        const DarkModeToggleComponent = mount(<DarkModeToggle darkMode={darkMode} className={className} />);
-        const SwitchComponent = DarkModeToggleComponent.find('input[role="switch"]');
+        const { getByLabelText } = render(<DarkModeToggle darkMode={darkMode} className={className} />);
+        const switchComponent = getByLabelText('dark mode switch');
 
-        expect(SwitchComponent.props().checked).toEqual(false);
-        SwitchComponent.simulate('change');
+        expect(switchComponent.checked).toBe(false);
+        fireEvent.click(switchComponent);
         expect(toggleFunction).toHaveBeenCalledTimes(1);
     });
 });

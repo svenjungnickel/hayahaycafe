@@ -8,19 +8,29 @@ exports[`GalleryPage renders correctly 1`] = `
   >
     <div
       className="gallery container"
+      ref={null}
     >
       <div
         className="row"
+        ref={null}
       >
         <div
           className="col-12"
+          ref={null}
         >
           <div
             dangerouslySetInnerHTML={
               {
-                "__html": <p>
-                  HTML
-                </p>,
+                "__html": {
+                  "$$typeof": Symbol(react.transitional.element),
+                  "_owner": null,
+                  "_store": {},
+                  "key": null,
+                  "props": {
+                    "children": "HTML",
+                  },
+                  "type": "p",
+                },
               }
             }
           />
@@ -29,6 +39,7 @@ exports[`GalleryPage renders correctly 1`] = `
         <div
           className="gallery__image col-lg-4 col-md-6 col-sm-12 col-12"
           data-cy="galleryImage"
+          ref={null}
         >
           <div
             onClick={[Function]}
@@ -42,6 +53,7 @@ exports[`GalleryPage renders correctly 1`] = `
         <div
           className="gallery__image col-lg-4 col-md-6 col-sm-12 col-12"
           data-cy="galleryImage"
+          ref={null}
         >
           <div
             onClick={[Function]}
@@ -66,12 +78,15 @@ exports[`GalleryPageTemplate renders GatsbyImage 1`] = `
   >
     <div
       className="gallery container"
+      ref={null}
     >
       <div
         className="row"
+        ref={null}
       >
         <div
           className="col-12"
+          ref={null}
         >
           <div>
             content
@@ -81,6 +96,7 @@ exports[`GalleryPageTemplate renders GatsbyImage 1`] = `
         <div
           className="gallery__image col-lg-4 col-md-6 col-sm-12 col-12"
           data-cy="galleryImage"
+          ref={null}
         >
           <div
             onClick={[Function]}
@@ -105,12 +121,15 @@ exports[`GalleryPageTemplate renders content correctly 1`] = `
   >
     <div
       className="gallery container"
+      ref={null}
     >
       <div
         className="row"
+        ref={null}
       >
         <div
           className="col-12"
+          ref={null}
         >
           <div>
             content
@@ -120,6 +139,7 @@ exports[`GalleryPageTemplate renders content correctly 1`] = `
         <div
           className="gallery__image col-lg-4 col-md-6 col-sm-12 col-12"
           data-cy="galleryImage"
+          ref={null}
         >
           <div
             onClick={[Function]}
@@ -144,19 +164,29 @@ exports[`GalleryPageTemplate renders html content correctly 1`] = `
   >
     <div
       className="gallery container"
+      ref={null}
     >
       <div
         className="row"
+        ref={null}
       >
         <div
           className="col-12"
+          ref={null}
         >
           <div
             dangerouslySetInnerHTML={
               {
-                "__html": <p>
-                  HTML content
-                </p>,
+                "__html": {
+                  "$$typeof": Symbol(react.transitional.element),
+                  "_owner": null,
+                  "_store": {},
+                  "key": null,
+                  "props": {
+                    "children": "HTML content",
+                  },
+                  "type": "p",
+                },
               }
             }
           />
@@ -165,6 +195,7 @@ exports[`GalleryPageTemplate renders html content correctly 1`] = `
         <div
           className="gallery__image col-lg-4 col-md-6 col-sm-12 col-12"
           data-cy="galleryImage"
+          ref={null}
         >
           <div
             onClick={[Function]}

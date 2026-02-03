@@ -8,19 +8,29 @@ exports[`DefaultPage renders correctly 1`] = `
   >
     <div
       className="container"
+      ref={null}
     >
       <div
         className="row"
+        ref={null}
       >
         <div
           className="col-12"
+          ref={null}
         >
           <div
             dangerouslySetInnerHTML={
               {
-                "__html": <p>
-                  HTML
-                </p>,
+                "__html": {
+                  "$$typeof": Symbol(react.transitional.element),
+                  "_owner": null,
+                  "_store": {},
+                  "key": null,
+                  "props": {
+                    "children": "HTML",
+                  },
+                  "type": "p",
+                },
               }
             }
           />
@@ -39,12 +49,15 @@ exports[`DefaultPageTemplate renders content correctly 1`] = `
   >
     <div
       className="container"
+      ref={null}
     >
       <div
         className="row"
+        ref={null}
       >
         <div
           className="col-12"
+          ref={null}
         >
           <div>
             content
@@ -64,19 +77,29 @@ exports[`DefaultPageTemplate renders html content correctly 1`] = `
   >
     <div
       className="container"
+      ref={null}
     >
       <div
         className="row"
+        ref={null}
       >
         <div
           className="col-12"
+          ref={null}
         >
           <div
             dangerouslySetInnerHTML={
               {
-                "__html": <p>
-                  Html content
-                </p>,
+                "__html": {
+                  "$$typeof": Symbol(react.transitional.element),
+                  "_owner": null,
+                  "_store": {},
+                  "key": null,
+                  "props": {
+                    "children": "Html content",
+                  },
+                  "type": "p",
+                },
               }
             }
           />

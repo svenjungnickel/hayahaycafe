@@ -3,6 +3,7 @@
 exports[`NavItem renders active 1`] = `
 <div
   className="navBar__item nav-item"
+  ref={null}
 >
   <a
     className="nav-link active"
@@ -17,6 +18,7 @@ exports[`NavItem renders active 1`] = `
 exports[`NavItem renders default (inactive) 1`] = `
 <div
   className="navBar__item nav-item"
+  ref={null}
 >
   <a
     className="nav-link"
