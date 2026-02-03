@@ -1,6 +1,8 @@
-@import "../mixins/media-queries";
+@import '../mixins/media-queries';
 
 .menu {
+    display: block;
+
     &__section {
         $block: &;
         color: var(--color-primary);
