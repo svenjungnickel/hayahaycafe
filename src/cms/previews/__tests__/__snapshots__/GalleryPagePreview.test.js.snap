@@ -8,12 +8,15 @@ exports[`GalleryPagePreview renders correctly 1`] = `
   >
     <div
       className="gallery container"
+      ref={null}
     >
       <div
         className="row"
+        ref={null}
       >
         <div
           className="col-12"
+          ref={null}
         >
           <div>
             content
@@ -23,6 +26,7 @@ exports[`GalleryPagePreview renders correctly 1`] = `
         <div
           className="gallery__image col-lg-4 col-md-6 col-sm-12 col-12"
           data-cy="galleryImage"
+          ref={null}
         >
           <div
             onClick={[Function]}
@@ -36,6 +40,7 @@ exports[`GalleryPagePreview renders correctly 1`] = `
         <div
           className="gallery__image col-lg-4 col-md-6 col-sm-12 col-12"
           data-cy="galleryImage"
+          ref={null}
         >
           <div
             onClick={[Function]}

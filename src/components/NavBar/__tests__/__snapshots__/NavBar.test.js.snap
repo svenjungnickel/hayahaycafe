@@ -5,6 +5,7 @@ exports[`NavBar renders with disabled dark mode (default) 1`] = `
   className="navBar navbar navbar-expand-md navbar-light fixed-top"
   data-cy="navBar"
   id="site-navbar"
+  ref={null}
 >
   <div
     className="d-block d-md-none"
@@ -33,6 +34,7 @@ exports[`NavBar renders with disabled dark mode (default) 1`] = `
     className="ml-right navbar-toggler collapsed"
     data-cy="navBarToggle"
     onClick={[Function]}
+    ref={null}
     type="button"
   >
     <span
@@ -43,10 +45,12 @@ exports[`NavBar renders with disabled dark mode (default) 1`] = `
     aria-expanded={null}
     className="justify-content-center navbar-collapse collapse"
     id="basic-navbar-nav"
+    ref={[Function]}
   >
     <div
       className="navBar__items navbar-nav"
       onKeyDown={[Function]}
+      ref={[Function]}
     >
       <nav />
       <nav />

@@ -4,10 +4,12 @@ exports[`InputField renders with description 1`] = `
 <div
   className="mb-3"
   data-cy="controlId"
+  ref={null}
 >
   <label
     className="form-label"
     htmlFor="controlId"
+    ref={null}
   >
     label
      *
@@ -17,16 +19,19 @@ exports[`InputField renders with description 1`] = `
     id="controlId"
     name="name"
     onChange={[Function]}
+    ref={null}
     required={true}
     type="text"
   />
   <small
     className="text-muted contactFormTextMuted form-text"
+    ref={null}
   >
     description
   </small>
   <div
     className="invalid-feedback"
+    ref={null}
   >
     errorMessage
   </div>
@@ -37,6 +42,7 @@ exports[`InputField renders with empty label and filled ariaLabel 1`] = `
 <div
   className="mb-3"
   data-cy="controlId"
+  ref={null}
 >
   <input
     aria-label="ariaLabel"
@@ -44,11 +50,13 @@ exports[`InputField renders with empty label and filled ariaLabel 1`] = `
     id="controlId"
     name="name"
     onChange={[Function]}
+    ref={null}
     required={true}
     type="text"
   />
   <div
     className="invalid-feedback"
+    ref={null}
   >
     errorMessage
   </div>
@@ -59,10 +67,12 @@ exports[`InputField renders with required parameters 1`] = `
 <div
   className="mb-3"
   data-cy="controlId"
+  ref={null}
 >
   <label
     className="form-label"
     htmlFor="controlId"
+    ref={null}
   >
     label
      *
@@ -72,11 +82,13 @@ exports[`InputField renders with required parameters 1`] = `
     id="controlId"
     name="name"
     onChange={[Function]}
+    ref={null}
     required={true}
     type="text"
   />
   <div
     className="invalid-feedback"
+    ref={null}
   >
     errorMessage
   </div>

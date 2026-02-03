@@ -24,13 +24,16 @@ exports[`Footer renders correctly 1`] = `
   >
     <div
       className="text-center container"
+      ref={null}
     >
       <div
         className="justify-content-center nav"
         onKeyDown={[Function]}
+        ref={[Function]}
       >
         <div
           className="nav-item"
+          ref={null}
         >
           <a
             className="nav-link"
@@ -42,6 +45,7 @@ exports[`Footer renders correctly 1`] = `
         </div>
         <div
           className="nav-item"
+          ref={null}
         >
           <a
             className="nav-link"

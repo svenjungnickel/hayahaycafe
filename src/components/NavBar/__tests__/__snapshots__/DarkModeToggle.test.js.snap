@@ -145,6 +145,7 @@ exports[`DarkModeToggle renders darkMode value null (default) 1`] = `
       onChange={[Function]}
       onFocus={[Function]}
       onKeyUp={[Function]}
+      ref={[Function]}
       role="switch"
       style={
         {
@@ -310,6 +311,7 @@ exports[`DarkModeToggle renders darkMode value true 1`] = `
       onChange={[Function]}
       onFocus={[Function]}
       onKeyUp={[Function]}
+      ref={[Function]}
       role="switch"
       style={
         {

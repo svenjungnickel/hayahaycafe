@@ -4,217 +4,215 @@ exports[`ContactForm snapshot renders correctly 1`] = `
 <div
   className="contactForm"
 >
-  <div
-    style={
-      {
-        "height": 0,
-        "visibility": undefined,
-      }
-    }
+  <form
+    action="/thanks"
+    className=""
+    data-cy="contactForm"
+    data-netlify="true"
+    data-netlify-recaptcha="true"
+    method="POST"
+    name="contact"
+    noValidate={true}
+    onSubmit={[Function]}
+    ref={null}
   >
-    <div
-      className="react-reveal"
-      style={
-        {
-          "opacity": undefined,
-        }
-      }
+    <label
+      className="form-label"
+      htmlFor="contactFirstName"
+      ref={null}
     >
-      <form
-        action="/thanks"
-        className=""
-        data-cy="contactForm"
-        data-netlify="true"
-        data-netlify-recaptcha="true"
-        method="POST"
-        name="contact"
-        noValidate={true}
-        onSubmit={[Function]}
+      Name *
+    </label>
+    <div
+      className="row"
+      ref={null}
+    >
+      <div
+        className="col-lg-6 col-12"
+        ref={null}
       >
-        <label
-          className="form-label"
-          htmlFor="contactFirstName"
-        >
-          Name *
-        </label>
-        <div
-          className="row"
-        >
-          <div
-            className="col-lg-6 col-12"
-          >
-            <div
-              className="mb-3"
-              data-cy="contactFirstName"
-            >
-              <input
-                aria-label="First name"
-                className="form-control"
-                id="contactFirstName"
-                name="firstName"
-                onChange={[Function]}
-                required={true}
-                type="text"
-              />
-              <small
-                className="text-muted contactFormTextMuted form-text"
-              >
-                First name
-              </small>
-              <div
-                className="invalid-feedback"
-              >
-                Please enter your first name.
-              </div>
-            </div>
-          </div>
-          <div
-            className="col-lg-6 col-12"
-          >
-            <div
-              className="mb-3"
-              data-cy="contactLastName"
-            >
-              <input
-                aria-label="Last name"
-                className="form-control"
-                id="contactLastName"
-                name="lastName"
-                onChange={[Function]}
-                required={true}
-                type="text"
-              />
-              <small
-                className="text-muted contactFormTextMuted form-text"
-              >
-                Last name
-              </small>
-              <div
-                className="invalid-feedback"
-              >
-                Please enter your last name.
-              </div>
-            </div>
-          </div>
-        </div>
         <div
           className="mb-3"
-          data-cy="contactEmail"
+          data-cy="contactFirstName"
+          ref={null}
         >
-          <label
-            className="form-label"
-            htmlFor="contactEmail"
-          >
-            Email
-             *
-          </label>
           <input
+            aria-label="First name"
             className="form-control"
-            id="contactEmail"
-            name="email"
+            id="contactFirstName"
+            name="firstName"
             onChange={[Function]}
-            required={true}
-            type="email"
-          />
-          <div
-            className="invalid-feedback"
-          >
-            Please enter a valid email address.
-          </div>
-        </div>
-        <div
-          className="mb-3"
-          data-cy="contactSubject"
-        >
-          <label
-            className="form-label"
-            htmlFor="contactSubject"
-          >
-            Subject
-             *
-          </label>
-          <input
-            className="form-control"
-            id="contactSubject"
-            name="subject"
-            onChange={[Function]}
+            ref={null}
             required={true}
             type="text"
           />
+          <small
+            className="text-muted contactFormTextMuted form-text"
+            ref={null}
+          >
+            First name
+          </small>
           <div
             className="invalid-feedback"
+            ref={null}
           >
-            Please enter a subject.
+            Please enter your first name.
           </div>
         </div>
+      </div>
+      <div
+        className="col-lg-6 col-12"
+        ref={null}
+      >
         <div
           className="mb-3"
-          data-cy="contactMessage"
+          data-cy="contactLastName"
+          ref={null}
         >
-          <label
-            className="form-label"
-            htmlFor="contactMessage"
-          >
-            Message *
-          </label>
-          <textarea
+          <input
+            aria-label="Last name"
             className="form-control"
-            id="contactMessage"
-            name="message"
+            id="contactLastName"
+            name="lastName"
             onChange={[Function]}
+            ref={null}
             required={true}
-            rows="5"
+            type="text"
           />
+          <small
+            className="text-muted contactFormTextMuted form-text"
+            ref={null}
+          >
+            Last name
+          </small>
           <div
             className="invalid-feedback"
+            ref={null}
           >
-            Please enter your message.
+            Please enter your last name.
           </div>
         </div>
-        <div
-          className="mb-3"
-          data-cy="contactRecaptcha"
-        >
-          <div
-            className="contactFormReCaptcha"
-            id="contactRecaptcha"
-          />
-        </div>
-        <button
-          className="contactFormSubmitButton btn btn-primary"
-          disabled={false}
-          type="submit"
-        >
-          Submit
-        </button>
-      </form>
+      </div>
     </div>
-  </div>
+    <div
+      className="mb-3"
+      data-cy="contactEmail"
+      ref={null}
+    >
+      <label
+        className="form-label"
+        htmlFor="contactEmail"
+        ref={null}
+      >
+        Email
+         *
+      </label>
+      <input
+        className="form-control"
+        id="contactEmail"
+        name="email"
+        onChange={[Function]}
+        ref={null}
+        required={true}
+        type="email"
+      />
+      <div
+        className="invalid-feedback"
+        ref={null}
+      >
+        Please enter a valid email address.
+      </div>
+    </div>
+    <div
+      className="mb-3"
+      data-cy="contactSubject"
+      ref={null}
+    >
+      <label
+        className="form-label"
+        htmlFor="contactSubject"
+        ref={null}
+      >
+        Subject
+         *
+      </label>
+      <input
+        className="form-control"
+        id="contactSubject"
+        name="subject"
+        onChange={[Function]}
+        ref={null}
+        required={true}
+        type="text"
+      />
+      <div
+        className="invalid-feedback"
+        ref={null}
+      >
+        Please enter a subject.
+      </div>
+    </div>
+    <div
+      className="mb-3"
+      data-cy="contactMessage"
+      ref={null}
+    >
+      <label
+        className="form-label"
+        htmlFor="contactMessage"
+        ref={null}
+      >
+        Message *
+      </label>
+      <textarea
+        className="form-control"
+        id="contactMessage"
+        name="message"
+        onChange={[Function]}
+        required={true}
+        rows="5"
+      />
+      <div
+        className="invalid-feedback"
+        ref={null}
+      >
+        Please enter your message.
+      </div>
+    </div>
+    <div
+      className="mb-3"
+      data-cy="contactRecaptcha"
+      ref={null}
+    >
+      <div
+        data-testid="recaptcha"
+      />
+    </div>
+    <button
+      className="contactFormSubmitButton btn btn-primary"
+      disabled={false}
+      ref={null}
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>
   <div
     style={
       {
-        "height": 0,
-        "visibility": "hidden",
+        "display": "none",
       }
     }
   >
     <div
-      className="react-reveal"
-      style={
-        {
-          "opacity": 0,
-        }
-      }
+      className="fade contactFormSuccess alert alert-success show"
+      data-cy="contactFormSuccess"
+      ref={[Function]}
+      role="alert"
     >
-      <div
-        className="fade contactFormSuccess alert alert-success show"
-        data-cy="contactFormSuccess"
-        role="alert"
-      >
-        <p>
-          Thank you for your message. We're getting in touch with you soon.
-        </p>
-      </div>
+      <p>
+        Thank you for your message. We're getting in touch with you soon.
+      </p>
     </div>
   </div>
 </div>

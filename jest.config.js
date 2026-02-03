@@ -14,7 +14,7 @@ module.exports = {
         __PATH_PREFIX__: '',
     },
     setupFiles: ['<rootDir>/loadershim.js', '<rootDir>/setJestEnvVars.js'],
-    setupFilesAfterEnv: ['<rootDir>/setupEnzyme.js'],
+    setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
     collectCoverage: true,
     collectCoverageFrom: ['<rootDir>/src/**/*.{js,jsx}', '!**/node_modules/**', '!**/vendor/**'],
     coverageReporters: ['html', 'text-summary'],

@@ -35,9 +35,16 @@ exports[`HTMLContent renders content 1`] = `
 <div
   dangerouslySetInnerHTML={
     {
-      "__html": <div>
-        HTMLContent
-      </div>,
+      "__html": {
+        "$$typeof": Symbol(react.transitional.element),
+        "_owner": null,
+        "_store": {},
+        "key": null,
+        "props": {
+          "children": "HTMLContent",
+        },
+        "type": "div",
+      },
     }
   }
 />
@@ -48,9 +55,16 @@ exports[`HTMLContent renders content and classname 1`] = `
   className="className"
   dangerouslySetInnerHTML={
     {
-      "__html": <div>
-        HTMLContent
-      </div>,
+      "__html": {
+        "$$typeof": Symbol(react.transitional.element),
+        "_owner": null,
+        "_store": {},
+        "key": null,
+        "props": {
+          "children": "HTMLContent",
+        },
+        "type": "div",
+      },
     }
   }
 />

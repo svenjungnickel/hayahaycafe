@@ -14,6 +14,7 @@ exports[`StartPagePreview renders correctly 1`] = `
     >
       <div
         className="container"
+        ref={null}
       >
         <div
           className="startHeader__contentInner"
@@ -37,12 +38,15 @@ exports[`StartPagePreview renders correctly 1`] = `
   >
     <div
       className="container"
+      ref={null}
     >
       <div
         className="row"
+        ref={null}
       >
         <div
           className="col-sm-6 col-12 offset-sm-3"
+          ref={null}
         >
           <div>
             content
@@ -50,12 +54,14 @@ exports[`StartPagePreview renders correctly 1`] = `
         </div>
         <div
           className="col-12"
+          ref={null}
         >
           <hr />
         </div>
         <div
           className="col-sm-4 col-12"
           data-cy="startPageLocation"
+          ref={null}
         >
           <p>
             Location
@@ -64,6 +70,7 @@ exports[`StartPagePreview renders correctly 1`] = `
         <div
           className="col-sm-4 col-12"
           data-cy="startPageWhat3Words"
+          ref={null}
         >
           <hr />
           <a
@@ -78,6 +85,7 @@ exports[`StartPagePreview renders correctly 1`] = `
         <div
           className="col-sm-4 col-12"
           data-cy="startPageOpeningHours"
+          ref={null}
         >
           <hr />
           <p>

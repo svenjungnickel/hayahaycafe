@@ -1,0 +1,23 @@
+diff --git a/node_modules/gatsby-plugin-netlify-cms/gatsby-node.js b/node_modules/gatsby-plugin-netlify-cms/gatsby-node.js
+index 3799081..b45f4cc 100644
+--- a/node_modules/gatsby-plugin-netlify-cms/gatsby-node.js
++++ b/node_modules/gatsby-plugin-netlify-cms/gatsby-node.js
+@@ -6,6 +6,7 @@ var _trim2 = _interopRequireDefault(require("lodash/trim"));
+ var _isPlainObject2 = _interopRequireDefault(require("lodash/isPlainObject"));
+ var _mapValues2 = _interopRequireDefault(require("lodash/mapValues"));
+ var _path = _interopRequireDefault(require("path"));
++var _fs = _interopRequireDefault(require("fs"));
+ var _webpack = _interopRequireDefault(require("gatsby/webpack"));
+ var _htmlWebpackPlugin = _interopRequireDefault(require("html-webpack-plugin"));
+ var _htmlWebpackSkipAssetsPlugin = require("html-webpack-skip-assets-plugin");
+@@ -129,6 +130,10 @@ exports.onCreateWebpackConfig = function (_ref4, _ref5) {
+       sourceMap: "netlify-identity.js.map"
+     });
+   }
++  externals = externals.filter(function (external) {
++    var assetPath = _path.default.join(_path.default.dirname(require.resolve(_path.default.join(external.name, "package.json"))), external.assetDir, external.assetName);
++    return _fs.default.existsSync(assetPath);
++  });
+   var config = (0, _extends2.default)({}, gatsbyConfig, {
+     entry: {
+       cms: [_path.default.join(__dirname, "cms.js"), enableIdentityWidget && _path.default.join(__dirname, "cms-identity.js")].concat(modulePath).filter(function (p) {

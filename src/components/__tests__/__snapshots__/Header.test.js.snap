@@ -13,6 +13,7 @@ exports[`Header renders with subtitle 1`] = `
   >
     <div
       className="container"
+      ref={null}
     >
       <div
         className="header__contentInner"
@@ -46,6 +47,7 @@ exports[`Header renders without subtitle 1`] = `
   >
     <div
       className="container"
+      ref={null}
     >
       <div
         className="header__contentInner"

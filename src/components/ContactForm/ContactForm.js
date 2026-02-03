@@ -1,7 +1,7 @@
 import React, { useState, createRef } from 'react';
+import PropTypes from 'prop-types';
 import { Alert, Button, Row, Col, Form } from 'react-bootstrap';
 import Recaptcha from 'react-google-recaptcha';
-import Fade from 'react-reveal/Fade';
 import useDarkMode from 'use-dark-mode';
 import InputField from './InputField';
 import Encode from './Encode';
@@ -15,6 +15,29 @@ import {
 const RECAPTCHA_KEY = process.env.GATSBY_SITE_RECAPTCHA_KEY;
 const CONTACT_FORM_FADE_UP_DURATION = 400;
 const SUCCESS_MESSAGE_FADE_IN_DURATION = 200;
+
+const Fade = ({ children, when, unmountOnExit }) => {
+    if (!when && unmountOnExit) {
+        return null;
+    }
+
+    if (!when) {
+        return <div style={{ display: 'none' }}>{children}</div>;
+    }
+
+    return <>{children}</>;
+};
+
+Fade.defaultProps = {
+    when: true,
+    unmountOnExit: false,
+};
+
+Fade.propTypes = {
+    children: PropTypes.node.isRequired,
+    when: PropTypes.bool,
+    unmountOnExit: PropTypes.bool,
+};
 
 const ContactForm = () => {
     const [validated, setValidated] = useState(false);

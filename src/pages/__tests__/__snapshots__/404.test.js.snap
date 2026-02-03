@@ -8,12 +8,15 @@ exports[`404 renders correctly 1`] = `
   >
     <div
       className="container"
+      ref={null}
     >
       <div
         className="row"
+        ref={null}
       >
         <div
           className="col"
+          ref={null}
         >
           <h1>
             404: not found

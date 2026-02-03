@@ -8,12 +8,15 @@ exports[`ContactPage renders correctly 1`] = `
   >
     <div
       className="container"
+      ref={null}
     >
       <div
         className="justify-content-md-center row"
+        ref={null}
       >
         <div
           className="col-md-8 col-12"
+          ref={null}
         >
           <form />
         </div>
@@ -31,12 +34,15 @@ exports[`ContactPageTemplate renders with content 1`] = `
   >
     <div
       className="container"
+      ref={null}
     >
       <div
         className="justify-content-md-center row"
+        ref={null}
       >
         <div
           className="col-md-8 col-12"
+          ref={null}
         >
           <div>
             content
@@ -46,9 +52,11 @@ exports[`ContactPageTemplate renders with content 1`] = `
       </div>
       <div
         className="justify-content-md-center row"
+        ref={null}
       >
         <div
           className="col-md-8 col-12"
+          ref={null}
         >
           <form />
         </div>
@@ -66,19 +74,29 @@ exports[`ContactPageTemplate renders with html content 1`] = `
   >
     <div
       className="container"
+      ref={null}
     >
       <div
         className="justify-content-md-center row"
+        ref={null}
       >
         <div
           className="col-md-8 col-12"
+          ref={null}
         >
           <div
             dangerouslySetInnerHTML={
               {
-                "__html": <p>
-                  HTML content
-                </p>,
+                "__html": {
+                  "$$typeof": Symbol(react.transitional.element),
+                  "_owner": null,
+                  "_store": {},
+                  "key": null,
+                  "props": {
+                    "children": "HTML content",
+                  },
+                  "type": "p",
+                },
               }
             }
           />
@@ -87,9 +105,11 @@ exports[`ContactPageTemplate renders with html content 1`] = `
       </div>
       <div
         className="justify-content-md-center row"
+        ref={null}
       >
         <div
           className="col-md-8 col-12"
+          ref={null}
         >
           <form />
         </div>
@@ -107,12 +127,15 @@ exports[`ContactPageTemplate renders without content 1`] = `
   >
     <div
       className="container"
+      ref={null}
     >
       <div
         className="justify-content-md-center row"
+        ref={null}
       >
         <div
           className="col-md-8 col-12"
+          ref={null}
         >
           <form />
         </div>

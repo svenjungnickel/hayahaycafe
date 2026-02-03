@@ -8,12 +8,15 @@ exports[`DefaultPagePreview renders correctly 1`] = `
   >
     <div
       className="container"
+      ref={null}
     >
       <div
         className="row"
+        ref={null}
       >
         <div
           className="col-12"
+          ref={null}
         >
           <div>
             content
