@@ -51,6 +51,7 @@
         "@lhci/cli": "^0.15.1",
         "@stryker-mutator/core": "^9.1.1",
         "@stryker-mutator/jest-runner": "^9.4.0",
+        "@cypress-audit/lighthouse": "^1.4.2",
         "@testing-library/react": "^16.3.0",
         "@testing-library/cypress": "^10.1.0",
         "axe-core": "^4.11.1",
