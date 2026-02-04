@@ -133,6 +133,72 @@ module.exports = {
                 enableIdentityWidget: true,
                 htmlTitle: 'Hayahay Cafe - Admin',
                 logo: 'assets/logo.png',
+                customizeWebpackConfig: (config) => {
+                    const fs = require('fs');
+                    const path = require('path');
+
+                    const umdAssets = {
+                        react: 'react.production.min.js',
+                        'react-dom': 'react-dom.production.min.js',
+                    };
+
+                    const missingExternals = new Set(
+                        Object.entries(umdAssets)
+                            .filter(([pkg, file]) => {
+                                const assetPath = path.join(
+                                    path.dirname(require.resolve(`${pkg}/package.json`)),
+                                    'umd',
+                                    file
+                                );
+                                return !fs.existsSync(assetPath);
+                            })
+                            .map(([pkg]) => pkg)
+                    );
+
+                    if (missingExternals.size === 0) {
+                        return;
+                    }
+
+                    config.externals = (config.externals || []).filter((external) => {
+                        const name = external && typeof external === 'object' ? Object.keys(external)[0] : null;
+                        return !missingExternals.has(name);
+                    });
+
+                    const filterPatterns = (patterns) =>
+                        patterns.filter((pattern) => !pattern || !pattern.from || fs.existsSync(pattern.from));
+
+                    config.plugins = (config.plugins || []).map((plugin) => {
+                        if (!plugin || !plugin.constructor) {
+                            return plugin;
+                        }
+
+                        if (['CopyPlugin', 'CopyWebpackPlugin'].includes(plugin.constructor.name)) {
+                            if (plugin.patterns) {
+                                plugin.patterns = filterPatterns(plugin.patterns);
+                            } else if (plugin.options && plugin.options.patterns) {
+                                plugin.options.patterns = filterPatterns(plugin.options.patterns);
+                            }
+                        }
+
+                        if (plugin.constructor.name === 'HtmlWebpackTagsPlugin') {
+                            const removeTags = (tags) =>
+                                tags.filter((tag) =>
+                                    typeof tag === 'string'
+                                        ? !tag.includes('react.production.min.js') &&
+                                          !tag.includes('react-dom.production.min.js')
+                                        : true
+                                );
+
+                            if (plugin.tags) {
+                                plugin.tags = removeTags(plugin.tags);
+                            } else if (plugin.options && plugin.options.tags) {
+                                plugin.options.tags = removeTags(plugin.options.tags);
+                            }
+                        }
+
+                        return plugin;
+                    });
+                },
             },
         },
         'gatsby-plugin-netlify', // make sure to keep it last in the array

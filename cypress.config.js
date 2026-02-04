@@ -5,7 +5,6 @@ module.exports = defineConfig({
         baseUrl: 'http://localhost:9090/',
         specPattern: 'cypress/e2e/*.test.js',
         video: false,
-        videoUploadOnPasses: false,
         videoCompression: false,
         projectId: 'imkh2i',
         chromeWebSecurity: false,
