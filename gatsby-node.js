@@ -2,6 +2,7 @@ const groupBy = require('lodash/groupBy');
 const each = require('lodash/each');
 const get = require('lodash/get');
 const kebabCase = require('lodash/kebabCase');
+const fs = require('fs');
 const path = require('path');
 
 exports.createPages = ({ actions, graphql }) => {
@@ -103,3 +104,69 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
 // Random fix for https://github.com/gatsbyjs/gatsby/issues/5700
 module.exports.resolvableExtensions = () => ['.json'];
+
+exports.onCreateWebpackConfig = ({ actions, getConfig, stage }) => {
+    if (!['develop', 'develop-html', 'build-javascript', 'build-html'].includes(stage)) {
+        return;
+    }
+
+    const config = getConfig();
+    const umdPattern = /\breact(-dom)?\/umd\//;
+
+    const isCopyPlugin = (plugin) => {
+        if (!plugin || !plugin.constructor) {
+            return false;
+        }
+
+        return ['CopyPlugin', 'CopyWebpackPlugin'].includes(plugin.constructor.name);
+    };
+
+    const getPatterns = (plugin) => {
+        if (plugin.patterns) {
+            return plugin.patterns;
+        }
+
+        if (plugin.options && plugin.options.patterns) {
+            return plugin.options.patterns;
+        }
+
+        return null;
+    };
+
+    const setPatterns = (plugin, patterns) => {
+        if (plugin.patterns) {
+            plugin.patterns = patterns;
+        } else if (plugin.options && plugin.options.patterns) {
+            plugin.options.patterns = patterns;
+        }
+    };
+
+    config.plugins = config.plugins.map((plugin) => {
+        if (!isCopyPlugin(plugin)) {
+            return plugin;
+        }
+
+        const patterns = getPatterns(plugin);
+        if (!Array.isArray(patterns)) {
+            return plugin;
+        }
+
+        const filtered = patterns.filter((pattern) => {
+            if (!pattern || !pattern.from || typeof pattern.from !== 'string') {
+                return true;
+            }
+
+            if (!umdPattern.test(pattern.from)) {
+                return true;
+            }
+
+            const resolvedPath = path.isAbsolute(pattern.from) ? pattern.from : path.resolve(pattern.from);
+            return fs.existsSync(resolvedPath);
+        });
+
+        setPatterns(plugin, filtered);
+        return plugin;
+    });
+
+    actions.replaceWebpackConfig(config);
+};
