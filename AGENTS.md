@@ -136,11 +136,52 @@ Netlify CMS proxy (local CMS editing):
 npm run netlifycms:proxyserver
 ```
 
+CI checks (DDEV):
+
+```sh
+ddev ci
+```
+
+CI checks (manual, DDEV container):
+
+```sh
+ddev exec --dir="/var/www/html" bash -c "npm run lint && npm run test && npm run build && npm run lighthouse"
+```
+
+DDEV Cypress:
+
+```sh
+ddev cypress-open
+ddev cypress-run
+```
+
+DDEV Stryker:
+
+```sh
+ddev stryker
+```
+
 ## Environment setup
 
 - Copy `.env.dist` to `.env.development` and fill in values as needed.
 - For Cypress E2E, copy `cypress.env.json.dist` to `cypress.env.json` and provide credentials.
 - Also copy `.env.development` to `.env.production` for E2E (tests hit a local production server).
+
+## DDEV setup
+
+- DDEV config lives under `.ddev/` and runs Node 24 with a Gatsby dev daemon.
+- Start/restart: `ddev start` / `ddev restart`.
+- Run npm commands in the container:
+
+```sh
+ddev exec --dir="/var/www/html" bash -c "npm install --prefer-offline --no-audit --legacy-peer-deps"
+ddev exec --dir="/var/www/html" bash -c "npm run develop"
+```
+
+- Gatsby dev server runs on `0.0.0.0:8000` in the container and is exposed via `https://hayahaycafe.ddev.site`.
+- The DDEV Gatsby daemon auto-runs `npm install --prefer-offline --no-audit --legacy-peer-deps` when `package.json` or `package-lock.json` changes.
+- DDEV disables the webpack ESLint plugin via `GATSBY_DISABLE_ESLINT=true` (lint still works via `npm run lint`).
+- Lighthouse in DDEV uses Chromium at `/usr/bin/chromium` with `--no-sandbox` (see `lighthouserc.json`).
 
 ## Code style and conventions
 

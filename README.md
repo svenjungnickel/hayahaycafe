@@ -14,15 +14,11 @@
     git clone https://github.com/svenjungnickel/hayahaycafe.git
     ```
 
-2.  **Install dependencies.**
+2. **Install DDEV**
 
-    Navigate into the cloned repo and install dependencies.
+    To run the project locally you have to install [DDEV](https://docs.ddev.com/en/stable/). 
+    DDEV is an open source tool for launching local web development environments in minutes. It supports PHP and Node.js.
 
-    ```sh
-    cd hayahaycafe/
-    npm install
-    ```
-    
 3.  **Define environment variables.**
 
     - Gatsby
@@ -42,7 +38,24 @@
     
 4.  **Start developing.**
 
-    4.1 Netlify CMS local backend
+    4.1 **Start DDEV.**
+
+    Navigate into the cloned repo and start ddev.
+
+    ```sh
+    cd hayahaycafe/
+    ddev start
+    ```
+    
+    This will start the DDEV environment, install dependencies and start the Gatsby local developer server automatically.
+
+    If you want to connect to the DDEV container you can use following command:
+
+    ```sh
+    ddev ssh
+    ```
+
+    4.2 Netlify CMS local backend (deprecated)
         
     If you want to use Netlify CMS locally to edit your content first start the Netlify CMS proxy server before you
     start the gatsby developer server.
@@ -56,33 +69,18 @@
     ```sh
     npm run netlifycms:proxyserver
     ```
-        
-    4.2 Gatsby local developer server
-    
-    Start a local server for developing via gatsby.
-    
-    ```sh
-    gatsby develop
-    ```
-        
-    Alternatively you can use a predefined npm command which cleans also the gatsby cache and makes the dev server 
-    accessible in your local network (for visiting from your mobile device). 
-        
-    ```sh
-    npm run develop
-    ```
 
 5.  **Open the source code and start editing!**
 
-    Your site is now running at `http://localhost:8000`!
+    Your site is now running at `https://hayahaycafe.ddev.site`!
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment 
+    _Note: You'll also see a second link: _`https://hayahaycafe.ddev.site/___graphql`_. This is a tool you can use to experiment 
     with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
     Open the `hayahaycafe` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and 
     the browser will update in real time!
 
-## 💫 Deploy
+## 💫 Deploy (deprecated)
 
 To deploy on [Netlify](https://www.netlify.com/) just hit following button:
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/svenjungnickel/hayahaycafe)
@@ -112,7 +110,7 @@ You can also test the Netlify build before you deploy.
 
 ## 🚨 Linting
 
-We are using [EsLint](https://eslint.org/) for Javascript linting. Simply run following command to lint your code:
+We are using [EsLint](https://eslint.org/) for Javascript linting. Simply run following command in the ddev container to lint your code:
 
 ```sh
 npm run lint
@@ -152,16 +150,18 @@ All unit tests generate also code coverage. You can find the generated code cove
 
 We are using [Cypress](https://www.cypress.io/) for E2E tests. You can find more details in the [gatsby docs](https://www.gatsbyjs.org/docs/end-to-end-testing/).
 
-To start cypress simply use following command:
+Cypress runs in a separate ddev container. It needs some initial setup before you can start running tests.
+Visit the [ddev-cypress docs](https://github.com/ddev/ddev-cypress) for more details.
+After the initial setup you can start running E2E tests.
 
 ```sh
-npm run test:e2e
+ddev cypress-open
 ```
 
 To run all tests in headless mode use following command:
 
 ```sh
-npm run test:e2e:ci
+ddev cypress-run
 ```
 
 E2E tests running in CI are recorded. You can find all recorded tests in the [![Cypress Dashboard](https://img.shields.io/badge/cypress-dashboard-brightgreen.svg)](https://dashboard.cypress.io/projects/imkh2i/runs)

@@ -111,6 +111,7 @@ exports.onCreateWebpackConfig = ({ actions, getConfig, stage }) => {
     }
 
     const config = getConfig();
+    const disableEslint = ['1', 'true', 'yes'].includes(String(process.env.GATSBY_DISABLE_ESLINT).toLowerCase());
     const umdPattern = /\breact(-dom)?\/umd\//;
 
     const isCopyPlugin = (plugin) => {
@@ -167,6 +168,16 @@ exports.onCreateWebpackConfig = ({ actions, getConfig, stage }) => {
         setPatterns(plugin, filtered);
         return plugin;
     });
+
+    if (disableEslint && Array.isArray(config.plugins)) {
+        config.plugins = config.plugins.filter((plugin) => {
+            if (!plugin || !plugin.constructor) {
+                return true;
+            }
+
+            return plugin.constructor.name !== 'ESLintWebpackPlugin';
+        });
+    }
 
     actions.replaceWebpackConfig(config);
 };
