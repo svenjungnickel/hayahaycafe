@@ -103,8 +103,10 @@
         "test": "jest",
         "lint": "eslint ./src/ && echo 'Lint complete.'",
         "lint:fix": "eslint --fix ./src/ && echo 'Lint fix complete.'",
-        "test:e2e:ci": "start-server-and-test serve http://localhost:9090 cypress run --record false",
-        "test:e2e:ci:record": "start-server-and-test serve http://localhost:9090 cypress run --record",
+        "cypress:run": "cypress run --record false",
+        "cypress:run:record": "cypress run --record",
+        "test:e2e:ci": "start-server-and-test serve http://localhost:9090 cypress:run",
+        "test:e2e:ci:record": "start-server-and-test serve http://localhost:9090 cypress:run:record",
         "lighthouse": "lhci autorun",
         "stryker:run": "stryker run"
     }
