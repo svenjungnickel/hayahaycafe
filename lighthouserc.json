@@ -12,7 +12,10 @@
         "http://localhost:9090/data-privacy/",
         "http://localhost:9090/404/"
       ],
-      "numberOfRuns": 1
+      "numberOfRuns": 1,
+      "settings": {
+        "chromeFlags": "--no-sandbox --disable-setuid-sandbox --disable-dev-shm-usage"
+      }
     },
     "upload": {
       "target": "temporary-public-storage"
