@@ -4,3 +4,15 @@
   environment = { NPM_FLAGS = "--legacy-peer-deps" }
   [context.deploy-preview]
     ignore = "git log -1 --pretty=%B | grep dependabot"
+
+[[redirects]]
+  from = "https://hayahaycafe.de/*"
+  to = "https://www.hayahaycafe.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.hayahaycafe.de/*"
+  to = "https://www.hayahaycafe.com/:splat"
+  status = 301
+  force = true
