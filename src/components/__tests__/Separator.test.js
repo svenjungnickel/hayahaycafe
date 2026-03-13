@@ -1,11 +1,11 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import Separator from '../Separator';
 
 describe('Separator', () => {
     it('renders without className', () => {
         const component = <Separator />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });
@@ -14,7 +14,7 @@ describe('Separator', () => {
         const className = 'className';
 
         const component = <Separator className={className} />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });

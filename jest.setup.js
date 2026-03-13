@@ -15,16 +15,3 @@ jest.mock('react-google-recaptcha', () => {
     MockRecaptcha.displayName = 'Recaptcha';
     return MockRecaptcha;
 });
-
-const reactTestRenderer = require('react-test-renderer');
-const originalCreate = reactTestRenderer.create;
-
-reactTestRenderer.create = (element, options) => {
-    let renderer;
-
-    reactTestRenderer.act(() => {
-        renderer = originalCreate(element, options);
-    });
-
-    return renderer;
-};

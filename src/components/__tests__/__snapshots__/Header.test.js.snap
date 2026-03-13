@@ -1,64 +1,66 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Header renders with subtitle 1`] = `
-<header
-  className="header"
->
-  <img
-    alt="alt"
-    src="src"
-  />
-  <div
-    className="header__content"
+<DocumentFragment>
+  <header
+    class="header"
   >
+    <img
+      alt="alt"
+      src="src"
+    />
     <div
-      className="container"
-      ref={null}
+      class="header__content"
     >
       <div
-        className="header__contentInner"
+        class="container"
       >
-        <h1
-          className="display-1"
+        <div
+          class="header__contentInner"
         >
-          title
-        </h1>
-        <p
-          className="lead"
-        >
-          subtitle
-        </p>
+          <h1
+            class="display-1"
+          >
+            title
+          </h1>
+          <p
+            class="lead"
+          >
+            subtitle
+          </p>
+        </div>
       </div>
     </div>
-  </div>
-</header>
+  </header>
+</DocumentFragment>
 `;
 
 exports[`Header renders without subtitle 1`] = `
-<header
-  className="header"
->
-  <img
-    alt="alt"
-    src="src"
-  />
-  <div
-    className="header__content"
+<DocumentFragment>
+  <header
+    class="header"
   >
+    <img
+      alt="alt"
+      src="src"
+    />
     <div
-      className="container"
-      ref={null}
+      class="header__content"
     >
       <div
-        className="header__contentInner"
+        class="container"
       >
-        <h1
-          className="display-1"
+        <div
+          class="header__contentInner"
         >
-          title
-        </h1>
+          <h1
+            class="display-1"
+          >
+            title
+          </h1>
+        </div>
       </div>
     </div>
-  </div>
-</header>
+  </header>
+</DocumentFragment>
 `;

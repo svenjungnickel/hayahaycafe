@@ -1,5 +1,5 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import { useStaticQuery } from 'gatsby';
 import What3WordsAddress from '../What3WordsAddress';
 
@@ -11,7 +11,7 @@ describe('What3WordsAddress', () => {
         useStaticQuery.mockImplementationOnce(() => data);
 
         const component = <What3WordsAddress />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });
@@ -23,7 +23,7 @@ describe('What3WordsAddress', () => {
         useStaticQuery.mockImplementationOnce(() => data);
 
         const component = <What3WordsAddress />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });
@@ -37,7 +37,7 @@ describe('What3WordsAddress', () => {
         useStaticQuery.mockImplementationOnce(() => data);
 
         const component = <What3WordsAddress />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });
@@ -53,7 +53,7 @@ describe('What3WordsAddress', () => {
         useStaticQuery.mockImplementationOnce(() => data);
 
         const component = <What3WordsAddress />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });

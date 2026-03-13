@@ -1,5 +1,5 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import { getSrc } from 'gatsby-plugin-image';
 import MenuPage, { MenuPageTemplate } from '../MenuPage';
 import { HTMLContent } from '../../components/Content';
@@ -27,7 +27,7 @@ describe('MenuPageTemplate', () => {
                 images={images}
             />
         );
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });
@@ -49,7 +49,7 @@ describe('MenuPageTemplate', () => {
                 images={images}
             />
         );
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });
@@ -72,7 +72,7 @@ describe('MenuPageTemplate', () => {
                 images={images}
             />
         );
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });
@@ -88,7 +88,7 @@ describe('MenuPage', () => {
         };
 
         const component = <MenuPage data={data} />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });

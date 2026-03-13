@@ -1,5 +1,5 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import NavBar from '../NavBar';
 
 jest.mock('../NavItem');
@@ -10,7 +10,7 @@ describe('NavBar', () => {
         const currentPage = '/';
 
         const component = <NavBar currentPage={currentPage} />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });

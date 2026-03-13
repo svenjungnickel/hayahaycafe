@@ -1,21 +1,29 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`FooterAddress does not render empty data 1`] = `null`;
+exports[`FooterAddress does not render empty data 1`] = `<DocumentFragment />`;
 
-exports[`FooterAddress does not render empty globalSettings data 1`] = `null`;
+exports[`FooterAddress does not render empty globalSettings data 1`] = `<DocumentFragment />`;
 
-exports[`FooterAddress does not render empty location data 1`] = `null`;
+exports[`FooterAddress does not render empty location data 1`] = `<DocumentFragment />`;
 
 exports[`FooterAddress renders address data with company, first address line and postal code 1`] = `
-<p>
-  company, addressLine1, postalCode
-</p>
+<DocumentFragment>
+  <p>
+    company, addressLine1, postalCode
+  </p>
+</DocumentFragment>
 `;
 
 exports[`FooterAddress renders complete address data (company, first and second address line, province, postal code and country 1`] = `
-<p>
-  company, addressLine1, addressLine2, province, postalCode, country
-</p>
+<DocumentFragment>
+  <p>
+    company, addressLine1, addressLine2, province, postalCode, country
+  </p>
+</DocumentFragment>
 `;
 
-exports[`FooterAddress renders empty address data 1`] = `<p />`;
+exports[`FooterAddress renders empty address data 1`] = `
+<DocumentFragment>
+  <p />
+</DocumentFragment>
+`;

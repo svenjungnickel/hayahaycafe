@@ -1,76 +1,69 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`StartPagePreview renders correctly 1`] = `
-[
+<DocumentFragment>
   <header
-    className="startHeader"
+    class="startHeader"
   >
     <img
       alt="alt"
       src="src"
     />
     <div
-      className="startHeader__content"
+      class="startHeader__content"
     >
       <div
-        className="container"
-        ref={null}
+        class="container"
       >
         <div
-          className="startHeader__contentInner"
+          class="startHeader__contentInner"
         >
           <h1
-            className="display-1"
+            class="display-1"
           >
             title
           </h1>
           <p
-            className="lead"
+            class="lead"
           >
             subtitle
           </p>
         </div>
       </div>
     </div>
-  </header>,
+  </header>
   <section
-    className="section"
+    class="section"
   >
     <div
-      className="container"
-      ref={null}
+      class="container"
     >
       <div
-        className="row"
-        ref={null}
+        class="row"
       >
         <div
-          className="col-sm-6 col-12 offset-sm-3"
-          ref={null}
+          class="col-sm-6 col-12 offset-sm-3"
         >
           <div>
             content
           </div>
         </div>
         <div
-          className="col-12"
-          ref={null}
+          class="col-12"
         >
           <hr />
         </div>
         <div
-          className="col-sm-4 col-12"
+          class="col-sm-4 col-12"
           data-cy="startPageLocation"
-          ref={null}
         >
           <p>
             Location
           </p>
         </div>
         <div
-          className="col-sm-4 col-12"
+          class="col-sm-4 col-12"
           data-cy="startPageWhat3Words"
-          ref={null}
         >
           <hr />
           <a
@@ -83,9 +76,8 @@ exports[`StartPagePreview renders correctly 1`] = `
           </a>
         </div>
         <div
-          className="col-sm-4 col-12"
+          class="col-sm-4 col-12"
           data-cy="startPageOpeningHours"
-          ref={null}
         >
           <hr />
           <p>
@@ -94,6 +86,6 @@ exports[`StartPagePreview renders correctly 1`] = `
         </div>
       </div>
     </div>
-  </section>,
-]
+  </section>
+</DocumentFragment>
 `;

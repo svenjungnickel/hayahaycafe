@@ -1,88 +1,83 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`NavBar renders with disabled dark mode (default) 1`] = `
-<nav
-  className="navBar navbar navbar-expand-md navbar-light fixed-top"
-  data-cy="navBar"
-  id="site-navbar"
-  ref={null}
->
-  <div
-    className="d-block d-md-none"
-  >
-    <a
-      aria-label="back to startpage"
-      data-cy="navBarLinkLogo"
-      href="/"
-    >
-      <img
-        alt="Logo"
-        height={80}
-        loading="eager"
-        src="../../../assets/logo.png"
-        width={97}
-      />
-    </a>
-  </div>
-  <input
-    role="switch"
-    type="checkbox"
-  />
-  <button
-    aria-controls="basic-navbar-nav"
-    aria-label="Toggle navigation"
-    className="ml-right navbar-toggler collapsed"
-    data-cy="navBarToggle"
-    onClick={[Function]}
-    ref={null}
-    type="button"
-  >
-    <span
-      className="navbar-toggler-icon"
-    />
-  </button>
-  <div
-    aria-expanded={null}
-    className="justify-content-center navbar-collapse collapse"
-    id="basic-navbar-nav"
-    ref={[Function]}
+<DocumentFragment>
+  <nav
+    class="navBar navbar navbar-expand-md navbar-light fixed-top"
+    data-cy="navBar"
+    id="site-navbar"
   >
     <div
-      className="navBar__items navbar-nav"
-      onKeyDown={[Function]}
-      ref={[Function]}
+      class="d-block d-md-none"
     >
-      <nav />
-      <nav />
-      <nav />
-      <div
-        className="d-none d-md-block"
+      <a
+        aria-label="back to startpage"
+        data-cy="navBarLinkLogo"
+        href="/"
       >
-        <a
-          aria-label="back to startpage"
-          data-cy="navBarLinkLogo"
-          href="/"
-        >
-          <img
-            alt="Logo"
-            height={120}
-            loading="eager"
-            src="../../../assets/logo.png"
-            width={146}
-          />
-        </a>
-      </div>
-      <nav />
-      <nav />
+        <img
+          alt="Logo"
+          height="80"
+          loading="eager"
+          src="../../../assets/logo.png"
+          width="97"
+        />
+      </a>
     </div>
-  </div>
-  <div
-    className="darkModeToggle"
-  >
     <input
       role="switch"
       type="checkbox"
     />
-  </div>
-</nav>
+    <button
+      aria-controls="basic-navbar-nav"
+      aria-label="Toggle navigation"
+      class="ml-right navbar-toggler collapsed"
+      data-cy="navBarToggle"
+      type="button"
+    >
+      <span
+        class="navbar-toggler-icon"
+      />
+    </button>
+    <div
+      class="justify-content-center navbar-collapse collapse"
+      id="basic-navbar-nav"
+    >
+      <div
+        class="navBar__items navbar-nav"
+      >
+        <nav />
+        <nav />
+        <nav />
+        <div
+          class="d-none d-md-block"
+        >
+          <a
+            aria-label="back to startpage"
+            data-cy="navBarLinkLogo"
+            href="/"
+          >
+            <img
+              alt="Logo"
+              height="120"
+              loading="eager"
+              src="../../../assets/logo.png"
+              width="146"
+            />
+          </a>
+        </div>
+        <nav />
+        <nav />
+      </div>
+    </div>
+    <div
+      class="darkModeToggle"
+    >
+      <input
+        role="switch"
+        type="checkbox"
+      />
+    </div>
+  </nav>
+</DocumentFragment>
 `;

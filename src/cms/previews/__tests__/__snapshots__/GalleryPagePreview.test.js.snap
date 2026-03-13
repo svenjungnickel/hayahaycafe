@@ -1,22 +1,19 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`GalleryPagePreview renders correctly 1`] = `
-[
-  <header />,
+<DocumentFragment>
+  <header />
   <section
-    className="section"
+    class="section"
   >
     <div
-      className="gallery container"
-      ref={null}
+      class="gallery container"
     >
       <div
-        className="row"
-        ref={null}
+        class="row"
       >
         <div
-          className="col-12"
-          ref={null}
+          class="col-12"
         >
           <div>
             content
@@ -24,13 +21,10 @@ exports[`GalleryPagePreview renders correctly 1`] = `
           <hr />
         </div>
         <div
-          className="gallery__image col-lg-4 col-md-6 col-sm-12 col-12"
+          class="gallery__image col-lg-4 col-md-6 col-sm-12 col-12"
           data-cy="galleryImage"
-          ref={null}
         >
-          <div
-            onClick={[Function]}
-          >
+          <div>
             <img
               alt="alt"
               src="src"
@@ -38,13 +32,10 @@ exports[`GalleryPagePreview renders correctly 1`] = `
           </div>
         </div>
         <div
-          className="gallery__image col-lg-4 col-md-6 col-sm-12 col-12"
+          class="gallery__image col-lg-4 col-md-6 col-sm-12 col-12"
           data-cy="galleryImage"
-          ref={null}
         >
-          <div
-            onClick={[Function]}
-          >
+          <div>
             <img
               alt="alt"
               src="src"
@@ -53,6 +44,6 @@ exports[`GalleryPagePreview renders correctly 1`] = `
         </div>
       </div>
     </div>
-  </section>,
-]
+  </section>
+</DocumentFragment>
 `;

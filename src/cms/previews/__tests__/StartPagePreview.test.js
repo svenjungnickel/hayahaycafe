@@ -1,5 +1,5 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import StartPagePreview from '../StartPagePreview';
 import StartPageData from '../../../__fixtures__/StartPageData';
 
@@ -22,7 +22,7 @@ describe('StartPagePreview', () => {
         const widgetFor = () => 'content';
 
         const component = <StartPagePreview entry={entry} widgetFor={widgetFor} />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });

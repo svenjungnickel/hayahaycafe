@@ -1,5 +1,5 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import { useStaticQuery } from 'gatsby';
 import OpeningHours from '../OpeningHours';
 
@@ -9,7 +9,7 @@ describe('OpeningHours', () => {
         useStaticQuery.mockImplementationOnce(() => data);
 
         const component = <OpeningHours />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });
@@ -21,7 +21,7 @@ describe('OpeningHours', () => {
         useStaticQuery.mockImplementationOnce(() => data);
 
         const component = <OpeningHours />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });
@@ -35,7 +35,7 @@ describe('OpeningHours', () => {
         useStaticQuery.mockImplementationOnce(() => data);
 
         const component = <OpeningHours />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });

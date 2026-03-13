@@ -1,70 +1,67 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Footer renders correctly 1`] = `
-<footer
-  className="footer"
->
-  <div
-    className="footer__pre"
-  >
-    <ul>
-      <li>
-        facebook
-      </li>
-      <li>
-        instagram
-      </li>
-      <li>
-        tripadvisor
-      </li>
-    </ul>
-  </div>
-  <div
-    className="footer__main"
+<DocumentFragment>
+  <footer
+    class="footer"
   >
     <div
-      className="text-center container"
-      ref={null}
+      class="footer__pre"
+    >
+      <ul>
+        <li>
+          facebook
+        </li>
+        <li>
+          instagram
+        </li>
+        <li>
+          tripadvisor
+        </li>
+      </ul>
+    </div>
+    <div
+      class="footer__main"
     >
       <div
-        className="justify-content-center nav"
-        onKeyDown={[Function]}
-        ref={[Function]}
+        class="text-center container"
       >
         <div
-          className="nav-item"
-          ref={null}
+          class="justify-content-center nav"
         >
-          <a
-            className="nav-link"
-            data-cy="footerLinkLegal"
-            href="/legal"
+          <div
+            class="nav-item"
           >
-            Legal
-          </a>
+            <a
+              class="nav-link"
+              data-cy="footerLinkLegal"
+              href="/legal"
+            >
+              Legal
+            </a>
+          </div>
+          <div
+            class="nav-item"
+          >
+            <a
+              class="nav-link"
+              data-cy="footerLinkDataPrivacy"
+              href="/data-privacy"
+            >
+              Data Privacy
+            </a>
+          </div>
         </div>
         <div
-          className="nav-item"
-          ref={null}
+          class="footer__address"
+          data-cy="footerAddress"
         >
-          <a
-            className="nav-link"
-            data-cy="footerLinkDataPrivacy"
-            href="/data-privacy"
-          >
-            Data Privacy
-          </a>
+          <p>
+            FooterAddress
+          </p>
         </div>
-      </div>
-      <div
-        className="footer__address"
-        data-cy="footerAddress"
-      >
-        <p>
-          FooterAddress
-        </p>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
+</DocumentFragment>
 `;

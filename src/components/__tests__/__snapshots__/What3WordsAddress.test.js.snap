@@ -1,35 +1,37 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`What3WordsAddress does not render empty data 1`] = `null`;
+exports[`What3WordsAddress does not render empty data 1`] = `<DocumentFragment />`;
 
-exports[`What3WordsAddress does not render empty globalSettings data 1`] = `null`;
+exports[`What3WordsAddress does not render empty globalSettings data 1`] = `<DocumentFragment />`;
 
-exports[`What3WordsAddress does not render empty location data 1`] = `null`;
+exports[`What3WordsAddress does not render empty location data 1`] = `<DocumentFragment />`;
 
 exports[`What3WordsAddress renders correctly 1`] = `
-<div
-  className="what3words"
->
-  <h2>
-    Map
-  </h2>
-  <a
-    className="what3words__link"
-    href="https://what3words.com/what3WordsAddress"
-    rel="noopener noreferrer"
-    target="_blank"
+<DocumentFragment>
+  <div
+    class="what3words"
   >
-    <img
-      alt="What3words address"
-      height={80}
-      src="../../assets/what3words-icon.png"
-      width={80}
-    />
-    <p
-      className="what3words__address"
+    <h2>
+      Map
+    </h2>
+    <a
+      class="what3words__link"
+      href="https://what3words.com/what3WordsAddress"
+      rel="noopener noreferrer"
+      target="_blank"
     >
-      ///what3WordsAddress
-    </p>
-  </a>
-</div>
+      <img
+        alt="What3words address"
+        height="80"
+        src="../../assets/what3words-icon.png"
+        width="80"
+      />
+      <p
+        class="what3words__address"
+      >
+        ///what3WordsAddress
+      </p>
+    </a>
+  </div>
+</DocumentFragment>
 `;

@@ -1,5 +1,5 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import InputField from '../InputField';
 
 describe('InputField', () => {
@@ -19,7 +19,7 @@ describe('InputField', () => {
                 onChange={onChange}
             />
         );
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });
@@ -42,7 +42,7 @@ describe('InputField', () => {
                 description={description}
             />
         );
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });
@@ -65,7 +65,7 @@ describe('InputField', () => {
                 ariaLabel={ariaLabel}
             />
         );
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });

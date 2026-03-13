@@ -1,5 +1,5 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import ContactPage, { ContactPageTemplate } from '../ContactPage';
 import { HTMLContent } from '../../components/Content';
 import ContactPageData from '../../__fixtures__/ContactPageData';
@@ -16,7 +16,7 @@ describe('ContactPageTemplate', () => {
         const headerImage = 'headerImage';
 
         const component = <ContactPageTemplate title={title} subtitle={subtitle} headerImage={headerImage} />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });
@@ -30,7 +30,7 @@ describe('ContactPageTemplate', () => {
         const component = (
             <ContactPageTemplate title={title} subtitle={subtitle} headerImage={headerImage} content={content} />
         );
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });
@@ -50,7 +50,7 @@ describe('ContactPageTemplate', () => {
                 contentComponent={HTMLContent}
             />
         );
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });
@@ -66,7 +66,7 @@ describe('ContactPage', () => {
         };
 
         const component = <ContactPage data={data} />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });

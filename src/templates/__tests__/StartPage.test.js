@@ -1,5 +1,5 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import StartPage, { StartPageTemplate } from '../StartPage';
 import { HTMLContent } from '../../components/Content';
 import StartPageData from '../../__fixtures__/StartPageData';
@@ -22,7 +22,7 @@ describe('StartPageTemplate', () => {
         const component = (
             <StartPageTemplate title={title} subtitle={subtitle} headerImage={headerImage} content={content} />
         );
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });
@@ -42,7 +42,7 @@ describe('StartPageTemplate', () => {
                 contentComponent={HTMLContent}
             />
         );
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });
@@ -58,7 +58,7 @@ describe('StartPage', () => {
         };
 
         const component = <StartPage data={data} />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });

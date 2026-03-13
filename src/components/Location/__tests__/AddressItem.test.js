@@ -1,5 +1,5 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import AddressItem from '../AddressItem';
 
 describe('AddressItem', () => {
@@ -7,7 +7,7 @@ describe('AddressItem', () => {
         const item = 'item';
 
         const component = <AddressItem item={item} />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });

@@ -1,5 +1,5 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import MenuPagePreview from '../MenuPagePreview';
 import MenuPageData from '../../../__fixtures__/MenuPageData';
 
@@ -19,7 +19,7 @@ describe('MenuPagePreview', () => {
         const widgetFor = () => 'content';
 
         const component = <MenuPagePreview entry={entry} widgetFor={widgetFor} />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });

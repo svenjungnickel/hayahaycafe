@@ -1,22 +1,19 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`ContactPagePreview renders correctly 1`] = `
-[
-  <header />,
+<DocumentFragment>
+  <header />
   <section
-    className="section"
+    class="section"
   >
     <div
-      className="container"
-      ref={null}
+      class="container"
     >
       <div
-        className="justify-content-md-center row"
-        ref={null}
+        class="justify-content-md-center row"
       >
         <div
-          className="col-md-8 col-12"
-          ref={null}
+          class="col-md-8 col-12"
         >
           <div>
             content
@@ -25,17 +22,15 @@ exports[`ContactPagePreview renders correctly 1`] = `
         </div>
       </div>
       <div
-        className="justify-content-md-center row"
-        ref={null}
+        class="justify-content-md-center row"
       >
         <div
-          className="col-md-8 col-12"
-          ref={null}
+          class="col-md-8 col-12"
         >
           <form />
         </div>
       </div>
     </div>
-  </section>,
-]
+  </section>
+</DocumentFragment>
 `;

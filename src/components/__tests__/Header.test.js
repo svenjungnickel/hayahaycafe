@@ -1,5 +1,5 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import Header from '../Header';
 
 jest.mock('../Image');
@@ -10,7 +10,7 @@ describe('Header', () => {
         const title = 'title';
 
         const component = <Header headerImage={headerImage} title={title} />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });
@@ -21,7 +21,7 @@ describe('Header', () => {
         const subtitle = 'subtitle';
 
         const component = <Header headerImage={headerImage} title={title} subtitle={subtitle} />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });

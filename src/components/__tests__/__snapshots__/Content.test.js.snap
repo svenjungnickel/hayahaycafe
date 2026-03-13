@@ -1,71 +1,53 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Content renders classname 1`] = `
-<div
-  className="className"
-/>
+<DocumentFragment>
+  <div
+    class="className"
+  />
+</DocumentFragment>
 `;
 
 exports[`Content renders content 1`] = `
-<div>
-  Content
-</div>
+<DocumentFragment>
+  <div>
+    Content
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Content renders content and classname 1`] = `
-<div
-  className="className"
->
-  Content
-</div>
+<DocumentFragment>
+  <div
+    class="className"
+  >
+    Content
+  </div>
+</DocumentFragment>
 `;
 
 exports[`HTMLContent renders classname 1`] = `
-<div
-  className="className"
-  dangerouslySetInnerHTML={
-    {
-      "__html": undefined,
-    }
-  }
-/>
+<DocumentFragment>
+  <div
+    class="className"
+  />
+</DocumentFragment>
 `;
 
 exports[`HTMLContent renders content 1`] = `
-<div
-  dangerouslySetInnerHTML={
-    {
-      "__html": {
-        "$$typeof": Symbol(react.transitional.element),
-        "_owner": null,
-        "_store": {},
-        "key": null,
-        "props": {
-          "children": "HTMLContent",
-        },
-        "type": "div",
-      },
-    }
-  }
-/>
+<DocumentFragment>
+  <div>
+    [object Object]
+  </div>
+</DocumentFragment>
 `;
 
 exports[`HTMLContent renders content and classname 1`] = `
-<div
-  className="className"
-  dangerouslySetInnerHTML={
-    {
-      "__html": {
-        "$$typeof": Symbol(react.transitional.element),
-        "_owner": null,
-        "_store": {},
-        "key": null,
-        "props": {
-          "children": "HTMLContent",
-        },
-        "type": "div",
-      },
-    }
-  }
-/>
+<DocumentFragment>
+  <div
+    class="className"
+  >
+    [object Object]
+  </div>
+</DocumentFragment>
 `;

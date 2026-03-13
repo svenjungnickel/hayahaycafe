@@ -1,17 +1,19 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Listaddress renders correctly 1`] = `
-<div
-  className="listAddress"
->
-  <h2>
-    Location
-  </h2>
-  addressLine1
-  <br />
-  province
-  <br />
-  12345
-  <br />
-</div>
+<DocumentFragment>
+  <div
+    class="listAddress"
+  >
+    <h2>
+      Location
+    </h2>
+    addressLine1
+    <br />
+    province
+    <br />
+    12345
+    <br />
+  </div>
+</DocumentFragment>
 `;

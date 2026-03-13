@@ -1,78 +1,93 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`MenuPage renders correctly 1`] = `
-<main>
-  <header />
-  <section
-    className="menu__section"
-  >
-    <div
-      className="menu container"
-      ref={null}
+<DocumentFragment>
+  <main>
+    <header />
+    <section
+      class="menu__section"
     >
       <div
-        className="row"
-        ref={null}
+        class="menu container"
       >
         <div
-          className="col-12"
-          data-cy="menuContent"
-          ref={null}
+          class="row"
         >
           <div
-            dangerouslySetInnerHTML={
-              {
-                "__html": {
-                  "$$typeof": Symbol(react.transitional.element),
-                  "_owner": null,
-                  "_store": {},
-                  "key": null,
-                  "props": {
-                    "children": "HTML",
-                  },
-                  "type": "p",
-                },
-              }
-            }
-          />
+            class="col-12"
+            data-cy="menuContent"
+          >
+            <div>
+              [object Object]
+            </div>
+            <hr />
+          </div>
+          <div
+            class="menu__image col-lg-4 col-md-6"
+            data-cy="menuImage"
+          >
+            <div>
+              <img
+                alt="alt"
+                src="src"
+              />
+            </div>
+          </div>
+          <div
+            class="menu__image col-lg-4 col-md-6"
+            data-cy="menuImage"
+          >
+            <div>
+              <img
+                alt="alt"
+                src="src"
+              />
+            </div>
+          </div>
+          <div
+            class="menu__image col-lg-4 col-md-6"
+            data-cy="menuImage"
+          >
+            <div>
+              <img
+                alt="alt"
+                src="src"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</DocumentFragment>
+`;
+
+exports[`MenuPageTemplate renders GatsbyImage 1`] = `
+<DocumentFragment>
+  <header />
+  <section
+    class="menu__section"
+  >
+    <div
+      class="menu container"
+    >
+      <div
+        class="row"
+      >
+        <div
+          class="col-12"
+          data-cy="menuContent"
+        >
+          <div>
+            content
+          </div>
           <hr />
         </div>
         <div
-          className="menu__image col-lg-4 col-md-6"
+          class="menu__image col-lg-4 col-md-6"
           data-cy="menuImage"
-          ref={null}
         >
-          <div
-            onClick={[Function]}
-          >
-            <img
-              alt="alt"
-              src="src"
-            />
-          </div>
-        </div>
-        <div
-          className="menu__image col-lg-4 col-md-6"
-          data-cy="menuImage"
-          ref={null}
-        >
-          <div
-            onClick={[Function]}
-          >
-            <img
-              alt="alt"
-              src="src"
-            />
-          </div>
-        </div>
-        <div
-          className="menu__image col-lg-4 col-md-6"
-          data-cy="menuImage"
-          ref={null}
-        >
-          <div
-            onClick={[Function]}
-          >
+          <div>
             <img
               alt="alt"
               src="src"
@@ -82,71 +97,24 @@ exports[`MenuPage renders correctly 1`] = `
       </div>
     </div>
   </section>
-</main>
-`;
-
-exports[`MenuPageTemplate renders GatsbyImage 1`] = `
-[
-  <header />,
-  <section
-    className="menu__section"
-  >
-    <div
-      className="menu container"
-      ref={null}
-    >
-      <div
-        className="row"
-        ref={null}
-      >
-        <div
-          className="col-12"
-          data-cy="menuContent"
-          ref={null}
-        >
-          <div>
-            content
-          </div>
-          <hr />
-        </div>
-        <div
-          className="menu__image col-lg-4 col-md-6"
-          data-cy="menuImage"
-          ref={null}
-        >
-          <div
-            onClick={[Function]}
-          >
-            <img
-              alt="alt"
-              src="src"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>,
-]
+</DocumentFragment>
 `;
 
 exports[`MenuPageTemplate renders content correctly 1`] = `
-[
-  <header />,
+<DocumentFragment>
+  <header />
   <section
-    className="menu__section"
+    class="menu__section"
   >
     <div
-      className="menu container"
-      ref={null}
+      class="menu container"
     >
       <div
-        className="row"
-        ref={null}
+        class="row"
       >
         <div
-          className="col-12"
+          class="col-12"
           data-cy="menuContent"
-          ref={null}
         >
           <div>
             content
@@ -154,13 +122,10 @@ exports[`MenuPageTemplate renders content correctly 1`] = `
           <hr />
         </div>
         <div
-          className="menu__image col-lg-4 col-md-6"
+          class="menu__image col-lg-4 col-md-6"
           data-cy="menuImage"
-          ref={null}
         >
-          <div
-            onClick={[Function]}
-          >
+          <div>
             <img
               alt="alt"
               src="src"
@@ -169,55 +134,36 @@ exports[`MenuPageTemplate renders content correctly 1`] = `
         </div>
       </div>
     </div>
-  </section>,
-]
+  </section>
+</DocumentFragment>
 `;
 
 exports[`MenuPageTemplate renders html content correctly 1`] = `
-[
-  <header />,
+<DocumentFragment>
+  <header />
   <section
-    className="menu__section"
+    class="menu__section"
   >
     <div
-      className="menu container"
-      ref={null}
+      class="menu container"
     >
       <div
-        className="row"
-        ref={null}
+        class="row"
       >
         <div
-          className="col-12"
+          class="col-12"
           data-cy="menuContent"
-          ref={null}
         >
-          <div
-            dangerouslySetInnerHTML={
-              {
-                "__html": {
-                  "$$typeof": Symbol(react.transitional.element),
-                  "_owner": null,
-                  "_store": {},
-                  "key": null,
-                  "props": {
-                    "children": "HTML content",
-                  },
-                  "type": "p",
-                },
-              }
-            }
-          />
+          <div>
+            [object Object]
+          </div>
           <hr />
         </div>
         <div
-          className="menu__image col-lg-4 col-md-6"
+          class="menu__image col-lg-4 col-md-6"
           data-cy="menuImage"
-          ref={null}
         >
-          <div
-            onClick={[Function]}
-          >
+          <div>
             <img
               alt="alt"
               src="src"
@@ -226,6 +172,6 @@ exports[`MenuPageTemplate renders html content correctly 1`] = `
         </div>
       </div>
     </div>
-  </section>,
-]
+  </section>
+</DocumentFragment>
 `;

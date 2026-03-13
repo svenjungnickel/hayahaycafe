@@ -1,5 +1,5 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import NavItem from '../NavItem';
 
 describe('NavItem', () => {
@@ -8,7 +8,7 @@ describe('NavItem', () => {
         const name = 'name';
 
         const component = <NavItem link={link} name={name} />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });
@@ -19,7 +19,7 @@ describe('NavItem', () => {
         const active = true;
 
         const component = <NavItem link={link} name={name} active={active} />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });

@@ -1,55 +1,61 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`Location does not render empty data 1`] = `null`;
+exports[`Location does not render empty data 1`] = `<DocumentFragment />`;
 
-exports[`Location does not render empty globalSettings data 1`] = `null`;
+exports[`Location does not render empty globalSettings data 1`] = `<DocumentFragment />`;
 
-exports[`Location does not render empty location data 1`] = `null`;
+exports[`Location does not render empty location data 1`] = `<DocumentFragment />`;
 
 exports[`Location renders address data with company, first address line and postal code 1`] = `
-<div
-  className="listAddress"
->
-  <h2>
-    Location
-  </h2>
-  company
-  <br />
-  addressLine1
-  <br />
-  postalCode
-  <br />
-</div>
+<DocumentFragment>
+  <div
+    class="listAddress"
+  >
+    <h2>
+      Location
+    </h2>
+    company
+    <br />
+    addressLine1
+    <br />
+    postalCode
+    <br />
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Location renders complete address data (company, first and second address line, province, postal code and country 1`] = `
-<div
-  className="listAddress"
->
-  <h2>
-    Location
-  </h2>
-  company
-  <br />
-  addressLine1
-  <br />
-  addressLine2
-  <br />
-  province
-  <br />
-  postalCode
-  <br />
-  country
-  <br />
-</div>
+<DocumentFragment>
+  <div
+    class="listAddress"
+  >
+    <h2>
+      Location
+    </h2>
+    company
+    <br />
+    addressLine1
+    <br />
+    addressLine2
+    <br />
+    province
+    <br />
+    postalCode
+    <br />
+    country
+    <br />
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Location renders empty address data 1`] = `
-<div
-  className="listAddress"
->
-  <h2>
-    Location
-  </h2>
-</div>
+<DocumentFragment>
+  <div
+    class="listAddress"
+  >
+    <h2>
+      Location
+    </h2>
+  </div>
+</DocumentFragment>
 `;

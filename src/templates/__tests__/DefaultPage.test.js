@@ -1,5 +1,5 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import DefaultPage, { DefaultPageTemplate } from '../DefaultPage';
 import { HTMLContent } from '../../components/Content';
 import DefaultPageData from '../../__fixtures__/DefaultPageData';
@@ -14,7 +14,7 @@ describe('DefaultPageTemplate', () => {
         const content = 'content';
 
         const component = <DefaultPageTemplate title={title} headerImage={headerImage} content={content} />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });
@@ -32,7 +32,7 @@ describe('DefaultPageTemplate', () => {
                 contentComponent={HTMLContent}
             />
         );
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });
@@ -48,7 +48,7 @@ describe('DefaultPage', () => {
         };
 
         const component = <DefaultPage data={data} />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });

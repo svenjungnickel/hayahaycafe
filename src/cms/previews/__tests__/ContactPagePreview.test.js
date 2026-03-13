@@ -1,5 +1,5 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import ContactPagePreview from '../ContactPagePreview';
 import ContactPageData from '../../../__fixtures__/ContactPageData';
 
@@ -22,7 +22,7 @@ describe('ContactPagePreview', () => {
         const widgetFor = () => 'content';
 
         const component = <ContactPagePreview entry={entry} widgetFor={widgetFor} />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });
