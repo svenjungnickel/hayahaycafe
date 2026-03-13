@@ -6,4 +6,8 @@
 ## Usage: cypress-open [arguments]
 ## Example: "ddev cypress-open --config cypress.json"
 
+export DISPLAY=:99
+Xvfb :99 -screen 0 1280x720x24 &>/dev/null &
+sleep 1
+
 cypress open --project . "$@"
