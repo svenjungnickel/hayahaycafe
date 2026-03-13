@@ -1,5 +1,4 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import { render, fireEvent } from '@testing-library/react';
 import DarkModeToggle from '../DarkModeToggle';
 
@@ -12,7 +11,7 @@ describe('DarkModeToggle', () => {
         const className = 'className';
 
         const component = <DarkModeToggle darkMode={darkMode} className={className} />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });
@@ -25,7 +24,7 @@ describe('DarkModeToggle', () => {
         const className = 'className';
 
         const component = <DarkModeToggle darkMode={darkMode} className={className} />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });

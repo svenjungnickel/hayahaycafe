@@ -1,48 +1,44 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`ContactPage renders correctly 1`] = `
-<main>
-  <header />
-  <section
-    className="section"
-  >
-    <div
-      className="container"
-      ref={null}
+<DocumentFragment>
+  <main>
+    <header />
+    <section
+      class="section"
     >
       <div
-        className="justify-content-md-center row"
-        ref={null}
+        class="container"
       >
         <div
-          className="col-md-8 col-12"
-          ref={null}
+          class="justify-content-md-center row"
         >
-          <form />
+          <div
+            class="col-md-8 col-12"
+          >
+            <form />
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-</main>
+    </section>
+  </main>
+</DocumentFragment>
 `;
 
 exports[`ContactPageTemplate renders with content 1`] = `
-[
-  <header />,
+<DocumentFragment>
+  <header />
   <section
-    className="section"
+    class="section"
   >
     <div
-      className="container"
-      ref={null}
+      class="container"
     >
       <div
-        className="justify-content-md-center row"
-        ref={null}
+        class="justify-content-md-center row"
       >
         <div
-          className="col-md-8 col-12"
-          ref={null}
+          class="col-md-8 col-12"
         >
           <div>
             content
@@ -51,96 +47,73 @@ exports[`ContactPageTemplate renders with content 1`] = `
         </div>
       </div>
       <div
-        className="justify-content-md-center row"
-        ref={null}
+        class="justify-content-md-center row"
       >
         <div
-          className="col-md-8 col-12"
-          ref={null}
+          class="col-md-8 col-12"
         >
           <form />
         </div>
       </div>
     </div>
-  </section>,
-]
+  </section>
+</DocumentFragment>
 `;
 
 exports[`ContactPageTemplate renders with html content 1`] = `
-[
-  <header />,
+<DocumentFragment>
+  <header />
   <section
-    className="section"
+    class="section"
   >
     <div
-      className="container"
-      ref={null}
+      class="container"
     >
       <div
-        className="justify-content-md-center row"
-        ref={null}
+        class="justify-content-md-center row"
       >
         <div
-          className="col-md-8 col-12"
-          ref={null}
+          class="col-md-8 col-12"
         >
-          <div
-            dangerouslySetInnerHTML={
-              {
-                "__html": {
-                  "$$typeof": Symbol(react.transitional.element),
-                  "_owner": null,
-                  "_store": {},
-                  "key": null,
-                  "props": {
-                    "children": "HTML content",
-                  },
-                  "type": "p",
-                },
-              }
-            }
-          />
+          <div>
+            [object Object]
+          </div>
           <hr />
         </div>
       </div>
       <div
-        className="justify-content-md-center row"
-        ref={null}
+        class="justify-content-md-center row"
       >
         <div
-          className="col-md-8 col-12"
-          ref={null}
+          class="col-md-8 col-12"
         >
           <form />
         </div>
       </div>
     </div>
-  </section>,
-]
+  </section>
+</DocumentFragment>
 `;
 
 exports[`ContactPageTemplate renders without content 1`] = `
-[
-  <header />,
+<DocumentFragment>
+  <header />
   <section
-    className="section"
+    class="section"
   >
     <div
-      className="container"
-      ref={null}
+      class="container"
     >
       <div
-        className="justify-content-md-center row"
-        ref={null}
+        class="justify-content-md-center row"
       >
         <div
-          className="col-md-8 col-12"
-          ref={null}
+          class="col-md-8 col-12"
         >
           <form />
         </div>
       </div>
     </div>
-  </section>,
-]
+  </section>
+</DocumentFragment>
 `;

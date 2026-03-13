@@ -42,7 +42,7 @@ const getHelmetHtmlLang = (helmet) => {
 };
 
 describe('SEO', () => {
-    // Jest snapshot tests are not working here because Helmet is not getting rendered via react-test-renderer.
+    // Jest snapshot tests are not working here because Helmet is not getting rendered via @testing-library/react.
     // To test Helmet, we have to actual mount Helmet, use Helmet.peek() to get the markup content and verify every
     // field by hand.
     it('renders default props', () => {

@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`AddressItem renders correctly 1`] = `
-[
-  "item",
-  <br />,
-]
+<DocumentFragment>
+  item
+  <br />
+</DocumentFragment>
 `;

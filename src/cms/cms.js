@@ -1,10 +1,10 @@
 /**
- * The default export of `netlify-cms-app` is an object with all of the Netlify CMS
+ * The default export of `decap-cms-app` is an object with all of the Decap CMS
  * extension registration methods, such as `registerWidget` and
  * `registerPreviewTemplate`.
  */
-import CMS from 'netlify-cms-app';
-// import cloudinary from 'netlify-cms-media-library-cloudinary';
+import CMS from 'decap-cms-app';
+// import cloudinary from 'decap-cms-media-library-cloudinary';
 
 import StartPagePreview from './previews/StartPagePreview';
 import ContactPagePreview from './previews/ContactPagePreview';

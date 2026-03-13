@@ -1,23 +1,20 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`MenuPagePreview renders correctly 1`] = `
-[
-  <header />,
+<DocumentFragment>
+  <header />
   <section
-    className="menu__section"
+    class="menu__section"
   >
     <div
-      className="menu container"
-      ref={null}
+      class="menu container"
     >
       <div
-        className="row"
-        ref={null}
+        class="row"
       >
         <div
-          className="col-12"
+          class="col-12"
           data-cy="menuContent"
-          ref={null}
         >
           <div>
             content
@@ -25,13 +22,10 @@ exports[`MenuPagePreview renders correctly 1`] = `
           <hr />
         </div>
         <div
-          className="menu__image col-lg-4 col-md-6"
+          class="menu__image col-lg-4 col-md-6"
           data-cy="menuImage"
-          ref={null}
         >
-          <div
-            onClick={[Function]}
-          >
+          <div>
             <img
               alt="alt"
               src="src"
@@ -39,13 +33,10 @@ exports[`MenuPagePreview renders correctly 1`] = `
           </div>
         </div>
         <div
-          className="menu__image col-lg-4 col-md-6"
+          class="menu__image col-lg-4 col-md-6"
           data-cy="menuImage"
-          ref={null}
         >
-          <div
-            onClick={[Function]}
-          >
+          <div>
             <img
               alt="alt"
               src="src"
@@ -53,13 +44,10 @@ exports[`MenuPagePreview renders correctly 1`] = `
           </div>
         </div>
         <div
-          className="menu__image col-lg-4 col-md-6"
+          class="menu__image col-lg-4 col-md-6"
           data-cy="menuImage"
-          ref={null}
         >
-          <div
-            onClick={[Function]}
-          >
+          <div>
             <img
               alt="alt"
               src="src"
@@ -68,6 +56,6 @@ exports[`MenuPagePreview renders correctly 1`] = `
         </div>
       </div>
     </div>
-  </section>,
-]
+  </section>
+</DocumentFragment>
 `;

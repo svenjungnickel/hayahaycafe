@@ -1,5 +1,5 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import ListAddress from '../ListAddress';
 
 describe('Listaddress', () => {
@@ -14,7 +14,7 @@ describe('Listaddress', () => {
         };
 
         const component = <ListAddress address={address} />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });

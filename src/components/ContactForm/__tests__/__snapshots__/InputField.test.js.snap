@@ -1,96 +1,85 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`InputField renders with description 1`] = `
-<div
-  className="mb-3"
-  data-cy="controlId"
-  ref={null}
->
-  <label
-    className="form-label"
-    htmlFor="controlId"
-    ref={null}
-  >
-    label
-     *
-  </label>
-  <input
-    className="form-control"
-    id="controlId"
-    name="name"
-    onChange={[Function]}
-    ref={null}
-    required={true}
-    type="text"
-  />
-  <small
-    className="text-muted contactFormTextMuted form-text"
-    ref={null}
-  >
-    description
-  </small>
+<DocumentFragment>
   <div
-    className="invalid-feedback"
-    ref={null}
+    class="mb-3"
+    data-cy="controlId"
   >
-    errorMessage
+    <label
+      class="form-label"
+      for="controlId"
+    >
+      label *
+    </label>
+    <input
+      class="form-control"
+      id="controlId"
+      name="name"
+      required=""
+      type="text"
+    />
+    <small
+      class="text-muted contactFormTextMuted form-text"
+    >
+      description
+    </small>
+    <div
+      class="invalid-feedback"
+    >
+      errorMessage
+    </div>
   </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`InputField renders with empty label and filled ariaLabel 1`] = `
-<div
-  className="mb-3"
-  data-cy="controlId"
-  ref={null}
->
-  <input
-    aria-label="ariaLabel"
-    className="form-control"
-    id="controlId"
-    name="name"
-    onChange={[Function]}
-    ref={null}
-    required={true}
-    type="text"
-  />
+<DocumentFragment>
   <div
-    className="invalid-feedback"
-    ref={null}
+    class="mb-3"
+    data-cy="controlId"
   >
-    errorMessage
+    <input
+      aria-label="ariaLabel"
+      class="form-control"
+      id="controlId"
+      name="name"
+      required=""
+      type="text"
+    />
+    <div
+      class="invalid-feedback"
+    >
+      errorMessage
+    </div>
   </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`InputField renders with required parameters 1`] = `
-<div
-  className="mb-3"
-  data-cy="controlId"
-  ref={null}
->
-  <label
-    className="form-label"
-    htmlFor="controlId"
-    ref={null}
-  >
-    label
-     *
-  </label>
-  <input
-    className="form-control"
-    id="controlId"
-    name="name"
-    onChange={[Function]}
-    ref={null}
-    required={true}
-    type="text"
-  />
+<DocumentFragment>
   <div
-    className="invalid-feedback"
-    ref={null}
+    class="mb-3"
+    data-cy="controlId"
   >
-    errorMessage
+    <label
+      class="form-label"
+      for="controlId"
+    >
+      label *
+    </label>
+    <input
+      class="form-control"
+      id="controlId"
+      name="name"
+      required=""
+      type="text"
+    />
+    <div
+      class="invalid-feedback"
+    >
+      errorMessage
+    </div>
   </div>
-</div>
+</DocumentFragment>
 `;

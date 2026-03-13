@@ -121,12 +121,12 @@ module.exports = {
         // created manifest.webmanifest
         'gatsby-plugin-offline',
 
-        // netlify cms
+        // decap cms
         {
-            resolve: 'gatsby-plugin-netlify-cms',
+            resolve: 'gatsby-plugin-decap-cms',
             options: {
                 /**
-                 * One convention is to place your Netlify CMS customization code in a
+                 * One convention is to place your Decap CMS customization code in a
                  * `src/cms` directory.
                  */
                 modulePath: `${__dirname}/src/cms/cms.js`,

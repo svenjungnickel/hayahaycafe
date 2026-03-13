@@ -1,5 +1,5 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import { useStaticQuery } from 'gatsby';
 import Location from '../Location';
 
@@ -9,7 +9,7 @@ describe('Location', () => {
         useStaticQuery.mockImplementationOnce(() => data);
 
         const component = <Location />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });
@@ -21,7 +21,7 @@ describe('Location', () => {
         useStaticQuery.mockImplementationOnce(() => data);
 
         const component = <Location />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });
@@ -35,7 +35,7 @@ describe('Location', () => {
         useStaticQuery.mockImplementationOnce(() => data);
 
         const component = <Location />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });
@@ -51,7 +51,7 @@ describe('Location', () => {
         useStaticQuery.mockImplementationOnce(() => data);
 
         const component = <Location />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });
@@ -74,7 +74,7 @@ describe('Location', () => {
         useStaticQuery.mockImplementationOnce(() => data);
 
         const component = <Location />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });
@@ -97,7 +97,7 @@ describe('Location', () => {
         useStaticQuery.mockImplementationOnce(() => data);
 
         const component = <Location />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });

@@ -1,5 +1,5 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import Content, { HTMLContent } from '../Content';
 
 describe('Content', () => {
@@ -7,7 +7,7 @@ describe('Content', () => {
         const content = 'Content';
 
         const component = <Content content={content} />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });
@@ -16,7 +16,7 @@ describe('Content', () => {
         const className = 'className';
 
         const component = <Content className={className} />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });
@@ -26,7 +26,7 @@ describe('Content', () => {
         const className = 'className';
 
         const component = <Content content={content} className={className} />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });
@@ -37,7 +37,7 @@ describe('HTMLContent', () => {
         const content = <div>HTMLContent</div>;
 
         const component = <HTMLContent content={content} />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });
@@ -46,7 +46,7 @@ describe('HTMLContent', () => {
         const className = 'className';
 
         const component = <HTMLContent className={className} />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });
@@ -56,7 +56,7 @@ describe('HTMLContent', () => {
         const className = 'className';
 
         const component = <HTMLContent content={content} className={className} />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });

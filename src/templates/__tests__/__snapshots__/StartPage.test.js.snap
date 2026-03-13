@@ -1,31 +1,122 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`StartPage renders correctly 1`] = `
-<main>
+<DocumentFragment>
+  <main>
+    <header
+      class="startHeader"
+    >
+      <img
+        alt="alt"
+        src="src"
+      />
+      <div
+        class="startHeader__content"
+      >
+        <div
+          class="container"
+        >
+          <div
+            class="startHeader__contentInner"
+          >
+            <h1
+              class="display-1"
+            >
+              title
+            </h1>
+            <p
+              class="lead"
+            >
+              subtitle
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section
+      class="section"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="row"
+        >
+          <div
+            class="col-sm-6 col-12 offset-sm-3"
+          >
+            <div>
+              [object Object]
+            </div>
+          </div>
+          <div
+            class="col-12"
+          >
+            <hr />
+          </div>
+          <div
+            class="col-sm-4 col-12"
+            data-cy="startPageLocation"
+          >
+            <p>
+              Location
+            </p>
+          </div>
+          <div
+            class="col-sm-4 col-12"
+            data-cy="startPageWhat3Words"
+          >
+            <hr />
+            <a
+              href="what3WordsAddress"
+            >
+              <img
+                alt="what3WordsIcon"
+                src="src"
+              />
+            </a>
+          </div>
+          <div
+            class="col-sm-4 col-12"
+            data-cy="startPageOpeningHours"
+          >
+            <hr />
+            <p>
+              Opening Hours
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</DocumentFragment>
+`;
+
+exports[`StartPageTemplate renders content correctly 1`] = `
+<DocumentFragment>
   <header
-    className="startHeader"
+    class="startHeader"
   >
     <img
       alt="alt"
       src="src"
     />
     <div
-      className="startHeader__content"
+      class="startHeader__content"
     >
       <div
-        className="container"
-        ref={null}
+        class="container"
       >
         <div
-          className="startHeader__contentInner"
+          class="startHeader__contentInner"
         >
           <h1
-            className="display-1"
+            class="display-1"
           >
             title
           </h1>
           <p
-            className="lead"
+            class="lead"
           >
             subtitle
           </p>
@@ -34,56 +125,37 @@ exports[`StartPage renders correctly 1`] = `
     </div>
   </header>
   <section
-    className="section"
+    class="section"
   >
     <div
-      className="container"
-      ref={null}
+      class="container"
     >
       <div
-        className="row"
-        ref={null}
+        class="row"
       >
         <div
-          className="col-sm-6 col-12 offset-sm-3"
-          ref={null}
+          class="col-sm-6 col-12 offset-sm-3"
         >
-          <div
-            dangerouslySetInnerHTML={
-              {
-                "__html": {
-                  "$$typeof": Symbol(react.transitional.element),
-                  "_owner": null,
-                  "_store": {},
-                  "key": null,
-                  "props": {
-                    "children": "HTML",
-                  },
-                  "type": "p",
-                },
-              }
-            }
-          />
+          <div>
+            content
+          </div>
         </div>
         <div
-          className="col-12"
-          ref={null}
+          class="col-12"
         >
           <hr />
         </div>
         <div
-          className="col-sm-4 col-12"
+          class="col-sm-4 col-12"
           data-cy="startPageLocation"
-          ref={null}
         >
           <p>
             Location
           </p>
         </div>
         <div
-          className="col-sm-4 col-12"
+          class="col-sm-4 col-12"
           data-cy="startPageWhat3Words"
-          ref={null}
         >
           <hr />
           <a
@@ -96,9 +168,8 @@ exports[`StartPage renders correctly 1`] = `
           </a>
         </div>
         <div
-          className="col-sm-4 col-12"
+          class="col-sm-4 col-12"
           data-cy="startPageOpeningHours"
-          ref={null}
         >
           <hr />
           <p>
@@ -108,191 +179,73 @@ exports[`StartPage renders correctly 1`] = `
       </div>
     </div>
   </section>
-</main>
-`;
-
-exports[`StartPageTemplate renders content correctly 1`] = `
-[
-  <header
-    className="startHeader"
-  >
-    <img
-      alt="alt"
-      src="src"
-    />
-    <div
-      className="startHeader__content"
-    >
-      <div
-        className="container"
-        ref={null}
-      >
-        <div
-          className="startHeader__contentInner"
-        >
-          <h1
-            className="display-1"
-          >
-            title
-          </h1>
-          <p
-            className="lead"
-          >
-            subtitle
-          </p>
-        </div>
-      </div>
-    </div>
-  </header>,
-  <section
-    className="section"
-  >
-    <div
-      className="container"
-      ref={null}
-    >
-      <div
-        className="row"
-        ref={null}
-      >
-        <div
-          className="col-sm-6 col-12 offset-sm-3"
-          ref={null}
-        >
-          <div>
-            content
-          </div>
-        </div>
-        <div
-          className="col-12"
-          ref={null}
-        >
-          <hr />
-        </div>
-        <div
-          className="col-sm-4 col-12"
-          data-cy="startPageLocation"
-          ref={null}
-        >
-          <p>
-            Location
-          </p>
-        </div>
-        <div
-          className="col-sm-4 col-12"
-          data-cy="startPageWhat3Words"
-          ref={null}
-        >
-          <hr />
-          <a
-            href="what3WordsAddress"
-          >
-            <img
-              alt="what3WordsIcon"
-              src="src"
-            />
-          </a>
-        </div>
-        <div
-          className="col-sm-4 col-12"
-          data-cy="startPageOpeningHours"
-          ref={null}
-        >
-          <hr />
-          <p>
-            Opening Hours
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>,
-]
+</DocumentFragment>
 `;
 
 exports[`StartPageTemplate renders html content correctly 1`] = `
-[
+<DocumentFragment>
   <header
-    className="startHeader"
+    class="startHeader"
   >
     <img
       alt="alt"
       src="src"
     />
     <div
-      className="startHeader__content"
+      class="startHeader__content"
     >
       <div
-        className="container"
-        ref={null}
+        class="container"
       >
         <div
-          className="startHeader__contentInner"
+          class="startHeader__contentInner"
         >
           <h1
-            className="display-1"
+            class="display-1"
           >
             title
           </h1>
           <p
-            className="lead"
+            class="lead"
           >
             subtitle
           </p>
         </div>
       </div>
     </div>
-  </header>,
+  </header>
   <section
-    className="section"
+    class="section"
   >
     <div
-      className="container"
-      ref={null}
+      class="container"
     >
       <div
-        className="row"
-        ref={null}
+        class="row"
       >
         <div
-          className="col-sm-6 col-12 offset-sm-3"
-          ref={null}
+          class="col-sm-6 col-12 offset-sm-3"
         >
-          <div
-            dangerouslySetInnerHTML={
-              {
-                "__html": {
-                  "$$typeof": Symbol(react.transitional.element),
-                  "_owner": null,
-                  "_store": {},
-                  "key": null,
-                  "props": {
-                    "children": "HTML content",
-                  },
-                  "type": "p",
-                },
-              }
-            }
-          />
+          <div>
+            [object Object]
+          </div>
         </div>
         <div
-          className="col-12"
-          ref={null}
+          class="col-12"
         >
           <hr />
         </div>
         <div
-          className="col-sm-4 col-12"
+          class="col-sm-4 col-12"
           data-cy="startPageLocation"
-          ref={null}
         >
           <p>
             Location
           </p>
         </div>
         <div
-          className="col-sm-4 col-12"
+          class="col-sm-4 col-12"
           data-cy="startPageWhat3Words"
-          ref={null}
         >
           <hr />
           <a
@@ -305,9 +258,8 @@ exports[`StartPageTemplate renders html content correctly 1`] = `
           </a>
         </div>
         <div
-          className="col-sm-4 col-12"
+          class="col-sm-4 col-12"
           data-cy="startPageOpeningHours"
-          ref={null}
         >
           <hr />
           <p>
@@ -316,6 +268,6 @@ exports[`StartPageTemplate renders html content correctly 1`] = `
         </div>
       </div>
     </div>
-  </section>,
-]
+  </section>
+</DocumentFragment>
 `;

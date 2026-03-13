@@ -1,17 +1,21 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Separator renders with className 1`] = `
-<div
-  className="separator className"
->
-  <hr />
-</div>
+<DocumentFragment>
+  <div
+    class="separator className"
+  >
+    <hr />
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Separator renders without className 1`] = `
-<div
-  className="separator"
->
-  <hr />
-</div>
+<DocumentFragment>
+  <div
+    class="separator"
+  >
+    <hr />
+  </div>
+</DocumentFragment>
 `;

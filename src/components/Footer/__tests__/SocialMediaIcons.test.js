@@ -1,5 +1,5 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import { useStaticQuery } from 'gatsby';
 import SocialMediaIcons, { SocialMediaIcon } from '../SocialMediaIcons';
 
@@ -11,7 +11,7 @@ describe('SocialMediaIcons', () => {
         };
 
         const component = <SocialMediaIcon item={icon} />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });
@@ -23,7 +23,7 @@ describe('SocialMediaIcons', () => {
         };
 
         const component = <SocialMediaIcon item={icon} />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });
@@ -35,7 +35,7 @@ describe('SocialMediaIcons', () => {
         };
 
         const component = <SocialMediaIcon item={icon} />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });
@@ -45,7 +45,7 @@ describe('SocialMediaIcons', () => {
         useStaticQuery.mockImplementationOnce(() => data);
 
         const component = <SocialMediaIcons />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });
@@ -57,7 +57,7 @@ describe('SocialMediaIcons', () => {
         useStaticQuery.mockImplementationOnce(() => data);
 
         const component = <SocialMediaIcons />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });
@@ -71,7 +71,7 @@ describe('SocialMediaIcons', () => {
         useStaticQuery.mockImplementationOnce(() => data);
 
         const component = <SocialMediaIcons />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });
@@ -98,7 +98,7 @@ describe('SocialMediaIcons', () => {
         useStaticQuery.mockImplementationOnce(() => data);
 
         const component = <SocialMediaIcons />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });

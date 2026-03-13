@@ -1,12 +1,11 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import { render, fireEvent } from '@testing-library/react';
 import ContactForm from '../ContactForm';
 
 describe('ContactForm snapshot', () => {
     it('renders correctly', () => {
         const component = <ContactForm />;
-        const tree = renderer.create(component).toJSON();
+        const tree = render(component).asFragment();
 
         expect(tree).toMatchSnapshot();
     });

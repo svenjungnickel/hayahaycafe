@@ -1,22 +1,19 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`DefaultPagePreview renders correctly 1`] = `
-[
-  <header />,
+<DocumentFragment>
+  <header />
   <section
-    className="section"
+    class="section"
   >
     <div
-      className="container"
-      ref={null}
+      class="container"
     >
       <div
-        className="row"
-        ref={null}
+        class="row"
       >
         <div
-          className="col-12"
-          ref={null}
+          class="col-12"
         >
           <div>
             content
@@ -24,6 +21,6 @@ exports[`DefaultPagePreview renders correctly 1`] = `
         </div>
       </div>
     </div>
-  </section>,
-]
+  </section>
+</DocumentFragment>
 `;

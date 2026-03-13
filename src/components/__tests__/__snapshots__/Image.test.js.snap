@@ -1,18 +1,21 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`Image renders <img> 1`] = `
-<img
-  alt="alt"
-  loading="lazy"
-  src="src"
-/>
+<DocumentFragment>
+  <img
+    alt="alt"
+    loading="lazy"
+    src="src"
+  />
+</DocumentFragment>
 `;
 
 exports[`Image renders GatsbyImage 1`] = `
-<img
-  alt="alt"
-  image={true}
-  loading="lazy"
-  src="image"
-/>
+<DocumentFragment>
+  <img
+    alt="alt"
+    loading="lazy"
+    src="image"
+  />
+</DocumentFragment>
 `;

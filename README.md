@@ -14,28 +14,26 @@
     git clone https://github.com/svenjungnickel/hayahaycafe.git
     ```
 
-2. **Install DDEV**
+2.  **Install DDEV**
 
-    To run the project locally you have to install [DDEV](https://docs.ddev.com/en/stable/). 
+    To run the project locally you have to install [DDEV](https://docs.ddev.com/en/stable/).
     DDEV is an open source tool for launching local web development environments in minutes. It supports PHP and Node.js.
 
 3.  **Define environment variables.**
-
     - Gatsby
-    
+
         Define your environment variables before you start. To do so, simply copy `.env.dist` and rename it to `.env.development`.
         Then update the variables with your parameters.
-    
+
         > Hint: Use the predefined SITE_RECAPTCHA_KEY and GATSBY_SITE_RECAPTCHA_KEY for automated tests. More details under **E2E tests**.
 
     - Cypress
-    
-        You have to define the Netlify CMS login details in the cypress environment files in order to run E2E Tests. 
+
+        You have to define the Netlify CMS login details in the cypress environment files in order to run E2E Tests.
         Copy `cypress.env.json.dist`, rename it to `cypress.env.json` and enter the login credentials.
-        Additional copy the `.env.development` and rename it to `.env.production`. This is necessary because we are 
+        Additional copy the `.env.development` and rename it to `.env.production`. This is necessary because we are
         running the cypress tests against a local production server.
-    
-    
+
 4.  **Start developing.**
 
     4.1 **Start DDEV.**
@@ -46,7 +44,7 @@
     cd hayahaycafe/
     ddev start
     ```
-    
+
     This will start the DDEV environment, install dependencies and start the Gatsby local developer server automatically.
 
     If you want to connect to the DDEV container you can use following command:
@@ -55,17 +53,17 @@
     ddev ssh
     ```
 
-    4.2 Netlify CMS local backend (deprecated)
-        
-    If you want to use Netlify CMS locally to edit your content first start the Netlify CMS proxy server before you
+    4.2 Decap CMS local backend (deprecated)
+
+    If you want to use Decap CMS locally to edit your content first start the Decap CMS proxy server before you
     start the gatsby developer server.
-        
+
     ```sh
-    npx netlify-cms-proxy-server
+    npx decap-server
     ```
-        
+
     Alternatively you can use a predefined npm command
-                
+
     ```sh
     npm run netlifycms:proxyserver
     ```
@@ -74,10 +72,10 @@
 
     Your site is now running at `https://hayahaycafe.ddev.site`!
 
-    _Note: You'll also see a second link: _`https://hayahaycafe.ddev.site/___graphql`_. This is a tool you can use to experiment 
+    _Note: You'll also see a second link: _`https://hayahaycafe.ddev.site/___graphql`_. This is a tool you can use to experiment
     with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
-    Open the `hayahaycafe` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and 
+    Open the `hayahaycafe` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and
     the browser will update in real time!
 
 ## 💫 Deploy (deprecated)
@@ -85,7 +83,7 @@
 To deploy on [Netlify](https://www.netlify.com/) just hit following button:
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/svenjungnickel/hayahaycafe)
 
-You can also test the Netlify build before you deploy. 
+You can also test the Netlify build before you deploy.
 
 1.  **Link Netlify Project.**
 
@@ -94,18 +92,18 @@ You can also test the Netlify build before you deploy.
     ```sh
     netlify link
     ```
-    
+
     Select a way to link the project.
 
 2.  **Run test build.**
-    
+
     To test the build run following command:
-    
+
     ```sh
     netlify build
     ```
 
-    This will run the build on your local dev environment. The logs will show if the build will be successful or has 
+    This will run the build on your local dev environment. The logs will show if the build will be successful or has
     any errors.
 
 ## 🚨 Linting
@@ -144,7 +142,7 @@ To watch all unit tests run following:
 npx jest --watchAll
 ```
 
-All unit tests generate also code coverage. You can find the generated code coverage under `<rootDir>/coverage/index.html`. 
+All unit tests generate also code coverage. You can find the generated code coverage under `<rootDir>/coverage/index.html`.
 
 ## 🎉 E2E tests
 
@@ -202,7 +200,7 @@ Visit the docs for more [example commands](https://github.com/nektos/act#example
 ## Preventing commits to the master branch
 
 This project is setup to reject push and commits directly to master. To prevent commits to master on your local machine
-install following pre-commit hook to your `.git/hooks/pre-commit` file. 
+install following pre-commit hook to your `.git/hooks/pre-commit` file.
 
 ```sh
 #!/bin/sh
@@ -217,11 +215,10 @@ fi
 
 After your created the file you have to make it executable:
 
-
 ```sh
 chmod +x .git/hooks/pre-commit
 ```
 
 ### Trouble shooting
 
-If you work on a Mac OS using OS X Mojave and get weird error messages, try following [work around](https://meyerweb.com/eric/thoughts/2020/02/10/preventing-commits-to-the-master-branch-in-os-x-mojave/). 
+If you work on a Mac OS using OS X Mojave and get weird error messages, try following [work around](https://meyerweb.com/eric/thoughts/2020/02/10/preventing-commits-to-the-master-branch-in-os-x-mojave/).

@@ -1,219 +1,181 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`ContactForm snapshot renders correctly 1`] = `
-<div
-  className="contactForm"
->
-  <form
-    action="/thanks"
-    className=""
-    data-cy="contactForm"
-    data-netlify="true"
-    data-netlify-recaptcha="true"
-    method="POST"
-    name="contact"
-    noValidate={true}
-    onSubmit={[Function]}
-    ref={null}
-  >
-    <label
-      className="form-label"
-      htmlFor="contactFirstName"
-      ref={null}
-    >
-      Name *
-    </label>
-    <div
-      className="row"
-      ref={null}
-    >
-      <div
-        className="col-lg-6 col-12"
-        ref={null}
-      >
-        <div
-          className="mb-3"
-          data-cy="contactFirstName"
-          ref={null}
-        >
-          <input
-            aria-label="First name"
-            className="form-control"
-            id="contactFirstName"
-            name="firstName"
-            onChange={[Function]}
-            ref={null}
-            required={true}
-            type="text"
-          />
-          <small
-            className="text-muted contactFormTextMuted form-text"
-            ref={null}
-          >
-            First name
-          </small>
-          <div
-            className="invalid-feedback"
-            ref={null}
-          >
-            Please enter your first name.
-          </div>
-        </div>
-      </div>
-      <div
-        className="col-lg-6 col-12"
-        ref={null}
-      >
-        <div
-          className="mb-3"
-          data-cy="contactLastName"
-          ref={null}
-        >
-          <input
-            aria-label="Last name"
-            className="form-control"
-            id="contactLastName"
-            name="lastName"
-            onChange={[Function]}
-            ref={null}
-            required={true}
-            type="text"
-          />
-          <small
-            className="text-muted contactFormTextMuted form-text"
-            ref={null}
-          >
-            Last name
-          </small>
-          <div
-            className="invalid-feedback"
-            ref={null}
-          >
-            Please enter your last name.
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="mb-3"
-      data-cy="contactEmail"
-      ref={null}
-    >
-      <label
-        className="form-label"
-        htmlFor="contactEmail"
-        ref={null}
-      >
-        Email
-         *
-      </label>
-      <input
-        className="form-control"
-        id="contactEmail"
-        name="email"
-        onChange={[Function]}
-        ref={null}
-        required={true}
-        type="email"
-      />
-      <div
-        className="invalid-feedback"
-        ref={null}
-      >
-        Please enter a valid email address.
-      </div>
-    </div>
-    <div
-      className="mb-3"
-      data-cy="contactSubject"
-      ref={null}
-    >
-      <label
-        className="form-label"
-        htmlFor="contactSubject"
-        ref={null}
-      >
-        Subject
-         *
-      </label>
-      <input
-        className="form-control"
-        id="contactSubject"
-        name="subject"
-        onChange={[Function]}
-        ref={null}
-        required={true}
-        type="text"
-      />
-      <div
-        className="invalid-feedback"
-        ref={null}
-      >
-        Please enter a subject.
-      </div>
-    </div>
-    <div
-      className="mb-3"
-      data-cy="contactMessage"
-      ref={null}
-    >
-      <label
-        className="form-label"
-        htmlFor="contactMessage"
-        ref={null}
-      >
-        Message *
-      </label>
-      <textarea
-        className="form-control"
-        id="contactMessage"
-        name="message"
-        onChange={[Function]}
-        required={true}
-        rows="5"
-      />
-      <div
-        className="invalid-feedback"
-        ref={null}
-      >
-        Please enter your message.
-      </div>
-    </div>
-    <div
-      className="mb-3"
-      data-cy="contactRecaptcha"
-      ref={null}
-    >
-      <div
-        data-testid="recaptcha"
-      />
-    </div>
-    <button
-      className="contactFormSubmitButton btn btn-primary"
-      disabled={false}
-      ref={null}
-      type="submit"
-    >
-      Submit
-    </button>
-  </form>
+<DocumentFragment>
   <div
-    style={
-      {
-        "display": "none",
-      }
-    }
+    class="contactForm"
   >
-    <div
-      className="fade contactFormSuccess alert alert-success show"
-      data-cy="contactFormSuccess"
-      ref={[Function]}
-      role="alert"
+    <form
+      action="/thanks"
+      class=""
+      data-cy="contactForm"
+      data-netlify="true"
+      data-netlify-recaptcha="true"
+      method="POST"
+      name="contact"
+      novalidate=""
     >
-      <p>
-        Thank you for your message. We're getting in touch with you soon.
-      </p>
+      <label
+        class="form-label"
+        for="contactFirstName"
+      >
+        Name *
+      </label>
+      <div
+        class="row"
+      >
+        <div
+          class="col-lg-6 col-12"
+        >
+          <div
+            class="mb-3"
+            data-cy="contactFirstName"
+          >
+            <input
+              aria-label="First name"
+              class="form-control"
+              id="contactFirstName"
+              name="firstName"
+              required=""
+              type="text"
+            />
+            <small
+              class="text-muted contactFormTextMuted form-text"
+            >
+              First name
+            </small>
+            <div
+              class="invalid-feedback"
+            >
+              Please enter your first name.
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-lg-6 col-12"
+        >
+          <div
+            class="mb-3"
+            data-cy="contactLastName"
+          >
+            <input
+              aria-label="Last name"
+              class="form-control"
+              id="contactLastName"
+              name="lastName"
+              required=""
+              type="text"
+            />
+            <small
+              class="text-muted contactFormTextMuted form-text"
+            >
+              Last name
+            </small>
+            <div
+              class="invalid-feedback"
+            >
+              Please enter your last name.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="mb-3"
+        data-cy="contactEmail"
+      >
+        <label
+          class="form-label"
+          for="contactEmail"
+        >
+          Email *
+        </label>
+        <input
+          class="form-control"
+          id="contactEmail"
+          name="email"
+          required=""
+          type="email"
+        />
+        <div
+          class="invalid-feedback"
+        >
+          Please enter a valid email address.
+        </div>
+      </div>
+      <div
+        class="mb-3"
+        data-cy="contactSubject"
+      >
+        <label
+          class="form-label"
+          for="contactSubject"
+        >
+          Subject *
+        </label>
+        <input
+          class="form-control"
+          id="contactSubject"
+          name="subject"
+          required=""
+          type="text"
+        />
+        <div
+          class="invalid-feedback"
+        >
+          Please enter a subject.
+        </div>
+      </div>
+      <div
+        class="mb-3"
+        data-cy="contactMessage"
+      >
+        <label
+          class="form-label"
+          for="contactMessage"
+        >
+          Message *
+        </label>
+        <textarea
+          class="form-control"
+          id="contactMessage"
+          name="message"
+          required=""
+          rows="5"
+        />
+        <div
+          class="invalid-feedback"
+        >
+          Please enter your message.
+        </div>
+      </div>
+      <div
+        class="mb-3"
+        data-cy="contactRecaptcha"
+      >
+        <div
+          data-testid="recaptcha"
+        />
+      </div>
+      <button
+        class="contactFormSubmitButton btn btn-primary"
+        type="submit"
+      >
+        Submit
+      </button>
+    </form>
+    <div
+      style="display: none;"
+    >
+      <div
+        class="fade contactFormSuccess alert alert-success show"
+        data-cy="contactFormSuccess"
+        role="alert"
+      >
+        <p>
+          Thank you for your message. We're getting in touch with you soon.
+        </p>
+      </div>
     </div>
   </div>
-</div>
+</DocumentFragment>
 `;

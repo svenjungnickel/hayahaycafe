@@ -1,32 +1,31 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`404 renders correctly 1`] = `
-<main>
-  <header />
-  <section
-    className="section"
-  >
-    <div
-      className="container"
-      ref={null}
+<DocumentFragment>
+  <main>
+    <header />
+    <section
+      class="section"
     >
       <div
-        className="row"
-        ref={null}
+        class="container"
       >
         <div
-          className="col"
-          ref={null}
+          class="row"
         >
-          <h1>
-            404: not found
-          </h1>
-          <p>
-            You just hit a route that doesn't exist.
-          </p>
+          <div
+            class="col"
+          >
+            <h1>
+              404: not found
+            </h1>
+            <p>
+              You just hit a route that doesn't exist.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-</main>
+    </section>
+  </main>
+</DocumentFragment>
 `;
