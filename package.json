@@ -36,7 +36,7 @@
         "netlify-plugin-gatsby-cache": "^0.3.2",
         "postcss": "^8.5.14",
         "prop-types": "^15.8.1",
-        "react": "^19.2.4",
+        "react": "^19.2.6",
         "react-bootstrap": "^2.10.10",
         "react-dom": "^19.2.4",
         "react-google-recaptcha": "^3.1.0",
