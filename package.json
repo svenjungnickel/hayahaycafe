@@ -78,7 +78,7 @@
     "overrides": {
         "cookie": "0.7.2",
         "diff": "8.0.3",
-        "dompurify": "3.2.5",
+        "dompurify": "3.4.12",
         "eslint-webpack-plugin": "^5.0.2",
         "got": "11.8.6",
         "lmdb": "3.5.1",
@@ -86,7 +86,7 @@
         "lodash.template": "4.5.0",
         "resolve-url-loader": "5.0.0",
         "semver": "7.7.3",
-        "tmp": "0.2.5",
+        "tmp": "0.2.7",
         "trim": "1.0.1"
     },
     "keywords": [
