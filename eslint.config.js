@@ -1,4 +1,5 @@
 const js = require('@eslint/js');
+const { fixupPluginRules } = require('@eslint/compat');
 const globals = require('globals');
 const babelParser = require('@babel/eslint-parser');
 const jestPlugin = require('eslint-plugin-jest');
@@ -40,7 +41,7 @@ module.exports = [
         },
         plugins: {
             jest: jestPlugin,
-            react: reactPlugin,
+            react: fixupPluginRules(reactPlugin),
             'react-hooks': reactHooksPlugin,
             cypress: cypressPlugin,
             prettier: prettierPlugin,
