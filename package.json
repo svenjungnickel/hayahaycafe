@@ -49,6 +49,7 @@
     "devDependencies": {
         "@babel/eslint-parser": "^8.0.1",
         "@cypress-audit/lighthouse": "^1.4.2",
+        "@eslint/compat": "^2.1.0",
         "@eslint/js": "^10.0.1",
         "@lhci/cli": "^0.15.1",
         "@stryker-mutator/core": "^10.0.0",
