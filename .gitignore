@@ -90,3 +90,5 @@ reports/
 
 # Lighthouse ci results
 .lighthouseci/
+# Im Web-Image gebauter SME-Shim (siehe .ddev/web-build/nosme.c)
+.ddev/nosme/

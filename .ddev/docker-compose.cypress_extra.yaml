@@ -1,4 +1,9 @@
 services:
   cypress:
+    shm_size: 2gb
     environment:
       - DISPLAY=host.docker.internal:0
+      # Electrons AVIF-Decoder stuerzt auf Apple M4/M5 unter OrbStack >= 2.2.3
+      # mit SIGILL ab; der Shim blendet die SME-Bits aus AT_HWCAP2 aus.
+      # Die Datei legt der post-start-Hook aus config.chromium.yaml an.
+      - LD_PRELOAD=/mnt/ddev_config/nosme/libnosme.so

@@ -1,0 +1,16 @@
+# Baut den SME-Shim (siehe nosme.c) ins Web-Image.
+#
+# Ohne ihn stuerzt der AVIF-Decoder auf Apple M4/M5 unter OrbStack >= 2.2.3
+# ("SME support on M4 and newer") mit SIGILL ab: Lighthouse haengt bzw. meldet
+# TARGET_CRASHED, der GPU-Prozess laeuft in eine Absturzschleife bis
+# "GPU process isn't usable. Goodbye.".
+#
+# Eingehaengt wird der Shim ueber LD_PRELOAD in config.chromium.yaml (Web) und
+# docker-compose.cypress_extra.yaml (Cypress/Electron).
+
+COPY nosme.c /tmp/nosme.c
+
+RUN (timeout 120 apt-get update || true) && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends gcc libc6-dev && \
+    gcc -shared -fPIC -O2 -o /usr/local/lib/libnosme.so /tmp/nosme.c -ldl && \
+    rm -f /tmp/nosme.c

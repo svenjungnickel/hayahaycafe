@@ -1,5 +1,13 @@
 web_environment:
     - CHROME_PATH=/usr/bin/chromium
     - CHROME_FLAGS=--no-sandbox --disable-dev-shm-usage
+    # Ohne den SME-Shim stuerzt Chromiums AVIF-Decoder auf Apple M4/M5 unter
+    # OrbStack >= 2.2.3 mit SIGILL ab (siehe .ddev/web-build/nosme.c).
+    - LD_PRELOAD=/usr/local/lib/libnosme.so
 webimage_extra_packages:
     - chromium
+hooks:
+    post-start:
+        # Den Shim aus dem Web-Image ins Projekt spiegeln, damit ihn auch der
+        # Cypress-Container laden kann (siehe docker-compose.cypress_extra.yaml).
+        - exec: install -D -m 0644 /usr/local/lib/libnosme.so /var/www/html/.ddev/nosme/libnosme.so
