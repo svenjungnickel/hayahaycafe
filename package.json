@@ -9,7 +9,7 @@
     },
     "dependencies": {
         "bootstrap": "^5.3.8",
-        "decap-cms-app": "^3.16.2",
+        "decap-cms-app": "^3.16.3",
         "fslightbox-react": "^2.1.1",
         "gatsby": "^5.16.1",
         "gatsby-plugin-catch-links": "^5.16.0",
@@ -36,14 +36,14 @@
         "netlify-plugin-gatsby-cache": "^0.3.2",
         "postcss": "^8.5.28",
         "prop-types": "^15.8.1",
-        "react": "^19.2.8",
+        "react": "^19.3.0",
         "react-bootstrap": "^2.10.10",
-        "react-dom": "^19.2.8",
+        "react-dom": "^19.3.0",
         "react-google-recaptcha": "^3.1.0",
         "react-helmet": "^6.1.0",
         "react-icons": "^5.7.0",
         "react-switch": "^7.1.0",
-        "sass": "^1.104.1",
+        "sass": "^1.105.0",
         "use-dark-mode": "^2.3.1"
     },
     "devDependencies": {
@@ -73,7 +73,7 @@
         "identity-obj-proxy": "^3.0.0",
         "jest": "^30.5.2",
         "jest-environment-jsdom": "^30.5.2",
-        "prettier": "^3.9.8",
+        "prettier": "^3.9.9",
         "start-server-and-test": "^3.0.12"
     },
     "overrides": {
