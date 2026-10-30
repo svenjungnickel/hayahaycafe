@@ -21,6 +21,21 @@ Cypress.Commands.add('useMobile', () => {
 });
 
 /**
+ * Filters by position, as :visible does not detect elements moved off-screen via transform.
+ * Added as query, so that following assertions retry the filter.
+ *
+ * @func cy.inViewport
+ */
+Cypress.Commands.addQuery('inViewport', function () {
+    return ($subject) =>
+        $subject.filter((index, element) => {
+            const { left, right } = element.getBoundingClientRect();
+
+            return right > 0 && left < element.ownerDocument.defaultView.innerWidth;
+        });
+});
+
+/**
  * https://cypress.io/blog/2020/02/12/working-with-iframes-in-cypress/
  *
  * @func cy.getIframeBody
