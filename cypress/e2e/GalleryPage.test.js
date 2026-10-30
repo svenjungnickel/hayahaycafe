@@ -1,5 +1,5 @@
 const getVisibleLightboxImage = () =>
-    cy.get('.fslightbox-container').should('be.visible').find('.fslightbox-source').filter(':visible');
+    cy.get('.fslightbox-container').should('be.visible').find('.fslightbox-source').inViewport();
 
 const openLightBoxAndVerifyImageSource = () => {
     let imgSource;

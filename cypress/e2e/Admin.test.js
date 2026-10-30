@@ -6,11 +6,11 @@ const login = () => {
     cy.get("iframe[src*='about:blank']:visible").then(($iframe) => {
         const $body = $iframe.contents().find('body');
 
-        cy.wrap($body).find('input[type=email]').type(Cypress.env('NETLIFY_CMS_EMAIL'));
-
-        cy.wrap($body).find('input[type=password]').type(Cypress.env('NETLIFY_CMS_PASSWORD'));
-
-        cy.wrap($body).find('button[type=submit]').click({ force: true });
+        cy.env(['NETLIFY_CMS_EMAIL', 'NETLIFY_CMS_PASSWORD']).then(({ NETLIFY_CMS_EMAIL, NETLIFY_CMS_PASSWORD }) => {
+            cy.wrap($body).find('input[type=email]').type(NETLIFY_CMS_EMAIL);
+            cy.wrap($body).find('input[type=password]').type(NETLIFY_CMS_PASSWORD);
+            cy.wrap($body).find('button[type=submit]').click({ force: true });
+        });
     });
 
     cy.get('main').find('h1').should('contain', 'Page');
