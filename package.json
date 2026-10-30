@@ -36,14 +36,14 @@
         "netlify-plugin-gatsby-cache": "^0.3.2",
         "postcss": "^8.5.32",
         "prop-types": "^15.8.1",
-        "react": "^19.3.0",
+        "react": "^19.3.1",
         "react-bootstrap": "^2.10.10",
-        "react-dom": "^19.3.0",
+        "react-dom": "^19.3.1",
         "react-google-recaptcha": "^3.1.0",
         "react-helmet": "^6.1.0",
         "react-icons": "^5.7.0",
         "react-switch": "^7.1.0",
-        "sass": "^1.106.1",
+        "sass": "^1.107.0",
         "use-dark-mode": "^2.3.1"
     },
     "devDependencies": {
@@ -79,16 +79,22 @@
     "overrides": {
         "cookie": "0.7.2",
         "diff": "8.0.3",
-        "dompurify": "3.4.12",
+        "dompurify": "3.4.17",
         "eslint-webpack-plugin": "^6.0.0",
         "got": "11.8.6",
+        "immutable@3.7.6": "3.8.4",
         "lmdb": "3.5.1",
+        "lodash@4.17.23": "4.18.1",
         "lodash.set": "4.3.2",
-        "lodash.template": "4.5.0",
+        "lodash.template": "4.18.1",
+        "minimatch@3.0.5": "3.1.5",
+        "path-to-regexp@0.1.12": "0.1.13",
         "resolve-url-loader": "5.0.0",
         "semver": "7.7.3",
+        "tar-fs": "3.1.3",
         "tmp": "0.2.7",
-        "trim": "1.0.1"
+        "trim": "1.0.1",
+        "ws@8.13.0": "8.22.0"
     },
     "keywords": [
         "gatsby"
