@@ -153,7 +153,8 @@ exports[`ContactForm snapshot renders correctly 1`] = `
         data-cy="contactRecaptcha"
       >
         <div
-          data-testid="recaptcha"
+          class="contactFormReCaptcha"
+          data-cy="contactRecaptchaPlaceholder"
         />
       </div>
       <button

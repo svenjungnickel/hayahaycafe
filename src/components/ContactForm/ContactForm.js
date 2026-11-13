@@ -1,4 +1,4 @@
-import React, { useState, createRef } from 'react';
+import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { Alert, Button, Row, Col, Form } from 'react-bootstrap';
 import Recaptcha from 'react-google-recaptcha';
@@ -44,8 +44,16 @@ const ContactForm = () => {
     const [state, setState] = useState({});
     const [recaptchaError, setRecaptchaError] = useState(false);
     const [success, setSuccess] = useState(false);
+    // reCAPTCHA sets third-party cookies, so it is only loaded once the visitor interacts with the form
+    const [recaptchaLoaded, setRecaptchaLoaded] = useState(false);
     const darkMode = useDarkMode(false);
-    const recaptchaRef = createRef();
+    const recaptchaRef = useRef(null);
+
+    const loadRecaptcha = () => {
+        if (false === recaptchaLoaded) {
+            setRecaptchaLoaded(true);
+        }
+    };
 
     const handleChange = (e) => {
         setState({ ...state, [e.target.name]: e.target.value });
@@ -60,8 +68,9 @@ const ContactForm = () => {
         event.stopPropagation();
         setValidated(true);
 
-        const recaptchaValue = recaptchaRef.current.getValue() || false;
+        const recaptchaValue = recaptchaRef.current?.getValue() || false;
         if (false === recaptchaValue) {
+            loadRecaptcha();
             setRecaptchaError(true);
             return;
         }
@@ -93,6 +102,7 @@ const ContactForm = () => {
                     noValidate
                     validated={validated}
                     onSubmit={handleSubmit}
+                    onFocus={loadRecaptcha}
                     name="contact"
                     method="POST"
                     action="/thanks"
@@ -157,14 +167,18 @@ const ContactForm = () => {
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="contactRecaptcha" data-cy="contactRecaptcha">
-                        <Recaptcha
-                            id="contactRecaptcha"
-                            ref={recaptchaRef}
-                            sitekey={RECAPTCHA_KEY}
-                            onChange={handleRecaptcha}
-                            theme={true === darkMode.value ? 'dark' : 'light'}
-                            className={contactFormReCaptcha}
-                        />
+                        {true === recaptchaLoaded ? (
+                            <Recaptcha
+                                id="contactRecaptcha"
+                                ref={recaptchaRef}
+                                sitekey={RECAPTCHA_KEY}
+                                onChange={handleRecaptcha}
+                                theme={true === darkMode.value ? 'dark' : 'light'}
+                                className={contactFormReCaptcha}
+                            />
+                        ) : (
+                            <div className={contactFormReCaptcha} data-cy="contactRecaptchaPlaceholder" />
+                        )}
                         {true === recaptchaError && (
                             <div className="invalid-feedback" style={{ display: 'block' }}>
                                 Please answer the captcha.
