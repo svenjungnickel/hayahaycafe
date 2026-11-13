@@ -32,10 +32,23 @@ describe('ContactForm events', () => {
         expect(textArea.value).toBe('Hello');
     });
 
+    it('does not load recaptcha before interaction', () => {
+        expect(container.querySelector('[data-testid="recaptcha"]')).toBeNull();
+        expect(container.querySelector('[data-cy="contactRecaptchaPlaceholder"]')).not.toBeNull();
+    });
+
+    it('loads recaptcha on form focus', () => {
+        fireEvent.focus(container.querySelector('#contactFirstName'));
+
+        expect(container.querySelector('[data-testid="recaptcha"]')).not.toBeNull();
+        expect(container.querySelector('[data-cy="contactRecaptchaPlaceholder"]')).toBeNull();
+    });
+
     it('simulate unsuccessful form submit', () => {
         const form = container.querySelector('form');
         fireEvent.submit(form);
 
         expect(container.textContent).toContain('Please answer the captcha.');
+        expect(container.querySelector('[data-testid="recaptcha"]')).not.toBeNull();
     });
 });

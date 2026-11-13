@@ -1,9 +1,25 @@
+const loadRecaptcha = () => {
+    cy.get('[data-cy=contactFirstName] input').focus();
+};
+
+const recaptchaLazyLoad = () => {
+    cy.get('[data-cy=contactRecaptchaPlaceholder]').should('exist');
+    cy.get("iframe[src*='recaptcha']").should('not.exist');
+
+    loadRecaptcha();
+
+    cy.get('[data-cy=contactRecaptchaPlaceholder]').should('not.exist');
+    cy.get("iframe[src*='recaptcha']").should('exist');
+};
+
 const recaptchaDarkTheme = () => {
+    loadRecaptcha();
     cy.getIframeBody("iframe[src*='recaptcha']:visible").find('.rc-anchor-light');
 
     cy.setDarkMode(true);
     cy.visit('/contact/');
 
+    loadRecaptcha();
     cy.getIframeBody("iframe[src*='recaptcha']:visible").find('.rc-anchor-dark');
 };
 
@@ -94,6 +110,10 @@ describe('Contact form', () => {
             cy.useDesktop();
         });
 
+        it('Load Recaptcha only after form interaction', () => {
+            recaptchaLazyLoad();
+        });
+
         it('Load Recaptcha dark theme', () => {
             recaptchaDarkTheme();
         });
@@ -115,6 +135,10 @@ describe('Contact form', () => {
         beforeEach(() => {
             cy.setDarkMode(false);
             cy.useMobile();
+        });
+
+        it('Load Recaptcha only after form interaction', () => {
+            recaptchaLazyLoad();
         });
 
         it('Load Recaptcha dark theme', () => {
